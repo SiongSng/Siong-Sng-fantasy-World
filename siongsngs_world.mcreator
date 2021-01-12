@@ -36,6 +36,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "siong_sngworldfood"
+    },
+    {
+      "name": "CultivateSoilformula",
+      "type": "recipe",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cultivate_soilformula"
     }
   ],
   "variable_elements": [],
@@ -53,8 +62,7 @@
       "itemGroup.tabsiong_sngworldfood": "Siong\u0027s sng World - Food",
       "item.siongsngs_world.stonesteak": "Stone steak",
       "block.siongsngs_world.sng_cultivatesoil": "Cultivate Soil",
-      "item.siongsngs_world.stonesteak.description": "",
-      "depiction": ""
+      "item.siongsngs_world.stonesteak.description": ""
     }
   },
   "workspaceSettings": {

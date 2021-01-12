@@ -1,0 +1,42 @@
+{
+  "group": "cultivate_soil_formula",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:wheat_seeds"
+    },
+    "1": {
+      "item": "minecraft:wheat_seeds"
+    },
+    "2": {
+      "item": "minecraft:wheat_seeds"
+    },
+    "3": {
+      "item": "minecraft:wheat_seeds"
+    },
+    "4": {
+      "item": "minecraft:dirt"
+    },
+    "5": {
+      "item": "minecraft:wheat_seeds"
+    },
+    "6": {
+      "item": "minecraft:wheat_seeds"
+    },
+    "7": {
+      "item": "minecraft:wheat_seeds"
+    },
+    "8": {
+      "item": "minecraft:wheat_seeds"
+    }
+  },
+  "result": {
+    "item": "siongsngs_world:sng_cultivatesoil",
+    "count": 1
+  }
+}
