@@ -33,8 +33,13 @@ public class StonesteakItem extends SiongsngsWorldModElements.ModElement {
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
 			super(new Item.Properties().group(SiongSngworldfoodItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON)
-					.food((new Food.Builder()).hunger(2).saturation(0.2f).setAlwaysEdible().meat().build()));
+					.food((new Food.Builder()).hunger(2).saturation(0.2f).meat().build()));
 			setRegistryName("stonesteak");
+		}
+
+		@Override
+		public int getUseDuration(ItemStack stack) {
+			return 64;
 		}
 
 		@Override
@@ -45,7 +50,7 @@ public class StonesteakItem extends SiongsngsWorldModElements.ModElement {
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("\u4E0D\u4EFF\u5403\u5403\u770B?  \u53EF\u80FD\u6703\u611F\u89BA\u6709\u9EDE\u786C!!"));
+			list.add(new StringTextComponent("\u00A76\u4E0D\u4EFF\u5403\u5403\u770B?  \u00A7b\u53EF\u80FD\u6703\u611F\u89BA\u6709\u9EDE\u786C!!"));
 		}
 	}
 }

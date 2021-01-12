@@ -1,6 +1,7 @@
 {
   "itemGroup.tabsiong_sngworldblock": "菘菘的幻想世界-方塊",
-  "item.siongsngs_world.stonesteak": "石頭牛排",
   "itemGroup.tabsiong_sngworldfood": "菘菘的幻想世界-食物",
-  "block.siongsngs_world.sng_cultivatesoil": "培養土"
+  "item.siongsngs_world.stonesteak": "石頭牛排",
+  "block.siongsngs_world.sng_cultivatesoil": "培養土",
+  "item.siongsngs_world.stonesteak.description": "§6不仿吃吃看?  §b可能會感覺有點硬!!"
 }

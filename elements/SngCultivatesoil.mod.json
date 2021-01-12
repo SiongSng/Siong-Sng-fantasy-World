@@ -24,11 +24,11 @@
     "Mx": 1.0,
     "My": 1.0,
     "Mz": 1.0,
-    "name": "培養土",
+    "name": "Cultivate Soil",
     "specialInfo": [
-      "可以加快作物生長的培養土-生長速度加乘1"
+      "§b可以加快作物生長的培養土  §6生長速度加乘1"
     ],
-    "hardness": 3.0,
+    "hardness": 4.0,
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
@@ -122,7 +122,7 @@
     ],
     "frequencyPerChunks": 10,
     "frequencyOnChunk": 16,
-    "minGenerateHeight": 0,
+    "minGenerateHeight": 90,
     "maxGenerateHeight": 101
   }
 }
