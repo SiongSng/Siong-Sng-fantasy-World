@@ -1,0 +1,28 @@
+{
+  "_fv": 15,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "sng_stone_steak",
+    "customModelName": "Normal",
+    "name": "石頭牛排",
+    "rarity": "COMMON",
+    "specialInfo": [
+      "不仿吃吃看?  可能會感覺有點硬!!"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:SiongSngworldfood"
+    },
+    "stackSize": 64,
+    "nutritionalValue": 2,
+    "saturation": 0.2,
+    "eatingSpeed": 32,
+    "resultItem": {
+      "value": ""
+    },
+    "forDogs": true,
+    "isAlwaysEdible": true,
+    "animation": "eat",
+    "hasGlow": false
+  }
+}

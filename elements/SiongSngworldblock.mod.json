@@ -1,0 +1,11 @@
+{
+  "_fv": 15,
+  "_type": "tab",
+  "definition": {
+    "name": "菘菘的幻想世界-方塊",
+    "icon": {
+      "value": "Blocks.QUARTZ_BLOCK#0"
+    },
+    "showSearch": false
+  }
+}

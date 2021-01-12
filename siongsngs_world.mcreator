@@ -1,0 +1,77 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "SiongSngworldblock",
+      "type": "tab",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "siong_sngworldblock"
+    },
+    {
+      "name": "SngCultivatesoil",
+      "type": "block",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sng_cultivatesoil"
+    },
+    {
+      "name": "Stonesteak",
+      "type": "food",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stonesteak"
+    },
+    {
+      "name": "SiongSngworldfood",
+      "type": "tab",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "siong_sngworldfood"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "zh_tw": {
+      "itemGroup.tabsiong_sngworldblock": "菘菘的幻想世界-方塊",
+      "item.siongsngs_world.stonesteak": "石頭牛排",
+      "itemGroup.tabsiong_sngworldfood": "菘菘的幻想世界-食物",
+      "block.siongsngs_world.sng_cultivatesoil": "培養土"
+    },
+    "en_us": {
+      "itemGroup.tabsiong_sngworldblock": "菘菘的幻想世界-方塊",
+      "item.siongsngs_world.stonesteak": "石頭牛排",
+      "itemGroup.tabsiong_sngworldfood": "菘菘的幻想世界-食物",
+      "block.siongsngs_world.sng_cultivatesoil": "培養土"
+    }
+  },
+  "workspaceSettings": {
+    "modid": "siongsngs_world",
+    "modName": "菘菘的幻想世界",
+    "version": "1.0.0",
+    "description": "這是一個由菘菘所開發的多世界模組，旨在希望大家能夠透過該模組玩到更多的樣性的Minecraft",
+    "author": "菘菘(Barry23412)",
+    "websiteURL": "https://discord.gg/5w9BUM4",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.16.4",
+    "credits": "@2021 By Siong Sng",
+    "modElementsPackage": "net.mcreator.siongsngsworld",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202000652319
+}
