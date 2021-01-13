@@ -99,9 +99,6 @@
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
-        "value": "Blocks.STONE#0"
-      },
-      {
         "value": "Blocks.GRASS"
       },
       {
@@ -123,6 +120,6 @@
     "frequencyPerChunks": 10,
     "frequencyOnChunk": 16,
     "minGenerateHeight": 55,
-    "maxGenerateHeight": 106
+    "maxGenerateHeight": 110
   }
 }

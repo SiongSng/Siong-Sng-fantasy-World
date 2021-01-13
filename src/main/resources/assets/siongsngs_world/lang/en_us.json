@@ -1,10 +1,14 @@
 {
-  "block.siongsngs_world.copper_ore": "Copper Ore",
-  "itemGroup.tabsiong_sng_ore": "Siong Sng\u0027s World-Ore",
+  "item.siongsngs_world.copperparticle": "Copper particle",
   "block.siongsngs_world.ultivatesoil": "Cultivate Soil",
-  "itemGroup.tabsiong_sngworldblock": "Siong Sng\u0027s World-Block",
   "itemGroup.tabsiong_sngworldfood": "Siong Sng\u0027s World-Food",
+  "advancements.copper_oreprogress.title": "get Copper Ore!!",
+  "item.siongsngs_world.copperingot": "Copper ingot",
+  "advancements.copper_oreprogress.descr": "Dig the copper Ore!!",
+  "itemGroup.tabsiong_sng_ore": "Siong Sng\u0027s World-Ore",
+  "block.siongsngs_world.copper_ore": "Copper Ore",
+  "itemGroup.tabsiong_sngworldblock": "Siong Sng\u0027s World-Block",
+  "item.siongsngs_world.siong_sng_world": "Siong Sng World Portal Igniter",
   "item.siongsngs_world.stonesteak": "Stone steak",
-  "item.siongsngs_world.stonesteak.description": "",
-  "item.siongsngs_world.copperingot": "Copper ingot"
+  "item.siongsngs_world.stonesteak.description": ""
 }

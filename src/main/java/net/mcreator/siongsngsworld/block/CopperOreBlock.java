@@ -96,12 +96,18 @@ public class CopperOreBlock extends SiongsngsWorldModElements.ModElement {
 				boolean blockCriteria = false;
 				if (blockAt.getBlock() == Blocks.STONE.getDefaultState().getBlock())
 					blockCriteria = true;
+				if (blockAt.getBlock() == Blocks.GRANITE.getDefaultState().getBlock())
+					blockCriteria = true;
+				if (blockAt.getBlock() == Blocks.DIORITE.getDefaultState().getBlock())
+					blockCriteria = true;
+				if (blockAt.getBlock() == Blocks.ANDESITE.getDefaultState().getBlock())
+					blockCriteria = true;
 				return blockCriteria;
 			}
 
 			protected IRuleTestType<?> getType() {
 				return IRuleTestType.BLOCK_MATCH;
 			}
-		}, block.getDefaultState(), 8)).range(100).square().func_242731_b(6));
+		}, block.getDefaultState(), 9)).range(100).square().func_242731_b(21));
 	}
 }

@@ -1,0 +1,45 @@
+{
+  "_fv": 15,
+  "_type": "dimension",
+  "definition": {
+    "biomesInDimension": [
+      {
+        "value": "ocean"
+      },
+      {
+        "value": "plains"
+      }
+    ],
+    "worldGenType": "Normal world gen",
+    "mainFillerBlock": {
+      "value": "CUSTOM:SngCultivatesoil"
+    },
+    "fluidBlock": {
+      "value": "Blocks.WATER"
+    },
+    "canRespawnHere": true,
+    "hasFog": true,
+    "isDark": false,
+    "doesWaterVaporize": false,
+    "sleepResult": "ALLOW",
+    "hasSkyLight": true,
+    "imitateOverworldBehaviour": true,
+    "portalFrame": {
+      "value": "CUSTOM:SngCultivatesoil"
+    },
+    "portalParticles": {
+      "value": "EXPLOSION_NORMAL"
+    },
+    "portalLuminance": 0,
+    "portalSound": {
+      "value": "block.portal.ambient"
+    },
+    "igniterName": "Siong Sng World Portal Igniter",
+    "igniterTab": {
+      "value": "TOOLS"
+    },
+    "texture": "copper_particles",
+    "portalTexture": "coal_ore",
+    "enablePortal": true
+  }
+}

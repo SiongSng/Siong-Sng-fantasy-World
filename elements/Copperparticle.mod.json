@@ -3,9 +3,9 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "copper_ore",
+    "texture": "copper_particles",
     "customModelName": "Normal",
-    "name": "Copper ingot",
+    "name": "Copper particle",
     "rarity": "COMMON",
     "creativeTab": {
       "value": "CUSTOM:SiongSngOre"
@@ -24,7 +24,7 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "§b使用銅礦燒製而成的金屬，被廣泛使用，可以做出許多物品。"
+      "§b可以使用銅錠分解而成。 §6專門用於製作小部件。"
     ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",

@@ -98,11 +98,9 @@ public class SngCultivatesoilBlock extends SiongsngsWorldModElements.ModElement 
 					return false;
 				return super.generate(world, generator, rand, pos, config);
 			}
-		}.withConfiguration(new OreFeatureConfig(new BlockMatchRuleTest(Blocks.STONE.getDefaultState().getBlock()) {
+		}.withConfiguration(new OreFeatureConfig(new BlockMatchRuleTest(Blocks.GRASS_BLOCK.getDefaultState().getBlock()) {
 			public boolean test(BlockState blockAt, Random random) {
 				boolean blockCriteria = false;
-				if (blockAt.getBlock() == Blocks.STONE.getDefaultState().getBlock())
-					blockCriteria = true;
 				if (blockAt.getBlock() == Blocks.GRASS_BLOCK.getDefaultState().getBlock())
 					blockCriteria = true;
 				if (blockAt.getBlock() == Blocks.GRASS_PATH.getDefaultState().getBlock())
@@ -121,6 +119,6 @@ public class SngCultivatesoilBlock extends SiongsngsWorldModElements.ModElement 
 			protected IRuleTestType<?> getType() {
 				return IRuleTestType.BLOCK_MATCH;
 			}
-		}, block.getDefaultState(), 16)).range(106).square().func_242731_b(10));
+		}, block.getDefaultState(), 16)).range(110).square().func_242731_b(10));
 	}
 }
