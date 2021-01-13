@@ -1,7 +1,10 @@
 {
+  "block.siongsngs_world.copper_ore": "銅礦",
+  "itemGroup.tabsiong_sng_ore": "菘菘的幻想世界-礦物",
+  "block.siongsngs_world.ultivatesoil": "培養土",
   "itemGroup.tabsiong_sngworldblock": "菘菘的幻想世界-方塊",
   "itemGroup.tabsiong_sngworldfood": "菘菘的幻想世界-食物",
   "item.siongsngs_world.stonesteak": "石頭牛排",
-  "block.siongsngs_world.sng_cultivatesoil": "培養土",
-  "item.siongsngs_world.stonesteak.description": "§6不仿吃吃看?  §b可能會感覺有點硬!!"
+  "item.siongsngs_world.stonesteak.description": "§6不仿吃吃看?  §b可能會感覺有點硬!!",
+  "item.siongsngs_world.copperingot": "銅錠"
 }

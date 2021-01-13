@@ -17,7 +17,7 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "sng_cultivatesoil"
+      "registry_name": "ultivatesoil"
     },
     {
       "name": "Stonesteak",
@@ -45,24 +45,66 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "cultivate_soilformula"
+    },
+    {
+      "name": "CopperOre",
+      "type": "block",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copper_ore"
+    },
+    {
+      "name": "SiongSngOre",
+      "type": "tab",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "siong_sng_ore"
+    },
+    {
+      "name": "Copperingot",
+      "type": "item",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copperingot"
+    },
+    {
+      "name": "CopperingotFiringrecipe",
+      "type": "recipe",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copperingot_firingrecipe"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "zh_tw": {
+      "block.siongsngs_world.copper_ore": "銅礦",
+      "itemGroup.tabsiong_sng_ore": "菘菘的幻想世界-礦物",
+      "block.siongsngs_world.ultivatesoil": "培養土",
       "itemGroup.tabsiong_sngworldblock": "菘菘的幻想世界-方塊",
       "itemGroup.tabsiong_sngworldfood": "菘菘的幻想世界-食物",
       "item.siongsngs_world.stonesteak": "石頭牛排",
-      "block.siongsngs_world.sng_cultivatesoil": "培養土",
-      "item.siongsngs_world.stonesteak.description": "§6不仿吃吃看?  §b可能會感覺有點硬!!"
+      "item.siongsngs_world.stonesteak.description": "§6不仿吃吃看?  §b可能會感覺有點硬!!",
+      "item.siongsngs_world.copperingot": "銅錠"
     },
     "en_us": {
-      "itemGroup.tabsiong_sngworldblock": "Siong\u0027s sng World - Block",
-      "itemGroup.tabsiong_sngworldfood": "Siong\u0027s sng World - Food",
+      "block.siongsngs_world.copper_ore": "Copper Ore",
+      "itemGroup.tabsiong_sng_ore": "Siong Sng\u0027s World-Ore",
+      "block.siongsngs_world.ultivatesoil": "Cultivate Soil",
+      "itemGroup.tabsiong_sngworldblock": "Siong Sng\u0027s World-Block",
+      "itemGroup.tabsiong_sngworldfood": "Siong Sng\u0027s World-Food",
       "item.siongsngs_world.stonesteak": "Stone steak",
-      "block.siongsngs_world.sng_cultivatesoil": "Cultivate Soil",
-      "item.siongsngs_world.stonesteak.description": ""
+      "item.siongsngs_world.stonesteak.description": "",
+      "item.siongsngs_world.copperingot": "Copper ingot"
     }
   },
   "workspaceSettings": {

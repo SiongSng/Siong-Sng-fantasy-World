@@ -1,5 +1,5 @@
 {
-  "parent": "siongsngs_world:block/sng_cultivatesoil",
+  "parent": "siongsngs_world:block/ultivatesoil",
   "display": {
     "thirdperson": {
       "rotation": [

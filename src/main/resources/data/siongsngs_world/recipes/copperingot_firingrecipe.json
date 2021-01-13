@@ -1,0 +1,12 @@
+{
+  "group": "copper_ingot_firing_recipe",
+  "type": "minecraft:smelting",
+  "experience": 6,
+  "cookingtime": 355,
+  "ingredient": {
+    "item": "siongsngs_world:copper_ore"
+  },
+  "result": {
+    "item": "siongsngs_world:copperingot"
+  }
+}

@@ -1,7 +1,10 @@
 {
-  "itemGroup.tabsiong_sngworldblock": "Siong\u0027s sng World - Block",
-  "itemGroup.tabsiong_sngworldfood": "Siong\u0027s sng World - Food",
+  "block.siongsngs_world.copper_ore": "Copper Ore",
+  "itemGroup.tabsiong_sng_ore": "Siong Sng\u0027s World-Ore",
+  "block.siongsngs_world.ultivatesoil": "Cultivate Soil",
+  "itemGroup.tabsiong_sngworldblock": "Siong Sng\u0027s World-Block",
+  "itemGroup.tabsiong_sngworldfood": "Siong Sng\u0027s World-Food",
   "item.siongsngs_world.stonesteak": "Stone steak",
-  "block.siongsngs_world.sng_cultivatesoil": "Cultivate Soil",
-  "item.siongsngs_world.stonesteak.description": ""
+  "item.siongsngs_world.stonesteak.description": "",
+  "item.siongsngs_world.copperingot": "Copper ingot"
 }

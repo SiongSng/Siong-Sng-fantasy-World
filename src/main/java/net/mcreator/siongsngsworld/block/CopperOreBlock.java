@@ -6,7 +6,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -23,7 +22,6 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.RegistryKey;
-import net.minecraft.util.Direction;
 import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
@@ -35,7 +33,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.siongsngsworld.itemgroup.SiongSngworldblockItemGroup;
+import net.mcreator.siongsngsworld.itemgroup.SiongSngOreItemGroup;
 import net.mcreator.siongsngsworld.SiongsngsWorldModElements;
 
 import java.util.Random;
@@ -43,25 +41,25 @@ import java.util.List;
 import java.util.Collections;
 
 @SiongsngsWorldModElements.ModElement.Tag
-public class SngCultivatesoilBlock extends SiongsngsWorldModElements.ModElement {
-	@ObjectHolder("siongsngs_world:ultivatesoil")
+public class CopperOreBlock extends SiongsngsWorldModElements.ModElement {
+	@ObjectHolder("siongsngs_world:copper_ore")
 	public static final Block block = null;
-	public SngCultivatesoilBlock(SiongsngsWorldModElements instance) {
-		super(instance, 2);
+	public CopperOreBlock(SiongsngsWorldModElements instance) {
+		super(instance, 5);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items.add(
-				() -> new BlockItem(block, new Item.Properties().group(SiongSngworldblockItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items
+				.add(() -> new BlockItem(block, new Item.Properties().group(SiongSngOreItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ORGANIC).sound(SoundType.GROUND).hardnessAndResistance(4f, 10f).setLightLevel(s -> 0)
-					.harvestLevel(1).harvestTool(ToolType.SHOVEL));
-			setRegistryName("ultivatesoil");
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.METAL).hardnessAndResistance(3f, 15f).setLightLevel(s -> 1).harvestLevel(3)
+					.harvestTool(ToolType.PICKAXE).setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true));
+			setRegistryName("copper_ore");
 		}
 
 		@Override
@@ -69,12 +67,7 @@ public class SngCultivatesoilBlock extends SiongsngsWorldModElements.ModElement 
 		public void addInformation(ItemStack itemstack, IBlockReader world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
 			list.add(new StringTextComponent(
-					"\u00A7b\u53EF\u4EE5\u52A0\u5FEB\u4F5C\u7269\u751F\u9577\u7684\u57F9\u990A\u571F  \u00A76\u751F\u9577\u901F\u5EA6\u52A0\u4E581"));
-		}
-
-		@Override
-		public boolean canSustainPlant(BlockState state, IBlockReader world, BlockPos pos, Direction direction, IPlantable plantable) {
-			return true;
+					"\u00A7b\u9019\u500B\u4E16\u754C\u4E0A\u5E38\u898B\u7684\u7926\u7269\u4E4B\u4E00\uFF0C\u5230\u8655\u90FD\u6709\u5B83\u7684\u8E64\u5F71\u3002"));
 		}
 
 		@Override
@@ -103,24 +96,12 @@ public class SngCultivatesoilBlock extends SiongsngsWorldModElements.ModElement 
 				boolean blockCriteria = false;
 				if (blockAt.getBlock() == Blocks.STONE.getDefaultState().getBlock())
 					blockCriteria = true;
-				if (blockAt.getBlock() == Blocks.GRASS_BLOCK.getDefaultState().getBlock())
-					blockCriteria = true;
-				if (blockAt.getBlock() == Blocks.GRASS_PATH.getDefaultState().getBlock())
-					blockCriteria = true;
-				if (blockAt.getBlock() == Blocks.MYCELIUM.getDefaultState().getBlock())
-					blockCriteria = true;
-				if (blockAt.getBlock() == Blocks.DIRT.getDefaultState().getBlock())
-					blockCriteria = true;
-				if (blockAt.getBlock() == Blocks.COARSE_DIRT.getDefaultState().getBlock())
-					blockCriteria = true;
-				if (blockAt.getBlock() == Blocks.PODZOL.getDefaultState().getBlock())
-					blockCriteria = true;
 				return blockCriteria;
 			}
 
 			protected IRuleTestType<?> getType() {
 				return IRuleTestType.BLOCK_MATCH;
 			}
-		}, block.getDefaultState(), 16)).range(106).square().func_242731_b(10));
+		}, block.getDefaultState(), 8)).range(100).square().func_242731_b(6));
 	}
 }

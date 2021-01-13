@@ -2,9 +2,9 @@
   "_fv": 15,
   "_type": "tab",
   "definition": {
-    "name": "Siong Sng's World-Block",
+    "name": "Siong Sng's World-Ore",
     "icon": {
-      "value": "Blocks.QUARTZ_BLOCK#0"
+      "value": "Blocks.DIAMOND_ORE"
     },
     "showSearch": false
   }

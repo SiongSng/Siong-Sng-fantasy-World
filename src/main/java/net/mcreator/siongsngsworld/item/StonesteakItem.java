@@ -50,7 +50,7 @@ public class StonesteakItem extends SiongsngsWorldModElements.ModElement {
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("\u00a76\u4e0d\u4eff\u5403\u5403\u770b?  \u00a7b\u53ef\u80fd\u6703\u611f\u89ba\u6709\u9ede\u786c!!"));
+			list.add(new StringTextComponent("\u00A76\u4E0D\u4EFF\u5403\u5403\u770B?  \u00A7b\u53EF\u80FD\u6703\u611F\u89BA\u6709\u9EDE\u786C!!"));
 		}
 	}
 }
