@@ -34,7 +34,7 @@
     "portalSound": {
       "value": "block.portal.ambient"
     },
-    "igniterName": "Siong Sng World Portal Igniter",
+    "igniterName": "Siong Sng World Activate the portal tool",
     "igniterTab": {
       "value": "TOOLS"
     },

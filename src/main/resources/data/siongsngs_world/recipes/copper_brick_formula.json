@@ -1,0 +1,42 @@
+{
+  "group": "copper_brick_formula",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "siongsngs_world:copperingot"
+    },
+    "1": {
+      "item": "siongsngs_world:copperingot"
+    },
+    "2": {
+      "item": "siongsngs_world:copperingot"
+    },
+    "3": {
+      "item": "siongsngs_world:copperingot"
+    },
+    "4": {
+      "item": "siongsngs_world:copperingot"
+    },
+    "5": {
+      "item": "siongsngs_world:copperingot"
+    },
+    "6": {
+      "item": "siongsngs_world:copperingot"
+    },
+    "7": {
+      "item": "siongsngs_world:copperingot"
+    },
+    "8": {
+      "item": "siongsngs_world:copperingot"
+    }
+  },
+  "result": {
+    "item": "siongsngs_world:copper_block",
+    "count": 1
+  }
+}
