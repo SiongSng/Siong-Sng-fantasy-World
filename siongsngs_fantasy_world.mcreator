@@ -194,15 +194,6 @@
       "registry_name": "copperplate"
     },
     {
-      "name": "Copperplateformula",
-      "type": "recipe",
-      "sortid": 21,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "copperplateformula"
-    },
-    {
       "name": "Blueflame",
       "type": "particle",
       "sortid": 22,
@@ -219,6 +210,91 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "ironplatemakingmachine"
+    },
+    {
+      "name": "Ironplatepressgui",
+      "type": "gui",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ironplatepressgui"
+    },
+    {
+      "name": "IronplatemakingmachineZaiFangKuaiShangYouJian",
+      "type": "procedure",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ironplatemakingmachine_zai_fang_kuai_shang_you_jian",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Gui1",
+      "type": "procedure",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gui_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ironplatepressformula",
+      "type": "recipe",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ironplatepressformula"
+    },
+    {
+      "name": "ExitGui",
+      "type": "procedure",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "exit_gui",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -227,10 +303,11 @@
     "zh_tw": {
       "itemGroup.tabsiong_sngworldfood": "菘菘的幻想世界-食物",
       "block.siongsngs_fantasy_world.ultivatesoil": "培養土",
-      "item.siongsngs_fantasy_world.copperplate": "銅片",
+      "item.siongsngs_fantasy_world.copperplate": "銅板",
       "advancements.copper_oreprogress.title": "取得銅礦!!",
       "item.siongsngs_fantasy_world.irongear": "鐵齒輪",
       "item.siongsngs_fantasy_world.siong_sng_world": "菘菘的幻想世界-激活傳送門工具",
+      "item.siongsngs_fantasy_world.coppergear": "銅齒輪",
       "itemGroup.tabsiong_sng_ore": "菘菘的幻想世界-礦物",
       "advancements.copper_oreprogress.descr": "挖取銅礦!!",
       "itemGroup.tabsiong_sng_industrialcomponents": "菘菘的幻想世界-工業元件",
@@ -248,6 +325,7 @@
       "advancements.copper_oreprogress.title": "get Copper Ore!!",
       "item.siongsngs_fantasy_world.irongear": "Iron gear",
       "item.siongsngs_fantasy_world.siong_sng_world": "Siong Sng World Activate the portal tool",
+      "item.siongsngs_fantasy_world.coppergear": "Copper gear",
       "itemGroup.tabsiong_sng_ore": "Siong Sng\u0027s World-Ore",
       "advancements.copper_oreprogress.descr": "Dig the copper Ore!!",
       "itemGroup.tabsiong_sng_industrialcomponents": "Siong Sng\u0027s World-Industrial components",

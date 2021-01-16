@@ -1,0 +1,92 @@
+{
+  "_fv": 15,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "text": "關閉視窗",
+          "onClick": {
+            "name": "ExitGui"
+          },
+          "width": 41,
+          "height": 20,
+          "name": "關閉視窗",
+          "x": 128,
+          "y": 39
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "鐵製壓板機",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "鐵製壓板機",
+          "x": 191,
+          "y": 44
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "開始製造",
+          "onClick": {
+            "name": "Gui1"
+          },
+          "width": 57,
+          "height": 20,
+          "name": "開始製造",
+          "x": 186,
+          "y": 89
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 2,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #2",
+          "x": 249,
+          "y": 62
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #1",
+          "x": 168,
+          "y": 62
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 3,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #3",
+          "x": 249,
+          "y": 89
+        }
+      }
+    ]
+  }
+}

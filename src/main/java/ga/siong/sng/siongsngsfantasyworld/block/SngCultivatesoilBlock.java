@@ -119,6 +119,6 @@ public class SngCultivatesoilBlock extends SiongsngsFantasyWorldModElements.ModE
 			protected IRuleTestType<?> getType() {
 				return IRuleTestType.BLOCK_MATCH;
 			}
-		}, block.getDefaultState(), 16)).range(110).square().func_242731_b(10));
+		}, block.getDefaultState(), 16)).range(110).square().func_242731_b(13));
 	}
 }
