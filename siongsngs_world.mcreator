@@ -241,7 +241,7 @@
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.16.4",
     "credits": "@2021 By Siong Sng",
-    "modElementsPackage": "net.mcreator.siongsngsworld",
+    "modElementsPackage": "ga.siong.sng.siongsngsworld",
     "lockBaseModFiles": false
   },
   "mcreatorVersion": 202000652319

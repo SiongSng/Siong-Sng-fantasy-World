@@ -1,5 +1,5 @@
 
-package net.mcreator.siongsngsworld.block;
+package ga.siong.sng.siongsngsworld.block;
 
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -35,12 +35,12 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.siongsngsworld.itemgroup.SiongSngworldblockItemGroup;
-import net.mcreator.siongsngsworld.SiongsngsWorldModElements;
-
 import java.util.Random;
 import java.util.List;
 import java.util.Collections;
+
+import ga.siong.sng.siongsngsworld.itemgroup.SiongSngworldblockItemGroup;
+import ga.siong.sng.siongsngsworld.SiongsngsWorldModElements;
 
 @SiongsngsWorldModElements.ModElement.Tag
 public class SngCultivatesoilBlock extends SiongsngsWorldModElements.ModElement {

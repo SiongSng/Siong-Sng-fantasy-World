@@ -1,5 +1,5 @@
 
-package net.mcreator.siongsngsworld.item;
+package ga.siong.sng.siongsngsworld.item;
 
 import net.minecraftforge.registries.ObjectHolder;
 
@@ -12,17 +12,17 @@ import net.minecraft.item.Item;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.siongsngsworld.itemgroup.SiongSngIndustrialcomponentsItemGroup;
-import net.mcreator.siongsngsworld.SiongsngsWorldModElements;
-
 import java.util.List;
 
+import ga.siong.sng.siongsngsworld.itemgroup.SiongSngOreItemGroup;
+import ga.siong.sng.siongsngsworld.SiongsngsWorldModElements;
+
 @SiongsngsWorldModElements.ModElement.Tag
-public class CoppergearItem extends SiongsngsWorldModElements.ModElement {
-	@ObjectHolder("siongsngs_world:coppergear")
+public class CopperparticleItem extends SiongsngsWorldModElements.ModElement {
+	@ObjectHolder("siongsngs_world:copperparticle")
 	public static final Item block = null;
-	public CoppergearItem(SiongsngsWorldModElements instance) {
-		super(instance, 15);
+	public CopperparticleItem(SiongsngsWorldModElements instance) {
+		super(instance, 10);
 	}
 
 	@Override
@@ -31,8 +31,8 @@ public class CoppergearItem extends SiongsngsWorldModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(SiongSngIndustrialcomponentsItemGroup.tab).maxStackSize(16).rarity(Rarity.COMMON));
-			setRegistryName("coppergear");
+			super(new Item.Properties().group(SiongSngOreItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
+			setRegistryName("copperparticle");
 		}
 
 		@Override
@@ -53,7 +53,8 @@ public class CoppergearItem extends SiongsngsWorldModElements.ModElement {
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("\u00A7b\u8A31\u591A\u6A5F\u5668\u90FD\u6703\u7528\u5230\u7684\u91CD\u8981\u96F6\u4EF6\u3002"));
+			list.add(new StringTextComponent(
+					"\u00A7b\u53EF\u4EE5\u4F7F\u7528\u9285\u9320\u5206\u89E3\u800C\u6210\u3002 \u00A76\u5C08\u9580\u7528\u65BC\u88FD\u4F5C\u5C0F\u90E8\u4EF6\u3002"));
 		}
 	}
 }

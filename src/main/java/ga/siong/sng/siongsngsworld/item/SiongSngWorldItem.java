@@ -1,5 +1,5 @@
 
-package net.mcreator.siongsngsworld.item;
+package ga.siong.sng.siongsngsworld.item;
 
 import net.minecraftforge.registries.ObjectHolder;
 
@@ -12,7 +12,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.PlayerEntity;
 
-import net.mcreator.siongsngsworld.world.dimension.SiongSngWorldDimension;
+import ga.siong.sng.siongsngsworld.world.dimension.SiongSngWorldDimension;
 
 public class SiongSngWorldItem extends Item {
 	@ObjectHolder("siongsngs_world:siong_sng_world")

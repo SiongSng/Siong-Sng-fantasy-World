@@ -1,5 +1,5 @@
 
-package net.mcreator.siongsngsworld.item;
+package ga.siong.sng.siongsngsworld.item;
 
 import net.minecraftforge.registries.ObjectHolder;
 
@@ -13,10 +13,10 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Food;
 import net.minecraft.client.util.ITooltipFlag;
 
-import net.mcreator.siongsngsworld.itemgroup.SiongSngworldfoodItemGroup;
-import net.mcreator.siongsngsworld.SiongsngsWorldModElements;
-
 import java.util.List;
+
+import ga.siong.sng.siongsngsworld.itemgroup.SiongSngworldfoodItemGroup;
+import ga.siong.sng.siongsngsworld.SiongsngsWorldModElements;
 
 @SiongsngsWorldModElements.ModElement.Tag
 public class StonesteakItem extends SiongsngsWorldModElements.ModElement {

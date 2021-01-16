@@ -1,5 +1,5 @@
 
-package net.mcreator.siongsngsworld.block;
+package ga.siong.sng.siongsngsworld.block;
 
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.common.ToolType;
@@ -19,11 +19,11 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.siongsngsworld.itemgroup.SiongSngOreItemGroup;
-import net.mcreator.siongsngsworld.SiongsngsWorldModElements;
-
 import java.util.List;
 import java.util.Collections;
+
+import ga.siong.sng.siongsngsworld.itemgroup.SiongSngOreItemGroup;
+import ga.siong.sng.siongsngsworld.SiongsngsWorldModElements;
 
 @SiongsngsWorldModElements.ModElement.Tag
 public class CopperBlockBlock extends SiongsngsWorldModElements.ModElement {
