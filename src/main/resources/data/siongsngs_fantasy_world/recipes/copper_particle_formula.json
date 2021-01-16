@@ -1,0 +1,13 @@
+{
+  "group": "copper_particle_formula",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "siongsngs_fantasy_world:copperingot"
+    }
+  ],
+  "result": {
+    "item": "siongsngs_fantasy_world:copperparticle",
+    "count": 9
+  }
+}
