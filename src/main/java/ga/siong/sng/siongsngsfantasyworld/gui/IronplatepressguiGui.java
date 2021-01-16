@@ -41,7 +41,6 @@ import java.util.Map;
 import java.util.HashMap;
 
 import ga.siong.sng.siongsngsfantasyworld.procedures.Gui1Procedure;
-import ga.siong.sng.siongsngsfantasyworld.procedures.ExitGuiProcedure;
 import ga.siong.sng.siongsngsfantasyworld.SiongsngsFantasyWorldModElements;
 import ga.siong.sng.siongsngsfantasyworld.SiongsngsFantasyWorldMod;
 
@@ -125,15 +124,15 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 					}
 				}
 			}
-			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 124, 26) {
+			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 123, 26) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 43, 26) {
+			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 40, 29) {
 			}));
-			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 124, 53) {
+			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 123, 53) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
@@ -342,6 +341,8 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 			int k = (this.width - this.xSize) / 2;
 			int l = (this.height - this.ySize) / 2;
 			this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
+			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("siongsngs_fantasy_world:textures/arrowanimation1.png"));
+			this.blit(ms, this.guiLeft + 65, this.guiTop + 21, 0, 0, 41, 29, 41, 29);
 		}
 
 		@Override
@@ -360,7 +361,7 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-			this.font.drawString(ms, "\u9435\u88FD\u58D3\u677F\u6A5F", 65, 7, -12829636);
+			this.font.drawString(ms, "\u9435\u88FD\u58D3\u677F\u6A5F", 64, 5, -3790097);
 		}
 
 		@Override
@@ -373,13 +374,9 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 		public void init(Minecraft minecraft, int width, int height) {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
-			this.addButton(new Button(this.guiLeft + 2, this.guiTop + 2, 41, 20, new StringTextComponent("關閉視窗"), e -> {
+			this.addButton(new Button(this.guiLeft + 59, this.guiTop + 55, 57, 20, new StringTextComponent("製作"), e -> {
 				SiongsngsFantasyWorldMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
 				handleButtonAction(entity, 0, x, y, z);
-			}));
-			this.addButton(new Button(this.guiLeft + 60, this.guiTop + 52, 57, 20, new StringTextComponent("開始製造"), e -> {
-				SiongsngsFantasyWorldMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
-				handleButtonAction(entity, 1, x, y, z);
 			}));
 		}
 	}
@@ -473,14 +470,6 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 		if (buttonID == 0) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				ExitGuiProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (buttonID == 1) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
 				Gui1Procedure.executeProcedure($_dependencies);
 			}
 		}

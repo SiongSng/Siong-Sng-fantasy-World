@@ -11,54 +11,44 @@
     "doesPauseGame": false,
     "components": [
       {
-        "type": "button",
-        "data": {
-          "text": "關閉視窗",
-          "onClick": {
-            "name": "ExitGui"
-          },
-          "width": 41,
-          "height": 20,
-          "name": "關閉視窗",
-          "x": 128,
-          "y": 39
-        }
-      },
-      {
         "type": "label",
         "data": {
           "text": "鐵製壓板機",
           "color": {
-            "value": -12829636,
+            "value": -3790097,
             "falpha": 0.0
           },
           "name": "鐵製壓板機",
-          "x": 191,
-          "y": 44
+          "x": 190,
+          "y": 42
         }
       },
       {
         "type": "button",
         "data": {
-          "text": "開始製造",
+          "text": "製作",
           "onClick": {
             "name": "Gui1"
           },
           "width": 57,
           "height": 20,
-          "name": "開始製造",
-          "x": 186,
-          "y": 89
+          "name": "製作",
+          "x": 185,
+          "y": 92
         }
       },
       {
         "type": "outputslot",
         "data": {
+          "color": {
+            "value": -178,
+            "falpha": 0.0
+          },
           "id": 2,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
           "name": "Slot #2",
-          "x": 249,
+          "x": 248,
           "y": 62
         }
       },
@@ -68,23 +58,41 @@
           "inputLimit": {
             "value": ""
           },
+          "color": {
+            "value": -8847616,
+            "falpha": 0.0
+          },
           "id": 1,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
           "name": "Slot #1",
-          "x": 168,
-          "y": 62
+          "x": 165,
+          "y": 65
         }
       },
       {
         "type": "outputslot",
         "data": {
+          "color": {
+            "value": -178,
+            "falpha": 0.0
+          },
           "id": 3,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
           "name": "Slot #3",
-          "x": 249,
+          "x": 248,
           "y": 89
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrowanimation1.png",
+          "use1Xscale": false,
+          "name": "arrowanimation1.png",
+          "x": 191,
+          "y": 58
         }
       }
     ]

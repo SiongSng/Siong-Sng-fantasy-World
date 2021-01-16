@@ -262,12 +262,7 @@
       "ids": {},
       "registry_name": "gui_1",
       "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       }
     },
     {
@@ -280,21 +275,31 @@
       "registry_name": "ironplatepressformula"
     },
     {
-      "name": "ExitGui",
-      "type": "procedure",
+      "name": "Copperbrickbreakdown",
+      "type": "recipe",
       "sortid": 26,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "exit_gui",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
+      "registry_name": "copperbrickbreakdown"
+    },
+    {
+      "name": "Copperparticlesynthesis",
+      "type": "recipe",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copperparticlesynthesis"
+    },
+    {
+      "name": "Ironplate",
+      "type": "item",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ironplate"
     }
   ],
   "variable_elements": [],
@@ -315,6 +320,7 @@
       "item.siongsngs_fantasy_world.copperparticle": "»É²É",
       "block.siongsngs_fantasy_world.copper_ore": "»ÉÄq",
       "item.siongsngs_fantasy_world.copperingot": "ª¥¼öªº»É¿õ",
+      "item.siongsngs_fantasy_world.ironplate": "Iron plate",
       "block.siongsngs_fantasy_world.copper_block": "»É¿j",
       "block.siongsngs_fantasy_world.ironplatemakingmachine": "ÅK»sÀ£ªO¾÷"
     },
@@ -333,6 +339,7 @@
       "item.siongsngs_fantasy_world.copperparticle": "Copper particle",
       "block.siongsngs_fantasy_world.copper_ore": "Copper Ore",
       "item.siongsngs_fantasy_world.copperingot": "Copper ingot",
+      "item.siongsngs_fantasy_world.ironplate": "Iron plate",
       "block.siongsngs_fantasy_world.copper_block": "Copper brick",
       "block.siongsngs_fantasy_world.ironplatemakingmachine": "Iron plate press"
     }
