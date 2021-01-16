@@ -183,6 +183,42 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "irongearformula"
+    },
+    {
+      "name": "Copperplate",
+      "type": "item",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copperplate"
+    },
+    {
+      "name": "Copperplateformula",
+      "type": "recipe",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copperplateformula"
+    },
+    {
+      "name": "Blueflame",
+      "type": "particle",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blueflame"
+    },
+    {
+      "name": "Ironplatemakingmachine",
+      "type": "block",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ironplatemakingmachine"
     }
   ],
   "variable_elements": [],
@@ -191,6 +227,7 @@
     "zh_tw": {
       "itemGroup.tabsiong_sngworldfood": "菘菘的幻想世界-食物",
       "block.siongsngs_fantasy_world.ultivatesoil": "培養土",
+      "item.siongsngs_fantasy_world.copperplate": "銅片",
       "advancements.copper_oreprogress.title": "取得銅礦!!",
       "item.siongsngs_fantasy_world.irongear": "鐵齒輪",
       "item.siongsngs_fantasy_world.siong_sng_world": "菘菘的幻想世界-激活傳送門工具",
@@ -201,11 +238,13 @@
       "item.siongsngs_fantasy_world.copperparticle": "銅粒",
       "block.siongsngs_fantasy_world.copper_ore": "銅礦",
       "item.siongsngs_fantasy_world.copperingot": "炙熱的銅錠",
-      "block.siongsngs_fantasy_world.copper_block": "銅磚"
+      "block.siongsngs_fantasy_world.copper_block": "銅磚",
+      "block.siongsngs_fantasy_world.ironplatemakingmachine": "鐵製壓板機"
     },
     "en_us": {
       "itemGroup.tabsiong_sngworldfood": "Siong Sng\u0027s World-Food",
       "block.siongsngs_fantasy_world.ultivatesoil": "Cultivate Soil",
+      "item.siongsngs_fantasy_world.copperplate": "Copper plate",
       "advancements.copper_oreprogress.title": "get Copper Ore!!",
       "item.siongsngs_fantasy_world.irongear": "Iron gear",
       "item.siongsngs_fantasy_world.siong_sng_world": "Siong Sng World Activate the portal tool",
@@ -216,7 +255,8 @@
       "item.siongsngs_fantasy_world.copperparticle": "Copper particle",
       "block.siongsngs_fantasy_world.copper_ore": "Copper Ore",
       "item.siongsngs_fantasy_world.copperingot": "Copper ingot",
-      "block.siongsngs_fantasy_world.copper_block": "Copper brick"
+      "block.siongsngs_fantasy_world.copper_block": "Copper brick",
+      "block.siongsngs_fantasy_world.ironplatemakingmachine": "Iron plate press"
     }
   },
   "workspaceSettings": {

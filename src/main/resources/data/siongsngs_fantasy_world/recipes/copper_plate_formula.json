@@ -1,0 +1,33 @@
+{
+  "group": "copper_plate_formula",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23",
+    "45"
+  ],
+  "key": {
+    "0": {
+      "item": "siongsngs_fantasy_world:copperingot"
+    },
+    "1": {
+      "item": "siongsngs_fantasy_world:copperingot"
+    },
+    "2": {
+      "item": "siongsngs_fantasy_world:copperparticle"
+    },
+    "3": {
+      "item": "siongsngs_fantasy_world:copperparticle"
+    },
+    "4": {
+      "item": "siongsngs_fantasy_world:copperingot"
+    },
+    "5": {
+      "item": "siongsngs_fantasy_world:copperingot"
+    }
+  },
+  "result": {
+    "item": "siongsngs_fantasy_world:copperplate",
+    "count": 1
+  }
+}

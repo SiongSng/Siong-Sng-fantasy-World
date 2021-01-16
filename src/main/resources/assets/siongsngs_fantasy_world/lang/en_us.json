@@ -1,6 +1,7 @@
 {
   "itemGroup.tabsiong_sngworldfood": "Siong Sng\u0027s World-Food",
   "block.siongsngs_fantasy_world.ultivatesoil": "Cultivate Soil",
+  "item.siongsngs_fantasy_world.copperplate": "Copper plate",
   "advancements.copper_oreprogress.title": "get Copper Ore!!",
   "item.siongsngs_fantasy_world.irongear": "Iron gear",
   "item.siongsngs_fantasy_world.siong_sng_world": "Siong Sng World Activate the portal tool",
@@ -11,5 +12,6 @@
   "item.siongsngs_fantasy_world.copperparticle": "Copper particle",
   "block.siongsngs_fantasy_world.copper_ore": "Copper Ore",
   "item.siongsngs_fantasy_world.copperingot": "Copper ingot",
-  "block.siongsngs_fantasy_world.copper_block": "Copper brick"
+  "block.siongsngs_fantasy_world.copper_block": "Copper brick",
+  "block.siongsngs_fantasy_world.ironplatemakingmachine": "Iron plate press"
 }

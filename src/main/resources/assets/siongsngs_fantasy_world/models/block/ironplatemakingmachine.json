@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "siongsngs_fantasy_world:blocks/iron_plate_making_machine_side",
+    "up": "siongsngs_fantasy_world:blocks/iron_plate_press_top",
+    "north": "siongsngs_fantasy_world:blocks/iron_plate_press_positive",
+    "east": "siongsngs_fantasy_world:blocks/iron_plate_making_machine_side",
+    "south": "siongsngs_fantasy_world:blocks/iron_plate_making_machine_side",
+    "west": "siongsngs_fantasy_world:blocks/iron_plate_making_machine_side",
+    "particle": "siongsngs_fantasy_world:blocks/iron_plate_making_machine_side"
+  }
+}
