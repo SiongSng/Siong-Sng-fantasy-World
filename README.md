@@ -1,6 +1,6 @@
 [![Discord](https://discord.com/api/guilds/714087332738891857/widget.png)](https://discord.gg/5w9BUM4)
-[![最新發布](https://img.shields.io/github/release/rrt467778/McSngbot.svg)](https://github.com/rrt467778/McSngbot/releases/latest)
-[![GitHub downloads](https://img.shields.io/github/downloads/rrt467778/McSngbot/total.svg)](https://github.com/rrt467778/McSngbot/releases/latest)
+[![最新發布](https://img.shields.io/github/release/rrt467778/Siong-Sng-fantasy-World.svg)](https://github.com/rrt467778/McSngbot/releases/latest)
+[![GitHub downloads](https://img.shields.io/github/downloads/rrt467778/Siong-Sng-fantasy-World/total.svg)](https://github.com/rrt467778/McSngbot/releases/latest)
 
 
 # Siong Sng's fantasy World 菘菘的幻想世界
