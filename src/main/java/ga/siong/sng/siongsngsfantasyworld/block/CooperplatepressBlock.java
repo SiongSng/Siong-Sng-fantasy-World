@@ -38,11 +38,11 @@ import ga.siong.sng.siongsngsfantasyworld.itemgroup.SiongSngIndustrialcomponents
 import ga.siong.sng.siongsngsfantasyworld.SiongsngsFantasyWorldModElements;
 
 @SiongsngsFantasyWorldModElements.ModElement.Tag
-public class IronplatemakingmachineBlock extends SiongsngsFantasyWorldModElements.ModElement {
-	@ObjectHolder("siongsngs_fantasy_world:ironplatemakingmachine")
+public class CooperplatepressBlock extends SiongsngsFantasyWorldModElements.ModElement {
+	@ObjectHolder("siongsngs_fantasy_world:cooperplatepress")
 	public static final Block block = null;
-	public IronplatemakingmachineBlock(SiongsngsFantasyWorldModElements instance) {
-		super(instance, 22);
+	public CooperplatepressBlock(SiongsngsFantasyWorldModElements instance) {
+		super(instance, 29);
 	}
 
 	@Override
@@ -54,7 +54,7 @@ public class IronplatemakingmachineBlock extends SiongsngsFantasyWorldModElement
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(5f, 50f).setLightLevel(s -> 0));
-			setRegistryName("ironplatemakingmachine");
+			setRegistryName("cooperplatepress");
 		}
 
 		@Override
@@ -63,7 +63,7 @@ public class IronplatemakingmachineBlock extends SiongsngsFantasyWorldModElement
 			super.addInformation(itemstack, world, list, flag);
 			list.add(new StringTextComponent(
 					"\u00A7b\u53EF\u4EE5\u4F7F\u7528\u9435\u88FD\u58D3\u677F\u6A5F\u4F86\u88FD\u4F5C\u8A31\u591A\u677F\u5B50\uFF0C\u5347\u7D1A\u58D3\u677F\u6A5F\u53EF\u4EE5\u8B93\u58D3\u5236\u901F\u5EA6\u66F4\u5FEB\u3002"));
-			list.add(new StringTextComponent("\u58D3\u5236\u901F\u5EA6 --- X1"));
+			list.add(new StringTextComponent("\u58D3\u5236\u901F\u5EA6 --- X2"));
 		}
 
 		@Override

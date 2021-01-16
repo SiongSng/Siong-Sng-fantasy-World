@@ -470,6 +470,7 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 		if (buttonID == 0) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
 				Gui1Procedure.executeProcedure($_dependencies);
 			}
 		}
