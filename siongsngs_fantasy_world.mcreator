@@ -458,8 +458,8 @@
   "language_map": {
     "zh_tw": {
       "block.siongsngs_fantasy_world.Pressing_machine.error": "請放入物品",
-      "item.siongsngs_fantasy_world.copperplate": "銅板",
       "itemGroup.tabsiong_sngworldfood": "菘菘的幻想世界-食物",
+      "item.siongsngs_fantasy_world.copperplate": "銅板",
       "item.siongsngs_fantasy_world.irongear": "鐵齒輪",
       "block.siongsngs_fantasy_world.cooperplatepress": "銅製壓板機",
       "block.siongsngs_fantasy_world.siong_sng_portalframe": "菘菘的幻想世界傳送門框架",
@@ -490,8 +490,8 @@
     },
     "en_us": {
       "block.siongsngs_fantasy_world.Pressing_machine.error": "Please put in items",
-      "item.siongsngs_fantasy_world.copperplate": "Copper plate",
       "itemGroup.tabsiong_sngworldfood": "Siong Sng\u0027s World-Food",
+      "item.siongsngs_fantasy_world.copperplate": "Copper plate",
       "item.siongsngs_fantasy_world.irongear": "Iron gear",
       "block.siongsngs_fantasy_world.cooperplatepress": "Cooper plate press",
       "block.siongsngs_fantasy_world.siong_sng_portalframe": "Siong Sng\u0027s fantasy World Portal frame",
@@ -537,7 +537,7 @@
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.16.4",
     "credits": "@2021 By Siong Sng",
-    "modElementsPackage": "siong.sng.fantasy_world",
+    "modElementsPackage": "siongsng.fantasy_world",
     "lockBaseModFiles": false
   },
   "mcreatorVersion": 202000652319

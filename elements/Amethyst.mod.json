@@ -10,7 +10,7 @@
     "textureBack": "",
     "renderType": 2,
     "customModelName": "crystal_3:default",
-    "rotationMode": 4,
+    "rotationMode": 0,
     "emissiveRendering": true,
     "displayFluidOverlay": true,
     "itemTexture": "",
