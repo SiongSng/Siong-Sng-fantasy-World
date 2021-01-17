@@ -66,6 +66,7 @@ import it.unimi.dsi.fastutil.objects.Object2ObjectMap;
 
 import ga.siong.sng.siongsngsfantasyworld.item.SiongSngWorldItem;
 import ga.siong.sng.siongsngsfantasyworld.block.SngCultivatesoilBlock;
+import ga.siong.sng.siongsngsfantasyworld.block.SiongSngPortalframeBlock;
 import ga.siong.sng.siongsngsfantasyworld.SiongsngsFantasyWorldModElements;
 
 import com.google.common.collect.Sets;
@@ -222,7 +223,7 @@ public class SiongSngWorldDimension extends SiongsngsFantasyWorldModElements.Mod
 
 	public static class CustomPortalSize {
 		private static final AbstractBlock.IPositionPredicate POSITION_PREDICATE = (state, blockReader, pos) -> {
-			return state.getBlock() == SngCultivatesoilBlock.block.getDefaultState().getBlock();
+			return state.getBlock() == SiongSngPortalframeBlock.block.getDefaultState().getBlock();
 		};
 		private final IWorld world;
 		private final Direction.Axis axis;
@@ -491,7 +492,7 @@ public class SiongSngWorldDimension extends SiongsngsFantasyWorldModElements.Mod
 					for (int k2 = 0; k2 < 2; ++k2) {
 						for (int i3 = -1; i3 < 3; ++i3) {
 							BlockState blockstate1 = i3 < 0
-									? SngCultivatesoilBlock.block.getDefaultState().getBlock().getDefaultState()
+									? SiongSngPortalframeBlock.block.getDefaultState().getBlock().getDefaultState()
 									: Blocks.AIR.getDefaultState();
 							blockpos$mutable.setAndOffset(blockpos, k2 * direction.getXOffset() + l1 * direction1.getXOffset(), i3,
 									k2 * direction.getZOffset() + l1 * direction1.getZOffset());
@@ -504,7 +505,7 @@ public class SiongSngWorldDimension extends SiongsngsFantasyWorldModElements.Mod
 				for (int i2 = -1; i2 < 4; ++i2) {
 					if (k1 == -1 || k1 == 2 || i2 == -1 || i2 == 3) {
 						blockpos$mutable.setAndOffset(blockpos, k1 * direction.getXOffset(), i2, k1 * direction.getZOffset());
-						this.world.setBlockState(blockpos$mutable, SngCultivatesoilBlock.block.getDefaultState().getBlock().getDefaultState(), 3);
+						this.world.setBlockState(blockpos$mutable, SiongSngPortalframeBlock.block.getDefaultState().getBlock().getDefaultState(), 3);
 					}
 				}
 			}

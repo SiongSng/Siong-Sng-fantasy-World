@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "siongsngs_fantasy_world:blocks/cultivate_soil_bottom",
-    "up": "siongsngs_fantasy_world:blocks/cultivate_soil",
-    "north": "siongsngs_fantasy_world:blocks/cultivate_soil_side",
-    "east": "siongsngs_fantasy_world:blocks/cultivate_soil_side",
-    "south": "siongsngs_fantasy_world:blocks/cultivate_soil_side",
-    "west": "siongsngs_fantasy_world:blocks/cultivate_soil_side",
+    "down": "siongsngs_fantasy_world:blocks/cultivate_soil_top",
+    "up": "siongsngs_fantasy_world:blocks/cultivate_soil_top",
+    "north": "siongsngs_fantasy_world:blocks/cultivate_soil_top",
+    "east": "siongsngs_fantasy_world:blocks/cultivate_soil_top",
+    "south": "siongsngs_fantasy_world:blocks/cultivate_soil_top",
+    "west": "siongsngs_fantasy_world:blocks/cultivate_soil_top",
     "particle": "siongsngs_fantasy_world:blocks/cultivate_soil_side"
   }
 }

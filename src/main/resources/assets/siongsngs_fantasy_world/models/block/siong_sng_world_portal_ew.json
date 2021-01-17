@@ -1,7 +1,7 @@
 {
   "textures": {
-    "particle": "siongsngs_fantasy_world:blocks/coal_ore",
-    "portal": "siongsngs_fantasy_world:blocks/coal_ore"
+    "particle": "siongsngs_fantasy_world:blocks/siongsng_portal_block",
+    "portal": "siongsngs_fantasy_world:blocks/siongsng_portal_block"
   },
   "elements": [
     {

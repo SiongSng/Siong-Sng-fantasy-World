@@ -1,5 +1,6 @@
 package ga.siong.sng.siongsngsfantasyworld.procedures;
 
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
@@ -132,8 +133,9 @@ public class Gui1Procedure extends SiongsngsFantasyWorldModElements.ModElement {
 			}
 		} else {
 			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-				((PlayerEntity) entity).sendStatusMessage(
-						new StringTextComponent("\u60A8\u9700\u8981\u653E\u51652\u500B\u9285\u9320\u624D\u80FD\u88FD\u4F5C"), (true));
+				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent(
+						(new TranslationTextComponent("block.siongsngs_fantasy_world.Pressing_machine.cooper_error").getUnformattedComponentText())),
+						(true));
 			}
 		}
 		if ((((new Object() {
@@ -235,8 +237,9 @@ public class Gui1Procedure extends SiongsngsFantasyWorldModElements.ModElement {
 			}
 		} else {
 			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-				((PlayerEntity) entity).sendStatusMessage(
-						new StringTextComponent("\u60A8\u9700\u8981\u653E\u51652\u500B\u9285\u9320\u624D\u80FD\u88FD\u4F5C"), (true));
+				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent(
+						(new TranslationTextComponent("block.siongsngs_fantasy_world.Pressing_machine.iron_error").getUnformattedComponentText())),
+						(true));
 			}
 		}
 	}

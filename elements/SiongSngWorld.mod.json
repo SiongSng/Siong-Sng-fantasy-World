@@ -25,7 +25,7 @@
     "hasSkyLight": true,
     "imitateOverworldBehaviour": true,
     "portalFrame": {
-      "value": "CUSTOM:SngCultivatesoil"
+      "value": "CUSTOM:SiongSngPortalframe"
     },
     "portalParticles": {
       "value": "EXPLOSION_NORMAL"
@@ -39,7 +39,7 @@
       "value": "TOOLS"
     },
     "texture": "copper_particles",
-    "portalTexture": "coal_ore",
+    "portalTexture": "siongsng_portal_block",
     "enablePortal": true
   }
 }

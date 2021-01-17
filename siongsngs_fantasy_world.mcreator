@@ -314,6 +314,62 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "cooperplatepress"
+    },
+    {
+      "name": "Ironplatepressschedule",
+      "type": "achievement",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ironplatepressschedule"
+    },
+    {
+      "name": "Cooperplatepressformula",
+      "type": "recipe",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cooperplatepressformula"
+    },
+    {
+      "name": "SiongSngPortalframe",
+      "type": "block",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "siong_sng_portalframe"
+    },
+    {
+      "name": "Elementary_culture_soil_growth_bonus",
+      "type": "procedure",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "elementary_culture_soil_growth_bonus",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -321,13 +377,16 @@
   "language_map": {
     "zh_tw": {
       "itemGroup.tabsiong_sngworldfood": "菘菘的幻想世界-食物",
-      "block.siongsngs_fantasy_world.ultivatesoil": "培養土",
+      "block.siongsngs_fantasy_world.ultivatesoil": "初階培養土",
       "item.siongsngs_fantasy_world.copperplate": "銅板",
       "advancements.copper_oreprogress.title": "取得銅礦!!",
       "item.siongsngs_fantasy_world.irongear": "鐵齒輪",
       "block.siongsngs_fantasy_world.cooperplatepress": "銅製壓板機",
+      "block.siongsngs_fantasy_world.siong_sng_portalframe": "菘菘的幻想世界傳送門框架",
+      "block.siongsngs_fantasy_world.Pressing_machine.iron_error": "您需要放入2個鐵錠才能製作",
       "item.siongsngs_fantasy_world.siong_sng_world": "菘菘的幻想世界-激活傳送門工具",
       "item.siongsngs_fantasy_world.coppergear": "銅齒輪",
+      "block.siongsngs_fantasy_world.Pressing_machine.cooper_error": "您需要放入2個銅錠才能製作",
       "itemGroup.tabsiong_sng_ore": "菘菘的幻想世界-礦物",
       "advancements.copper_oreprogress.descr": "挖取銅礦!!",
       "itemGroup.tabsiong_sng_industrialcomponents": "菘菘的幻想世界-工業元件",
@@ -336,18 +395,23 @@
       "block.siongsngs_fantasy_world.copper_ore": "銅礦",
       "item.siongsngs_fantasy_world.copperingot": "炙熱的銅錠",
       "item.siongsngs_fantasy_world.ironplate": "鐵板",
+      "advancements.ironplatepressschedule.title": "壓碎板子!!!",
+      "advancements.ironplatepressschedule.descr": "製作一個壓板機",
       "block.siongsngs_fantasy_world.copper_block": "銅磚",
       "block.siongsngs_fantasy_world.ironplatemakingmachine": "鐵製壓板機"
     },
     "en_us": {
       "itemGroup.tabsiong_sngworldfood": "Siong Sng\u0027s World-Food",
-      "block.siongsngs_fantasy_world.ultivatesoil": "Cultivate Soil",
+      "block.siongsngs_fantasy_world.ultivatesoil": "Elementary Cultivate Soil",
       "item.siongsngs_fantasy_world.copperplate": "Copper plate",
       "advancements.copper_oreprogress.title": "get Copper Ore!!",
       "item.siongsngs_fantasy_world.irongear": "Iron gear",
       "block.siongsngs_fantasy_world.cooperplatepress": "Cooper plate press",
+      "block.siongsngs_fantasy_world.siong_sng_portalframe": "Siong Sng\u0027s fantasy World Portal frame",
+      "block.siongsngs_fantasy_world.Pressing_machine.iron_error": "You need to put in 2 iron ingots to make",
       "item.siongsngs_fantasy_world.siong_sng_world": "Siong Sng World Activate the portal tool",
       "item.siongsngs_fantasy_world.coppergear": "Copper gear",
+      "block.siongsngs_fantasy_world.Pressing_machine.cooper_error": "You need to put in 2 copper ingots to make",
       "itemGroup.tabsiong_sng_ore": "Siong Sng\u0027s World-Ore",
       "advancements.copper_oreprogress.descr": "Dig the copper Ore!!",
       "itemGroup.tabsiong_sng_industrialcomponents": "Siong Sng\u0027s World-Industrial components",
@@ -356,6 +420,8 @@
       "block.siongsngs_fantasy_world.copper_ore": "Copper Ore",
       "item.siongsngs_fantasy_world.copperingot": "Copper ingot",
       "item.siongsngs_fantasy_world.ironplate": "Iron plate",
+      "advancements.ironplatepressschedule.title": "Crush the board!!!",
+      "advancements.ironplatepressschedule.descr": "Make a platen press.",
       "block.siongsngs_fantasy_world.copper_block": "Copper brick",
       "block.siongsngs_fantasy_world.ironplatemakingmachine": "Iron plate press"
     }
