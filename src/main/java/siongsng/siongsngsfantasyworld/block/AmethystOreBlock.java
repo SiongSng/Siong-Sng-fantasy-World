@@ -2,7 +2,7 @@
 package siongsng.siongsngsfantasyworld.block;
 
 import siongsng.siongsngsfantasyworld.particle.BlueflameParticle;
-import siongsng.siongsngsfantasyworld.itemgroup.SiongSngworldblockItemGroup;
+import siongsng.siongsngsfantasyworld.itemgroup.SiongSngOreItemGroup;
 import siongsng.siongsngsfantasyworld.SiongsngsFantasyWorldModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
@@ -57,8 +57,8 @@ public class AmethystOreBlock extends SiongsngsFantasyWorldModElements.ModElemen
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items.add(
-				() -> new BlockItem(block, new Item.Properties().group(SiongSngworldblockItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items
+				.add(() -> new BlockItem(block, new Item.Properties().group(SiongSngOreItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {

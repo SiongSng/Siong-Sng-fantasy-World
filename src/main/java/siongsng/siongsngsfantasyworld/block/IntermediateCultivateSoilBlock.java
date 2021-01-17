@@ -5,6 +5,7 @@ import siongsng.siongsngsfantasyworld.itemgroup.SiongSngworldblockItemGroup;
 import siongsng.siongsngsfantasyworld.SiongsngsFantasyWorldModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.common.ToolType;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -40,7 +41,8 @@ public class IntermediateCultivateSoilBlock extends SiongsngsFantasyWorldModElem
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.EARTH).sound(SoundType.GROUND).hardnessAndResistance(6f, 15f).setLightLevel(s -> 0));
+			super(Block.Properties.create(Material.EARTH).sound(SoundType.GROUND).hardnessAndResistance(6f, 15f).setLightLevel(s -> 0).harvestLevel(2)
+					.harvestTool(ToolType.SHOVEL));
 			setRegistryName("intermediate_cultivate_soil");
 		}
 
