@@ -3,5 +3,20 @@
 [![GitHub downloads](https://img.shields.io/github/downloads/Barry23412/Siong-Sng-fantasy-World/total.svg)](https://github.com/Barry23412/Siong-Sng-fantasy-World/releases/latest)
 
 
-# Siong Sng's fantasy World 菘菘的幻想世界
-這是一個由菘菘所開發的多世界模組，旨在希望大家能夠透過該模組玩到更多的樣性的Minecraft。
+Siong Sng's fantasy World
+=======================================  
+**Readme language selection:** [English](https://github.com/Barry23412/Siong-Sng-fantasy-World/blob/master/README.md)   [繁體中文]()   [简体中文]()
+
+|Mod Name|Mod ID|Author|Programming Tools|Module support language|
+|:------:|:----:|:----:|:---------------:|:---------------------:|
+|Siong Sng's fantasy World|siongsngs_fantasy_world|Siong Sng|IntelliJ IDEA、Mcreator|English、繁體中文、简体中文|
+  
+
+This is a multi-world mod developed by Siong Siong, hoping that everyone can play more diverse Minecraft through this mod
+
+[Mod Wiki](https://github.com/Barry23412/Siong-Sng-fantasy-World/wiki)  
+[Support discord server](https://discord.gg/5w9BUM4)  
+[Issue tracker](https://github.com/Barry23412/Siong-Sng-fantasy-World/issues)  
+
+
+### @2021 By Siong Sng
