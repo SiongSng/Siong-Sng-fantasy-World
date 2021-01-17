@@ -2,19 +2,19 @@
   "_fv": 15,
   "_type": "block",
   "definition": {
-    "texture": "cultivate_soil_top",
-    "textureTop": "cultivate_soil_top",
-    "textureLeft": "cultivate_soil_top",
-    "textureFront": "cultivate_soil_top",
-    "textureRight": "cultivate_soil_top",
-    "textureBack": "cultivate_soil_top",
+    "texture": "amethyst_ore",
+    "textureTop": "amethyst_ore",
+    "textureLeft": "amethyst_ore",
+    "textureFront": "amethyst_ore",
+    "textureRight": "amethyst_ore",
+    "textureBack": "amethyst_ore",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
-    "particleTexture": "cultivate_soil_top",
+    "particleTexture": "",
     "hasTransparency": false,
     "connectedSides": false,
     "transparencyType": "SOLID",
@@ -24,29 +24,29 @@
     "Mx": 1.0,
     "My": 1.0,
     "Mz": 1.0,
-    "name": "Elementary Cultivate Soil",
+    "name": "Amethyst Ore",
     "specialInfo": [
-      "§b可以加快作物生長的§c初階培養土  §6生長速度加乘1"
+      "§b神秘的紫色與藍色湊合成的礦物?"
     ],
     "hardness": 4.0,
-    "resistance": 10.0,
+    "resistance": 25.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
       "value": "CUSTOM:SiongSngworldblock"
     },
-    "destroyTool": "shovel",
+    "destroyTool": "pickaxe",
     "customDrop": {
       "value": ""
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
     "enchantPowerBonus": 0.0,
-    "plantsGrowOn": true,
+    "plantsGrowOn": false,
     "canProvidePower": false,
     "lightOpacity": 255,
     "material": {
-      "value": "GRASS"
+      "value": "ROCK"
     },
     "tickRate": 10,
     "tickRandomly": false,
@@ -68,14 +68,14 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 1,
-    "spawnParticles": false,
+    "breakHarvestLevel": 4,
+    "spawnParticles": true,
     "particleToSpawn": {
-      "value": "EXPLOSION_NORMAL"
+      "value": "CUSTOM:Blueflame"
     },
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
-    "particleAmount": 4,
+    "particleAmount": 3,
     "hasInventory": false,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
@@ -94,32 +94,27 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "spawnWorldTypes": [
-      "Surface"
+      "Surface",
+      "CUSTOM:SiongSngWorld"
     ],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
-        "value": "Blocks.GRASS"
+        "value": "Blocks.STONE"
       },
       {
-        "value": "Blocks.GRASS_PATH"
+        "value": "Blocks.STONE#1"
       },
       {
-        "value": "Blocks.MYCELIUM"
+        "value": "Blocks.STONE#3"
       },
       {
-        "value": "Blocks.DIRT#0"
-      },
-      {
-        "value": "Blocks.DIRT#1"
-      },
-      {
-        "value": "Blocks.DIRT#2"
+        "value": "Blocks.STONE#6"
       }
     ],
-    "frequencyPerChunks": 13,
-    "frequencyOnChunk": 16,
-    "minGenerateHeight": 55,
-    "maxGenerateHeight": 110
+    "frequencyPerChunks": 9,
+    "frequencyOnChunk": 8,
+    "minGenerateHeight": 0,
+    "maxGenerateHeight": 65
   }
 }

@@ -2,19 +2,19 @@
   "_fv": 15,
   "_type": "block",
   "definition": {
-    "texture": "cultivate_soil_top",
-    "textureTop": "cultivate_soil_top",
-    "textureLeft": "cultivate_soil_top",
-    "textureFront": "cultivate_soil_top",
-    "textureRight": "cultivate_soil_top",
-    "textureBack": "cultivate_soil_top",
+    "texture": "intermediate_cultivate_soil",
+    "textureTop": "intermediate_cultivate_soil",
+    "textureLeft": "intermediate_cultivate_soil",
+    "textureFront": "intermediate_cultivate_soil",
+    "textureRight": "intermediate_cultivate_soil",
+    "textureBack": "intermediate_cultivate_soil",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
-    "particleTexture": "cultivate_soil_top",
+    "particleTexture": "",
     "hasTransparency": false,
     "connectedSides": false,
     "transparencyType": "SOLID",
@@ -24,29 +24,29 @@
     "Mx": 1.0,
     "My": 1.0,
     "Mz": 1.0,
-    "name": "Elementary Cultivate Soil",
+    "name": "Intermediate Cultivate Soil",
     "specialInfo": [
-      "§b可以加快作物生長的§c初階培養土  §6生長速度加乘1"
+      "§b可以加快作物生長的§c中階培養土  §6生長速度加乘2"
     ],
-    "hardness": 4.0,
-    "resistance": 10.0,
+    "hardness": 6.0,
+    "resistance": 15.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
       "value": "CUSTOM:SiongSngworldblock"
     },
-    "destroyTool": "shovel",
+    "destroyTool": "Not specified",
     "customDrop": {
       "value": ""
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
     "enchantPowerBonus": 0.0,
-    "plantsGrowOn": true,
+    "plantsGrowOn": false,
     "canProvidePower": false,
     "lightOpacity": 255,
     "material": {
-      "value": "GRASS"
+      "value": "EARTH"
     },
     "tickRate": 10,
     "tickRandomly": false,
@@ -71,7 +71,7 @@
     "breakHarvestLevel": 1,
     "spawnParticles": false,
     "particleToSpawn": {
-      "value": "EXPLOSION_NORMAL"
+      "value": "CUSTOM:Blueflame"
     },
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
@@ -93,33 +93,12 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "spawnWorldTypes": [
-      "Surface"
-    ],
+    "spawnWorldTypes": [],
     "restrictionBiomes": [],
-    "blocksToReplace": [
-      {
-        "value": "Blocks.GRASS"
-      },
-      {
-        "value": "Blocks.GRASS_PATH"
-      },
-      {
-        "value": "Blocks.MYCELIUM"
-      },
-      {
-        "value": "Blocks.DIRT#0"
-      },
-      {
-        "value": "Blocks.DIRT#1"
-      },
-      {
-        "value": "Blocks.DIRT#2"
-      }
-    ],
-    "frequencyPerChunks": 13,
+    "blocksToReplace": [],
+    "frequencyPerChunks": 10,
     "frequencyOnChunk": 16,
-    "minGenerateHeight": 55,
-    "maxGenerateHeight": 110
+    "minGenerateHeight": 0,
+    "maxGenerateHeight": 64
   }
 }

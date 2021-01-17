@@ -1,6 +1,7 @@
 
 package siongsng.siongsngsfantasyworld.block;
 
+import siongsng.siongsngsfantasyworld.particle.BlueflameParticle;
 import siongsng.siongsngsfantasyworld.itemgroup.SiongSngworldblockItemGroup;
 import siongsng.siongsngsfantasyworld.SiongsngsFantasyWorldModElements;
 
@@ -9,7 +10,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -24,14 +24,17 @@ import net.minecraft.world.ISeedReader;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.RegistryKey;
-import net.minecraft.util.Direction;
 import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.client.Minecraft;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.Blocks;
@@ -43,11 +46,11 @@ import java.util.List;
 import java.util.Collections;
 
 @SiongsngsFantasyWorldModElements.ModElement.Tag
-public class SngCultivatesoilBlock extends SiongsngsFantasyWorldModElements.ModElement {
-	@ObjectHolder("siongsngs_fantasy_world:ultivatesoil")
+public class AmethystOreBlock extends SiongsngsFantasyWorldModElements.ModElement {
+	@ObjectHolder("siongsngs_fantasy_world:amethyst_ore")
 	public static final Block block = null;
-	public SngCultivatesoilBlock(SiongsngsFantasyWorldModElements instance) {
-		super(instance, 2);
+	public AmethystOreBlock(SiongsngsFantasyWorldModElements instance) {
+		super(instance, 37);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -59,22 +62,16 @@ public class SngCultivatesoilBlock extends SiongsngsFantasyWorldModElements.ModE
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ORGANIC).sound(SoundType.GROUND).hardnessAndResistance(4f, 10f).setLightLevel(s -> 0)
-					.harvestLevel(1).harvestTool(ToolType.SHOVEL));
-			setRegistryName("ultivatesoil");
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.GROUND).hardnessAndResistance(4f, 25f).setLightLevel(s -> 0).harvestLevel(4)
+					.harvestTool(ToolType.PICKAXE));
+			setRegistryName("amethyst_ore");
 		}
 
 		@Override
 		@OnlyIn(Dist.CLIENT)
 		public void addInformation(ItemStack itemstack, IBlockReader world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent(
-					"\u00A7b\u53EF\u4EE5\u52A0\u5FEB\u4F5C\u7269\u751F\u9577\u7684\u00A7c\u521D\u968E\u57F9\u990A\u571F  \u00A76\u751F\u9577\u901F\u5EA6\u52A0\u4E581"));
-		}
-
-		@Override
-		public boolean canSustainPlant(BlockState state, IBlockReader world, BlockPos pos, Direction direction, IPlantable plantable) {
-			return true;
+			list.add(new StringTextComponent("\u00A7b\u795E\u79D8\u7684\u7D2B\u8272\u8207\u85CD\u8272\u6E4A\u5408\u6210\u7684\u7926\u7269?"));
 		}
 
 		@Override
@@ -83,6 +80,27 @@ public class SngCultivatesoilBlock extends SiongsngsFantasyWorldModElements.ModE
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
 			return Collections.singletonList(new ItemStack(this, 1));
+		}
+
+		@OnlyIn(Dist.CLIENT)
+		@Override
+		public void animateTick(BlockState state, World world, BlockPos pos, Random random) {
+			super.animateTick(state, world, pos, random);
+			PlayerEntity entity = Minecraft.getInstance().player;
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			if (true)
+				for (int l = 0; l < 3; ++l) {
+					double d0 = (x + random.nextFloat());
+					double d1 = (y + random.nextFloat());
+					double d2 = (z + random.nextFloat());
+					int i1 = random.nextInt(2) * 2 - 1;
+					double d3 = (random.nextFloat() - 0.5D) * 0.5D;
+					double d4 = (random.nextFloat() - 0.5D) * 0.5D;
+					double d5 = (random.nextFloat() - 0.5D) * 0.5D;
+					world.addParticle(BlueflameParticle.particle, d0, d1, d2, d3, d4, d5);
+				}
 		}
 	}
 	@SubscribeEvent
@@ -94,24 +112,22 @@ public class SngCultivatesoilBlock extends SiongsngsFantasyWorldModElements.ModE
 				boolean dimensionCriteria = false;
 				if (dimensionType == World.OVERWORLD)
 					dimensionCriteria = true;
+				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("siongsngs_fantasy_world:siong_sng_world")))
+					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;
 				return super.generate(world, generator, rand, pos, config);
 			}
-		}.withConfiguration(new OreFeatureConfig(new BlockMatchRuleTest(Blocks.GRASS_BLOCK.getDefaultState().getBlock()) {
+		}.withConfiguration(new OreFeatureConfig(new BlockMatchRuleTest(Blocks.STONE.getDefaultState().getBlock()) {
 			public boolean test(BlockState blockAt, Random random) {
 				boolean blockCriteria = false;
-				if (blockAt.getBlock() == Blocks.GRASS_BLOCK.getDefaultState().getBlock())
+				if (blockAt.getBlock() == Blocks.STONE.getDefaultState().getBlock())
 					blockCriteria = true;
-				if (blockAt.getBlock() == Blocks.GRASS_PATH.getDefaultState().getBlock())
+				if (blockAt.getBlock() == Blocks.GRANITE.getDefaultState().getBlock())
 					blockCriteria = true;
-				if (blockAt.getBlock() == Blocks.MYCELIUM.getDefaultState().getBlock())
+				if (blockAt.getBlock() == Blocks.DIORITE.getDefaultState().getBlock())
 					blockCriteria = true;
-				if (blockAt.getBlock() == Blocks.DIRT.getDefaultState().getBlock())
-					blockCriteria = true;
-				if (blockAt.getBlock() == Blocks.COARSE_DIRT.getDefaultState().getBlock())
-					blockCriteria = true;
-				if (blockAt.getBlock() == Blocks.PODZOL.getDefaultState().getBlock())
+				if (blockAt.getBlock() == Blocks.POLISHED_ANDESITE.getDefaultState().getBlock())
 					blockCriteria = true;
 				return blockCriteria;
 			}
@@ -119,6 +135,6 @@ public class SngCultivatesoilBlock extends SiongsngsFantasyWorldModElements.ModE
 			protected IRuleTestType<?> getType() {
 				return IRuleTestType.BLOCK_MATCH;
 			}
-		}, block.getDefaultState(), 16)).range(110).square().func_242731_b(13));
+		}, block.getDefaultState(), 8)).range(65).square().func_242731_b(9));
 	}
 }

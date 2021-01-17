@@ -421,14 +421,41 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "industrialera"
+    },
+    {
+      "name": "AmethystOre",
+      "type": "block",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "amethyst_ore"
+    },
+    {
+      "name": "IntermediateCultivateSoil",
+      "type": "block",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "intermediate_cultivate_soil"
+    },
+    {
+      "name": "IntermediateCultivateSoilformula",
+      "type": "recipe",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "intermediate_cultivate_soilformula"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "zh_tw": {
-      "item.siongsngs_fantasy_world.copperplate": "銅板",
       "itemGroup.tabsiong_sngworldfood": "菘菘的幻想世界-食物",
+      "item.siongsngs_fantasy_world.copperplate": "銅板",
       "item.siongsngs_fantasy_world.irongear": "鐵齒輪",
       "block.siongsngs_fantasy_world.cooperplatepress": "銅製壓板機",
       "block.siongsngs_fantasy_world.siong_sng_portalframe": "菘菘的幻想世界傳送門框架",
@@ -436,6 +463,7 @@
       "block.siongsngs_fantasy_world.Pressing_machine.cooper_error": "您需要放入2個銅錠才能製作",
       "itemGroup.tabsiong_sng_ore": "菘菘的幻想世界-礦物",
       "itemGroup.tabsiong_sngworldblock": "菘菘的幻想世界-方塊",
+      "block.siongsngs_fantasy_world.intermediate_cultivate_soil": "Intermediate Cultivate Soil",
       "item.siongsngs_fantasy_world.copperparticle": "銅粒",
       "item.siongsngs_fantasy_world.stonesteak": "石頭牛排",
       "block.siongsngs_fantasy_world.copper_ore": "銅礦",
@@ -449,14 +477,15 @@
       "advancements.copper_oreprogress.title": "取得銅礦!!",
       "block.siongsngs_fantasy_world.Pressing_machine.iron_error": "您需要放入2個鐵錠才能製作",
       "item.siongsngs_fantasy_world.siong_sng_world": "菘菘的幻想世界-激活傳送門工具",
+      "block.siongsngs_fantasy_world.amethyst_ore": "Amethyst Ore",
       "advancements.copper_oreprogress.descr": "挖取銅礦!!",
       "itemGroup.tabsiong_sng_industrialcomponents": "菘菘的幻想世界-工業元件",
       "advancements.industrialera.title": "工業時代",
       "advancements.industrialera.descr": "製作一個鐵齒輪"
     },
     "en_us": {
-      "item.siongsngs_fantasy_world.copperplate": "Copper plate",
       "itemGroup.tabsiong_sngworldfood": "Siong Sng\u0027s World-Food",
+      "item.siongsngs_fantasy_world.copperplate": "Copper plate",
       "item.siongsngs_fantasy_world.irongear": "Iron gear",
       "block.siongsngs_fantasy_world.cooperplatepress": "Cooper plate press",
       "block.siongsngs_fantasy_world.siong_sng_portalframe": "Siong Sng\u0027s fantasy World Portal frame",
@@ -464,6 +493,7 @@
       "block.siongsngs_fantasy_world.Pressing_machine.cooper_error": "You need to put in 2 copper ingots to make",
       "itemGroup.tabsiong_sng_ore": "Siong Sng\u0027s World-Ore",
       "itemGroup.tabsiong_sngworldblock": "Siong Sng\u0027s World-Block",
+      "block.siongsngs_fantasy_world.intermediate_cultivate_soil": "Intermediate Cultivate Soil",
       "item.siongsngs_fantasy_world.copperparticle": "Copper particle",
       "item.siongsngs_fantasy_world.stonesteak": "Stone steak",
       "block.siongsngs_fantasy_world.copper_ore": "Copper Ore",
@@ -477,14 +507,15 @@
       "advancements.copper_oreprogress.title": "get Copper Ore!!",
       "block.siongsngs_fantasy_world.Pressing_machine.iron_error": "You need to put in 2 iron ingots to make",
       "item.siongsngs_fantasy_world.siong_sng_world": "Siong Sng World Activate the portal tool",
+      "block.siongsngs_fantasy_world.amethyst_ore": "Amethyst Ore",
       "advancements.copper_oreprogress.descr": "Dig the copper Ore!!",
       "itemGroup.tabsiong_sng_industrialcomponents": "Siong Sng\u0027s World-Industrial components",
       "advancements.industrialera.title": "Industrial era!",
       "advancements.industrialera.descr": "Making an iron gears."
     },
     "zh_cn": {
-      "itemGroup.tabsiong_sngworldfood": "菘菘的幻想世界-食物",
       "item.siongsngs_fantasy_world.copperplate": "?板",
+      "itemGroup.tabsiong_sngworldfood": "菘菘的幻想世界-食物",
       "item.siongsngs_fantasy_world.irongear": "???",
       "block.siongsngs_fantasy_world.cooperplatepress": "?制?板机",
       "block.siongsngs_fantasy_world.siong_sng_portalframe": "菘菘的幻想世界?送?框架",
@@ -492,6 +523,7 @@
       "block.siongsngs_fantasy_world.Pressing_machine.cooper_error": "您需要放入2???才能制作",
       "itemGroup.tabsiong_sng_ore": "菘菘的幻想世界-?物",
       "itemGroup.tabsiong_sngworldblock": "菘菘的幻想世界-方?",
+      "block.siongsngs_fantasy_world.intermediate_cultivate_soil": "Intermediate Cultivate Soil",
       "item.siongsngs_fantasy_world.copperparticle": "?粒",
       "item.siongsngs_fantasy_world.stonesteak": "石?牛排",
       "block.siongsngs_fantasy_world.copper_ore": "??",
@@ -505,6 +537,7 @@
       "advancements.copper_oreprogress.title": "取得??!!",
       "block.siongsngs_fantasy_world.Pressing_machine.iron_error": "您需要放入2???才能制作",
       "item.siongsngs_fantasy_world.siong_sng_world": "菘菘的幻想世界-激活?送?工具",
+      "block.siongsngs_fantasy_world.amethyst_ore": "Amethyst Ore",
       "advancements.copper_oreprogress.descr": "挖取??!!",
       "itemGroup.tabsiong_sng_industrialcomponents": "菘菘的幻想世界-工??件",
       "advancements.industrialera.title": "工??代",

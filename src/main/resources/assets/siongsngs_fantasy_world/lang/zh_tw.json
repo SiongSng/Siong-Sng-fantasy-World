@@ -1,6 +1,6 @@
 {
-  "item.siongsngs_fantasy_world.copperplate": "銅板",
   "itemGroup.tabsiong_sngworldfood": "菘菘的幻想世界-食物",
+  "item.siongsngs_fantasy_world.copperplate": "銅板",
   "item.siongsngs_fantasy_world.irongear": "鐵齒輪",
   "block.siongsngs_fantasy_world.cooperplatepress": "銅製壓板機",
   "block.siongsngs_fantasy_world.siong_sng_portalframe": "菘菘的幻想世界傳送門框架",
@@ -8,6 +8,7 @@
   "block.siongsngs_fantasy_world.Pressing_machine.cooper_error": "您需要放入2個銅錠才能製作",
   "itemGroup.tabsiong_sng_ore": "菘菘的幻想世界-礦物",
   "itemGroup.tabsiong_sngworldblock": "菘菘的幻想世界-方塊",
+  "block.siongsngs_fantasy_world.intermediate_cultivate_soil": "Intermediate Cultivate Soil",
   "item.siongsngs_fantasy_world.copperparticle": "銅粒",
   "item.siongsngs_fantasy_world.stonesteak": "石頭牛排",
   "block.siongsngs_fantasy_world.copper_ore": "銅礦",
@@ -21,6 +22,7 @@
   "advancements.copper_oreprogress.title": "取得銅礦!!",
   "block.siongsngs_fantasy_world.Pressing_machine.iron_error": "您需要放入2個鐵錠才能製作",
   "item.siongsngs_fantasy_world.siong_sng_world": "菘菘的幻想世界-激活傳送門工具",
+  "block.siongsngs_fantasy_world.amethyst_ore": "Amethyst Ore",
   "advancements.copper_oreprogress.descr": "挖取銅礦!!",
   "itemGroup.tabsiong_sng_industrialcomponents": "菘菘的幻想世界-工業元件",
   "advancements.industrialera.title": "工業時代",
