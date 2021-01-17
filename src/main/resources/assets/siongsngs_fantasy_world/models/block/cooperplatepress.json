@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "siongsngs_fantasy_world:blocks/copper_plate_making_machine_above",
+    "up": "siongsngs_fantasy_world:blocks/copper_plate_making_machine_above",
+    "north": "siongsngs_fantasy_world:blocks/cooper_plate_press_positive",
+    "east": "siongsngs_fantasy_world:blocks/copper_plate_making_machine_side",
+    "south": "siongsngs_fantasy_world:blocks/copper_plate_making_machine_side",
+    "west": "siongsngs_fantasy_world:blocks/copper_plate_making_machine_side",
+    "particle": "siongsngs_fantasy_world:blocks/copper_plate_making_machine_above"
+  }
+}
