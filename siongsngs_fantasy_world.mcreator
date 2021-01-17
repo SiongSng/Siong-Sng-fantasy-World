@@ -427,8 +427,8 @@
   "sound_elements": [],
   "language_map": {
     "zh_tw": {
-      "itemGroup.tabsiong_sngworldfood": "菘菘的幻想世界-食物",
       "item.siongsngs_fantasy_world.copperplate": "銅板",
+      "itemGroup.tabsiong_sngworldfood": "菘菘的幻想世界-食物",
       "item.siongsngs_fantasy_world.irongear": "鐵齒輪",
       "block.siongsngs_fantasy_world.cooperplatepress": "銅製壓板機",
       "block.siongsngs_fantasy_world.siong_sng_portalframe": "菘菘的幻想世界傳送門框架",
@@ -455,8 +455,8 @@
       "advancements.industrialera.descr": "製作一個鐵齒輪"
     },
     "en_us": {
-      "itemGroup.tabsiong_sngworldfood": "Siong Sng\u0027s World-Food",
       "item.siongsngs_fantasy_world.copperplate": "Copper plate",
+      "itemGroup.tabsiong_sngworldfood": "Siong Sng\u0027s World-Food",
       "item.siongsngs_fantasy_world.irongear": "Iron gear",
       "block.siongsngs_fantasy_world.cooperplatepress": "Cooper plate press",
       "block.siongsngs_fantasy_world.siong_sng_portalframe": "Siong Sng\u0027s fantasy World Portal frame",
@@ -481,14 +481,42 @@
       "itemGroup.tabsiong_sng_industrialcomponents": "Siong Sng\u0027s World-Industrial components",
       "advancements.industrialera.title": "Industrial era!",
       "advancements.industrialera.descr": "Making an iron gears."
+    },
+    "zh_cn": {
+      "itemGroup.tabsiong_sngworldfood": "菘菘的幻想世界-食物",
+      "item.siongsngs_fantasy_world.copperplate": "?板",
+      "item.siongsngs_fantasy_world.irongear": "???",
+      "block.siongsngs_fantasy_world.cooperplatepress": "?制?板机",
+      "block.siongsngs_fantasy_world.siong_sng_portalframe": "菘菘的幻想世界?送?框架",
+      "item.siongsngs_fantasy_world.coppergear": "???",
+      "block.siongsngs_fantasy_world.Pressing_machine.cooper_error": "您需要放入2???才能制作",
+      "itemGroup.tabsiong_sng_ore": "菘菘的幻想世界-?物",
+      "itemGroup.tabsiong_sngworldblock": "菘菘的幻想世界-方?",
+      "item.siongsngs_fantasy_world.copperparticle": "?粒",
+      "item.siongsngs_fantasy_world.stonesteak": "石?牛排",
+      "block.siongsngs_fantasy_world.copper_ore": "??",
+      "item.siongsngs_fantasy_world.copperingot": "灸?的??",
+      "item.siongsngs_fantasy_world.ironplate": "?板",
+      "advancements.ironplatepressschedule.title": "?碎板子!!!",
+      "advancements.ironplatepressschedule.descr": "制作一??板机",
+      "block.siongsngs_fantasy_world.copper_block": "??",
+      "block.siongsngs_fantasy_world.ironplatemakingmachine": "?制?板机",
+      "block.siongsngs_fantasy_world.ultivatesoil": "初?培?土",
+      "advancements.copper_oreprogress.title": "取得??!!",
+      "block.siongsngs_fantasy_world.Pressing_machine.iron_error": "您需要放入2???才能制作",
+      "item.siongsngs_fantasy_world.siong_sng_world": "菘菘的幻想世界-激活?送?工具",
+      "advancements.copper_oreprogress.descr": "挖取??!!",
+      "itemGroup.tabsiong_sng_industrialcomponents": "菘菘的幻想世界-工??件",
+      "advancements.industrialera.title": "工??代",
+      "advancements.industrialera.descr": "制作一????"
     }
   },
   "workspaceSettings": {
     "modid": "siongsngs_fantasy_world",
-    "modName": "Siong Sng\u0027s fantasy World-菘菘的幻想世界",
+    "modName": "Siong Sng\u0027s fantasy World",
     "version": "1.0.0",
-    "description": "這是一個由菘菘所開發的多世界模組，旨在希望大家能夠透過該模組玩到更多的樣性的Minecraft",
-    "author": "菘菘(Barry23412)",
+    "description": "This is a multi-world mod developed by Siong Siong, hoping that everyone can play more diverse Minecraft through this mod",
+    "author": "Siong Sng(Barry23412)",
     "websiteURL": "https://discord.gg/5w9BUM4",
     "license": "Academic Free License v3.0",
     "disableForgeVersionCheck": true,
@@ -499,7 +527,7 @@
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.16.4",
     "credits": "@2021 By Siong Sng",
-    "modElementsPackage": "ga.siong.sng.siongsngsfantasyworld",
+    "modElementsPackage": "siongsng.siongsngsfantasyworld",
     "lockBaseModFiles": false
   },
   "mcreatorVersion": 202000652319
