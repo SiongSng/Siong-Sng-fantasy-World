@@ -57,8 +57,8 @@ public class CopperOreBlock extends SiongsngsWorldModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.METAL).hardnessAndResistance(3f, 15f).setLightLevel(s -> 1).harvestLevel(3)
-					.harvestTool(ToolType.PICKAXE).setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true));
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.METAL).hardnessAndResistance(3f, 15f).setLightLevel(s -> 0).harvestLevel(3)
+					.harvestTool(ToolType.PICKAXE));
 			setRegistryName("copper_ore");
 		}
 

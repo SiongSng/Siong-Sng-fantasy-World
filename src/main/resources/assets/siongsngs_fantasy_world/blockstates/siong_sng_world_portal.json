@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "siongsngs_fantasy_world:block/siong_sng_world_portal_ew"
+    },
+    "axis=x": {
+      "model": "siongsngs_fantasy_world:block/siong_sng_world_portal_ns"
+    }
+  }
+}

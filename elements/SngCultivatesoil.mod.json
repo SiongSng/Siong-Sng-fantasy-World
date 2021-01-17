@@ -2,19 +2,19 @@
   "_fv": 15,
   "_type": "block",
   "definition": {
-    "texture": "cultivate_soil_bottom",
-    "textureTop": "cultivate_soil",
-    "textureLeft": "cultivate_soil_side",
-    "textureFront": "cultivate_soil_side",
-    "textureRight": "cultivate_soil_side",
-    "textureBack": "cultivate_soil_side",
+    "texture": "cultivate_soil_top",
+    "textureTop": "cultivate_soil_top",
+    "textureLeft": "cultivate_soil_top",
+    "textureFront": "cultivate_soil_top",
+    "textureRight": "cultivate_soil_top",
+    "textureBack": "cultivate_soil_top",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
-    "particleTexture": "cultivate_soil_side",
+    "particleTexture": "cultivate_soil_top",
     "hasTransparency": false,
     "connectedSides": false,
     "transparencyType": "SOLID",
@@ -24,9 +24,9 @@
     "Mx": 1.0,
     "My": 1.0,
     "Mz": 1.0,
-    "name": "Cultivate Soil",
+    "name": "Elementary Cultivate Soil",
     "specialInfo": [
-      "§b可以加快作物生長的培養土  §6生長速度加乘1"
+      "§b可以加快作物生長的§c初階培養土  §6生長速度加乘1"
     ],
     "hardness": 4.0,
     "resistance": 10.0,
@@ -117,7 +117,7 @@
         "value": "Blocks.DIRT#2"
       }
     ],
-    "frequencyPerChunks": 10,
+    "frequencyPerChunks": 13,
     "frequencyOnChunk": 16,
     "minGenerateHeight": 55,
     "maxGenerateHeight": 110

@@ -69,7 +69,7 @@ public class SngCultivatesoilBlock extends SiongsngsWorldModElements.ModElement 
 		public void addInformation(ItemStack itemstack, IBlockReader world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
 			list.add(new StringTextComponent(
-					"\u00A7b\u53EF\u4EE5\u52A0\u5FEB\u4F5C\u7269\u751F\u9577\u7684\u57F9\u990A\u571F  \u00A76\u751F\u9577\u901F\u5EA6\u52A0\u4E581"));
+					"\u00A7b\u53EF\u4EE5\u52A0\u5FEB\u4F5C\u7269\u751F\u9577\u7684\u00A7c\u521D\u968E\u57F9\u990A\u571F  \u00A76\u751F\u9577\u901F\u5EA6\u52A0\u4E581"));
 		}
 
 		@Override
@@ -119,6 +119,6 @@ public class SngCultivatesoilBlock extends SiongsngsWorldModElements.ModElement 
 			protected IRuleTestType<?> getType() {
 				return IRuleTestType.BLOCK_MATCH;
 			}
-		}, block.getDefaultState(), 16)).range(110).square().func_242731_b(10));
+		}, block.getDefaultState(), 16)).range(110).square().func_242731_b(13));
 	}
 }

@@ -1,0 +1,548 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "SiongSngworldblock",
+      "type": "tab",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "siong_sngworldblock"
+    },
+    {
+      "name": "SngCultivatesoil",
+      "type": "block",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ultivatesoil"
+    },
+    {
+      "name": "Stonesteak",
+      "type": "food",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stonesteak"
+    },
+    {
+      "name": "SiongSngworldfood",
+      "type": "tab",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "siong_sngworldfood"
+    },
+    {
+      "name": "CultivateSoilformula",
+      "type": "recipe",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cultivate_soilformula"
+    },
+    {
+      "name": "CopperOre",
+      "type": "block",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copper_ore"
+    },
+    {
+      "name": "SiongSngOre",
+      "type": "tab",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "siong_sng_ore"
+    },
+    {
+      "name": "Copperingot",
+      "type": "item",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copperingot"
+    },
+    {
+      "name": "CopperingotFiringrecipe",
+      "type": "recipe",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copperingot_firingrecipe"
+    },
+    {
+      "name": "CopperOreprogress",
+      "type": "achievement",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copper_oreprogress"
+    },
+    {
+      "name": "Copperparticle",
+      "type": "item",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copperparticle"
+    },
+    {
+      "name": "Copperparticleformula",
+      "type": "recipe",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copperparticleformula"
+    },
+    {
+      "name": "SiongSngWorld",
+      "type": "dimension",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "siong_sng_world",
+      "metadata": {
+        "ep": true
+      }
+    },
+    {
+      "name": "CopperBlock",
+      "type": "block",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copper_block"
+    },
+    {
+      "name": "Copperbrickformula",
+      "type": "recipe",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copperbrickformula"
+    },
+    {
+      "name": "Coppergear",
+      "type": "item",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "coppergear"
+    },
+    {
+      "name": "SiongSngIndustrialcomponents",
+      "type": "tab",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "siong_sng_industrialcomponents"
+    },
+    {
+      "name": "COppergearformula",
+      "type": "recipe",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "c_oppergearformula"
+    },
+    {
+      "name": "Irongear",
+      "type": "item",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "irongear"
+    },
+    {
+      "name": "Irongearformula",
+      "type": "recipe",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "irongearformula"
+    },
+    {
+      "name": "Copperplate",
+      "type": "item",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copperplate"
+    },
+    {
+      "name": "Blueflame",
+      "type": "particle",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blueflame"
+    },
+    {
+      "name": "Ironplatemakingmachine",
+      "type": "block",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ironplatemakingmachine"
+    },
+    {
+      "name": "Ironplatepressgui",
+      "type": "gui",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ironplatepressgui"
+    },
+    {
+      "name": "IronplatemakingmachineZaiFangKuaiShangYouJian",
+      "type": "procedure",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ironplatemakingmachine_zai_fang_kuai_shang_you_jian",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Gui1",
+      "type": "procedure",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gui_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ironplatepressformula",
+      "type": "recipe",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ironplatepressformula"
+    },
+    {
+      "name": "Copperbrickbreakdown",
+      "type": "recipe",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copperbrickbreakdown"
+    },
+    {
+      "name": "Copperparticlesynthesis",
+      "type": "recipe",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copperparticlesynthesis"
+    },
+    {
+      "name": "Ironplate",
+      "type": "item",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ironplate"
+    },
+    {
+      "name": "Cooperplatepress",
+      "type": "block",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cooperplatepress"
+    },
+    {
+      "name": "Ironplatepressschedule",
+      "type": "achievement",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ironplatepressschedule"
+    },
+    {
+      "name": "Cooperplatepressformula",
+      "type": "recipe",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cooperplatepressformula"
+    },
+    {
+      "name": "SiongSngPortalframe",
+      "type": "block",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "siong_sng_portalframe"
+    },
+    {
+      "name": "Elementary_culture_soil_growth_bonus",
+      "type": "procedure",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "elementary_culture_soil_growth_bonus",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Cooperplatepressgui",
+      "type": "gui",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cooperplatepressgui"
+    },
+    {
+      "name": "Cooperplatepressgui1",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cooperplatepressgui_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Industrialera",
+      "type": "achievement",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "industrialera"
+    },
+    {
+      "name": "AmethystOre",
+      "type": "block",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "amethyst_ore"
+    },
+    {
+      "name": "IntermediateCultivateSoil",
+      "type": "block",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "intermediate_cultivate_soil"
+    },
+    {
+      "name": "IntermediateCultivateSoilformula",
+      "type": "recipe",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "intermediate_cultivate_soilformula"
+    },
+    {
+      "name": "Amethyst",
+      "type": "block",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "amethyst"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "zh_tw": {
+      "item.siongsngs_fantasy_world.copperplate": "銅板",
+      "itemGroup.tabsiong_sngworldfood": "菘菘的幻想世界-食物",
+      "item.siongsngs_fantasy_world.irongear": "鐵齒輪",
+      "block.siongsngs_fantasy_world.cooperplatepress": "銅製壓板機",
+      "block.siongsngs_fantasy_world.siong_sng_portalframe": "菘菘的幻想世界傳送門框架",
+      "item.siongsngs_fantasy_world.coppergear": "銅齒輪",
+      "block.siongsngs_fantasy_world.Pressing_machine.cooper_error": "您需要放入2個銅錠才能製作",
+      "itemGroup.tabsiong_sng_ore": "菘菘的幻想世界-礦物",
+      "itemGroup.tabsiong_sngworldblock": "菘菘的幻想世界-方塊",
+      "block.siongsngs_fantasy_world.intermediate_cultivate_soil": "中階培養土",
+      "item.siongsngs_fantasy_world.copperparticle": "銅粒",
+      "item.siongsngs_fantasy_world.stonesteak": "石頭牛排",
+      "block.siongsngs_fantasy_world.copper_ore": "銅礦",
+      "item.siongsngs_fantasy_world.copperingot": "炙熱的銅錠",
+      "item.siongsngs_fantasy_world.ironplate": "鐵板",
+      "advancements.ironplatepressschedule.title": "壓碎板子!!!",
+      "advancements.ironplatepressschedule.descr": "製作一個壓板機",
+      "block.siongsngs_fantasy_world.copper_block": "銅磚",
+      "block.siongsngs_fantasy_world.ironplatemakingmachine": "鐵製壓板機",
+      "block.siongsngs_fantasy_world.ultivatesoil": "初階培養土",
+      "advancements.copper_oreprogress.title": "取得銅礦!!",
+      "block.siongsngs_fantasy_world.amethyst": "Amethyst",
+      "block.siongsngs_fantasy_world.Pressing_machine.iron_error": "您需要放入2個鐵錠才能製作",
+      "item.siongsngs_fantasy_world.siong_sng_world": "菘菘的幻想世界-激活傳送門工具",
+      "block.siongsngs_fantasy_world.amethyst_ore": "紫水晶礦物",
+      "advancements.copper_oreprogress.descr": "挖取銅礦!!",
+      "itemGroup.tabsiong_sng_industrialcomponents": "菘菘的幻想世界-工業元件",
+      "advancements.industrialera.title": "工業時代",
+      "advancements.industrialera.descr": "製作一個鐵齒輪"
+    },
+    "en_us": {
+      "item.siongsngs_fantasy_world.copperplate": "Copper plate",
+      "itemGroup.tabsiong_sngworldfood": "Siong Sng\u0027s World-Food",
+      "item.siongsngs_fantasy_world.irongear": "Iron gear",
+      "block.siongsngs_fantasy_world.cooperplatepress": "Cooper plate press",
+      "block.siongsngs_fantasy_world.siong_sng_portalframe": "Siong Sng\u0027s fantasy World Portal frame",
+      "item.siongsngs_fantasy_world.coppergear": "Copper gear",
+      "block.siongsngs_fantasy_world.Pressing_machine.cooper_error": "You need to put in 2 copper ingots to make",
+      "itemGroup.tabsiong_sng_ore": "Siong Sng\u0027s World-Ore",
+      "itemGroup.tabsiong_sngworldblock": "Siong Sng\u0027s World-Block",
+      "block.siongsngs_fantasy_world.intermediate_cultivate_soil": "Intermediate Cultivate Soil",
+      "item.siongsngs_fantasy_world.copperparticle": "Copper particle",
+      "item.siongsngs_fantasy_world.stonesteak": "Stone steak",
+      "block.siongsngs_fantasy_world.copper_ore": "Copper Ore",
+      "item.siongsngs_fantasy_world.copperingot": "Copper ingot",
+      "item.siongsngs_fantasy_world.ironplate": "Iron plate",
+      "advancements.ironplatepressschedule.title": "Crush the board!!!",
+      "advancements.ironplatepressschedule.descr": "Make a platen press.",
+      "block.siongsngs_fantasy_world.copper_block": "Copper brick",
+      "block.siongsngs_fantasy_world.ironplatemakingmachine": "Iron plate press",
+      "block.siongsngs_fantasy_world.ultivatesoil": "Elementary Cultivate Soil",
+      "advancements.copper_oreprogress.title": "get Copper Ore!!",
+      "block.siongsngs_fantasy_world.amethyst": "Amethyst",
+      "block.siongsngs_fantasy_world.Pressing_machine.iron_error": "You need to put in 2 iron ingots to make",
+      "item.siongsngs_fantasy_world.siong_sng_world": "Siong Sng World Activate the portal tool",
+      "block.siongsngs_fantasy_world.amethyst_ore": "Amethyst Ore",
+      "advancements.copper_oreprogress.descr": "Dig the copper Ore!!",
+      "itemGroup.tabsiong_sng_industrialcomponents": "Siong Sng\u0027s World-Industrial components",
+      "advancements.industrialera.title": "Industrial era!",
+      "advancements.industrialera.descr": "Making an iron gears."
+    }
+  },
+  "workspaceSettings": {
+    "modid": "siongsngs_fantasy_world",
+    "modName": "Siong Sng\u0027s fantasy World",
+    "version": "1.0.0",
+    "description": "This is a multi-world mod developed by Siong Siong, hoping that everyone can play more diverse Minecraft through this mod",
+    "author": "Siong Sng(Barry23412)",
+    "websiteURL": "https://discord.gg/5w9BUM4",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.16.4",
+    "credits": "@2021 By Siong Sng",
+    "modElementsPackage": "siongsng.siongsngsfantasyworld",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202000652319
+}

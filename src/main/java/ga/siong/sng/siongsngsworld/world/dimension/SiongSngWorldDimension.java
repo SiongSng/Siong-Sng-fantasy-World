@@ -1,6 +1,8 @@
 
 package ga.siong.sng.siongsngsworld.world.dimension;
 
+import siongsng.siongsngsfantasyworld.particle.BlueflameParticle;
+
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -37,7 +39,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.Direction;
 import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.particles.ParticleTypes;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.EntitySize;
 import net.minecraft.entity.Entity;
@@ -189,7 +190,7 @@ public class SiongSngWorldDimension extends SiongsngsWorldModElements.ModElement
 					pz = pos.getZ() + 0.5 + 0.25 * j;
 					vz = random.nextFloat() * 2 * j;
 				}
-				world.addParticle(ParticleTypes.EXPLOSION, px, py, pz, vx, vy, vz);
+				world.addParticle(BlueflameParticle.particle, px, py, pz, vx, vy, vz);
 			}
 			if (random.nextInt(110) == 0)
 				world.playSound(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
@@ -222,7 +223,7 @@ public class SiongSngWorldDimension extends SiongsngsWorldModElements.ModElement
 
 	public static class CustomPortalSize {
 		private static final AbstractBlock.IPositionPredicate POSITION_PREDICATE = (state, blockReader, pos) -> {
-			return state.getBlock() == SngCultivatesoilBlock.block.getDefaultState().getBlock();
+			return state.getBlock() == SiongSngPortalframeItem.block.getDefaultState().getBlock();
 		};
 		private final IWorld world;
 		private final Direction.Axis axis;
@@ -491,7 +492,7 @@ public class SiongSngWorldDimension extends SiongsngsWorldModElements.ModElement
 					for (int k2 = 0; k2 < 2; ++k2) {
 						for (int i3 = -1; i3 < 3; ++i3) {
 							BlockState blockstate1 = i3 < 0
-									? SngCultivatesoilBlock.block.getDefaultState().getBlock().getDefaultState()
+									? SiongSngPortalframeItem.block.getDefaultState().getBlock().getDefaultState()
 									: Blocks.AIR.getDefaultState();
 							blockpos$mutable.setAndOffset(blockpos, k2 * direction.getXOffset() + l1 * direction1.getXOffset(), i3,
 									k2 * direction.getZOffset() + l1 * direction1.getZOffset());
@@ -504,7 +505,7 @@ public class SiongSngWorldDimension extends SiongsngsWorldModElements.ModElement
 				for (int i2 = -1; i2 < 4; ++i2) {
 					if (k1 == -1 || k1 == 2 || i2 == -1 || i2 == 3) {
 						blockpos$mutable.setAndOffset(blockpos, k1 * direction.getXOffset(), i2, k1 * direction.getZOffset());
-						this.world.setBlockState(blockpos$mutable, SngCultivatesoilBlock.block.getDefaultState().getBlock().getDefaultState(), 3);
+						this.world.setBlockState(blockpos$mutable, SiongSngPortalframeItem.block.getDefaultState().getBlock().getDefaultState(), 3);
 					}
 				}
 			}

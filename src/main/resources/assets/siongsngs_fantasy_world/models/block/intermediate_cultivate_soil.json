@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "siongsngs_fantasy_world:blocks/intermediate_cultivate_soil",
+    "up": "siongsngs_fantasy_world:blocks/intermediate_cultivate_soil",
+    "north": "siongsngs_fantasy_world:blocks/intermediate_cultivate_soil",
+    "east": "siongsngs_fantasy_world:blocks/intermediate_cultivate_soil",
+    "south": "siongsngs_fantasy_world:blocks/intermediate_cultivate_soil",
+    "west": "siongsngs_fantasy_world:blocks/intermediate_cultivate_soil",
+    "particle": "siongsngs_fantasy_world:blocks/intermediate_cultivate_soil"
+  }
+}
