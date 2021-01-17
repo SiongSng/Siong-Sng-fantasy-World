@@ -1,0 +1,11 @@
+{
+  "_fv": 15,
+  "_type": "tab",
+  "definition": {
+    "name": "Siong Sng's World-Food",
+    "icon": {
+      "value": "Items.CARROT"
+    },
+    "showSearch": false
+  }
+}

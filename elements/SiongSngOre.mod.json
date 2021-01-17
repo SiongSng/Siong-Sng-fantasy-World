@@ -1,0 +1,11 @@
+{
+  "_fv": 15,
+  "_type": "tab",
+  "definition": {
+    "name": "Siong Sng's World-Ore",
+    "icon": {
+      "value": "Blocks.DIAMOND_ORE"
+    },
+    "showSearch": false
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "_fv": 15,
+  "_type": "item",
+  "definition": {
+    "renderType": 0,
+    "texture": "copper_backpack",
+    "customModelName": "Normal",
+    "name": "Copper backpack",
+    "rarity": "UNCOMMON",
+    "creativeTab": {
+      "value": "CUSTOM:Utility"
+    },
+    "stackSize": 1,
+    "enchantability": 0,
+    "useDuration": 0,
+    "toolType": 1.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInfo": [
+      "§b銅背包共有36格物品欄，右鍵可以開啟"
+    ],
+    "hasGlow": false,
+    "guiBoundTo": "Copperbackpackgui",
+    "inventorySize": 36,
+    "inventoryStackSize": 64
+  }
+}
