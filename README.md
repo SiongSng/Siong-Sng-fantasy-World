@@ -5,7 +5,7 @@
 
 Siong Sng's fantasy World
 =======================================  
-**Readme language selection:** [English](https://github.com/Barry23412/Siong-Sng-fantasy-World/blob/master/README.md)   [繁體中文](https://github.com/Barry23412/Siong-Sng-fantasy-World/Zh_tw-readme.md)   [简体中文](https://github.com/Barry23412/Siong-Sng-fantasy-World/Zh_cn-readme.md)
+**Readme language selection:** [English](https://github.com/Barry23412/Siong-Sng-fantasy-World/blob/master/README.md)   [繁體中文](https://github.com/Barry23412/Siong-Sng-fantasy-World/blob/master/Zh_tw-readme.md)   [简体中文](https://github.com/Barry23412/Siong-Sng-fantasy-World/blob/master/Zh_cn-readme.md)
 
 |Mod Name|Mod ID|Author|Programming Tools|Module support language|
 |:------:|:----:|:----:|:---------------:|:---------------------:|
