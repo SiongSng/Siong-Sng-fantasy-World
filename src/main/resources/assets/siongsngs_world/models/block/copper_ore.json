@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "siongsngs_world:blocks/copper_ore",
+    "up": "siongsngs_world:blocks/copper_ore",
+    "north": "siongsngs_world:blocks/copper_ore",
+    "east": "siongsngs_world:blocks/copper_ore",
+    "south": "siongsngs_world:blocks/copper_ore",
+    "west": "siongsngs_world:blocks/copper_ore",
+    "particle": "siongsngs_world:blocks/copper_ore"
+  }
+}

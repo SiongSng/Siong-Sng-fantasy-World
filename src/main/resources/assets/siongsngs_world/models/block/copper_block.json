@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "siongsngs_world:blocks/copper_block_side",
+    "up": "siongsngs_world:blocks/copper_block_side",
+    "north": "siongsngs_world:blocks/copper_block_side",
+    "east": "siongsngs_world:blocks/copper_block_side",
+    "south": "siongsngs_world:blocks/copper_block_side",
+    "west": "siongsngs_world:blocks/copper_block_side",
+    "particle": "siongsngs_world:blocks/copper_block_side"
+  }
+}

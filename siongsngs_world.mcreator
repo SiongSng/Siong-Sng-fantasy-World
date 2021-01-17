@@ -1,0 +1,248 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "SiongSngworldblock",
+      "type": "tab",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "siong_sngworldblock"
+    },
+    {
+      "name": "SngCultivatesoil",
+      "type": "block",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ultivatesoil"
+    },
+    {
+      "name": "Stonesteak",
+      "type": "food",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stonesteak"
+    },
+    {
+      "name": "SiongSngworldfood",
+      "type": "tab",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "siong_sngworldfood"
+    },
+    {
+      "name": "CultivateSoilformula",
+      "type": "recipe",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cultivate_soilformula"
+    },
+    {
+      "name": "CopperOre",
+      "type": "block",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copper_ore"
+    },
+    {
+      "name": "SiongSngOre",
+      "type": "tab",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "siong_sng_ore"
+    },
+    {
+      "name": "Copperingot",
+      "type": "item",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copperingot"
+    },
+    {
+      "name": "CopperingotFiringrecipe",
+      "type": "recipe",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copperingot_firingrecipe"
+    },
+    {
+      "name": "CopperOreprogress",
+      "type": "achievement",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copper_oreprogress"
+    },
+    {
+      "name": "Copperparticle",
+      "type": "item",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copperparticle"
+    },
+    {
+      "name": "Copperparticleformula",
+      "type": "recipe",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copperparticleformula"
+    },
+    {
+      "name": "SiongSngWorld",
+      "type": "dimension",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "siong_sng_world",
+      "metadata": {
+        "ep": true
+      }
+    },
+    {
+      "name": "CopperBlock",
+      "type": "block",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copper_block"
+    },
+    {
+      "name": "Copperbrickformula",
+      "type": "recipe",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "copperbrickformula"
+    },
+    {
+      "name": "Coppergear",
+      "type": "item",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "coppergear"
+    },
+    {
+      "name": "SiongSngIndustrialcomponents",
+      "type": "tab",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "siong_sng_industrialcomponents"
+    },
+    {
+      "name": "COppergearformula",
+      "type": "recipe",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "c_oppergearformula"
+    },
+    {
+      "name": "Irongear",
+      "type": "item",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "irongear"
+    },
+    {
+      "name": "Irongearformula",
+      "type": "recipe",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "irongearformula"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "zh_tw": {
+      "item.siongsngs_world.copperparticle": "銅粒",
+      "block.siongsngs_world.ultivatesoil": "培養土",
+      "item.siongsngs_world.irongear": "鐵齒輪",
+      "block.siongsngs_world.copper_block": "銅磚",
+      "itemGroup.tabsiong_sngworldfood": "菘菘的幻想世界-食物",
+      "advancements.copper_oreprogress.title": "取得銅礦!!",
+      "item.siongsngs_world.coppergear": "銅齒輪",
+      "item.siongsngs_world.copperingot": "炙熱的銅錠",
+      "advancements.copper_oreprogress.descr": "挖取銅礦!!",
+      "itemGroup.tabsiong_sng_ore": "菘菘的幻想世界-礦物",
+      "block.siongsngs_world.copper_ore": "銅礦",
+      "itemGroup.tabsiong_sng_industrialcomponents": "菘菘的幻想世界-工業元件",
+      "itemGroup.tabsiong_sngworldblock": "菘菘的幻想世界-方塊",
+      "item.siongsngs_world.siong_sng_world": "菘菘的幻想世界-激活傳送門工具",
+      "item.siongsngs_world.stonesteak": "石頭牛排",
+      "item.siongsngs_world.stonesteak.description": "§6不仿吃吃看?  §b可能會感覺有點硬!!"
+    },
+    "en_us": {
+      "item.siongsngs_world.copperparticle": "Copper particle",
+      "block.siongsngs_world.ultivatesoil": "Elementary Cultivate Soil",
+      "item.siongsngs_world.irongear": "Iron gear",
+      "block.siongsngs_world.copper_block": "Copper brick",
+      "itemGroup.tabsiong_sngworldfood": "Siong Sng\u0027s World-Food",
+      "advancements.copper_oreprogress.title": "get Copper Ore!!",
+      "item.siongsngs_world.coppergear": "Copper gear",
+      "item.siongsngs_world.copperingot": "Copper ingot",
+      "advancements.copper_oreprogress.descr": "Dig the copper Ore!!",
+      "itemGroup.tabsiong_sng_ore": "Siong Sng\u0027s World-Ore",
+      "block.siongsngs_world.copper_ore": "Copper Ore",
+      "itemGroup.tabsiong_sng_industrialcomponents": "Siong Sng\u0027s World-Industrial components",
+      "itemGroup.tabsiong_sngworldblock": "Siong Sng\u0027s World-Block",
+      "item.siongsngs_world.siong_sng_world": "Siong Sng World Activate the portal tool",
+      "item.siongsngs_world.stonesteak": "Stone steak",
+      "item.siongsngs_world.stonesteak.description": ""
+    }
+  },
+  "workspaceSettings": {
+    "modid": "siongsngs_world",
+    "modName": "菘菘的幻想世界",
+    "version": "1.0.0",
+    "description": "這是一個由菘菘所開發的多世界模組，旨在希望大家能夠透過該模組玩到更多的樣性的Minecraft",
+    "author": "菘菘(Barry23412)",
+    "websiteURL": "https://discord.gg/5w9BUM4",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.16.4",
+    "credits": "@2021 By Siong Sng",
+    "modElementsPackage": "ga.siong.sng.siongsngsworld",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202000652319
+}
