@@ -5,7 +5,7 @@
 
 菘菘的幻想世界
 =======================================  
-**自述文件語言選擇:** [English](https://github.com/Barry23412/Siong-Sng-fantasy-World/blob/master/README.md)   [繁體中文](https://github.com/Barry23412/Siong-Sng-fantasy-World/Zh_tw-readme.md)   [简体中文](https://github.com/Barry23412/Siong-Sng-fantasy-World/Zh_cn-readme.md)
+**自述文件語言選擇:** [English](https://github.com/Barry23412/Siong-Sng-fantasy-World/blob/master/README.md)   [繁體中文](https://github.com/Barry23412/Siong-Sng-fantasy-World/blob/master/Zh_tw-readme.md)   [简体中文](https://github.com/Barry23412/Siong-Sng-fantasy-World/blob/master/Zh_cn-readme.md)
 
 |模組名稱|模組ID|作者|編寫工具|模組支援語言|
 |:-----:|:---:|:-:|:---------------:|:---------------------:|
