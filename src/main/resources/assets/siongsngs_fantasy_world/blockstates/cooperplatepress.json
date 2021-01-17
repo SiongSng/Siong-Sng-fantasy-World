@@ -1,7 +1,27 @@
 {
   "variants": {
-    "": {
+    "facing=north": {
       "model": "siongsngs_fantasy_world:block/cooperplatepress"
+    },
+    "facing=east": {
+      "model": "siongsngs_fantasy_world:block/cooperplatepress",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "siongsngs_fantasy_world:block/cooperplatepress",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "siongsngs_fantasy_world:block/cooperplatepress",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "siongsngs_fantasy_world:block/cooperplatepress",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "siongsngs_fantasy_world:block/cooperplatepress",
+      "x": 90
     }
   }
 }

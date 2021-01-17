@@ -109,11 +109,14 @@
       },
       {
         "value": "Blocks.STONE#5"
+      },
+      {
+        "value": "Blocks.GRANITE_WALL"
       }
     ],
     "frequencyPerChunks": 21,
     "frequencyOnChunk": 9,
-    "minGenerateHeight": 8,
+    "minGenerateHeight": 2,
     "maxGenerateHeight": 100
   }
 }

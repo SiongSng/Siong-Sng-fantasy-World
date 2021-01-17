@@ -10,7 +10,7 @@
     "textureBack": "iron_plate_making_machine_side",
     "renderType": 10,
     "customModelName": "Normal",
-    "rotationMode": 0,
+    "rotationMode": 2,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",

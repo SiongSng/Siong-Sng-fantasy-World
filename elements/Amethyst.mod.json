@@ -9,14 +9,14 @@
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "crystal_3:default",
-    "rotationMode": 0,
+    "customModelName": "crystal_0:default",
+    "rotationMode": 2,
     "emissiveRendering": true,
     "displayFluidOverlay": true,
     "itemTexture": "",
     "particleTexture": "",
     "hasTransparency": true,
-    "connectedSides": false,
+    "connectedSides": true,
     "transparencyType": "CUTOUT",
     "mx": 0.0,
     "my": 0.0,
@@ -66,7 +66,7 @@
     "soundOnStep": {
       "value": "GLASS"
     },
-    "luminance": 2,
+    "luminance": 4,
     "unbreakable": false,
     "breakHarvestLevel": 1,
     "spawnParticles": true,
@@ -104,13 +104,10 @@
       },
       {
         "value": "Blocks.AIR"
-      },
-      {
-        "value": "Blocks.AIR"
       }
     ],
-    "frequencyPerChunks": 15,
-    "frequencyOnChunk": 2,
+    "frequencyPerChunks": 19,
+    "frequencyOnChunk": 3,
     "minGenerateHeight": 0,
     "maxGenerateHeight": 115
   }

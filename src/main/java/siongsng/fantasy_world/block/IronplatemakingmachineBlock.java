@@ -25,13 +25,17 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.Rotation;
 import net.minecraft.util.NonNullList;
+import net.minecraft.util.Mirror;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Direction;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.LockableLootTileEntity;
+import net.minecraft.state.StateContainer;
+import net.minecraft.state.DirectionProperty;
 import net.minecraft.network.play.server.SUpdateTileEntityPacket;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.network.NetworkManager;
@@ -39,6 +43,7 @@ import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
+import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.BlockItem;
 import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.inventory.container.Container;
@@ -52,6 +57,7 @@ import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.client.Minecraft;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.DirectionalBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
@@ -90,8 +96,10 @@ public class IronplatemakingmachineBlock extends SiongsngsFantasyWorldModElement
 	}
 
 	public static class CustomBlock extends Block {
+		public static final DirectionProperty FACING = DirectionalBlock.FACING;
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(5f, 50f).setLightLevel(s -> 0));
+			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
 			setRegistryName("ironplatemakingmachine");
 		}
 
@@ -102,6 +110,25 @@ public class IronplatemakingmachineBlock extends SiongsngsFantasyWorldModElement
 			list.add(new StringTextComponent(
 					"\u00A7b\u53EF\u4EE5\u4F7F\u7528\u9435\u88FD\u58D3\u677F\u6A5F\u4F86\u88FD\u4F5C\u8A31\u591A\u677F\u5B50\uFF0C\u5347\u7D1A\u58D3\u677F\u6A5F\u53EF\u4EE5\u8B93\u58D3\u5236\u901F\u5EA6\u66F4\u5FEB\u3002"));
 			list.add(new StringTextComponent("\u58D3\u5236\u901F\u5EA6 --- X1"));
+		}
+
+		@Override
+		protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
+			builder.add(FACING);
+		}
+
+		public BlockState rotate(BlockState state, Rotation rot) {
+			return state.with(FACING, rot.rotate(state.get(FACING)));
+		}
+
+		public BlockState mirror(BlockState state, Mirror mirrorIn) {
+			return state.rotate(mirrorIn.toRotation(state.get(FACING)));
+		}
+
+		@Override
+		public BlockState getStateForPlacement(BlockItemUseContext context) {
+			;
+			return this.getDefaultState().with(FACING, context.getNearestLookingDirection().getOpposite());
 		}
 
 		@Override

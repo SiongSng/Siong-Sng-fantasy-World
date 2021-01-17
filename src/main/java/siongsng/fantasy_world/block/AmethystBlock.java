@@ -27,11 +27,17 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.Rotation;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.RegistryKey;
+import net.minecraft.util.Mirror;
+import net.minecraft.util.Direction;
+import net.minecraft.state.StateContainer;
+import net.minecraft.state.DirectionProperty;
 import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
+import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.BlockItem;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.entity.player.PlayerEntity;
@@ -41,6 +47,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.Minecraft;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.DirectionalBlock;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
@@ -71,9 +78,11 @@ public class AmethystBlock extends SiongsngsFantasyWorldModElements.ModElement {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
 	}
 	public static class CustomBlock extends Block {
+		public static final DirectionProperty FACING = DirectionalBlock.FACING;
 		public CustomBlock() {
-			super(Block.Properties.create(Material.IRON).sound(SoundType.GLASS).hardnessAndResistance(3f, 15f).setLightLevel(s -> 2).notSolid()
+			super(Block.Properties.create(Material.IRON).sound(SoundType.GLASS).hardnessAndResistance(3f, 15f).setLightLevel(s -> 4).notSolid()
 					.setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true).setOpaque((bs, br, bp) -> false));
+			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
 			setRegistryName("amethyst");
 		}
 
@@ -90,9 +99,33 @@ public class AmethystBlock extends SiongsngsFantasyWorldModElements.ModElement {
 			return true;
 		}
 
+		@OnlyIn(Dist.CLIENT)
+		public boolean isSideInvisible(BlockState state, BlockState adjacentBlockState, Direction side) {
+			return adjacentBlockState.getBlock() == this ? true : super.isSideInvisible(state, adjacentBlockState, side);
+		}
+
 		@Override
 		public boolean propagatesSkylightDown(BlockState state, IBlockReader reader, BlockPos pos) {
 			return true;
+		}
+
+		@Override
+		protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
+			builder.add(FACING);
+		}
+
+		public BlockState rotate(BlockState state, Rotation rot) {
+			return state.with(FACING, rot.rotate(state.get(FACING)));
+		}
+
+		public BlockState mirror(BlockState state, Mirror mirrorIn) {
+			return state.rotate(mirrorIn.toRotation(state.get(FACING)));
+		}
+
+		@Override
+		public BlockState getStateForPlacement(BlockItemUseContext context) {
+			;
+			return this.getDefaultState().with(FACING, context.getNearestLookingDirection().getOpposite());
 		}
 
 		@Override
@@ -146,14 +179,12 @@ public class AmethystBlock extends SiongsngsFantasyWorldModElements.ModElement {
 					blockCriteria = true;
 				if (blockAt.getBlock() == Blocks.AIR.getDefaultState().getBlock())
 					blockCriteria = true;
-				if (blockAt.getBlock() == Blocks.AIR.getDefaultState().getBlock())
-					blockCriteria = true;
 				return blockCriteria;
 			}
 
 			protected IRuleTestType<?> getType() {
 				return IRuleTestType.BLOCK_MATCH;
 			}
-		}, block.getDefaultState(), 2)).range(115).square().func_242731_b(15));
+		}, block.getDefaultState(), 3)).range(115).square().func_242731_b(19));
 	}
 }

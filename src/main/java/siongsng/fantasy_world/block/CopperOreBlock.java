@@ -102,6 +102,8 @@ public class CopperOreBlock extends SiongsngsFantasyWorldModElements.ModElement 
 					blockCriteria = true;
 				if (blockAt.getBlock() == Blocks.ANDESITE.getDefaultState().getBlock())
 					blockCriteria = true;
+				if (blockAt.getBlock() == Blocks.GRANITE_WALL.getDefaultState().getBlock())
+					blockCriteria = true;
 				return blockCriteria;
 			}
 

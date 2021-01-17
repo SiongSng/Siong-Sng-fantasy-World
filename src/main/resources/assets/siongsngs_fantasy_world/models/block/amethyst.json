@@ -1,5 +1,5 @@
 {
-  "parent": "siongsngs_fantasy_world:custom/crystal_3",
+  "parent": "siongsngs_fantasy_world:custom/crystal_0",
   "textures": {
     "all": "siongsngs_fantasy_world:blocks/amethyst",
     "particle": "siongsngs_fantasy_world:blocks/amethyst",
