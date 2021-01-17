@@ -2,16 +2,16 @@
   "_fv": 15,
   "_type": "block",
   "definition": {
-    "texture": "amethyst",
-    "textureTop": "",
-    "textureLeft": "",
-    "textureFront": "amethyst",
-    "textureRight": "",
-    "textureBack": "",
+    "texture": "amethyst_ore",
+    "textureTop": "amethyst_ore",
+    "textureLeft": "amethyst_ore",
+    "textureFront": "amethyst_ore",
+    "textureRight": "amethyst_ore",
+    "textureBack": "amethyst_ore",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
-    "emissiveRendering": true,
+    "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
     "particleTexture": "",
@@ -24,18 +24,16 @@
     "Mx": 1.0,
     "My": 1.0,
     "Mz": 1.0,
-    "name": "Amethyst",
-    "specialInfo": [
-      "§b神秘的紫水晶，紫色與藍色的結合。"
-    ],
-    "hardness": 3.0,
-    "resistance": 15.0,
+    "name": "Amethyst ore",
+    "specialInfo": [],
+    "hardness": 4.0,
+    "resistance": 20.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
       "value": "CUSTOM:SiongSngOre"
     },
-    "destroyTool": "Not specified",
+    "destroyTool": "pickaxe",
     "customDrop": {
       "value": ""
     },
@@ -46,7 +44,7 @@
     "canProvidePower": false,
     "lightOpacity": 255,
     "material": {
-      "value": "IRON"
+      "value": "ROCK"
     },
     "tickRate": 10,
     "tickRandomly": false,
@@ -64,11 +62,11 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "GLASS"
+      "value": "STONE"
     },
-    "luminance": 2,
+    "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 1,
+    "breakHarvestLevel": 4,
     "spawnParticles": true,
     "particleToSpawn": {
       "value": "CUSTOM:Blueflame"
@@ -103,15 +101,18 @@
         "value": "Blocks.STONE"
       },
       {
-        "value": "Blocks.AIR"
+        "value": "Blocks.STONE#1"
       },
       {
-        "value": "Blocks.AIR"
+        "value": "Blocks.STONE#3"
+      },
+      {
+        "value": "Blocks.STONE#6"
       }
     ],
     "frequencyPerChunks": 15,
-    "frequencyOnChunk": 2,
+    "frequencyOnChunk": 9,
     "minGenerateHeight": 0,
-    "maxGenerateHeight": 115
+    "maxGenerateHeight": 95
   }
 }

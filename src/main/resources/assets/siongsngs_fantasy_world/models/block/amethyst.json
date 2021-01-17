@@ -6,7 +6,7 @@
     "north": "siongsngs_fantasy_world:blocks/amethyst",
     "east": "siongsngs_fantasy_world:blocks/amethyst",
     "south": "siongsngs_fantasy_world:blocks/amethyst",
-    "west": "siongsngs_fantasy_world:blocks/",
+    "west": "siongsngs_fantasy_world:blocks/amethyst",
     "particle": "siongsngs_fantasy_world:blocks/amethyst"
   }
 }

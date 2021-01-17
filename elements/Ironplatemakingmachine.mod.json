@@ -78,7 +78,7 @@
     "particleSpawningRadious": 0.5,
     "particleAmount": 6,
     "hasInventory": false,
-    "guiBoundTo": "<NONE>",
+    "guiBoundTo": "Ironplatepressgui",
     "openGUIOnRightClick": false,
     "inventorySize": 3,
     "inventoryStackSize": 64,
@@ -94,9 +94,6 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onRightClicked": {
-      "name": "IronplatemakingmachineZaiFangKuaiShangYouJian"
-    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [],

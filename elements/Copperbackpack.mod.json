@@ -6,9 +6,9 @@
     "texture": "copper_backpack",
     "customModelName": "Normal",
     "name": "Copper backpack",
-    "rarity": "COMMON",
+    "rarity": "UNCOMMON",
     "creativeTab": {
-      "value": "CUSTOM:SiongSngworldUtilities"
+      "value": "CUSTOM:Utility"
     },
     "stackSize": 1,
     "enchantability": 0,
@@ -24,7 +24,7 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "§b銅背包共有36格物品欄可以放置物品，右鍵開啟背包"
+      "§b銅背包共有36格物品欄，右鍵可以開啟"
     ],
     "hasGlow": false,
     "guiBoundTo": "Copperbackpackgui",
