@@ -3,17 +3,17 @@ loaderVersion="[35,)"
 license="Academic Free License v3.0"
 
 [[mods]]
-modId="siongsngs_world"
+modId="siongsngs_fantasy_world"
 version="1.0.0"
-displayName="菘菘的幻想世界"
+displayName="Siong Sng's fantasy World"
 credits="@2021 By Siong Sng"
 displayURL="https://discord.gg/5w9BUM4"
-authors="菘菘(Barry23412)"
+authors="Siong Sng(Barry23412)"
 description='''
-這是一個由菘菘所開發的多世界模組，旨在希望大家能夠透過該模組玩到更多的樣性的Minecraft
+This is a multi-world mod developed by Siong Siong, hoping that everyone can play more diverse Minecraft through this mod
 '''
 
-[[dependencies.siongsngs_world]]
+[[dependencies.siongsngs_fantasy_world]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.16.4]"
