@@ -1,0 +1,27 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"particle": "siongsngs_fantasy_world:blocks/amethyst",
+		"crystal": "siongsngs_fantasy_world:blocks/amethyst"
+	},
+	"elements": [
+		{
+			"name": "crystal1",
+			"from": [8, 0, 0],
+			"to": [8, 16, 16],
+			"faces": {
+				"east": {"uv": [0, 0, 16, 16], "texture": "#crystal"},
+				"west": {"uv": [0, 16, 16, 0], "rotation": 180, "texture": "#crystal"}
+			}
+		},
+		{
+			"name": "crystal2",
+			"from": [0, 0, 8],
+			"to": [15, 14.9, 8],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#crystal"},
+				"south": {"uv": [0, 16, 16, 0], "rotation": 180, "texture": "#crystal"}
+			}
+		}
+	]
+}
