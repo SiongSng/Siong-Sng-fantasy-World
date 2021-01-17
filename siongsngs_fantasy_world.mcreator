@@ -427,8 +427,8 @@
   "sound_elements": [],
   "language_map": {
     "zh_tw": {
-      "item.siongsngs_fantasy_world.copperplate": "銅板",
       "itemGroup.tabsiong_sngworldfood": "菘菘的幻想世界-食物",
+      "item.siongsngs_fantasy_world.copperplate": "銅板",
       "item.siongsngs_fantasy_world.irongear": "鐵齒輪",
       "block.siongsngs_fantasy_world.cooperplatepress": "銅製壓板機",
       "block.siongsngs_fantasy_world.siong_sng_portalframe": "菘菘的幻想世界傳送門框架",
@@ -437,6 +437,7 @@
       "itemGroup.tabsiong_sng_ore": "菘菘的幻想世界-礦物",
       "itemGroup.tabsiong_sngworldblock": "菘菘的幻想世界-方塊",
       "item.siongsngs_fantasy_world.copperparticle": "銅粒",
+      "item.siongsngs_fantasy_world.stonesteak": "石頭牛排",
       "block.siongsngs_fantasy_world.copper_ore": "銅礦",
       "item.siongsngs_fantasy_world.copperingot": "炙熱的銅錠",
       "item.siongsngs_fantasy_world.ironplate": "鐵板",
@@ -454,8 +455,8 @@
       "advancements.industrialera.descr": "製作一個鐵齒輪"
     },
     "en_us": {
-      "item.siongsngs_fantasy_world.copperplate": "Copper plate",
       "itemGroup.tabsiong_sngworldfood": "Siong Sng\u0027s World-Food",
+      "item.siongsngs_fantasy_world.copperplate": "Copper plate",
       "item.siongsngs_fantasy_world.irongear": "Iron gear",
       "block.siongsngs_fantasy_world.cooperplatepress": "Cooper plate press",
       "block.siongsngs_fantasy_world.siong_sng_portalframe": "Siong Sng\u0027s fantasy World Portal frame",
@@ -464,6 +465,7 @@
       "itemGroup.tabsiong_sng_ore": "Siong Sng\u0027s World-Ore",
       "itemGroup.tabsiong_sngworldblock": "Siong Sng\u0027s World-Block",
       "item.siongsngs_fantasy_world.copperparticle": "Copper particle",
+      "item.siongsngs_fantasy_world.stonesteak": "Stone steak",
       "block.siongsngs_fantasy_world.copper_ore": "Copper Ore",
       "item.siongsngs_fantasy_world.copperingot": "Copper ingot",
       "item.siongsngs_fantasy_world.ironplate": "Iron plate",
