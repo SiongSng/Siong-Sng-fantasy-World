@@ -2,12 +2,14 @@
 [![最新發布](https://img.shields.io/github/release/Barry23412/Siong-Sng-fantasy-World.svg)](https://github.com/Barry23412/Siong-Sng-fantasy-World/releases/latest)
 [![GitHub downloads](https://img.shields.io/github/downloads/Barry23412/Siong-Sng-fantasy-World/total.svg)](https://github.com/Barry23412/Siong-Sng-fantasy-World/releases/latest)
 
-
 Siong Sng's fantasy World
 =======================================  
+
 **Readme language selection:** [English](https://github.com/Barry23412/Siong-Sng-fantasy-World/blob/master/README.md)   [繁體中文](https://github.com/Barry23412/Siong-Sng-fantasy-World/blob/master/Zh_tw-readme.md)   [简体中文](https://github.com/Barry23412/Siong-Sng-fantasy-World/blob/master/Zh_cn-readme.md)
 
-|Mod Name|Mod ID|Author|Programming Tools|Module support language|
+## [Download Mod](https://github.com/Barry23412/Siong-Sng-fantasy-World/releases/latest)
+
+|Mod Name|Mod ID|Author|Programming Tools|Mod support language|
 |:------:|:----:|:----:|:---------------:|:---------------------:|
 |Siong Sng's fantasy World|siongsngs_fantasy_world|Siong Sng|IntelliJ IDEA、Mcreator|English、繁體中文、简体中文|
   
