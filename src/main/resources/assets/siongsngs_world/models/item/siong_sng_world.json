@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "siongsngs_world:items/siong_sng_world_activate_the_portal_tool"
-  }
-}

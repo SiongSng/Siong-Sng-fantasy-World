@@ -36,7 +36,7 @@
     },
     "igniterName": "Siong Sng World Activate the portal tool",
     "igniterTab": {
-      "value": "TOOLS"
+      "value": "CUSTOM:Utility"
     },
     "texture": "siong_sng_world_activate_the_portal_tool",
     "portalTexture": "siongsng_portal_block",

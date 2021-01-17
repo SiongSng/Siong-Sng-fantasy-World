@@ -46,7 +46,7 @@
           },
           "id": 2,
           "disableStackInteraction": false,
-          "dropItemsWhenNotBound": false,
+          "dropItemsWhenNotBound": true,
           "name": "Slot #2",
           "x": 248,
           "y": 62
@@ -64,7 +64,7 @@
           },
           "id": 1,
           "disableStackInteraction": false,
-          "dropItemsWhenNotBound": false,
+          "dropItemsWhenNotBound": true,
           "name": "Slot #1",
           "x": 165,
           "y": 65
@@ -79,7 +79,7 @@
           },
           "id": 3,
           "disableStackInteraction": false,
-          "dropItemsWhenNotBound": false,
+          "dropItemsWhenNotBound": true,
           "name": "Slot #3",
           "x": 248,
           "y": 89
