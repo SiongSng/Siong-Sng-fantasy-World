@@ -1,6 +1,6 @@
 {
-  "itemGroup.tabsiong_sngworldfood": "Siong Sng\u0027s World-Food",
   "item.siongsngs_fantasy_world.copperplate": "Copper plate",
+  "itemGroup.tabsiong_sngworldfood": "Siong Sng\u0027s World-Food",
   "item.siongsngs_fantasy_world.irongear": "Iron gear",
   "block.siongsngs_fantasy_world.cooperplatepress": "Cooper plate press",
   "block.siongsngs_fantasy_world.siong_sng_portalframe": "Siong Sng\u0027s fantasy World Portal frame",
@@ -20,6 +20,7 @@
   "block.siongsngs_fantasy_world.ironplatemakingmachine": "Iron plate press",
   "block.siongsngs_fantasy_world.ultivatesoil": "Elementary Cultivate Soil",
   "advancements.copper_oreprogress.title": "get Copper Ore!!",
+  "block.siongsngs_fantasy_world.amethyst": "Amethyst",
   "block.siongsngs_fantasy_world.Pressing_machine.iron_error": "You need to put in 2 iron ingots to make",
   "item.siongsngs_fantasy_world.siong_sng_world": "Siong Sng World Activate the portal tool",
   "block.siongsngs_fantasy_world.amethyst_ore": "Amethyst Ore",
