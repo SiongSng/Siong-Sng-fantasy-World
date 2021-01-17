@@ -1,0 +1,100 @@
+{
+  "_fv": 15,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "銅製壓板機",
+          "color": {
+            "value": -3761887,
+            "falpha": 0.0
+          },
+          "name": "銅製壓板機",
+          "x": 190,
+          "y": 42
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "製作",
+          "onClick": {
+            "name": "Gui1"
+          },
+          "width": 57,
+          "height": 20,
+          "name": "製作",
+          "x": 185,
+          "y": 92
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "color": {
+            "value": -178,
+            "falpha": 0.0
+          },
+          "id": 2,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #2",
+          "x": 248,
+          "y": 62
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "color": {
+            "value": -8847616,
+            "falpha": 0.0
+          },
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #1",
+          "x": 165,
+          "y": 65
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "color": {
+            "value": -178,
+            "falpha": 0.0
+          },
+          "id": 3,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #3",
+          "x": 248,
+          "y": 89
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrowanimation1.png",
+          "use1Xscale": false,
+          "name": "arrowanimation1.png",
+          "x": 191,
+          "y": 58
+        }
+      }
+    ]
+  }
+}

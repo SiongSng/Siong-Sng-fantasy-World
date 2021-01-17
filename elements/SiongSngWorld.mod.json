@@ -28,7 +28,7 @@
       "value": "CUSTOM:SiongSngPortalframe"
     },
     "portalParticles": {
-      "value": "EXPLOSION_NORMAL"
+      "value": "CUSTOM:Blueflame"
     },
     "portalLuminance": 0,
     "portalSound": {
@@ -38,7 +38,7 @@
     "igniterTab": {
       "value": "TOOLS"
     },
-    "texture": "copper_particles",
+    "texture": "siong_sng_world_activate_the_portal_tool",
     "portalTexture": "siongsng_portal_block",
     "enablePortal": true
   }

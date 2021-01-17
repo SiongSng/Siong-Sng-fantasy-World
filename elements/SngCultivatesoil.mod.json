@@ -14,7 +14,7 @@
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
-    "particleTexture": "cultivate_soil_side",
+    "particleTexture": "cultivate_soil_top",
     "hasTransparency": false,
     "connectedSides": false,
     "transparencyType": "SOLID",

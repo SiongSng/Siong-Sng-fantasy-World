@@ -37,7 +37,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.Direction;
 import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.particles.ParticleTypes;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.EntitySize;
 import net.minecraft.entity.Entity;
@@ -64,6 +63,7 @@ import java.util.Comparator;
 
 import it.unimi.dsi.fastutil.objects.Object2ObjectMap;
 
+import ga.siong.sng.siongsngsfantasyworld.particle.BlueflameParticle;
 import ga.siong.sng.siongsngsfantasyworld.item.SiongSngWorldItem;
 import ga.siong.sng.siongsngsfantasyworld.block.SngCultivatesoilBlock;
 import ga.siong.sng.siongsngsfantasyworld.block.SiongSngPortalframeBlock;
@@ -190,7 +190,7 @@ public class SiongSngWorldDimension extends SiongsngsFantasyWorldModElements.Mod
 					pz = pos.getZ() + 0.5 + 0.25 * j;
 					vz = random.nextFloat() * 2 * j;
 				}
-				world.addParticle(ParticleTypes.EXPLOSION, px, py, pz, vx, vy, vz);
+				world.addParticle(BlueflameParticle.particle, px, py, pz, vx, vy, vz);
 			}
 			if (random.nextInt(110) == 0)
 				world.playSound(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,

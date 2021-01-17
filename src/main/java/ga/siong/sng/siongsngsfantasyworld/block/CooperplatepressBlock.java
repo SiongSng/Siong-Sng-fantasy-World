@@ -32,7 +32,7 @@ import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
 
-import ga.siong.sng.siongsngsfantasyworld.procedures.IronplatemakingmachineZaiFangKuaiShangYouJianProcedure;
+import ga.siong.sng.siongsngsfantasyworld.procedures.Cooperplatepressgui1Procedure;
 import ga.siong.sng.siongsngsfantasyworld.particle.BlueflameParticle;
 import ga.siong.sng.siongsngsfantasyworld.itemgroup.SiongSngIndustrialcomponentsItemGroup;
 import ga.siong.sng.siongsngsfantasyworld.SiongsngsFantasyWorldModElements;
@@ -110,7 +110,7 @@ public class CooperplatepressBlock extends SiongsngsFantasyWorldModElements.ModE
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				IronplatemakingmachineZaiFangKuaiShangYouJianProcedure.executeProcedure($_dependencies);
+				Cooperplatepressgui1Procedure.executeProcedure($_dependencies);
 			}
 			return ActionResultType.SUCCESS;
 		}

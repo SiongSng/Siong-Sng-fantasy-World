@@ -47,7 +47,7 @@ public class SiongSngPortalframeBlock extends SiongsngsFantasyWorldModElements.M
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.GROUND).hardnessAndResistance(4f, 20f).setLightLevel(s -> 0).harvestLevel(3)
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(4f, 20f).setLightLevel(s -> 0).harvestLevel(3)
 					.harvestTool(ToolType.PICKAXE));
 			setRegistryName("siong_sng_portalframe");
 		}

@@ -1,13 +1,14 @@
 {
   "display": {
+    "background": "minecraft:textures/block/stone.png",
     "icon": {
-      "item": "siongsngs_fantasy_world:ironplatemakingmachine"
+      "item": "siongsngs_fantasy_world:irongear"
     },
     "title": {
-      "translate": "advancements.ironplatepressschedule.title"
+      "translate": "advancements.industrialera.title"
     },
     "description": {
-      "translate": "advancements.ironplatepressschedule.descr"
+      "translate": "advancements.industrialera.descr"
     },
     "frame": "task",
     "show_toast": true,
@@ -15,12 +16,12 @@
     "hidden": false
   },
   "criteria": {
-    "ironplatepressschedule": {
+    "industrialera": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "siongsngs_fantasy_world:ironplatemakingmachine",
+            "item": "siongsngs_fantasy_world:irongear",
             "count": {
               "min": 1,
               "max": 45
@@ -31,7 +32,6 @@
     }
   },
   "rewards": {
-    "experience": 18
-  },
-  "parent": "siongsngs_fantasy_world:industrialera"
+    "experience": 15
+  }
 }

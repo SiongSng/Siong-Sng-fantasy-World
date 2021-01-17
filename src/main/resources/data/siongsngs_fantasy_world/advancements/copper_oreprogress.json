@@ -1,6 +1,5 @@
 {
   "display": {
-    "background": "minecraft:textures/block/stone.png",
     "icon": {
       "item": "siongsngs_fantasy_world:copper_ore"
     },
@@ -33,5 +32,6 @@
   },
   "rewards": {
     "experience": 5
-  }
+  },
+  "parent": "siongsngs_fantasy_world:industrialera"
 }
