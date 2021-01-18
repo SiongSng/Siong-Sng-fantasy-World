@@ -3,9 +3,9 @@
   "_type": "gui",
   "definition": {
     "type": 1,
-    "width": 176,
+    "width": 198,
     "height": 166,
-    "inventoryOffsetX": 0,
+    "inventoryOffsetX": -11,
     "inventoryOffsetY": 0,
     "renderBgLayer": true,
     "doesPauseGame": false,
@@ -13,13 +13,13 @@
       {
         "type": "label",
         "data": {
-          "text": "鐵製壓板機",
+          "text": "壓板機",
           "color": {
-            "value": -3790097,
+            "value": -16777216,
             "falpha": 0.0
           },
-          "name": "鐵製壓板機",
-          "x": 190,
+          "name": "壓板機",
+          "x": 120,
           "y": 42
         }
       },
@@ -33,8 +33,8 @@
           "width": 57,
           "height": 20,
           "name": "製作",
-          "x": 185,
-          "y": 92
+          "x": 166,
+          "y": 93
         }
       },
       {
@@ -48,8 +48,8 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #2",
-          "x": 248,
-          "y": 62
+          "x": 231,
+          "y": 60
         }
       },
       {
@@ -66,8 +66,8 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #1",
-          "x": 165,
-          "y": 65
+          "x": 139,
+          "y": 60
         }
       },
       {
@@ -81,8 +81,8 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #3",
-          "x": 248,
-          "y": 89
+          "x": 231,
+          "y": 91
         }
       },
       {
@@ -91,8 +91,92 @@
           "image": "arrowanimation1.png",
           "use1Xscale": false,
           "name": "arrowanimation1.png",
-          "x": 191,
-          "y": 58
+          "x": 174,
+          "y": 55
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "color": {
+            "value": -3394561,
+            "falpha": 0.0
+          },
+          "id": 4,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "IronplatemakingmachineZaiYouXiKeGengXinShi"
+          },
+          "name": "Slot #4",
+          "x": 285,
+          "y": 44
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "color": {
+            "value": -3394561,
+            "falpha": 0.0
+          },
+          "id": 5,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "IronplatemakingmachineZaiYouXiKeGengXinShi"
+          },
+          "name": "Slot #5",
+          "x": 285,
+          "y": 62
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "color": {
+            "value": -3394561,
+            "falpha": 0.0
+          },
+          "id": 6,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "IronplatemakingmachineZaiYouXiKeGengXinShi"
+          },
+          "name": "Slot #6",
+          "x": 285,
+          "y": 80
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "color": {
+            "value": -3394561,
+            "falpha": 0.0
+          },
+          "id": 7,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "IronplatemakingmachineZaiYouXiKeGengXinShi"
+          },
+          "name": "Slot #7",
+          "x": 285,
+          "y": 98
         }
       }
     ]

@@ -3,7 +3,7 @@ package siongsng.fantasy_world.block;
 
 import siongsng.fantasy_world.particle.BlueflameParticle;
 import siongsng.fantasy_world.itemgroup.SiongSngIndustrialcomponentsItemGroup;
-import siongsng.fantasy_world.gui.CooperplatepressguiGui;
+import siongsng.fantasy_world.gui.IronplatepressguiGui;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
@@ -175,7 +175,7 @@ public class CooperplatepressBlock extends SiongsngsFantasyWorldModElements.ModE
 
 					@Override
 					public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-						return new CooperplatepressguiGui.GuiContainerMod(id, inventory,
+						return new IronplatepressguiGui.GuiContainerMod(id, inventory,
 								new PacketBuffer(Unpooled.buffer()).writeBlockPos(new BlockPos(x, y, z)));
 					}
 				}, new BlockPos(x, y, z));
@@ -220,7 +220,7 @@ public class CooperplatepressBlock extends SiongsngsFantasyWorldModElements.ModE
 	}
 
 	public static class CustomTileEntity extends LockableLootTileEntity implements ISidedInventory {
-		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(4, ItemStack.EMPTY);
+		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(8, ItemStack.EMPTY);
 		protected CustomTileEntity() {
 			super(tileEntityType);
 		}
@@ -283,7 +283,7 @@ public class CooperplatepressBlock extends SiongsngsFantasyWorldModElements.ModE
 
 		@Override
 		public Container createMenu(int id, PlayerInventory player) {
-			return new CooperplatepressguiGui.GuiContainerMod(id, player, new PacketBuffer(Unpooled.buffer()).writeBlockPos(this.getPos()));
+			return new IronplatepressguiGui.GuiContainerMod(id, player, new PacketBuffer(Unpooled.buffer()).writeBlockPos(this.getPos()));
 		}
 
 		@Override
@@ -303,6 +303,20 @@ public class CooperplatepressBlock extends SiongsngsFantasyWorldModElements.ModE
 
 		@Override
 		public boolean isItemValidForSlot(int index, ItemStack stack) {
+			if (index == 0)
+				return false;
+			if (index == 2)
+				return false;
+			if (index == 3)
+				return false;
+			if (index == 4)
+				return false;
+			if (index == 5)
+				return false;
+			if (index == 6)
+				return false;
+			if (index == 7)
+				return false;
 			return true;
 		}
 
@@ -318,6 +332,16 @@ public class CooperplatepressBlock extends SiongsngsFantasyWorldModElements.ModE
 
 		@Override
 		public boolean canExtractItem(int index, ItemStack stack, Direction direction) {
+			if (index == 1)
+				return false;
+			if (index == 4)
+				return false;
+			if (index == 5)
+				return false;
+			if (index == 6)
+				return false;
+			if (index == 7)
+				return false;
 			return true;
 		}
 		private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());

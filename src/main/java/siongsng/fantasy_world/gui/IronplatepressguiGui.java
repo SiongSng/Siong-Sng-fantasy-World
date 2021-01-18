@@ -1,6 +1,7 @@
 
 package siongsng.fantasy_world.gui;
 
+import siongsng.fantasy_world.procedures.IronplatemakingmachineZaiYouXiKeGengXinShiProcedure;
 import siongsng.fantasy_world.procedures.Gui1Procedure;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 import siongsng.fantasy_world.SiongsngsFantasyWorldMod;
@@ -86,7 +87,7 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 			super(containerType, id);
 			this.entity = inv.player;
 			this.world = inv.player.world;
-			this.internal = new ItemStackHandler(4);
+			this.internal = new ItemStackHandler(8);
 			BlockPos pos = null;
 			if (extraData != null) {
 				pos = extraData.readBlockPos();
@@ -124,18 +125,46 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 					}
 				}
 			}
-			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 123, 26) {
+			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 117, 24) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 40, 29) {
+			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 25, 24) {
 			}));
-			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 123, 53) {
+			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 117, 55) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
+				}
+			}));
+			this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 171, 8) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(4, 0, 0);
+				}
+			}));
+			this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 171, 26) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(5, 0, 0);
+				}
+			}));
+			this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 171, 44) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(6, 0, 0);
+				}
+			}));
+			this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 171, 62) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(7, 0, 0);
 				}
 			}));
 			int si;
@@ -163,18 +192,18 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 			if (slot != null && slot.getHasStack()) {
 				ItemStack itemstack1 = slot.getStack();
 				itemstack = itemstack1.copy();
-				if (index < 3) {
-					if (!this.mergeItemStack(itemstack1, 3, this.inventorySlots.size(), true)) {
+				if (index < 7) {
+					if (!this.mergeItemStack(itemstack1, 7, this.inventorySlots.size(), true)) {
 						return ItemStack.EMPTY;
 					}
 					slot.onSlotChange(itemstack1, itemstack);
-				} else if (!this.mergeItemStack(itemstack1, 0, 3, false)) {
-					if (index < 3 + 27) {
-						if (!this.mergeItemStack(itemstack1, 3 + 27, this.inventorySlots.size(), true)) {
+				} else if (!this.mergeItemStack(itemstack1, 0, 7, false)) {
+					if (index < 7 + 27) {
+						if (!this.mergeItemStack(itemstack1, 7 + 27, this.inventorySlots.size(), true)) {
 							return ItemStack.EMPTY;
 						}
 					} else {
-						if (!this.mergeItemStack(itemstack1, 3, 3 + 27, false)) {
+						if (!this.mergeItemStack(itemstack1, 7, 7 + 27, false)) {
 							return ItemStack.EMPTY;
 						}
 					}
@@ -311,7 +340,7 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 			this.y = container.y;
 			this.z = container.z;
 			this.entity = container.entity;
-			this.xSize = 176;
+			this.xSize = 198;
 			this.ySize = 166;
 		}
 		private static final ResourceLocation texture = new ResourceLocation("siongsngs_fantasy_world:textures/ironplatepressgui.png");
@@ -330,7 +359,7 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 			int l = (this.height - this.ySize) / 2;
 			this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("siongsngs_fantasy_world:textures/arrowanimation1.png"));
-			this.blit(ms, this.guiLeft + 65, this.guiTop + 21, 0, 0, 41, 29, 41, 29);
+			this.blit(ms, this.guiLeft + 59, this.guiTop + 18, 0, 0, 41, 29, 41, 29);
 		}
 
 		@Override
@@ -349,7 +378,7 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-			this.font.drawString(ms, "\u9435\u88FD\u58D3\u677F\u6A5F", 64, 5, -3790097);
+			this.font.drawString(ms, "\u58D3\u677F\u6A5F", 5, 5, -16777216);
 		}
 
 		@Override
@@ -362,7 +391,7 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 		public void init(Minecraft minecraft, int width, int height) {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
-			this.addButton(new Button(this.guiLeft + 59, this.guiTop + 55, 57, 20, new StringTextComponent("製作"), e -> {
+			this.addButton(new Button(this.guiLeft + 51, this.guiTop + 56, 57, 20, new StringTextComponent("製作"), e -> {
 				SiongsngsFantasyWorldMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
 				handleButtonAction(entity, 0, x, y, z);
 			}));
@@ -469,5 +498,45 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
+		if (slotID == 4 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				IronplatemakingmachineZaiYouXiKeGengXinShiProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 5 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				IronplatemakingmachineZaiYouXiKeGengXinShiProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 6 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				IronplatemakingmachineZaiYouXiKeGengXinShiProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 7 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				IronplatemakingmachineZaiYouXiKeGengXinShiProcedure.executeProcedure($_dependencies);
+			}
+		}
 	}
 }

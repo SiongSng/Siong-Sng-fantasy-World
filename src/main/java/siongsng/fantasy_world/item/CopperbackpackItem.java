@@ -20,6 +20,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.math.BlockPos;
@@ -95,7 +96,8 @@ public class CopperbackpackItem extends SiongsngsFantasyWorldModElements.ModElem
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
 			list.add(new StringTextComponent(
-					"\u00A7b\u9285\u80CC\u5305\u5171\u670936\u683C\u7269\u54C1\u6B04\uFF0C\u53F3\u9375\u53EF\u4EE5\u958B\u555F"));
+			new TranslationTextComponent("copperbackpack.item.description").getUnformattedComponentText())
+			);
 		}
 
 		@Override

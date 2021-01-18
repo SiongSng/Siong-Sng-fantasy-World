@@ -372,15 +372,6 @@
       }
     },
     {
-      "name": "Cooperplatepressgui",
-      "type": "gui",
-      "sortid": 34,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "cooperplatepressgui"
-    },
-    {
       "name": "Industrialera",
       "type": "achievement",
       "sortid": 36,
@@ -412,7 +403,7 @@
       "type": "item",
       "sortid": 39,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "ids": {},
       "registry_name": "copperbackpack"
     },
@@ -451,15 +442,92 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "intermediateculturesoilformula"
+    },
+    {
+      "name": "SiongSngcoingui",
+      "type": "overlay",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "siong_sngcoingui"
+    },
+    {
+      "name": "Join",
+      "type": "procedure",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "join",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Mechanicalautomaticoperationcomponents",
+      "type": "item",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mechanicalautomaticoperationcomponents"
+    },
+    {
+      "name": "IronplatemakingmachineZaiYouXiKeGengXinShi",
+      "type": "procedure",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ironplatemakingmachine_zai_you_xi_ke_geng_xin_shi",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BarrenIronOre",
+      "type": "block",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "barren_iron_ore"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "zh_tw": {
-      "block.siongsngs_fantasy_world.Pressing_machine.error": "請放入物品",
-      "itemGroup.tabsiong_sngworldfood": "菘菘的幻想世界-食物",
+      "block.siongsngs_fantasy_world.Pressing_machine.error": "請放入物品或正確的物品數量",
       "item.siongsngs_fantasy_world.copperplate": "銅板",
+      "itemGroup.tabsiong_sngworldfood": "菘菘的幻想世界-食物",
       "item.siongsngs_fantasy_world.irongear": "鐵齒輪",
       "block.siongsngs_fantasy_world.cooperplatepress": "銅製壓板機",
       "block.siongsngs_fantasy_world.siong_sng_portalframe": "菘菘的幻想世界傳送門框架",
@@ -467,7 +535,10 @@
       "block.siongsngs_fantasy_world.intermediateculturesoil": "中階培養土",
       "itemGroup.tabsiong_sng_ore": "菘菘的幻想世界-礦物",
       "item.siongsngs_fantasy_world.copperbackpack": "銅背包",
+      "block.siongsngs_fantasy_world.barren_iron_ore": "Barren Iron Ore",
       "itemGroup.tabsiong_sngworldblock": "菘菘的幻想世界-方塊",
+      "item.siongsngs_fantasy_world.mechanicalautomaticoperationcomponents": "機械自動運作晶片",
+      "copperbackpack.item.description": "§b銅背包共有36格物品欄，右鍵可以開啟",
       "item.siongsngs_fantasy_world.copperparticle": "銅粒",
       "item.siongsngs_fantasy_world.stonesteak": "石頭牛排",
       "block.siongsngs_fantasy_world.copper_ore": "銅礦",
@@ -489,9 +560,9 @@
       "advancements.industrialera.descr": "製作一個鐵齒輪"
     },
     "en_us": {
-      "block.siongsngs_fantasy_world.Pressing_machine.error": "Please put in items",
-      "itemGroup.tabsiong_sngworldfood": "Siong Sng\u0027s World-Food",
+      "block.siongsngs_fantasy_world.Pressing_machine.error": "Please put in the items or the correct number of items",
       "item.siongsngs_fantasy_world.copperplate": "Copper plate",
+      "itemGroup.tabsiong_sngworldfood": "Siong Sng\u0027s World-Food",
       "item.siongsngs_fantasy_world.irongear": "Iron gear",
       "block.siongsngs_fantasy_world.cooperplatepress": "Cooper plate press",
       "block.siongsngs_fantasy_world.siong_sng_portalframe": "Siong Sng\u0027s fantasy World Portal frame",
@@ -499,7 +570,10 @@
       "block.siongsngs_fantasy_world.intermediateculturesoil": "Intermediate culture soil",
       "itemGroup.tabsiong_sng_ore": "Siong Sng\u0027s World-Ore",
       "item.siongsngs_fantasy_world.copperbackpack": "Copper backpack",
+      "block.siongsngs_fantasy_world.barren_iron_ore": "Barren Iron Ore",
       "itemGroup.tabsiong_sngworldblock": "Siong Sng\u0027s World-Block",
+      "item.siongsngs_fantasy_world.mechanicalautomaticoperationcomponents": "Mechanical automatic operation of the chip",
+      "copperbackpack.item.description": "§B Copper backpack has 36 inventory slots, right click to open",
       "item.siongsngs_fantasy_world.copperparticle": "Copper particle",
       "item.siongsngs_fantasy_world.stonesteak": "Stone steak",
       "block.siongsngs_fantasy_world.copper_ore": "Copper Ore",
@@ -525,7 +599,7 @@
     "modid": "siongsngs_fantasy_world",
     "modName": "Siong Sng\u0027s fantasy World",
     "version": "1.0.0",
-    "description": "This is a multi-world mod developed by Siong Siong, hoping that everyone can play more diverse Minecraft through this mod",
+    "description": "This is a multi-world mod developed by Siong Sng, hoping that everyone can play more diverse Minecraft through this mod",
     "author": "Siong Sng(Barry23412)",
     "websiteURL": "https://discord.gg/5w9BUM4",
     "license": "Academic Free License v3.0",

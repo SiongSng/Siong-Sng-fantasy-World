@@ -7,8 +7,6 @@ import siongsng.fantasy_world.item.CopperingotItem;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 import siongsng.fantasy_world.SiongsngsFantasyWorldMod;
 
-import net.minecraft.util.text.TranslationTextComponent;
-import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.inventory.container.Slot;
@@ -34,29 +32,7 @@ public class Gui1Procedure extends SiongsngsFantasyWorldModElements.ModElement {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		double previousRecipe = 0;
-		if (((new Object() {
-			public int getAmount(int sltid) {
-				if (entity instanceof ServerPlayerEntity) {
-					Container _current = ((ServerPlayerEntity) entity).openContainer;
-					if (_current instanceof Supplier) {
-						Object invobj = ((Supplier) _current).get();
-						if (invobj instanceof Map) {
-							ItemStack stack = ((Slot) ((Map) invobj).get(sltid)).getStack();;
-							if (stack != null)
-								return stack.getCount();
-						}
-					}
-				}
-				return 0;
-			}
-		}.getAmount((int) (1))) == 0)) {
-			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-				((PlayerEntity) entity).sendStatusMessage(
-						new StringTextComponent(
-								(new TranslationTextComponent("block.siongsngs_fantasy_world.Pressing_machine.error").getUnformattedComponentText())),
-						(true));
-			}
-		} else if ((((new Object() {
+		if ((((new Object() {
 			public ItemStack getItemStack(int sltid) {
 				Entity _ent = entity;
 				if (_ent instanceof ServerPlayerEntity) {

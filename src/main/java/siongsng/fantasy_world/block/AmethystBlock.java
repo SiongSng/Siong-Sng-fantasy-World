@@ -9,6 +9,7 @@ import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.common.ToolType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
@@ -20,12 +21,17 @@ import net.minecraft.world.gen.feature.OreFeature;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.ChunkGenerator;
 import net.minecraft.world.World;
+import net.minecraft.world.IWorldReader;
 import net.minecraft.world.ISeedReader;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IBlockDisplayReader;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.util.math.vector.Vector3d;
+import net.minecraft.util.math.shapes.VoxelShapes;
+import net.minecraft.util.math.shapes.VoxelShape;
+import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.ResourceLocation;
@@ -80,8 +86,9 @@ public class AmethystBlock extends SiongsngsFantasyWorldModElements.ModElement {
 	public static class CustomBlock extends Block {
 		public static final DirectionProperty FACING = DirectionalBlock.FACING;
 		public CustomBlock() {
-			super(Block.Properties.create(Material.IRON).sound(SoundType.GLASS).hardnessAndResistance(3f, 15f).setLightLevel(s -> 4).notSolid()
-					.setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true).setOpaque((bs, br, bp) -> false));
+			super(Block.Properties.create(Material.IRON).sound(SoundType.GLASS).hardnessAndResistance(3f, 15f).setLightLevel(s -> 4).harvestLevel(3)
+					.harvestTool(ToolType.PICKAXE).notSolid().setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true)
+					.setOpaque((bs, br, bp) -> false));
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
 			setRegistryName("amethyst");
 		}
@@ -99,6 +106,11 @@ public class AmethystBlock extends SiongsngsFantasyWorldModElements.ModElement {
 			return true;
 		}
 
+		@Override
+		public float[] getBeaconColorMultiplier(BlockState state, IWorldReader world, BlockPos pos, BlockPos beaconPos) {
+			return new float[]{0.8f, 0f, 1f};
+		}
+
 		@OnlyIn(Dist.CLIENT)
 		public boolean isSideInvisible(BlockState state, BlockState adjacentBlockState, Direction side) {
 			return adjacentBlockState.getBlock() == this ? true : super.isSideInvisible(state, adjacentBlockState, side);
@@ -107,6 +119,26 @@ public class AmethystBlock extends SiongsngsFantasyWorldModElements.ModElement {
 		@Override
 		public boolean propagatesSkylightDown(BlockState state, IBlockReader reader, BlockPos pos) {
 			return true;
+		}
+
+		@Override
+		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
+			Vector3d offset = state.getOffset(world, pos);
+			switch ((Direction) state.get(FACING)) {
+				case SOUTH :
+				default :
+					return VoxelShapes.create(1D, 0D, 1D, 0.25D, 1D, 0.25D).withOffset(offset.x, offset.y, offset.z);
+				case NORTH :
+					return VoxelShapes.create(0D, 0D, 0D, 0.75D, 1D, 0.75D).withOffset(offset.x, offset.y, offset.z);
+				case WEST :
+					return VoxelShapes.create(0D, 0D, 1D, 0.75D, 1D, 0.25D).withOffset(offset.x, offset.y, offset.z);
+				case EAST :
+					return VoxelShapes.create(1D, 0D, 0D, 0.25D, 1D, 0.75D).withOffset(offset.x, offset.y, offset.z);
+				case UP :
+					return VoxelShapes.create(0D, 1D, 0D, 0.75D, 0.25D, 1D).withOffset(offset.x, offset.y, offset.z);
+				case DOWN :
+					return VoxelShapes.create(0D, 0D, 1D, 0.75D, 0.75D, 0D).withOffset(offset.x, offset.y, offset.z);
+			}
 		}
 
 		@Override

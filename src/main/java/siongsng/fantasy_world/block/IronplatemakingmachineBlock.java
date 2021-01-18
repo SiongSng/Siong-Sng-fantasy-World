@@ -221,7 +221,7 @@ public class IronplatemakingmachineBlock extends SiongsngsFantasyWorldModElement
 	}
 
 	public static class CustomTileEntity extends LockableLootTileEntity implements ISidedInventory {
-		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(4, ItemStack.EMPTY);
+		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(8, ItemStack.EMPTY);
 		protected CustomTileEntity() {
 			super(tileEntityType);
 		}
@@ -304,6 +304,20 @@ public class IronplatemakingmachineBlock extends SiongsngsFantasyWorldModElement
 
 		@Override
 		public boolean isItemValidForSlot(int index, ItemStack stack) {
+			if (index == 0)
+				return false;
+			if (index == 2)
+				return false;
+			if (index == 3)
+				return false;
+			if (index == 4)
+				return false;
+			if (index == 5)
+				return false;
+			if (index == 6)
+				return false;
+			if (index == 7)
+				return false;
 			return true;
 		}
 
@@ -319,6 +333,16 @@ public class IronplatemakingmachineBlock extends SiongsngsFantasyWorldModElement
 
 		@Override
 		public boolean canExtractItem(int index, ItemStack stack, Direction direction) {
+			if (index == 1)
+				return false;
+			if (index == 4)
+				return false;
+			if (index == 5)
+				return false;
+			if (index == 6)
+				return false;
+			if (index == 7)
+				return false;
 			return true;
 		}
 		private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());

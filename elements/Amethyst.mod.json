@@ -21,9 +21,9 @@
     "mx": 0.0,
     "my": 0.0,
     "mz": 0.0,
-    "Mx": 1.0,
+    "Mx": 0.75,
     "My": 1.0,
-    "Mz": 1.0,
+    "Mz": 0.75,
     "name": "Amethyst",
     "specialInfo": [
       "§b神秘的紫水晶，紫色與藍色的結合。"
@@ -35,7 +35,7 @@
     "creativeTab": {
       "value": "CUSTOM:SiongSngOre"
     },
-    "destroyTool": "Not specified",
+    "destroyTool": "pickaxe",
     "customDrop": {
       "value": ""
     },
@@ -57,6 +57,10 @@
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
+    "beaconColorModifier": {
+      "value": -3407617,
+      "falpha": 0.0
+    },
     "flammability": 0,
     "fireSpreadSpeed": 0,
     "isLadder": false,
@@ -68,7 +72,7 @@
     },
     "luminance": 4,
     "unbreakable": false,
-    "breakHarvestLevel": 1,
+    "breakHarvestLevel": 3,
     "spawnParticles": true,
     "particleToSpawn": {
       "value": "CUSTOM:Blueflame"
