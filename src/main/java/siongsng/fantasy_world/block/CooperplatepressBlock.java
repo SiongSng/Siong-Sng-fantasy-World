@@ -309,14 +309,6 @@ public class CooperplatepressBlock extends SiongsngsFantasyWorldModElements.ModE
 				return false;
 			if (index == 3)
 				return false;
-			if (index == 4)
-				return false;
-			if (index == 5)
-				return false;
-			if (index == 6)
-				return false;
-			if (index == 7)
-				return false;
 			return true;
 		}
 

@@ -3,6 +3,7 @@ package siongsng.fantasy_world.gui;
 
 import siongsng.fantasy_world.procedures.IronplatemakingmachineZaiYouXiKeGengXinShiProcedure;
 import siongsng.fantasy_world.procedures.Gui1Procedure;
+import siongsng.fantasy_world.item.MechanicalautomaticoperationcomponentsItem;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 import siongsng.fantasy_world.SiongsngsFantasyWorldMod;
 
@@ -145,12 +146,22 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 					super.onSlotChanged();
 					GuiContainerMod.this.slotChanged(4, 0, 0);
 				}
+
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return (new ItemStack(MechanicalautomaticoperationcomponentsItem.block, (int) (1)).getItem() == stack.getItem());
+				}
 			}));
 			this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 171, 26) {
 				@Override
 				public void onSlotChanged() {
 					super.onSlotChanged();
 					GuiContainerMod.this.slotChanged(5, 0, 0);
+				}
+
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return (new ItemStack(MechanicalautomaticoperationcomponentsItem.block, (int) (1)).getItem() == stack.getItem());
 				}
 			}));
 			this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 171, 44) {
@@ -159,12 +170,22 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 					super.onSlotChanged();
 					GuiContainerMod.this.slotChanged(6, 0, 0);
 				}
+
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return (new ItemStack(MechanicalautomaticoperationcomponentsItem.block, (int) (1)).getItem() == stack.getItem());
+				}
 			}));
 			this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 171, 62) {
 				@Override
 				public void onSlotChanged() {
 					super.onSlotChanged();
 					GuiContainerMod.this.slotChanged(7, 0, 0);
+				}
+
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return (new ItemStack(MechanicalautomaticoperationcomponentsItem.block, (int) (1)).getItem() == stack.getItem());
 				}
 			}));
 			int si;

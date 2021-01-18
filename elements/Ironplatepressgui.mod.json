@@ -99,7 +99,7 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": ""
+            "value": "CUSTOM:Mechanicalautomaticoperationcomponents"
           },
           "color": {
             "value": -3394561,
@@ -120,7 +120,7 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": ""
+            "value": "CUSTOM:Mechanicalautomaticoperationcomponents"
           },
           "color": {
             "value": -3394561,
@@ -141,7 +141,7 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": ""
+            "value": "CUSTOM:Mechanicalautomaticoperationcomponents"
           },
           "color": {
             "value": -3394561,
@@ -162,7 +162,7 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": ""
+            "value": "CUSTOM:Mechanicalautomaticoperationcomponents"
           },
           "color": {
             "value": -3394561,

@@ -24,7 +24,7 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "§b放入機械中可以讓機械自動運轉(自動生產物品)"
+      "§b放入機械中擴充欄的第一格，可以讓機械自動運轉(自動生產物品)"
     ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",

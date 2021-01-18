@@ -54,7 +54,7 @@ public class MechanicalautomaticoperationcomponentsItem extends SiongsngsFantasy
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
 			list.add(new StringTextComponent(
-					"\u00A7b\u653E\u5165\u6A5F\u68B0\u4E2D\u53EF\u4EE5\u8B93\u6A5F\u68B0\u81EA\u52D5\u904B\u8F49(\u81EA\u52D5\u751F\u7522\u7269\u54C1)"));
+					"\u00A7b\u653E\u5165\u6A5F\u68B0\u4E2D\u64F4\u5145\u6B04\u7684\u7B2C\u4E00\u683C\uFF0C\u53EF\u4EE5\u8B93\u6A5F\u68B0\u81EA\u52D5\u904B\u8F49(\u81EA\u52D5\u751F\u7522\u7269\u54C1)"));
 		}
 	}
 }

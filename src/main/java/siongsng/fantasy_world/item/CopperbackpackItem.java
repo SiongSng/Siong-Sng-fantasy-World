@@ -95,9 +95,7 @@ public class CopperbackpackItem extends SiongsngsFantasyWorldModElements.ModElem
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent(
-			new TranslationTextComponent("copperbackpack.item.description").getUnformattedComponentText())
-			);
+			list.add(( new TranslationTextComponent("copperbackpack.item.description")));
 		}
 
 		@Override
