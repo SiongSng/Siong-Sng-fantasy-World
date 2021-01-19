@@ -41,8 +41,8 @@ public class JoinProcedure extends SiongsngsFantasyWorldModElements.ModElement {
 		if (!world.isRemote()) {
 			MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 			if (mcserv != null)
-				mcserv.getPlayerList().func_232641_a_(new StringTextComponent((("\u00A7b\u6B61\u8FCE\u00A7c") + ""
-						+ ((entity.getDisplayName().getString())) + "" + ("\u00A7b\u4F86\u5230\u83D8\u83D8\u7684\u5E7B\u60F3\u4E16\u754C!!!"))),
+				mcserv.getPlayerList().func_232641_a_(new StringTextComponent((("\u00A7b\u6B61\u8FCE \u00A7c") + ""
+						+ ((entity.getDisplayName().getString())) + "" + (" \u00A7b\u4F86\u5230\u83D8\u83D8\u7684\u5E7B\u60F3\u4E16\u754C!!!"))),
 						ChatType.SYSTEM, Util.DUMMY_UUID);
 		}
 	}

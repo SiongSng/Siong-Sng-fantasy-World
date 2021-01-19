@@ -6,7 +6,6 @@ import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.client.event.ParticleFactoryRegisterEvent;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
@@ -26,7 +25,6 @@ public class BlueflameParticle extends SiongsngsFantasyWorldModElements.ModEleme
 	public static final BasicParticleType particle = new BasicParticleType(false);
 	public BlueflameParticle(SiongsngsFantasyWorldModElements instance) {
 		super(instance, 22);
-		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

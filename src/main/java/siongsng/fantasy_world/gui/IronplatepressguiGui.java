@@ -59,17 +59,17 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
 				GUISlotChangedMessage::handler);
 		containerType = new ContainerType<>(new GuiContainerModFactory());
-		FMLJavaModLoadingContext.get().getModEventBus().register(this);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new ContainerRegisterHandler());
 	}
-
+	private static class ContainerRegisterHandler {
+		@SubscribeEvent
+		public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
+			event.getRegistry().register(containerType.setRegistryName("ironplatepressgui"));
+		}
+	}
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
 		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, GuiWindow::new));
-	}
-
-	@SubscribeEvent
-	public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
-		event.getRegistry().register(containerType.setRegistryName("ironplatepressgui"));
 	}
 	public static class GuiContainerModFactory implements IContainerFactory {
 		public GuiContainerMod create(int id, PlayerInventory inv, PacketBuffer extraData) {
@@ -133,6 +133,11 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 				}
 			}));
 			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 25, 24) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(1, 0, 0);
+				}
 			}));
 			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 117, 55) {
 				@Override
@@ -509,6 +514,10 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
 				Gui1Procedure.executeProcedure($_dependencies);
 			}
 		}
@@ -519,6 +528,16 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
+		if (slotID == 1 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				IronplatemakingmachineZaiYouXiKeGengXinShiProcedure.executeProcedure($_dependencies);
+			}
+		}
 		if (slotID == 4 && changeType == 0) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();

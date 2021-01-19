@@ -65,6 +65,9 @@
           "id": 1,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
+          "onSlotChanged": {
+            "name": "IronplatemakingmachineZaiYouXiKeGengXinShi"
+          },
           "name": "Slot #1",
           "x": 139,
           "y": 60

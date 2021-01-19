@@ -4,9 +4,17 @@ import siongsng.fantasy_world.item.IronplateItem;
 import siongsng.fantasy_world.item.CopperplateItem;
 import siongsng.fantasy_world.item.CopperparticleItem;
 import siongsng.fantasy_world.item.CopperingotItem;
+import siongsng.fantasy_world.block.IronplatemakingmachineBlock;
+import siongsng.fantasy_world.block.CooperplatepressBlock;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 import siongsng.fantasy_world.SiongsngsFantasyWorldMod;
 
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.common.MinecraftForge;
+
+import net.minecraft.world.IWorld;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.inventory.container.Slot;
@@ -30,8 +38,40 @@ public class Gui1Procedure extends SiongsngsFantasyWorldModElements.ModElement {
 				SiongsngsFantasyWorldMod.LOGGER.warn("Failed to load dependency entity for procedure Gui1!");
 			return;
 		}
+		if (dependencies.get("x") == null) {
+			if (!dependencies.containsKey("x"))
+				SiongsngsFantasyWorldMod.LOGGER.warn("Failed to load dependency x for procedure Gui1!");
+			return;
+		}
+		if (dependencies.get("y") == null) {
+			if (!dependencies.containsKey("y"))
+				SiongsngsFantasyWorldMod.LOGGER.warn("Failed to load dependency y for procedure Gui1!");
+			return;
+		}
+		if (dependencies.get("z") == null) {
+			if (!dependencies.containsKey("z"))
+				SiongsngsFantasyWorldMod.LOGGER.warn("Failed to load dependency z for procedure Gui1!");
+			return;
+		}
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				SiongsngsFantasyWorldMod.LOGGER.warn("Failed to load dependency world for procedure Gui1!");
+			return;
+		}
 		Entity entity = (Entity) dependencies.get("entity");
+		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
+		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
+		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
+		IWorld world = (IWorld) dependencies.get("world");
 		double previousRecipe = 0;
+		double wait_time = 0;
+		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == IronplatemakingmachineBlock.block.getDefaultState()
+				.getBlock())) {
+			wait_time = (double) 100;
+		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == CooperplatepressBlock.block.getDefaultState()
+				.getBlock())) {
+			wait_time = (double) 60;
+		}
 		if ((((new Object() {
 			public ItemStack getItemStack(int sltid) {
 				Entity _ent = entity;
@@ -75,60 +115,83 @@ public class Gui1Procedure extends SiongsngsFantasyWorldModElements.ModElement {
 					}
 				}
 			}
-			if (entity instanceof PlayerEntity) {
-				Container _current = ((PlayerEntity) entity).openContainer;
-				if (_current instanceof Supplier) {
-					Object invobj = ((Supplier) _current).get();
-					if (invobj instanceof Map) {
-						ItemStack _setstack = new ItemStack(CopperplateItem.block, (int) (1));
-						_setstack.setCount((int) ((new Object() {
-							public int getAmount(int sltid) {
-								if (entity instanceof ServerPlayerEntity) {
-									Container _current = ((ServerPlayerEntity) entity).openContainer;
-									if (_current instanceof Supplier) {
-										Object invobj = ((Supplier) _current).get();
-										if (invobj instanceof Map) {
-											ItemStack stack = ((Slot) ((Map) invobj).get(sltid)).getStack();;
-											if (stack != null)
-												return stack.getCount();
-										}
-									}
-								}
-								return 0;
-							}
-						}.getAmount((int) (2))) + 1));
-						((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
-						_current.detectAndSendChanges();
+			new Object() {
+				private int ticks = 0;
+				private float waitTicks;
+				private IWorld world;
+				public void start(IWorld world, int waitTicks) {
+					this.waitTicks = waitTicks;
+					MinecraftForge.EVENT_BUS.register(this);
+					this.world = world;
+				}
+
+				@SubscribeEvent
+				public void tick(TickEvent.ServerTickEvent event) {
+					if (event.phase == TickEvent.Phase.END) {
+						this.ticks += 1;
+						if (this.ticks >= this.waitTicks)
+							run();
 					}
 				}
-			}
-			if (entity instanceof PlayerEntity) {
-				Container _current = ((PlayerEntity) entity).openContainer;
-				if (_current instanceof Supplier) {
-					Object invobj = ((Supplier) _current).get();
-					if (invobj instanceof Map) {
-						ItemStack _setstack = new ItemStack(CopperparticleItem.block, (int) (1));
-						_setstack.setCount((int) ((new Object() {
-							public int getAmount(int sltid) {
-								if (entity instanceof ServerPlayerEntity) {
-									Container _current = ((ServerPlayerEntity) entity).openContainer;
-									if (_current instanceof Supplier) {
-										Object invobj = ((Supplier) _current).get();
-										if (invobj instanceof Map) {
-											ItemStack stack = ((Slot) ((Map) invobj).get(sltid)).getStack();;
-											if (stack != null)
-												return stack.getCount();
+
+				private void run() {
+					if (entity instanceof PlayerEntity) {
+						Container _current = ((PlayerEntity) entity).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								ItemStack _setstack = new ItemStack(CopperplateItem.block, (int) (1));
+								_setstack.setCount((int) ((new Object() {
+									public int getAmount(int sltid) {
+										if (entity instanceof ServerPlayerEntity) {
+											Container _current = ((ServerPlayerEntity) entity).openContainer;
+											if (_current instanceof Supplier) {
+												Object invobj = ((Supplier) _current).get();
+												if (invobj instanceof Map) {
+													ItemStack stack = ((Slot) ((Map) invobj).get(sltid)).getStack();;
+													if (stack != null)
+														return stack.getCount();
+												}
+											}
 										}
+										return 0;
 									}
-								}
-								return 0;
+								}.getAmount((int) (2))) + 1));
+								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
+								_current.detectAndSendChanges();
 							}
-						}.getAmount((int) (3))) + 1));
-						((Slot) ((Map) invobj).get((int) (3))).putStack(_setstack);
-						_current.detectAndSendChanges();
+						}
 					}
+					if (entity instanceof PlayerEntity) {
+						Container _current = ((PlayerEntity) entity).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								ItemStack _setstack = new ItemStack(CopperparticleItem.block, (int) (1));
+								_setstack.setCount((int) ((new Object() {
+									public int getAmount(int sltid) {
+										if (entity instanceof ServerPlayerEntity) {
+											Container _current = ((ServerPlayerEntity) entity).openContainer;
+											if (_current instanceof Supplier) {
+												Object invobj = ((Supplier) _current).get();
+												if (invobj instanceof Map) {
+													ItemStack stack = ((Slot) ((Map) invobj).get(sltid)).getStack();;
+													if (stack != null)
+														return stack.getCount();
+												}
+											}
+										}
+										return 0;
+									}
+								}.getAmount((int) (3))) + 1));
+								((Slot) ((Map) invobj).get((int) (3))).putStack(_setstack);
+								_current.detectAndSendChanges();
+							}
+						}
+					}
+					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}
+			}.start(world, (int) (wait_time));
 		} else if ((((new Object() {
 			public ItemStack getItemStack(int sltid) {
 				Entity _ent = entity;
@@ -172,60 +235,83 @@ public class Gui1Procedure extends SiongsngsFantasyWorldModElements.ModElement {
 					}
 				}
 			}
-			if (entity instanceof PlayerEntity) {
-				Container _current = ((PlayerEntity) entity).openContainer;
-				if (_current instanceof Supplier) {
-					Object invobj = ((Supplier) _current).get();
-					if (invobj instanceof Map) {
-						ItemStack _setstack = new ItemStack(IronplateItem.block, (int) (1));
-						_setstack.setCount((int) ((new Object() {
-							public int getAmount(int sltid) {
-								if (entity instanceof ServerPlayerEntity) {
-									Container _current = ((ServerPlayerEntity) entity).openContainer;
-									if (_current instanceof Supplier) {
-										Object invobj = ((Supplier) _current).get();
-										if (invobj instanceof Map) {
-											ItemStack stack = ((Slot) ((Map) invobj).get(sltid)).getStack();;
-											if (stack != null)
-												return stack.getCount();
-										}
-									}
-								}
-								return 0;
-							}
-						}.getAmount((int) (2))) + 1));
-						((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
-						_current.detectAndSendChanges();
+			new Object() {
+				private int ticks = 0;
+				private float waitTicks;
+				private IWorld world;
+				public void start(IWorld world, int waitTicks) {
+					this.waitTicks = waitTicks;
+					MinecraftForge.EVENT_BUS.register(this);
+					this.world = world;
+				}
+
+				@SubscribeEvent
+				public void tick(TickEvent.ServerTickEvent event) {
+					if (event.phase == TickEvent.Phase.END) {
+						this.ticks += 1;
+						if (this.ticks >= this.waitTicks)
+							run();
 					}
 				}
-			}
-			if (entity instanceof PlayerEntity) {
-				Container _current = ((PlayerEntity) entity).openContainer;
-				if (_current instanceof Supplier) {
-					Object invobj = ((Supplier) _current).get();
-					if (invobj instanceof Map) {
-						ItemStack _setstack = new ItemStack(Items.IRON_NUGGET, (int) (1));
-						_setstack.setCount((int) ((new Object() {
-							public int getAmount(int sltid) {
-								if (entity instanceof ServerPlayerEntity) {
-									Container _current = ((ServerPlayerEntity) entity).openContainer;
-									if (_current instanceof Supplier) {
-										Object invobj = ((Supplier) _current).get();
-										if (invobj instanceof Map) {
-											ItemStack stack = ((Slot) ((Map) invobj).get(sltid)).getStack();;
-											if (stack != null)
-												return stack.getCount();
+
+				private void run() {
+					if (entity instanceof PlayerEntity) {
+						Container _current = ((PlayerEntity) entity).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								ItemStack _setstack = new ItemStack(IronplateItem.block, (int) (1));
+								_setstack.setCount((int) ((new Object() {
+									public int getAmount(int sltid) {
+										if (entity instanceof ServerPlayerEntity) {
+											Container _current = ((ServerPlayerEntity) entity).openContainer;
+											if (_current instanceof Supplier) {
+												Object invobj = ((Supplier) _current).get();
+												if (invobj instanceof Map) {
+													ItemStack stack = ((Slot) ((Map) invobj).get(sltid)).getStack();;
+													if (stack != null)
+														return stack.getCount();
+												}
+											}
 										}
+										return 0;
 									}
-								}
-								return 0;
+								}.getAmount((int) (2))) + 1));
+								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
+								_current.detectAndSendChanges();
 							}
-						}.getAmount((int) (3))) + 1));
-						((Slot) ((Map) invobj).get((int) (3))).putStack(_setstack);
-						_current.detectAndSendChanges();
+						}
 					}
+					if (entity instanceof PlayerEntity) {
+						Container _current = ((PlayerEntity) entity).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								ItemStack _setstack = new ItemStack(Items.IRON_NUGGET, (int) (1));
+								_setstack.setCount((int) ((new Object() {
+									public int getAmount(int sltid) {
+										if (entity instanceof ServerPlayerEntity) {
+											Container _current = ((ServerPlayerEntity) entity).openContainer;
+											if (_current instanceof Supplier) {
+												Object invobj = ((Supplier) _current).get();
+												if (invobj instanceof Map) {
+													ItemStack stack = ((Slot) ((Map) invobj).get(sltid)).getStack();;
+													if (stack != null)
+														return stack.getCount();
+												}
+											}
+										}
+										return 0;
+									}
+								}.getAmount((int) (3))) + 1));
+								((Slot) ((Map) invobj).get((int) (3))).putStack(_setstack);
+								_current.detectAndSendChanges();
+							}
+						}
+					}
+					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}
+			}.start(world, (int) (wait_time));
 		}
 	}
 }
