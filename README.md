@@ -24,5 +24,5 @@ This is a multi-world mod developed by Siong Siong, hoping that everyone can pla
 ### @2021 By Siong Sng  
    
 
-![imgur](https://media.discordapp.net/attachments/761096264577843200/801476289781432410/2021-01-20_22.16.58.png?width=913&height=498)
+![imgur](https://media.discordapp.net/attachments/761096264577843200/801476289781432410/2021-01-20_22.16.58.png?width=913&height=498)   
 **\*This is the picture under development, not the final actual result**
