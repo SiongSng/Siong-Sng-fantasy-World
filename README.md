@@ -1,7 +1,8 @@
 [![Discord](https://discord.com/api/guilds/714087332738891857/widget.png)](https://discord.gg/5w9BUM4)
 [![latest](https://img.shields.io/github/release/Barry23412/Siong-Sng-fantasy-World.svg)](https://github.com/Barry23412/Siong-Sng-fantasy-World/releases/latest)
 [![GitHub downloads](https://img.shields.io/github/downloads/Barry23412/Siong-Sng-fantasy-World/total.svg)](https://github.com/Barry23412/Siong-Sng-fantasy-World/releases/latest)
-[![Crowdin](https://badges.crowdin.net/siong-sngs-fantasy-world/localized.svg)](https://crowdin.com/project/siong-sngs-fantasy-world)
+[![Crowdin](https://badges.crowdin.net/siong-sngs-fantasy-world/localized.svg)](https://crowdin.com/project/siong-sngs-fantasy-world)  
+
 Siong Sng's fantasy World
 =======================================  
 
