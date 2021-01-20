@@ -1,0 +1,197 @@
+{
+  "_fv": 15,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 372,
+    "height": 195,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "菘菘的幻想世界 辭典-知識之書",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "菘菘的幻想世界 辭典-知識之書",
+          "x": 33,
+          "y": 29
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "解鎖內容 <ENBT:number:The_completion_rate> %",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "解鎖內容 <ENBT:number:The_completion_rate> %",
+          "x": 32,
+          "y": 199
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "關於\\\"菘菘的幻想世界\\\"",
+          "width": 105,
+          "height": 20,
+          "name": "關於\\\"菘菘的幻想世界\\\"",
+          "x": 289,
+          "y": 192
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "故事",
+          "width": 41,
+          "height": 20,
+          "name": "故事",
+          "x": 195,
+          "y": 35
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "礦物",
+          "width": 41,
+          "height": 20,
+          "name": "礦物",
+          "x": 195,
+          "y": 71
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "武器",
+          "width": 41,
+          "height": 20,
+          "name": "武器",
+          "x": 240,
+          "y": 71
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "怪物/Boss",
+          "width": 63,
+          "height": 20,
+          "name": "怪物/Boss",
+          "x": 330,
+          "y": 35
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "裝備",
+          "width": 41,
+          "height": 20,
+          "name": "裝備",
+          "x": 285,
+          "y": 71
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "進度",
+          "width": 41,
+          "height": 20,
+          "name": "進度",
+          "x": 240,
+          "y": 35
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "教學",
+          "width": 41,
+          "height": 20,
+          "name": "教學",
+          "x": 285,
+          "y": 35
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "特殊效果?",
+          "width": 63,
+          "height": 20,
+          "name": "特殊效果?",
+          "x": 330,
+          "y": 71
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "神秘知識?",
+          "width": 63,
+          "height": 20,
+          "name": "神秘知識?",
+          "x": 330,
+          "y": 107
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "農業",
+          "width": 41,
+          "height": 20,
+          "name": "農業",
+          "x": 195,
+          "y": 107
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "其他",
+          "width": 41,
+          "height": 20,
+          "name": "其他",
+          "x": 285,
+          "y": 107
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "NPC",
+          "width": 41,
+          "height": 20,
+          "name": "NPC",
+          "x": 240,
+          "y": 107
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "www  圖示還沒製作好啦xd",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "www  圖示還沒製作好啦xd",
+          "x": 38,
+          "y": 115
+        }
+      }
+    ]
+  }
+}

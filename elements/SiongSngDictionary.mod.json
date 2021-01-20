@@ -3,14 +3,14 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "auto",
+    "texture": "siong_sng_dictionary",
     "customModelName": "Normal",
-    "name": "Mechanical automatic operation of the chip",
-    "rarity": "COMMON",
+    "name": "Siong Sng's fantasy World dictionary",
+    "rarity": "UNCOMMON",
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:Utility"
     },
-    "stackSize": 16,
+    "stackSize": 1,
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 1.0,
@@ -19,17 +19,18 @@
       "value": ""
     },
     "destroyAnyBlock": false,
-    "immuneToFire": false,
+    "immuneToFire": true,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "§b放入機械中擴充欄的第一格，可以讓機械自動運轉(自動生產物品)"
+      "§6推薦!!必看  裡面含有\"菘菘\"的幻象世界秘密?",
+      "§b不彷翻開來看看???"
     ],
     "hasGlow": false,
-    "guiBoundTo": "<NONE>",
-    "inventorySize": 9,
+    "guiBoundTo": "SiongSngBookgui",
+    "inventorySize": 1,
     "inventoryStackSize": 64
   }
 }

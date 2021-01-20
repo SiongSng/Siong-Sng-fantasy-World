@@ -2,12 +2,12 @@
   "_fv": 15,
   "_type": "block",
   "definition": {
-    "texture": "amethyst_ore",
-    "textureTop": "amethyst_ore",
-    "textureLeft": "amethyst_ore",
-    "textureFront": "amethyst_ore",
-    "textureRight": "amethyst_ore",
-    "textureBack": "amethyst_ore",
+    "texture": "amethyst_block",
+    "textureTop": "amethyst_block",
+    "textureLeft": "amethyst_block",
+    "textureFront": "amethyst_block",
+    "textureRight": "amethyst_block",
+    "textureBack": "amethyst_block",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
@@ -26,20 +26,20 @@
     "Mx": 1.0,
     "My": 1.0,
     "Mz": 1.0,
-    "name": "Amethyst ore",
+    "name": "Amethyst Block",
     "specialInfo": [],
-    "hardness": 4.0,
-    "resistance": 20.0,
+    "hardness": 2.0,
+    "resistance": 12.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:SiongSngOre"
+      "value": "CUSTOM:SiongSngworldblock"
     },
     "destroyTool": "pickaxe",
     "customDrop": {
-      "value": "CUSTOM:Amethystcrystallization"
+      "value": ""
     },
-    "dropAmount": 5,
+    "dropAmount": 1,
     "useLootTableForDrops": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
@@ -68,14 +68,14 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 4,
+    "breakHarvestLevel": 2,
     "spawnParticles": true,
     "particleToSpawn": {
       "value": "CUSTOM:Blueflame"
     },
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
-    "particleAmount": 3,
+    "particleAmount": 4,
     "hasInventory": false,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
@@ -93,28 +93,12 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "spawnWorldTypes": [
-      "Surface",
-      "CUSTOM:SiongSngWorld"
-    ],
+    "spawnWorldTypes": [],
     "restrictionBiomes": [],
-    "blocksToReplace": [
-      {
-        "value": "Blocks.STONE"
-      },
-      {
-        "value": "Blocks.STONE#1"
-      },
-      {
-        "value": "Blocks.STONE#3"
-      },
-      {
-        "value": "Blocks.STONE#6"
-      }
-    ],
-    "frequencyPerChunks": 15,
-    "frequencyOnChunk": 9,
+    "blocksToReplace": [],
+    "frequencyPerChunks": 10,
+    "frequencyOnChunk": 16,
     "minGenerateHeight": 0,
-    "maxGenerateHeight": 95
+    "maxGenerateHeight": 64
   }
 }

@@ -3,14 +3,14 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "auto",
+    "texture": "amethyst_crystallization",
     "customModelName": "Normal",
-    "name": "Mechanical automatic operation of the chip",
-    "rarity": "COMMON",
+    "name": " Amethyst crystallization",
+    "rarity": "UNCOMMON",
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:SiongSngOre"
     },
-    "stackSize": 16,
+    "stackSize": 64,
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 1.0,
@@ -24,9 +24,7 @@
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "specialInfo": [
-      "§b放入機械中擴充欄的第一格，可以讓機械自動運轉(自動生產物品)"
-    ],
+    "specialInfo": [],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,

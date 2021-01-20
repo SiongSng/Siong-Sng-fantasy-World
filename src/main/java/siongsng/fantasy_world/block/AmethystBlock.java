@@ -1,6 +1,7 @@
 
 package siongsng.fantasy_world.block;
 
+import siongsng.fantasy_world.procedures.Amethyst_generateProcedure;
 import siongsng.fantasy_world.particle.BlueflameParticle;
 import siongsng.fantasy_world.itemgroup.SiongSngOreItemGroup;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
@@ -61,6 +62,8 @@ import net.minecraft.block.Block;
 import java.util.Random;
 import java.util.List;
 import java.util.Collections;
+
+import com.google.common.collect.ImmutableMap;
 
 @SiongsngsFantasyWorldModElements.ModElement.Tag
 public class AmethystBlock extends SiongsngsFantasyWorldModElements.ModElement {
@@ -201,6 +204,11 @@ public class AmethystBlock extends SiongsngsFantasyWorldModElements.ModElement {
 				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("siongsngs_fantasy_world:siong_sng_world")))
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
+					return false;
+				int x = pos.getX();
+				int y = pos.getY();
+				int z = pos.getZ();
+				if (!Amethyst_generateProcedure.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world)))
 					return false;
 				return super.generate(world, generator, rand, pos, config);
 			}

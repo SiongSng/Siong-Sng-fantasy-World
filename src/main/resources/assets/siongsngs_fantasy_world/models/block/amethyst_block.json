@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "siongsngs_fantasy_world:blocks/amethyst_block",
+    "up": "siongsngs_fantasy_world:blocks/amethyst_block",
+    "north": "siongsngs_fantasy_world:blocks/amethyst_block",
+    "east": "siongsngs_fantasy_world:blocks/amethyst_block",
+    "south": "siongsngs_fantasy_world:blocks/amethyst_block",
+    "west": "siongsngs_fantasy_world:blocks/amethyst_block",
+    "particle": "siongsngs_fantasy_world:blocks/amethyst_block"
+  }
+}

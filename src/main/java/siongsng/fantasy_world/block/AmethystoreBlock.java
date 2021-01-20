@@ -3,6 +3,7 @@ package siongsng.fantasy_world.block;
 
 import siongsng.fantasy_world.particle.BlueflameParticle;
 import siongsng.fantasy_world.itemgroup.SiongSngOreItemGroup;
+import siongsng.fantasy_world.item.AmethystcrystallizationItem;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
@@ -68,7 +69,7 @@ public class AmethystoreBlock extends SiongsngsFantasyWorldModElements.ModElemen
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(this, 1));
+			return Collections.singletonList(new ItemStack(AmethystcrystallizationItem.block, (int) (5)));
 		}
 
 		@OnlyIn(Dist.CLIENT)

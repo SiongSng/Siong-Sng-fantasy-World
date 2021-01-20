@@ -181,6 +181,19 @@
           "x": 285,
           "y": 98
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "製作進度:<ENBT:number:tagName>%",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "製作進度:<ENBT:number:tagName>%",
+          "x": 163,
+          "y": 41
+        }
       }
     ]
   }

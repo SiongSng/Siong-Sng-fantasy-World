@@ -2,14 +2,14 @@
   "_fv": 15,
   "_type": "block",
   "definition": {
-    "texture": "amethyst_ore",
-    "textureTop": "amethyst_ore",
-    "textureLeft": "amethyst_ore",
-    "textureFront": "amethyst_ore",
-    "textureRight": "amethyst_ore",
-    "textureBack": "amethyst_ore",
-    "renderType": 10,
-    "customModelName": "Normal",
+    "texture": "siong_fruit",
+    "textureTop": "siong_fruit_top",
+    "textureLeft": "siong_fruit",
+    "textureFront": "siong_fruit",
+    "textureRight": "siong_fruit",
+    "textureBack": "siong_fruit",
+    "renderType": 13,
+    "customModelName": "Crop model",
     "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
@@ -17,7 +17,7 @@
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
-    "hasTransparency": false,
+    "hasTransparency": true,
     "connectedSides": false,
     "transparencyType": "SOLID",
     "mx": 0.0,
@@ -26,25 +26,25 @@
     "Mx": 1.0,
     "My": 1.0,
     "Mz": 1.0,
-    "name": "Amethyst ore",
+    "name": "Siong Log fruit",
     "specialInfo": [],
-    "hardness": 4.0,
-    "resistance": 20.0,
+    "hardness": 1.0,
+    "resistance": 10.0,
     "hasGravity": false,
-    "isWaterloggable": false,
+    "isWaterloggable": true,
     "creativeTab": {
-      "value": "CUSTOM:SiongSngOre"
+      "value": "CUSTOM:SiongSngworldblock"
     },
-    "destroyTool": "pickaxe",
+    "destroyTool": "Not specified",
     "customDrop": {
-      "value": "CUSTOM:Amethystcrystallization"
+      "value": ""
     },
-    "dropAmount": 5,
+    "dropAmount": 1,
     "useLootTableForDrops": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canProvidePower": false,
-    "lightOpacity": 255,
+    "lightOpacity": 0,
     "material": {
       "value": "ROCK"
     },
@@ -64,18 +64,18 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "STONE"
+      "value": "GROUND"
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 4,
-    "spawnParticles": true,
+    "breakHarvestLevel": 1,
+    "spawnParticles": false,
     "particleToSpawn": {
       "value": "CUSTOM:Blueflame"
     },
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
-    "particleAmount": 3,
+    "particleAmount": 4,
     "hasInventory": false,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
@@ -93,28 +93,16 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "spawnWorldTypes": [
-      "Surface",
-      "CUSTOM:SiongSngWorld"
-    ],
+    "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
         "value": "Blocks.STONE"
-      },
-      {
-        "value": "Blocks.STONE#1"
-      },
-      {
-        "value": "Blocks.STONE#3"
-      },
-      {
-        "value": "Blocks.STONE#6"
       }
     ],
-    "frequencyPerChunks": 15,
-    "frequencyOnChunk": 9,
+    "frequencyPerChunks": 10,
+    "frequencyOnChunk": 16,
     "minGenerateHeight": 0,
-    "maxGenerateHeight": 95
+    "maxGenerateHeight": 64
   }
 }

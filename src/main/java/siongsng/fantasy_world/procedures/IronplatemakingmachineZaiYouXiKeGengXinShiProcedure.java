@@ -4,6 +4,7 @@ import siongsng.fantasy_world.item.MechanicalautomaticoperationcomponentsItem;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 import siongsng.fantasy_world.SiongsngsFantasyWorldMod;
 
+import net.minecraft.world.IWorld;
 import net.minecraft.item.ItemStack;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.inventory.container.Container;
@@ -41,10 +42,16 @@ public class IronplatemakingmachineZaiYouXiKeGengXinShiProcedure extends Siongsn
 				SiongsngsFantasyWorldMod.LOGGER.warn("Failed to load dependency z for procedure IronplatemakingmachineZaiYouXiKeGengXinShi!");
 			return;
 		}
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				SiongsngsFantasyWorldMod.LOGGER.warn("Failed to load dependency world for procedure IronplatemakingmachineZaiYouXiKeGengXinShi!");
+			return;
+		}
 		Entity entity = (Entity) dependencies.get("entity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
+		IWorld world = (IWorld) dependencies.get("world");
 		if ((((new Object() {
 			public ItemStack getItemStack(int sltid) {
 				Entity _ent = entity;
@@ -109,6 +116,7 @@ public class IronplatemakingmachineZaiYouXiKeGengXinShiProcedure extends Siongsn
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
+				$_dependencies.put("world", world);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);

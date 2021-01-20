@@ -505,7 +505,7 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "ironplatemakingmachine_zai_you_xi_ke_geng_xin_shi",
+      "registry_name": "platen_chip_program",
       "metadata": {
         "dependencies": [
           {
@@ -535,17 +535,112 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "barren_iron_ore"
+    },
+    {
+      "name": "Amethystcrystallization",
+      "type": "item",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "amethystcrystallization"
+    },
+    {
+      "name": "AmethystBlock",
+      "type": "block",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "amethyst_block"
+    },
+    {
+      "name": "SiongSngDictionary",
+      "type": "item",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "siong_sng_dictionary"
+    },
+    {
+      "name": "SiongSngBookgui",
+      "type": "gui",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "siong_sng_bookgui"
+    },
+    {
+      "name": "Siongforest",
+      "type": "block",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "siongforest"
+    },
+    {
+      "name": "SiongforestEcologicaldomain",
+      "type": "biome",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "siongforest_ecologicaldomain"
+    },
+    {
+      "name": "Siongfruit",
+      "type": "block",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "siongfruit"
+    },
+    {
+      "name": "Amethyst_generate",
+      "type": "procedure",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "amethyst_generate",
+      "metadata": {
+        "return_type": "LOGIC",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "zh_tw": {
-      "block.siongsngs_fantasy_world.Pressing_machine.error": "請放入物品或正確的物品數量",
-      "item.siongsngs_fantasy_world.copperplate": "銅板",
+      "biome.siongsngs_fantasy_world.siongforest_ecologicaldomain": "菘森林",
       "itemGroup.tabsiong_sngworldfood": "菘菘的幻想世界-食物",
+      "item.siongsngs_fantasy_world.copperplate": "銅板",
       "item.siongsngs_fantasy_world.irongear": "鐵齒輪",
       "block.siongsngs_fantasy_world.cooperplatepress": "銅製壓板機",
+      "item.siongsngs_fantasy_world.siong_sng_dictionary": "菘菘的幻想世界辭典",
+      "block.siongsngs_fantasy_world.siongfruit": "菘樹果實",
       "block.siongsngs_fantasy_world.siong_sng_portalframe": "菘菘的幻想世界傳送門框架",
       "item.siongsngs_fantasy_world.coppergear": "銅齒輪",
       "block.siongsngs_fantasy_world.intermediateculturesoil": "中階培養土",
@@ -554,9 +649,11 @@
       "block.siongsngs_fantasy_world.barren_iron_ore": "貧瘠鐵礦",
       "itemGroup.tabsiong_sngworldblock": "菘菘的幻想世界-方塊",
       "item.siongsngs_fantasy_world.mechanicalautomaticoperationcomponents": "機械自動運作晶片",
+      "block.siongsngs_fantasy_world.siongforest": "菘樹",
       "item.siongsngs_fantasy_world.copperparticle": "銅粒",
       "item.siongsngs_fantasy_world.stonesteak": "石頭牛排",
       "block.siongsngs_fantasy_world.copper_ore": "銅礦",
+      "block.siongsngs_fantasy_world.amethyst_block": "紫水晶方塊",
       "item.siongsngs_fantasy_world.copperingot": "炙熱的銅錠",
       "item.siongsngs_fantasy_world.ironplate": "鐵板",
       "advancements.ironplatepressschedule.title": "壓碎板子!!!",
@@ -569,6 +666,7 @@
       "block.siongsngs_fantasy_world.amethystore": "紫水晶礦",
       "block.siongsngs_fantasy_world.amethyst": "紫水晶",
       "item.siongsngs_fantasy_world.siong_sng_world": "菘菘的幻想世界-激活傳送門工具",
+      "item.siongsngs_fantasy_world.amethystcrystallization": "紫水晶結晶",
       "advancements.copper_oreprogress.descr": "挖取銅礦!!",
       "itemGroup.tabsiong_sng_industrialcomponents": "菘菘的幻想世界-工業元件",
       "itemGroup.tabutility": "實用工具",
@@ -576,11 +674,13 @@
       "advancements.industrialera.descr": "製作一個鐵齒輪"
     },
     "en_us": {
-      "block.siongsngs_fantasy_world.Pressing_machine.error": "Please put in the items or the correct number of items",
+      "biome.siongsngs_fantasy_world.siongforest_ecologicaldomain": "Siong forest",
       "item.siongsngs_fantasy_world.copperplate": "Copper plate",
       "itemGroup.tabsiong_sngworldfood": "Siong Sng\u0027s fantasy World-Food",
       "item.siongsngs_fantasy_world.irongear": "Iron gear",
       "block.siongsngs_fantasy_world.cooperplatepress": "Cooper plate press",
+      "item.siongsngs_fantasy_world.siong_sng_dictionary": "Siong Sng\u0027s fantasy World dictionary",
+      "block.siongsngs_fantasy_world.siongfruit": "Siong Log fruit",
       "block.siongsngs_fantasy_world.siong_sng_portalframe": "Siong Sng\u0027s fantasy World Portal frame",
       "item.siongsngs_fantasy_world.coppergear": "Copper gear",
       "block.siongsngs_fantasy_world.intermediateculturesoil": "Intermediate culture soil",
@@ -589,9 +689,11 @@
       "block.siongsngs_fantasy_world.barren_iron_ore": "Barren Iron Ore",
       "itemGroup.tabsiong_sngworldblock": "Siong Sng\u0027s fantasy World-Block",
       "item.siongsngs_fantasy_world.mechanicalautomaticoperationcomponents": "Mechanical automatic operation of the chip",
+      "block.siongsngs_fantasy_world.siongforest": "Siong Log",
       "item.siongsngs_fantasy_world.copperparticle": "Copper particle",
       "item.siongsngs_fantasy_world.stonesteak": "Stone steak",
       "block.siongsngs_fantasy_world.copper_ore": "Copper Ore",
+      "block.siongsngs_fantasy_world.amethyst_block": "Amethyst Block",
       "item.siongsngs_fantasy_world.copperingot": "Copper ingot",
       "item.siongsngs_fantasy_world.ironplate": "Iron plate",
       "advancements.ironplatepressschedule.title": "Crush the board!!!",
@@ -604,6 +706,7 @@
       "block.siongsngs_fantasy_world.amethystore": "Amethyst ore",
       "block.siongsngs_fantasy_world.amethyst": "Amethyst",
       "item.siongsngs_fantasy_world.siong_sng_world": "Siong Sng\u0027s fantasy World Activate the portal tool",
+      "item.siongsngs_fantasy_world.amethystcrystallization": " Amethyst crystallization",
       "advancements.copper_oreprogress.descr": "Dig the copper Ore!!",
       "itemGroup.tabsiong_sng_industrialcomponents": "Siong Sng\u0027s fantasy World-Industrial components",
       "itemGroup.tabutility": "Utilities",

@@ -1,0 +1,7 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "siongsngs_fantasy_world:blocks/siong_fruit",
+    "particle": "siongsngs_fantasy_world:blocks/siong_fruit"
+  }
+}
