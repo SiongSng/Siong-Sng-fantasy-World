@@ -2,11 +2,10 @@
 [![latest](https://img.shields.io/github/release/Barry23412/Siong-Sng-fantasy-World.svg)](https://github.com/Barry23412/Siong-Sng-fantasy-World/releases/latest)
 [![GitHub downloads](https://img.shields.io/github/downloads/Barry23412/Siong-Sng-fantasy-World/total.svg)](https://github.com/Barry23412/Siong-Sng-fantasy-World/releases/latest)
 [![Crowdin](https://badges.crowdin.net/siong-sngs-fantasy-world/localized.svg)](https://crowdin.com/project/siong-sngs-fantasy-world)
-![imgur](https://media.discordapp.net/attachments/761096264577843200/801474495344672828/-.png?width=498&height=498)
-![imgur](https://media.discordapp.net/attachments/761096264577843200/801474496871137312/-.png?width=498&height=498)
-
 Siong Sng's fantasy World
 =======================================  
+
+![imgur](https://media.discordapp.net/attachments/761096264577843200/801474496871137312/-.png?width=498&height=498)
 
 **Readme language selection:** [English](https://github.com/Barry23412/Siong-Sng-fantasy-World/blob/master/README.md)   [繁體中文](https://github.com/Barry23412/Siong-Sng-fantasy-World/blob/master/Zh_tw-readme.md)   [简体中文](https://github.com/Barry23412/Siong-Sng-fantasy-World/blob/master/Zh_cn-readme.md)
 
