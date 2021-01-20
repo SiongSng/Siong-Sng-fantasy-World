@@ -5,9 +5,6 @@
 
 Siong Sng's fantasy World
 =======================================  
-
-![imgur](https://media.discordapp.net/attachments/761096264577843200/801474496871137312/-.png?width=498&height=498)
-
 **Readme language selection:** [English](https://github.com/Barry23412/Siong-Sng-fantasy-World/blob/master/README.md)   [繁體中文](https://github.com/Barry23412/Siong-Sng-fantasy-World/blob/master/Zh_tw-readme.md)   [简体中文](https://github.com/Barry23412/Siong-Sng-fantasy-World/blob/master/Zh_cn-readme.md)
 
 ## [Download Mod](https://github.com/Barry23412/Siong-Sng-fantasy-World/releases/latest)
@@ -25,3 +22,5 @@ This is a multi-world mod developed by Siong Siong, hoping that everyone can pla
 
 
 ### @2021 By Siong Sng
+
+![imgur](https://media.discordapp.net/attachments/761096264577843200/801474496871137312/-.png?width=498&height=498)
