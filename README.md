@@ -17,7 +17,7 @@ Siong Sng's fantasy World
 This is a multi-world mod developed by Siong Siong, hoping that everyone can play more diverse Minecraft through this mod
 
 [Mod Wiki](https://github.com/Barry23412/Siong-Sng-fantasy-World/wiki)  
-[Support discord server](https://discord.gg/5w9BUM4)  
+[Support discord server](https://discord.com/invite/gjmazfF9Rj)  
 [Issue tracker](https://github.com/Barry23412/Siong-Sng-fantasy-World/issues)  
 
 
