@@ -19,7 +19,7 @@
 这是一个由菘菘所开发的多世界模组，旨在希望大家能够透过该模组玩到更多的样性的我的世界
 
 [模组维基百科](https://github.com/Barry23412/Siong-Sng-fantasy-World/wiki)  
-[支持Discord服务器](https://discord.gg/5w9BUM4)  
+[支持Discord服务器](https://discord.com/invite/gjmazfF9Rj)  
 [问题追踪器](https://github.com/Barry23412/Siong-Sng-fantasy-World/issues)  
 
 
