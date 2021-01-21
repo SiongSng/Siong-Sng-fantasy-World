@@ -17,12 +17,12 @@
       {
         "type": "label",
         "data": {
-          "text": "<BNBT:number:coin>",
+          "text": "<ENBT:number:coin>",
           "color": {
-            "value": -12829636,
+            "value": -5634641,
             "falpha": 0.0
           },
-          "name": "<BNBT:number:coin>",
+          "name": "<ENBT:number:coin>",
           "x": 24,
           "y": 224
         }

@@ -68,10 +68,10 @@ public class Gui1Procedure extends SiongsngsFantasyWorldModElements.ModElement {
 		boolean wait = false;
 		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == IronplatemakingmachineBlock.block.getDefaultState()
 				.getBlock())) {
-			wait_time = (double) 100;
+			wait_time = (double) 40;
 		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == CooperplatepressBlock.block.getDefaultState()
 				.getBlock())) {
-			wait_time = (double) 60;
+			wait_time = (double) 20;
 		}
 		if ((((new Object() {
 			public ItemStack getItemStack(int sltid) {
@@ -116,32 +116,6 @@ public class Gui1Procedure extends SiongsngsFantasyWorldModElements.ModElement {
 						}
 					}
 				}
-			}
-			for (int index0 = 0; index0 < (int) (5); index0++) {
-				new Object() {
-					private int ticks = 0;
-					private float waitTicks;
-					private IWorld world;
-					public void start(IWorld world, int waitTicks) {
-						this.waitTicks = waitTicks;
-						MinecraftForge.EVENT_BUS.register(this);
-						this.world = world;
-					}
-
-					@SubscribeEvent
-					public void tick(TickEvent.ServerTickEvent event) {
-						if (event.phase == TickEvent.Phase.END) {
-							this.ticks += 1;
-							if (this.ticks >= this.waitTicks)
-								run();
-						}
-					}
-
-					private void run() {
-						entity.getPersistentData().putDouble("timer", ((entity.getPersistentData().getDouble("tagName")) + 1));
-						MinecraftForge.EVENT_BUS.unregister(this);
-					}
-				}.start(world, (int) 20);
 			}
 			new Object() {
 				private int ticks = 0;

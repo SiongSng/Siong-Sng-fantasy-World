@@ -39,7 +39,7 @@ public class StonesteakItem extends SiongsngsFantasyWorldModElements.ModElement 
 
 		@Override
 		public int getUseDuration(ItemStack stack) {
-			return 64;
+			return 100;
 		}
 
 		@Override

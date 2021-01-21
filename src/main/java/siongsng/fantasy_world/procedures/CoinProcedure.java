@@ -37,7 +37,7 @@ public class CoinProcedure extends SiongsngsFantasyWorldModElements.ModElement {
 		Entity entity = (Entity) dependencies.get("entity");
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
 		if (((itemstack).getItem() == new ItemStack(AmethystcrystallizationItem.block, (int) (1)).getItem())) {
-			entity.getPersistentData().putDouble("coin", ((entity.getPersistentData().getDouble("coin")) + 1));
+			entity.getPersistentData().putDouble("coin", ((entity.getPersistentData().getDouble("coin")) + (((itemstack)).getCount())));
 			((itemstack)).setCount((int) 0);
 		}
 	}

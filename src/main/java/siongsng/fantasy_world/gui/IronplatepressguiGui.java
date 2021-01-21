@@ -406,7 +406,7 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 		protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
 			this.font.drawString(ms, "\u58D3\u677F\u6A5F", 5, 5, -16777216);
 			this.font.drawString(ms, "\u88FD\u4F5C\u9032\u5EA6:" + (entity.getPersistentData().getDouble("timer2"))
-					+ "%(\u6B64\u529F\u80FD\u975E\u5BE6\u969B\u7D50\u679C)", 48, 4, -12829636);
+					+ "%(\u6B64\u529F\u80FD\u975E\u5BE6\u969B\u7D50\u679C)", 44, 4, -12829636);
 		}
 
 		@Override
@@ -537,6 +537,7 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
 				IronplatemakingmachineZaiYouXiKeGengXinShiProcedure.executeProcedure($_dependencies);
 			}
 		}
@@ -547,6 +548,7 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
 				IronplatemakingmachineZaiYouXiKeGengXinShiProcedure.executeProcedure($_dependencies);
 			}
 		}
@@ -557,6 +559,7 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
 				IronplatemakingmachineZaiYouXiKeGengXinShiProcedure.executeProcedure($_dependencies);
 			}
 		}
@@ -567,6 +570,7 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
 				IronplatemakingmachineZaiYouXiKeGengXinShiProcedure.executeProcedure($_dependencies);
 			}
 		}
@@ -577,6 +581,7 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
 				IronplatemakingmachineZaiYouXiKeGengXinShiProcedure.executeProcedure($_dependencies);
 			}
 		}

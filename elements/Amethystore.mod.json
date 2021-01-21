@@ -39,7 +39,7 @@
     "customDrop": {
       "value": "CUSTOM:Amethystcrystallization"
     },
-    "dropAmount": 5,
+    "dropAmount": 3,
     "useLootTableForDrops": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,

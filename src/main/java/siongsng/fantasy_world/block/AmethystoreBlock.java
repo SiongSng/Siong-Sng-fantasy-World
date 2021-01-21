@@ -69,7 +69,7 @@ public class AmethystoreBlock extends SiongsngsFantasyWorldModElements.ModElemen
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(AmethystcrystallizationItem.block, (int) (5)));
+			return Collections.singletonList(new ItemStack(AmethystcrystallizationItem.block, (int) (3)));
 		}
 
 		@OnlyIn(Dist.CLIENT)

@@ -11,9 +11,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.Minecraft;
 
@@ -55,14 +53,8 @@ public class SiongSngcoinguiOverlay extends SiongsngsFantasyWorldModElements.Mod
 				RenderSystem.enableDepthTest();
 				RenderSystem.enableAlphaTest();
 				RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
-				Minecraft.getInstance().fontRenderer.drawString(event.getMatrixStack(), "" + (new Object() {
-					public double getValue(BlockPos pos, String tag) {
-						TileEntity tileEntity = world.getTileEntity(pos);
-						if (tileEntity != null)
-							return tileEntity.getTileData().getDouble(tag);
-						return 0;
-					}
-				}.getValue(new BlockPos((int) x, (int) y, (int) z), "coin")) + "", posX + -189, posY + 104, -12829636);
+				Minecraft.getInstance().fontRenderer.drawString(event.getMatrixStack(), "" + (entity.getPersistentData().getDouble("coin")) + "",
+						posX + -189, posY + 104, -5634641);
 			}
 		}
 	}
