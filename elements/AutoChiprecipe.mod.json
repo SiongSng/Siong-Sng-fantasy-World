@@ -1,0 +1,46 @@
+{
+  "_fv": 15,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "auto_chip_recipe",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:Siong_logPlanks"
+      },
+      {
+        "value": "CUSTOM:Coppergear"
+      },
+      {
+        "value": "CUSTOM:Siong_logPlanks"
+      },
+      {
+        "value": "CUSTOM:Copperparticle"
+      },
+      {
+        "value": "CUSTOM:Copperingot"
+      },
+      {
+        "value": "Items.IRON_NUGGET"
+      },
+      {
+        "value": "CUSTOM:Siong_logPlanks"
+      },
+      {
+        "value": "CUSTOM:Irongear"
+      },
+      {
+        "value": "CUSTOM:Siong_logPlanks"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Mechanicalautomaticoperationcomponents"
+    },
+    "name": "auto_chip_recipe",
+    "namespace": "mod"
+  }
+}

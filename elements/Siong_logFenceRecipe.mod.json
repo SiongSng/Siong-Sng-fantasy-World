@@ -5,9 +5,9 @@
     "recipeType": "Crafting",
     "xpReward": 0.0,
     "cookingTime": 200,
-    "recipeRetstackSize": 9,
-    "group": "siong_wood_formula",
-    "recipeShapeless": true,
+    "recipeRetstackSize": 3,
+    "group": "",
+    "recipeShapeless": false,
     "recipeSlots": [
       {
         "value": ""
@@ -19,28 +19,28 @@
         "value": ""
       },
       {
-        "value": ""
+        "value": "CUSTOM:Siong_logPlanks"
       },
       {
-        "value": "CUSTOM:Siongforest"
+        "value": "Items.STICK"
       },
       {
-        "value": ""
+        "value": "CUSTOM:Siong_logPlanks"
       },
       {
-        "value": ""
+        "value": "CUSTOM:Siong_logPlanks"
       },
       {
-        "value": ""
+        "value": "Items.STICK"
       },
       {
-        "value": ""
+        "value": "CUSTOM:Siong_logPlanks"
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Siongwood"
+      "value": "CUSTOM:Siong_logFence"
     },
-    "name": "siong_wood_formula",
+    "name": "siong_log_fence_recipe",
     "namespace": "mod"
   }
 }

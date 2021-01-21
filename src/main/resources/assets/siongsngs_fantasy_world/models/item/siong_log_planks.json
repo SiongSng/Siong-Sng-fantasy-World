@@ -1,5 +1,5 @@
 {
-  "parent": "siongsngs_fantasy_world:block/siongforest",
+  "parent": "siongsngs_fantasy_world:block/siong_log_planks",
   "display": {
     "thirdperson": {
       "rotation": [

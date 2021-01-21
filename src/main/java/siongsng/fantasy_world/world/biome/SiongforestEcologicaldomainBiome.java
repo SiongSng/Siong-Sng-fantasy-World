@@ -3,7 +3,8 @@ package siongsng.fantasy_world.world.biome;
 
 import siongsng.fantasy_world.particle.BlueflameParticle;
 import siongsng.fantasy_world.block.SiongfruitBlock;
-import siongsng.fantasy_world.block.SiongforestBlock;
+import siongsng.fantasy_world.block.Siong_logLogBlock;
+import siongsng.fantasy_world.block.Siong_logLeavesBlock;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -81,8 +82,8 @@ public class SiongforestEcologicaldomainBiome extends SiongsngsFantasyWorldModEl
 				biomeGenerationSettings.withStructure(StructureFeatures.MINESHAFT);
 				biomeGenerationSettings.withStructure(StructureFeatures.VILLAGE_DESERT);
 				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.TREE
-						.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(SiongforestBlock.block.getDefaultState()),
-								new SimpleBlockStateProvider(Blocks.OAK_LEAVES.getDefaultState()),
+						.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(Siong_logLogBlock.block.getDefaultState()),
+								new SimpleBlockStateProvider(Siong_logLeavesBlock.block.getDefaultState()),
 								new BlobFoliagePlacer(FeatureSpread.func_242252_a(2), FeatureSpread.func_242252_a(0), 3),
 								new StraightTrunkPlacer(5, 2, 0), new TwoLayerFeature(1, 0, 1)))
 										.setDecorators(ImmutableList.of(CustomLeaveVineTreeDecorator.instance, CustomTrunkVineTreeDecorator.instance,

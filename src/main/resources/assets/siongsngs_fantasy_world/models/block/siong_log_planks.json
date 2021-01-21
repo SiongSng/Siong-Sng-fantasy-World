@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "siongsngs_fantasy_world:blocks/siong_log_planks",
+    "particle": "siongsngs_fantasy_world:blocks/siong_log_planks"
+  }
+}

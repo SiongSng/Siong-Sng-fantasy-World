@@ -1,0 +1,42 @@
+{
+  "group": "copper_backpack_recipe",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "siongsngs_fantasy_world:copperingot"
+    },
+    "1": {
+      "item": "siongsngs_fantasy_world:coppergear"
+    },
+    "2": {
+      "item": "siongsngs_fantasy_world:copperingot"
+    },
+    "3": {
+      "item": "minecraft:leather"
+    },
+    "4": {
+      "item": "minecraft:leather"
+    },
+    "5": {
+      "item": "minecraft:leather"
+    },
+    "6": {
+      "item": "siongsngs_fantasy_world:copperingot"
+    },
+    "7": {
+      "item": "siongsngs_fantasy_world:coppergear"
+    },
+    "8": {
+      "item": "siongsngs_fantasy_world:copperingot"
+    }
+  },
+  "result": {
+    "item": "siongsngs_fantasy_world:copperbackpack",
+    "count": 1
+  }
+}

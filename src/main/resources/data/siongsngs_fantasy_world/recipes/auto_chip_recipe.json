@@ -1,0 +1,42 @@
+{
+  "group": "auto_chip_recipe",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "siongsngs_fantasy_world:siong_log_planks"
+    },
+    "1": {
+      "item": "siongsngs_fantasy_world:coppergear"
+    },
+    "2": {
+      "item": "siongsngs_fantasy_world:siong_log_planks"
+    },
+    "3": {
+      "item": "siongsngs_fantasy_world:copperparticle"
+    },
+    "4": {
+      "item": "siongsngs_fantasy_world:copperingot"
+    },
+    "5": {
+      "item": "minecraft:iron_nugget"
+    },
+    "6": {
+      "item": "siongsngs_fantasy_world:siong_log_planks"
+    },
+    "7": {
+      "item": "siongsngs_fantasy_world:irongear"
+    },
+    "8": {
+      "item": "siongsngs_fantasy_world:siong_log_planks"
+    }
+  },
+  "result": {
+    "item": "siongsngs_fantasy_world:mechanicalautomaticoperationcomponents",
+    "count": 1
+  }
+}

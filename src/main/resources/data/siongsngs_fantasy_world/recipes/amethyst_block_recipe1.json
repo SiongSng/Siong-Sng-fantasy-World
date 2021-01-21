@@ -1,0 +1,13 @@
+{
+  "group": "amethyst_block_recipe1",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "siongsngs_fantasy_world:amethyst_block"
+    }
+  ],
+  "result": {
+    "item": "siongsngs_fantasy_world:amethystcrystallization",
+    "count": 9
+  }
+}

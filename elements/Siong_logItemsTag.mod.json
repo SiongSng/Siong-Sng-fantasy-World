@@ -1,0 +1,20 @@
+{
+  "_fv": 15,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:Siong_logWood"
+      },
+      {
+        "value": "CUSTOM:Siong_logLog"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "siong_log_log",
+    "namespace": "forge"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "_fv": 15,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "copper_backpack_recipe",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:Copperingot"
+      },
+      {
+        "value": "CUSTOM:Coppergear"
+      },
+      {
+        "value": "CUSTOM:Copperingot"
+      },
+      {
+        "value": "Items.LEATHER"
+      },
+      {
+        "value": "Items.LEATHER"
+      },
+      {
+        "value": "Items.LEATHER"
+      },
+      {
+        "value": "CUSTOM:Copperingot"
+      },
+      {
+        "value": "CUSTOM:Coppergear"
+      },
+      {
+        "value": "CUSTOM:Copperingot"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Copperbackpack"
+    },
+    "name": "copper_backpack_recipe",
+    "namespace": "mod"
+  }
+}

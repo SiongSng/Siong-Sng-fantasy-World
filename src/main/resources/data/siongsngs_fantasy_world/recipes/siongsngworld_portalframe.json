@@ -1,0 +1,42 @@
+{
+  "group": "siongsng_world_portal_frame",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "siongsngs_fantasy_world:amethyst"
+    },
+    "1": {
+      "item": "siongsngs_fantasy_world:amethystcrystallization"
+    },
+    "2": {
+      "item": "minecraft:gold_ingot"
+    },
+    "3": {
+      "item": "siongsngs_fantasy_world:amethystcrystallization"
+    },
+    "4": {
+      "item": "siongsngs_fantasy_world:siongwood"
+    },
+    "5": {
+      "item": "siongsngs_fantasy_world:amethystcrystallization"
+    },
+    "6": {
+      "item": "minecraft:gold_ingot"
+    },
+    "7": {
+      "item": "siongsngs_fantasy_world:amethystcrystallization"
+    },
+    "8": {
+      "item": "siongsngs_fantasy_world:amethyst"
+    }
+  },
+  "result": {
+    "item": "siongsngs_fantasy_world:siong_sng_portalframe",
+    "count": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "group": "siongsngs_fantasy_world",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:siong_log_log"
+    }
+  ],
+  "result": {
+    "item": "siongsngs_fantasy_world:siong_log_planks",
+    "count": 4
+  }
+}

@@ -66,10 +66,10 @@
     "minHeight": 5,
     "maxWaterDepth": 1,
     "treeStem": {
-      "value": "CUSTOM:Siongforest"
+      "value": "CUSTOM:Siong_logLog"
     },
     "treeBranch": {
-      "value": "Blocks.LEAVES#0"
+      "value": "CUSTOM:Siong_logLeaves"
     },
     "treeVines": {
       "value": "Blocks.AIR"

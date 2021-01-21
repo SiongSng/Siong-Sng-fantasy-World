@@ -2,12 +2,12 @@
   "_fv": 15,
   "_type": "block",
   "definition": {
-    "texture": "siong_log_top",
-    "textureTop": "siong_log_top",
-    "textureLeft": "siongsng_log_side",
-    "textureFront": "siongsng_log_side",
-    "textureRight": "siongsng_log_side",
-    "textureBack": "siongsng_log_side",
+    "texture": "siong_log_planks",
+    "textureTop": "siong_log_planks",
+    "textureLeft": "",
+    "textureFront": "siong_log_planks",
+    "textureRight": "",
+    "textureBack": "",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
@@ -15,6 +15,7 @@
     "displayFluidOverlay": false,
     "itemTexture": "",
     "particleTexture": "",
+    "blockBase": "Slab",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": false,
@@ -26,10 +27,10 @@
     "Mx": 1.0,
     "My": 1.0,
     "Mz": 1.0,
-    "name": "Siong Log",
+    "name": "Siong Log Slab",
     "specialInfo": [],
     "hardness": 2.0,
-    "resistance": 10.0,
+    "resistance": 3.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
@@ -57,7 +58,7 @@
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
-    "flammability": 0,
+    "flammability": 5,
     "fireSpreadSpeed": 0,
     "isLadder": false,
     "slipperiness": 0.6,
@@ -68,7 +69,7 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 1,
+    "breakHarvestLevel": 0,
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "CUSTOM:Blueflame"
@@ -95,7 +96,11 @@
     "fluidRestrictions": [],
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
-    "blocksToReplace": [],
+    "blocksToReplace": [
+      {
+        "value": "Blocks.STONE"
+      }
+    ],
     "frequencyPerChunks": 10,
     "frequencyOnChunk": 16,
     "minGenerateHeight": 0,

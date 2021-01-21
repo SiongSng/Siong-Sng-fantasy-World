@@ -1,0 +1,16 @@
+{
+  "group": "siong_sng_dictionary_recipe",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "siongsngs_fantasy_world:amethystcrystallization"
+    },
+    {
+      "item": "minecraft:book"
+    }
+  ],
+  "result": {
+    "item": "siongsngs_fantasy_world:siong_sng_dictionary",
+    "count": 1
+  }
+}

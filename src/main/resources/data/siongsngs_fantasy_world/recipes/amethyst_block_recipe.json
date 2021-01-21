@@ -1,0 +1,42 @@
+{
+  "group": "amethyst_block_recipe",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "siongsngs_fantasy_world:amethystcrystallization"
+    },
+    "1": {
+      "item": "siongsngs_fantasy_world:amethystcrystallization"
+    },
+    "2": {
+      "item": "siongsngs_fantasy_world:amethystcrystallization"
+    },
+    "3": {
+      "item": "siongsngs_fantasy_world:amethystcrystallization"
+    },
+    "4": {
+      "item": "siongsngs_fantasy_world:amethystcrystallization"
+    },
+    "5": {
+      "item": "siongsngs_fantasy_world:amethystcrystallization"
+    },
+    "6": {
+      "item": "siongsngs_fantasy_world:amethystcrystallization"
+    },
+    "7": {
+      "item": "siongsngs_fantasy_world:amethystcrystallization"
+    },
+    "8": {
+      "item": "siongsngs_fantasy_world:amethystcrystallization"
+    }
+  },
+  "result": {
+    "item": "siongsngs_fantasy_world:amethyst_block",
+    "count": 1
+  }
+}

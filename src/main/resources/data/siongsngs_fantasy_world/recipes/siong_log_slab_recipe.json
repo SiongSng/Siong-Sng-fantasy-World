@@ -1,0 +1,22 @@
+{
+  "group": "siongsngs_fantasy_world",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "siongsngs_fantasy_world:siong_log_planks"
+    },
+    "1": {
+      "item": "siongsngs_fantasy_world:siong_log_planks"
+    },
+    "2": {
+      "item": "siongsngs_fantasy_world:siong_log_planks"
+    }
+  },
+  "result": {
+    "item": "siongsngs_fantasy_world:siong_log_slab",
+    "count": 6
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "siongsngs_fantasy_world:block/siong_log_slab"
+    },
+    "type=top": {
+      "model": "siongsngs_fantasy_world:block/siong_log_slab_top"
+    },
+    "type=double": {
+      "model": "siongsngs_fantasy_world:block/siong_log_slab_full"
+    }
+  }
+}
