@@ -107,8 +107,8 @@
           "value": "EntityCow"
         },
         "minGroup": 1,
-        "maxGroup": 3,
-        "weight": 10,
+        "maxGroup": 2,
+        "weight": 4,
         "spawnType": "monster"
       }
     ]
