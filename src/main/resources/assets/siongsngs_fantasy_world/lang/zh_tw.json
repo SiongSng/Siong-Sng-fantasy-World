@@ -34,15 +34,16 @@
   "block.siongsngs_fantasy_world.ultivatesoil": "初階培養土",
   "block.siongsngs_fantasy_world.siong_log_fence_gate": "菘樹柵欄門",
   "advancements.copper_oreprogress.title": "取得銅礦!!",
+  "key.mcreator.openinfo": "開啟選單",
   "block.siongsngs_fantasy_world.amethystore": "紫水晶礦",
   "block.siongsngs_fantasy_world.amethyst": "紫水晶",
   "block.siongsngs_fantasy_world.siongwood": "菘木材",
   "item.siongsngs_fantasy_world.siong_sng_world": "菘菘的幻想世界-激活傳送門工具",
-  "item.siongsngs_fantasy_world.amethystcrystallization": "紫水晶結晶",
+  "item.siongsngs_fantasy_world.amethystcrystallization": "紫水晶晶體",
   "advancements.copper_oreprogress.descr": "挖取銅礦!!",
   "itemGroup.tabsiong_sng_industrialcomponents": "菘菘的幻想世界-工業元件",
   "itemGroup.tabutility": "實用工具",
-  "block.siongsngs_fantasy_world.siong_log_log": "菘樹",
+  "block.siongsngs_fantasy_world.siong_log_log": "菘樹原木",
   "advancements.industrialera.title": "工業時代",
   "advancements.industrialera.descr": "製作一個鐵齒輪"
 }

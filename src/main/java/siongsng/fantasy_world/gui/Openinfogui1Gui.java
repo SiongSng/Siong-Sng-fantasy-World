@@ -1,7 +1,8 @@
 
 package siongsng.fantasy_world.gui;
 
-import siongsng.fantasy_world.procedures.SiongSngbookhomeProcedure;
+import siongsng.fantasy_world.procedures.Open_info_runProcedure;
+import siongsng.fantasy_world.SiongsngsFantasyWorldModVariables;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 import siongsng.fantasy_world.SiongsngsFantasyWorldMod;
 
@@ -41,11 +42,11 @@ import java.util.HashMap;
 import com.mojang.blaze3d.matrix.MatrixStack;
 
 @SiongsngsFantasyWorldModElements.ModElement.Tag
-public class SiongSngbookaboutGui extends SiongsngsFantasyWorldModElements.ModElement {
+public class Openinfogui1Gui extends SiongsngsFantasyWorldModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
-	public SiongSngbookaboutGui(SiongsngsFantasyWorldModElements instance) {
-		super(instance, 84);
+	public Openinfogui1Gui(SiongsngsFantasyWorldModElements instance) {
+		super(instance, 86);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
@@ -56,7 +57,7 @@ public class SiongSngbookaboutGui extends SiongsngsFantasyWorldModElements.ModEl
 	private static class ContainerRegisterHandler {
 		@SubscribeEvent
 		public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
-			event.getRegistry().register(containerType.setRegistryName("siong_sngbookabout"));
+			event.getRegistry().register(containerType.setRegistryName("openinfogui_1"));
 		}
 	}
 	@OnlyIn(Dist.CLIENT)
@@ -112,10 +113,10 @@ public class SiongSngbookaboutGui extends SiongsngsFantasyWorldModElements.ModEl
 			this.y = container.y;
 			this.z = container.z;
 			this.entity = container.entity;
-			this.xSize = 372;
-			this.ySize = 195;
+			this.xSize = 190;
+			this.ySize = 198;
 		}
-		private static final ResourceLocation texture = new ResourceLocation("siongsngs_fantasy_world:textures/siong_sngbookabout.png");
+		private static final ResourceLocation texture = new ResourceLocation("siongsngs_fantasy_world:textures/openinfogui_1.png");
 		@Override
 		public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 			this.renderBackground(ms);
@@ -131,11 +132,7 @@ public class SiongSngbookaboutGui extends SiongsngsFantasyWorldModElements.ModEl
 			int l = (this.height - this.ySize) / 2;
 			this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("siongsngs_fantasy_world:textures/icon.png"));
-			this.blit(ms, this.guiLeft + 1, this.guiTop + 4, 0, 0, 16, 16, 16, 16);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("siongsngs_fantasy_world:textures/icon_text.png"));
-			this.blit(ms, this.guiLeft + 159, this.guiTop + -42, 0, 0, 250, 250, 250, 250);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("siongsngs_fantasy_world:textures/icon_1.png"));
-			this.blit(ms, this.guiLeft + 247, this.guiTop + 9, 0, 0, 64, 64, 64, 64);
+			this.blit(ms, this.guiLeft + 8, this.guiTop + 42, 0, 0, 16, 16, 16, 16);
 		}
 
 		@Override
@@ -154,17 +151,9 @@ public class SiongSngbookaboutGui extends SiongsngsFantasyWorldModElements.ModEl
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-			this.font.drawString(ms, "\u95DC\u65BC \u83D8\u83D8\u7684\u5E7B\u60F3\u4E16\u754C-SSSFW", 16, 6, -8060673);
-			this.font.drawString(ms, "\u83D8\u83D8\u7684\u5E7B\u60F3\u4E16\u754C-\u5546\u6A19 BY \u83D8\u83D8@2021", 223, 131, -12829636);
-			this.font.drawString(ms, "\u6A21\u7D44\u540D\u7A31: Siong Sng's fantasy World", 3, 25, -12829636);
-			this.font.drawString(ms, "\u6A21\u7D44\u8A3B\u518AID: siongsngs_fantasy_world", 3, 40, -12829636);
-			this.font.drawString(ms, "\u6A21\u7D44\u7248\u672C: V1.0.0 Pre-alpha 15", 3, 54, -12829636);
-			this.font.drawString(ms, "\u6A21\u7D44\u4F5C\u8005: Siong Sng", 3, 68, -12829636);
-			this.font.drawString(ms, "\u652F\u63F4\u8A9E\u8A00: English\u3001\u7E41\u9AD4\u4E2D\u6587\u3001\u7B80\u4F53\u4E2D\u6587", 3, 96,
-					-12829636);
-			this.font.drawString(ms, "\u958B\u767C\u5DE5\u5177: IntelliJ IDEA\u3001Mcreator\u3001GIMP", 3, 81, -12829636);
-			this.font.drawString(ms, "\u6A21\u7D44\u6240\u9700\u8F09\u5165\u5668: Forge(1.16.4-35.1.4)", 2, 111, -12829636);
-			this.font.drawString(ms, "\u83D8\u83D8\u7684\u5E7B\u60F3\u4E16\u754C\u7248\u6B0A\u6240\u6709", 4, 133, -12829636);
+			this.font.drawString(ms, "\u73A9\u5BB6\u8CC7\u8A0A", 71, 5, -12829636);
+			this.font.drawString(ms, "" + ((entity.getCapability(SiongsngsFantasyWorldModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new SiongsngsFantasyWorldModVariables.PlayerVariables())).coin) + " \u9846", 24, 44, -2868996);
 		}
 
 		@Override
@@ -177,7 +166,7 @@ public class SiongSngbookaboutGui extends SiongsngsFantasyWorldModElements.ModEl
 		public void init(Minecraft minecraft, int width, int height) {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
-			this.addButton(new Button(this.guiLeft + 157, this.guiTop + 166, 57, 20, new StringTextComponent("回到首頁"), e -> {
+			this.addButton(new Button(this.guiLeft + 61, this.guiTop + 174, 73, 20, new StringTextComponent("回到選單首頁"), e -> {
 				SiongsngsFantasyWorldMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
 				handleButtonAction(entity, 0, x, y, z);
 			}));
@@ -278,7 +267,7 @@ public class SiongSngbookaboutGui extends SiongsngsFantasyWorldModElements.ModEl
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				SiongSngbookhomeProcedure.executeProcedure($_dependencies);
+				Open_info_runProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}

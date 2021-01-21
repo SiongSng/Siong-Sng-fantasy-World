@@ -1,6 +1,7 @@
 
 package siongsng.fantasy_world.gui.overlay;
 
+import siongsng.fantasy_world.SiongsngsFantasyWorldModVariables;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -41,6 +42,23 @@ public class SiongSngcoinguiOverlay extends SiongsngsFantasyWorldModElements.Mod
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
 			if (true) {
+				Minecraft.getInstance().fontRenderer
+						.drawString(event.getMatrixStack(),
+								"" + ((entity.getCapability(SiongsngsFantasyWorldModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+										.orElse(new SiongsngsFantasyWorldModVariables.PlayerVariables())).coin) + "",
+								posX + -152, posY + 101, -5634641);
+				RenderSystem.disableDepthTest();
+				RenderSystem.depthMask(false);
+				RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA,
+						GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
+				RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
+				RenderSystem.disableAlphaTest();
+				Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("siongsngs_fantasy_world:textures/gui_blackbars.png"));
+				Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), posX + -167, posY + 76, 0, 0, 64, 64, 64, 64);
+				RenderSystem.depthMask(true);
+				RenderSystem.enableDepthTest();
+				RenderSystem.enableAlphaTest();
+				RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
 				RenderSystem.disableDepthTest();
 				RenderSystem.depthMask(false);
 				RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA,
@@ -48,13 +66,11 @@ public class SiongSngcoinguiOverlay extends SiongsngsFantasyWorldModElements.Mod
 				RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
 				RenderSystem.disableAlphaTest();
 				Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("siongsngs_fantasy_world:textures/icon.png"));
-				Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), posX + -207, posY + 101, 0, 0, 16, 16, 16, 16);
+				Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), posX + -167, posY + 99, 0, 0, 16, 16, 16, 16);
 				RenderSystem.depthMask(true);
 				RenderSystem.enableDepthTest();
 				RenderSystem.enableAlphaTest();
 				RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
-				Minecraft.getInstance().fontRenderer.drawString(event.getMatrixStack(), "" + (entity.getPersistentData().getDouble("coin")) + "",
-						posX + -189, posY + 104, -5634641);
 			}
 		}
 	}

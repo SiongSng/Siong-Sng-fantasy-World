@@ -985,9 +985,109 @@
           }
         ]
       }
+    },
+    {
+      "name": "Openinfogui",
+      "type": "gui",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "openinfogui"
+    },
+    {
+      "name": "Open_info_run",
+      "type": "procedure",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "open_info_run",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Openinfo",
+      "type": "keybind",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "openinfo"
+    },
+    {
+      "name": "Openinfogui1",
+      "type": "gui",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "openinfogui_1"
+    },
+    {
+      "name": "Openinforun1",
+      "type": "procedure",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "openinforun_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "coin",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    }
+  ],
   "sound_elements": [],
   "language_map": {
     "zh_tw": {
@@ -1026,15 +1126,16 @@
       "block.siongsngs_fantasy_world.ultivatesoil": "初階培養土",
       "block.siongsngs_fantasy_world.siong_log_fence_gate": "菘樹柵欄門",
       "advancements.copper_oreprogress.title": "取得銅礦!!",
+      "key.mcreator.openinfo": "開啟選單",
       "block.siongsngs_fantasy_world.amethystore": "紫水晶礦",
       "block.siongsngs_fantasy_world.amethyst": "紫水晶",
       "block.siongsngs_fantasy_world.siongwood": "菘木材",
       "item.siongsngs_fantasy_world.siong_sng_world": "菘菘的幻想世界-激活傳送門工具",
-      "item.siongsngs_fantasy_world.amethystcrystallization": "紫水晶結晶",
+      "item.siongsngs_fantasy_world.amethystcrystallization": "紫水晶晶體",
       "advancements.copper_oreprogress.descr": "挖取銅礦!!",
       "itemGroup.tabsiong_sng_industrialcomponents": "菘菘的幻想世界-工業元件",
       "itemGroup.tabutility": "實用工具",
-      "block.siongsngs_fantasy_world.siong_log_log": "菘樹",
+      "block.siongsngs_fantasy_world.siong_log_log": "菘樹原木",
       "advancements.industrialera.title": "工業時代",
       "advancements.industrialera.descr": "製作一個鐵齒輪"
     },
@@ -1074,6 +1175,7 @@
       "block.siongsngs_fantasy_world.ultivatesoil": "Elementary Cultivate Soil",
       "block.siongsngs_fantasy_world.siong_log_fence_gate": "Siong Log Fence Gate",
       "advancements.copper_oreprogress.title": "get Copper Ore!!",
+      "key.mcreator.openinfo": "Open Menu",
       "block.siongsngs_fantasy_world.amethystore": "Amethyst ore",
       "block.siongsngs_fantasy_world.amethyst": "Amethyst",
       "block.siongsngs_fantasy_world.siongwood": "Siong wood",
@@ -1103,7 +1205,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.16.4",
-    "credits": "@2021 By Siong Sng",
+    "credits": "@2021 BY SiongSng",
     "modElementsPackage": "siongsng.fantasy_world",
     "lockBaseModFiles": false
   },

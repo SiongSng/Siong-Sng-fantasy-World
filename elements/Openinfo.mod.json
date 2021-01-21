@@ -1,0 +1,12 @@
+{
+  "_fv": 15,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "R",
+    "keyBindingName": "Open Menu",
+    "keyBindingCategoryKey": "openinfo",
+    "onKeyPressed": {
+      "name": "Open_info_run"
+    }
+  }
+}
