@@ -1,0 +1,100 @@
+{
+  "_fv": 15,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 372,
+    "height": 195,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "故事-菘菘的幻想世界起源?",
+          "color": {
+            "value": -392702,
+            "falpha": 0.0
+          },
+          "name": "故事-菘菘的幻想世界起源?",
+          "x": 46,
+          "y": 33
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "很久很久以前，有一天有一個人叫做菘菘...",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "很久很久以前，有一天有一個人叫做菘菘...",
+          "x": 33,
+          "y": 63
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon.png",
+          "use1Xscale": false,
+          "name": "icon.png",
+          "x": 30,
+          "y": 30
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "下一頁",
+          "width": 49,
+          "height": 20,
+          "name": "下一頁",
+          "x": 339,
+          "y": 188
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "回到首頁",
+          "onClick": {
+            "name": "SiongSngbookhome"
+          },
+          "width": 57,
+          "height": 20,
+          "name": "回到首頁",
+          "x": 185,
+          "y": 188
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "上一頁",
+          "width": 49,
+          "height": 20,
+          "name": "上一頁",
+          "x": 32,
+          "y": 188
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "第一章-序幕",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "第一章-序幕",
+          "x": 196,
+          "y": 29
+        }
+      }
+    ]
+  }
+}

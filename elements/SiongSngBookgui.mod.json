@@ -19,8 +19,8 @@
             "falpha": 0.0
           },
           "name": "菘菘的幻想世界 辭典-知識之書",
-          "x": 33,
-          "y": 29
+          "x": 45,
+          "y": 30
         }
       },
       {
@@ -32,7 +32,7 @@
             "falpha": 0.0
           },
           "name": "解鎖內容 <ENBT:number:The_completion_rate> %",
-          "x": 32,
+          "x": 31,
           "y": 199
         }
       },
@@ -40,6 +40,9 @@
         "type": "button",
         "data": {
           "text": "關於\\\"菘菘的幻想世界\\\"",
+          "onClick": {
+            "name": "SiongSngbookaboutrun"
+          },
           "width": 105,
           "height": 20,
           "name": "關於\\\"菘菘的幻想世界\\\"",
@@ -51,6 +54,9 @@
         "type": "button",
         "data": {
           "text": "故事",
+          "onClick": {
+            "name": "SiongBookgui1run"
+          },
           "width": 41,
           "height": 20,
           "name": "故事",
@@ -180,16 +186,46 @@
         }
       },
       {
+        "type": "image",
+        "data": {
+          "image": "icon.png",
+          "use1Xscale": false,
+          "name": "icon.png",
+          "x": 30,
+          "y": 28
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_1.png",
+          "use1Xscale": true,
+          "name": "icon_1.png",
+          "x": 70,
+          "y": 46
+        }
+      },
+      {
         "type": "label",
         "data": {
-          "text": "www  圖示還沒製作好啦xd",
+          "text": "書籍編寫者:菘菘",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "www  圖示還沒製作好啦xd",
-          "x": 38,
-          "y": 115
+          "name": "書籍編寫者:菘菘",
+          "x": 72,
+          "y": 177
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_text.png",
+          "use1Xscale": true,
+          "name": "icon_text.png",
+          "x": -22,
+          "y": -6
         }
       }
     ]
