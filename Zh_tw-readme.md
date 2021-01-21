@@ -17,7 +17,7 @@
 這是一個由菘菘所開發的多世界模組，旨在希望大家能夠透過該模組玩到更多的樣性的Minecraft
 
 [模組維基百科](https://github.com/Barry23412/Siong-Sng-fantasy-World/wiki)  
-[支援Discord伺服器](https://discord.gg/5w9BUM4)  
+[支援Discord伺服器](https://discord.com/invite/gjmazfF9Rj)  
 [問題追蹤器](https://github.com/Barry23412/Siong-Sng-fantasy-World/issues)  
 
 
