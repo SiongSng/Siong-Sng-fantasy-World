@@ -185,12 +185,12 @@
       {
         "type": "label",
         "data": {
-          "text": "製作進度:<ENBT:number:tagName>%",
+          "text": "製作進度:<ENBT:number:timer2>%(此功能非實際結果)",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "製作進度:<ENBT:number:tagName>%",
+          "name": "製作進度:<ENBT:number:timer2>%(此功能非實際結果)",
           "x": 163,
           "y": 41
         }

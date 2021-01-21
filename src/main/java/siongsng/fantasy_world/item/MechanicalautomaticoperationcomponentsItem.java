@@ -1,6 +1,7 @@
 
 package siongsng.fantasy_world.item;
 
+import siongsng.fantasy_world.itemgroup.UtilityItemGroup;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
@@ -10,7 +11,6 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
@@ -31,7 +31,7 @@ public class MechanicalautomaticoperationcomponentsItem extends SiongsngsFantasy
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(16).rarity(Rarity.COMMON));
+			super(new Item.Properties().group(UtilityItemGroup.tab).maxStackSize(16).rarity(Rarity.UNCOMMON));
 			setRegistryName("mechanicalautomaticoperationcomponents");
 		}
 

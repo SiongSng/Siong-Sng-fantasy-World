@@ -6,9 +6,9 @@
     "texture": "auto",
     "customModelName": "Normal",
     "name": "Mechanical automatic operation of the chip",
-    "rarity": "COMMON",
+    "rarity": "UNCOMMON",
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:Utility"
     },
     "stackSize": 16,
     "enchantability": 0,

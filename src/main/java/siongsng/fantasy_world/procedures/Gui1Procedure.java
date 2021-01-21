@@ -65,6 +65,7 @@ public class Gui1Procedure extends SiongsngsFantasyWorldModElements.ModElement {
 		IWorld world = (IWorld) dependencies.get("world");
 		double previousRecipe = 0;
 		double wait_time = 0;
+		boolean wait = false;
 		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == IronplatemakingmachineBlock.block.getDefaultState()
 				.getBlock())) {
 			wait_time = (double) 100;
@@ -86,7 +87,7 @@ public class Gui1Procedure extends SiongsngsFantasyWorldModElements.ModElement {
 				}
 				return ItemStack.EMPTY;
 			}
-		}.getItemStack((int) (1))).getItem() == new ItemStack(CopperingotItem.block, (int) (1)).getItem()) && ((new Object() {
+		}.getItemStack((int) (1))).getItem() == new ItemStack(CopperingotItem.block, (int) (1)).getItem()) && (((wait) == (false)) && ((new Object() {
 			public int getAmount(int sltid) {
 				if (entity instanceof ServerPlayerEntity) {
 					Container _current = ((ServerPlayerEntity) entity).openContainer;
@@ -101,7 +102,8 @@ public class Gui1Procedure extends SiongsngsFantasyWorldModElements.ModElement {
 				}
 				return 0;
 			}
-		}.getAmount((int) (1))) >= 2))) {
+		}.getAmount((int) (1))) >= 2)))) {
+			wait = (boolean) (true);
 			{
 				Entity _ent = entity;
 				if (_ent instanceof ServerPlayerEntity) {
@@ -114,6 +116,32 @@ public class Gui1Procedure extends SiongsngsFantasyWorldModElements.ModElement {
 						}
 					}
 				}
+			}
+			for (int index0 = 0; index0 < (int) (5); index0++) {
+				new Object() {
+					private int ticks = 0;
+					private float waitTicks;
+					private IWorld world;
+					public void start(IWorld world, int waitTicks) {
+						this.waitTicks = waitTicks;
+						MinecraftForge.EVENT_BUS.register(this);
+						this.world = world;
+					}
+
+					@SubscribeEvent
+					public void tick(TickEvent.ServerTickEvent event) {
+						if (event.phase == TickEvent.Phase.END) {
+							this.ticks += 1;
+							if (this.ticks >= this.waitTicks)
+								run();
+						}
+					}
+
+					private void run() {
+						entity.getPersistentData().putDouble("timer", ((entity.getPersistentData().getDouble("tagName")) + 1));
+						MinecraftForge.EVENT_BUS.unregister(this);
+					}
+				}.start(world, (int) 20);
 			}
 			new Object() {
 				private int ticks = 0;
@@ -192,6 +220,7 @@ public class Gui1Procedure extends SiongsngsFantasyWorldModElements.ModElement {
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
 			}.start(world, (int) (wait_time));
+			wait = (boolean) (false);
 		} else if ((((new Object() {
 			public ItemStack getItemStack(int sltid) {
 				Entity _ent = entity;
@@ -206,7 +235,7 @@ public class Gui1Procedure extends SiongsngsFantasyWorldModElements.ModElement {
 				}
 				return ItemStack.EMPTY;
 			}
-		}.getItemStack((int) (1))).getItem() == new ItemStack(Items.IRON_INGOT, (int) (1)).getItem()) && ((new Object() {
+		}.getItemStack((int) (1))).getItem() == new ItemStack(Items.IRON_INGOT, (int) (1)).getItem()) && (((wait) == (false)) && ((new Object() {
 			public int getAmount(int sltid) {
 				if (entity instanceof ServerPlayerEntity) {
 					Container _current = ((ServerPlayerEntity) entity).openContainer;
@@ -221,7 +250,8 @@ public class Gui1Procedure extends SiongsngsFantasyWorldModElements.ModElement {
 				}
 				return 0;
 			}
-		}.getAmount((int) (1))) >= 2))) {
+		}.getAmount((int) (1))) >= 2)))) {
+			wait = (boolean) (true);
 			{
 				Entity _ent = entity;
 				if (_ent instanceof ServerPlayerEntity) {
@@ -312,6 +342,7 @@ public class Gui1Procedure extends SiongsngsFantasyWorldModElements.ModElement {
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
 			}.start(world, (int) (wait_time));
+			wait = (boolean) (false);
 		}
 	}
 }

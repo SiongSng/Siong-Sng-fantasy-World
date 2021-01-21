@@ -219,12 +219,24 @@ public class AmethystBlock extends SiongsngsFantasyWorldModElements.ModElement {
 					blockCriteria = true;
 				if (blockAt.getBlock() == Blocks.AIR.getDefaultState().getBlock())
 					blockCriteria = true;
+				if (blockAt.getBlock() == Blocks.GRASS_BLOCK.getDefaultState().getBlock())
+					blockCriteria = true;
+				if (blockAt.getBlock() == Blocks.GRASS_PATH.getDefaultState().getBlock())
+					blockCriteria = true;
+				if (blockAt.getBlock() == Blocks.MYCELIUM.getDefaultState().getBlock())
+					blockCriteria = true;
+				if (blockAt.getBlock() == Blocks.DIRT.getDefaultState().getBlock())
+					blockCriteria = true;
+				if (blockAt.getBlock() == Blocks.COARSE_DIRT.getDefaultState().getBlock())
+					blockCriteria = true;
+				if (blockAt.getBlock() == Blocks.PODZOL.getDefaultState().getBlock())
+					blockCriteria = true;
 				return blockCriteria;
 			}
 
 			protected IRuleTestType<?> getType() {
 				return IRuleTestType.BLOCK_MATCH;
 			}
-		}, block.getDefaultState(), 3)).range(115).square().func_242731_b(19));
+		}, block.getDefaultState(), 3)).range(115).square().func_242731_b(17));
 	}
 }
