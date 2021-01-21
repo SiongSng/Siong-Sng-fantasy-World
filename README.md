@@ -12,7 +12,7 @@ Siong Sng's fantasy World
 
 |Mod Name|Mod ID|Author|Programming Tools|Mod support language|
 |:------:|:----:|:----:|:---------------:|:---------------------:|
-|Siong Sng's fantasy World|siongsngs_fantasy_world|Siong Sng|[IntelliJ IDEA](https://github.com/JetBrains/intellij-community)、[Mcreator](https://github.com/MCreator/MCreator)|English、繁體中文、简体中文|
+|Siong Sng's fantasy World|siongsngs_fantasy_world|Siong Sng|[IntelliJ IDEA](https://github.com/JetBrains/intellij-community)、[Mcreator](https://github.com/MCreator/MCreator)、[GIMP](https://github.com/GNOME/gimp)|English、繁體中文、简体中文|
   
 
 This is a multi-world mod developed by Siong Siong, hoping that everyone can play more diverse Minecraft through this mod
