@@ -2,55 +2,53 @@
   "_fv": 15,
   "_type": "block",
   "definition": {
-    "texture": "cultivate_soil_top",
-    "textureTop": "cultivate_soil_top",
-    "textureLeft": "cultivate_soil_top",
-    "textureFront": "cultivate_soil_top",
-    "textureRight": "cultivate_soil_top",
-    "textureBack": "cultivate_soil_top",
-    "renderType": 10,
-    "customModelName": "Normal",
+    "texture": "siong_sapling",
+    "textureTop": "",
+    "textureLeft": "",
+    "textureFront": "",
+    "textureRight": "",
+    "textureBack": "",
+    "renderType": 12,
+    "customModelName": "Cross model",
     "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
-    "particleTexture": "cultivate_soil_top",
+    "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
-    "hasTransparency": false,
+    "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "SOLID",
+    "transparencyType": "TRANSLUCENT",
     "mx": 0.0,
     "my": 0.0,
     "mz": 0.0,
     "Mx": 1.0,
     "My": 1.0,
     "Mz": 1.0,
-    "name": "Elementary Cultivate Soil",
-    "specialInfo": [
-      "§b可以加快作物生長的§c初階培養土  §6生長速度加乘1"
-    ],
-    "hardness": 4.0,
+    "name": "Siong Sapling",
+    "specialInfo": [],
+    "hardness": 1.0,
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
       "value": "CUSTOM:SiongSngworldblock"
     },
-    "destroyTool": "shovel",
+    "destroyTool": "Not specified",
     "customDrop": {
       "value": ""
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
     "enchantPowerBonus": 0.0,
-    "plantsGrowOn": true,
+    "plantsGrowOn": false,
     "canProvidePower": false,
-    "lightOpacity": 255,
+    "lightOpacity": 0,
     "material": {
-      "value": "GRASS"
+      "value": "PLANTS"
     },
-    "tickRate": 10,
+    "tickRate": 20,
     "tickRandomly": false,
     "isReplaceable": false,
     "colorOnMap": "DEFAULT",
@@ -63,28 +61,28 @@
     "fireSpreadSpeed": 0,
     "isLadder": false,
     "slipperiness": 0.6,
-    "reactionToPushing": "NORMAL",
+    "reactionToPushing": "IGNORE",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "GROUND"
+      "value": "PLANT"
     },
     "luminance": 0,
     "unbreakable": false,
     "breakHarvestLevel": 1,
-    "spawnParticles": false,
+    "spawnParticles": true,
     "particleToSpawn": {
-      "value": "EXPLOSION_NORMAL"
+      "value": "CUSTOM:Blueflame"
     },
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
-    "particleAmount": 4,
-    "hasInventory": false,
+    "particleAmount": 2,
+    "hasInventory": true,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
-    "inventorySize": 9,
+    "inventorySize": 1,
     "inventoryStackSize": 64,
-    "inventoryDropWhenDestroyed": true,
-    "inventoryComparatorPower": true,
+    "inventoryDropWhenDestroyed": false,
+    "inventoryComparatorPower": false,
     "inventoryOutSlotIDs": [],
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": false,
@@ -96,35 +94,14 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onTickUpdate": {
-      "name": "Elementary_culture_soil_growth_bonus"
+      "name": "SiongSapling_timerGrow"
     },
-    "spawnWorldTypes": [
-      "Surface"
-    ],
+    "spawnWorldTypes": [],
     "restrictionBiomes": [],
-    "blocksToReplace": [
-      {
-        "value": "Blocks.GRASS"
-      },
-      {
-        "value": "Blocks.GRASS_PATH"
-      },
-      {
-        "value": "Blocks.MYCELIUM"
-      },
-      {
-        "value": "Blocks.DIRT#0"
-      },
-      {
-        "value": "Blocks.DIRT#1"
-      },
-      {
-        "value": "Blocks.DIRT#2"
-      }
-    ],
-    "frequencyPerChunks": 13,
+    "blocksToReplace": [],
+    "frequencyPerChunks": 10,
     "frequencyOnChunk": 16,
-    "minGenerateHeight": 55,
-    "maxGenerateHeight": 110
+    "minGenerateHeight": 0,
+    "maxGenerateHeight": 64
   }
 }

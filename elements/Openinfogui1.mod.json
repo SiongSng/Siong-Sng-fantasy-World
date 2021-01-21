@@ -43,21 +43,44 @@
           "image": "icon.png",
           "use1Xscale": false,
           "name": "icon.png",
-          "x": 127,
-          "y": 63
+          "x": 124,
+          "y": 66
         }
       },
       {
         "type": "label",
         "data": {
-          "text": "<VAR:coin> Áû",
+          "text": "<VAR:coin>",
           "color": {
             "value": -2868996,
             "falpha": 0.0
           },
-          "name": "<VAR:coin> Áû",
-          "x": 143,
-          "y": 65
+          "name": "<VAR:coin>",
+          "x": 142,
+          "y": 68
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<ENBT:text:life_value>",
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "name": "<ENBT:text:life_value>",
+          "x": 141,
+          "y": 50
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "Love.png",
+          "use1Xscale": true,
+          "name": "Love.png",
+          "x": 123,
+          "y": 47
         }
       }
     ]

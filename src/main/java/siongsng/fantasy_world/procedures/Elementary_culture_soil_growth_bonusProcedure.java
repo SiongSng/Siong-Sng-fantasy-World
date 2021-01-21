@@ -3,7 +3,6 @@ package siongsng.fantasy_world.procedures;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 import siongsng.fantasy_world.SiongsngsFantasyWorldMod;
 
-import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
@@ -45,14 +44,14 @@ public class Elementary_culture_soil_growth_bonusProcedure extends SiongsngsFant
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (world instanceof ServerWorld)
-			((ServerWorld) world).setDayTime((int) ((world.getWorldInfo().getDayTime()) + 0.5));
-		if (world instanceof World) {
-			if (BoneMealItem.applyBonemeal(new ItemStack(Items.BONE_MEAL), (World) world, new BlockPos((int) x, (int) (y + 1), (int) z))
-					|| BoneMealItem.growSeagrass(new ItemStack(Items.BONE_MEAL), (World) world, new BlockPos((int) x, (int) (y + 1), (int) z),
-							(Direction) null)) {
-				if (!world.isRemote())
-					((World) world).playEvent(2005, new BlockPos((int) x, (int) (y + 1), (int) z), 0);
+		if ((Math.random() < 0.1)) {
+			if (world instanceof World) {
+				if (BoneMealItem.applyBonemeal(new ItemStack(Items.BONE_MEAL), (World) world, new BlockPos((int) x, (int) (y + 1), (int) z))
+						|| BoneMealItem.growSeagrass(new ItemStack(Items.BONE_MEAL), (World) world, new BlockPos((int) x, (int) (y + 1), (int) z),
+								(Direction) null)) {
+					if (!world.isRemote())
+						((World) world).playEvent(2005, new BlockPos((int) x, (int) (y + 1), (int) z), 0);
+				}
 			}
 		}
 	}

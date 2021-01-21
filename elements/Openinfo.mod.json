@@ -2,7 +2,7 @@
   "_fv": 15,
   "_type": "keybind",
   "definition": {
-    "triggerKey": "R",
+    "triggerKey": "Y",
     "keyBindingName": "Open Menu",
     "keyBindingCategoryKey": "openinfo",
     "onKeyPressed": {

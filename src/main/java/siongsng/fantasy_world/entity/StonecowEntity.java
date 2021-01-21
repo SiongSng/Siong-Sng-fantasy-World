@@ -66,8 +66,8 @@ public class StonecowEntity extends SiongsngsFantasyWorldModElements.ModElement 
 	@Override
 	public void initElements() {
 		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER).setShouldReceiveVelocityUpdates(true)
-				.setTrackingRange(32).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.9f, 1.4f)).build("stonecow")
-						.setRegistryName("stonecow");
+				.setTrackingRange(32).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).immuneToFire().size(0.9f, 1.4f))
+						.build("stonecow").setRegistryName("stonecow");
 		elements.entities.add(() -> entity);
 		elements.items.add(() -> new SpawnEggItem(entity, -10066330, -6710887, new Item.Properties().group(SiongSngworldbiologicalItemGroup.tab))
 				.setRegistryName("stonecow_spawn_egg"));

@@ -5,29 +5,6 @@
     "priority": "NORMAL",
     "components": [
       {
-        "type": "label",
-        "data": {
-          "text": "<VAR:coin>",
-          "color": {
-            "value": -5634641,
-            "falpha": 0.0
-          },
-          "name": "<VAR:coin>",
-          "x": 61,
-          "y": 221
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "gui_blackbars.png",
-          "use1Xscale": false,
-          "name": "gui_blackbars.png",
-          "x": 46,
-          "y": 196
-        }
-      },
-      {
         "type": "image",
         "data": {
           "image": "icon.png",
@@ -35,6 +12,19 @@
           "name": "icon.png",
           "x": 46,
           "y": 219
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:coin>",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "<VAR:coin>",
+          "x": 63,
+          "y": 221
         }
       }
     ],
