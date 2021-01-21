@@ -8,7 +8,7 @@ Siong Sng's fantasy World
 =======================================  
 **Readme language selection:** [English](https://github.com/Barry23412/Siong-Sng-fantasy-World/blob/master/README.md)   [繁體中文](https://github.com/Barry23412/Siong-Sng-fantasy-World/blob/master/Zh_tw-readme.md)   [简体中文](https://github.com/Barry23412/Siong-Sng-fantasy-World/blob/master/Zh_cn-readme.md)
 
-## [Download Mod](https://github.com/Barry23412/Siong-Sng-fantasy-World/releases/latest)
+## [Download Mod](https://www.curseforge.com/minecraft/mc-mods/siong-sngs-fantasy-world)
 
 |Mod Name|Mod ID|Author|Programming Tools|Mod support language|
 |:------:|:----:|:----:|:---------------:|:---------------------:|
