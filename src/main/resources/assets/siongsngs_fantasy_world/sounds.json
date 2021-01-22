@@ -1,1 +1,11 @@
-{}
+{
+  "flif_book_1": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "siongsngs_fantasy_world:book1",
+        "stream": false
+      }
+    ]
+  }
+}

@@ -31,6 +31,9 @@
     "hasGlow": false,
     "guiBoundTo": "SiongSngBookgui",
     "inventorySize": 1,
-    "inventoryStackSize": 64
+    "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "Flif_book"
+    }
   }
 }

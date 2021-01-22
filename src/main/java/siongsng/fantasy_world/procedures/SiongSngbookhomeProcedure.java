@@ -19,6 +19,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
 import java.util.Map;
+import java.util.HashMap;
 
 import io.netty.buffer.Unpooled;
 
@@ -77,6 +78,14 @@ public class SiongSngbookhomeProcedure extends SiongsngsFantasyWorldModElements.
 					}
 				}, _bpos);
 			}
+		}
+		{
+			Map<String, Object> $_dependencies = new HashMap<>();
+			$_dependencies.put("world", world);
+			$_dependencies.put("x", x);
+			$_dependencies.put("y", y);
+			$_dependencies.put("z", z);
+			Flif_bookProcedure.executeProcedure($_dependencies);
 		}
 	}
 }

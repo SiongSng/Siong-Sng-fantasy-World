@@ -1,6 +1,7 @@
 
 package siongsng.fantasy_world.item;
 
+import siongsng.fantasy_world.procedures.Flif_bookProcedure;
 import siongsng.fantasy_world.itemgroup.UtilityItemGroup;
 import siongsng.fantasy_world.gui.SiongSngBookguiGui;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
@@ -43,7 +44,9 @@ import net.minecraft.block.BlockState;
 import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
 
 import io.netty.buffer.Unpooled;
 
@@ -124,6 +127,14 @@ public class SiongSngDictionaryItem extends SiongsngsFantasyWorldModElements.Mod
 					buf.writeBlockPos(new BlockPos(x, y, z));
 					buf.writeByte(hand == Hand.MAIN_HAND ? 0 : 1);
 				});
+			}
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				Flif_bookProcedure.executeProcedure($_dependencies);
 			}
 			return ar;
 		}

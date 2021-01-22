@@ -46,6 +46,8 @@ public class SiongsngsFantasyWorldModElements {
 	public final List<Supplier<Enchantment>> enchantments = new ArrayList<>();
 	public static Map<ResourceLocation, net.minecraft.util.SoundEvent> sounds = new HashMap<>();
 	public SiongsngsFantasyWorldModElements() {
+		sounds.put(new ResourceLocation("siongsngs_fantasy_world", "flif_book_1"),
+				new net.minecraft.util.SoundEvent(new ResourceLocation("siongsngs_fantasy_world", "flif_book_1")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("siongsngs_fantasy_world").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();
