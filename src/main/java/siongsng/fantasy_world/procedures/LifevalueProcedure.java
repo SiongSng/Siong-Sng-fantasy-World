@@ -28,7 +28,7 @@ public class LifevalueProcedure extends SiongsngsFantasyWorldModElements.ModElem
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		entity.getPersistentData().putDouble("life_value", ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1));
+		entity.getPersistentData().putDouble("live", ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1));
 	}
 
 	@SubscribeEvent

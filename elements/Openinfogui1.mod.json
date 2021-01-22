@@ -59,29 +59,6 @@
           "x": 142,
           "y": 68
         }
-      },
-      {
-        "type": "label",
-        "data": {
-          "text": "<ENBT:text:life_value>",
-          "color": {
-            "value": -65536,
-            "falpha": 0.0
-          },
-          "name": "<ENBT:text:life_value>",
-          "x": 141,
-          "y": 50
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "Love.png",
-          "use1Xscale": true,
-          "name": "Love.png",
-          "x": 123,
-          "y": 47
-        }
       }
     ]
   }
