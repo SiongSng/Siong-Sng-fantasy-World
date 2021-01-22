@@ -1453,6 +1453,66 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "copper_armor_boots_recipe"
+    },
+    {
+      "name": "SiongSngWorldequipment",
+      "type": "tab",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "siong_sng_worldequipment"
+    },
+    {
+      "name": "AmethyArmor",
+      "type": "armor",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "amethy_armor",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      }
+    },
+    {
+      "name": "AmethyArmorHelmetRecipe",
+      "type": "recipe",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "amethy_armor_helmet_recipe"
+    },
+    {
+      "name": "AmethyArmorBodyRecipe",
+      "type": "recipe",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "amethy_armor_body_recipe"
+    },
+    {
+      "name": "AmethyArmorLeggingsRecipe",
+      "type": "recipe",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "amethy_armor_leggings_recipe"
+    },
+    {
+      "name": "AmethyArmorBootsRecipe",
+      "type": "recipe",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "amethy_armor_boots_recipe"
     }
   ],
   "variable_elements": [
@@ -1469,9 +1529,9 @@
       "item.siongsngs_fantasy_world.copperplate": "銅板",
       "itemGroup.tabsiong_sngworldfood": "菘菘的幻想世界-食物",
       "item.siongsngs_fantasy_world.amethys_axe": "紫水晶斧頭",
-      "item.siongsngs_fantasy_world.irongear": "鐵齒輪",
-      "block.siongsngs_fantasy_world.cooperplatepress": "銅製壓板機",
       "item.siongsngs_fantasy_world.amethys_shovel": "紫水晶鏟子",
+      "block.siongsngs_fantasy_world.cooperplatepress": "銅製壓板機",
+      "item.siongsngs_fantasy_world.irongear": "鐵齒輪",
       "block.siongsngs_fantasy_world.siong_sng_portalframe": "菘菘的幻想世界傳送門框架",
       "block.siongsngs_fantasy_world.siong_log_stairs": "菘樹樓梯",
       "item.siongsngs_fantasy_world.copper_armor_helmet": "銅頭盔",
@@ -1483,6 +1543,8 @@
       "item.siongsngs_fantasy_world.mechanicalautomaticoperationcomponents": "機械自動運作晶片",
       "itemGroup.tabsiong_sngworldblock": "菘菘的幻想世界-方塊",
       "block.siongsngs_fantasy_world.copper_ore": "銅礦",
+      "itemGroup.tabsiong_sng_worldequipment": "菘菘的幻想世界-裝備",
+      "item.siongsngs_fantasy_world.amethy_armor_chestplate": "紫水晶胸甲",
       "item.siongsngs_fantasy_world.copperingot": "炙熱的銅錠",
       "item.siongsngs_fantasy_world.copper_pickaxe": "銅稿子",
       "block.siongsngs_fantasy_world.siong_log_planks": "菘樹木材",
@@ -1499,6 +1561,7 @@
       "itemGroup.tabsiong_sng_world_toolsandweapons": "菘菘的幻想世界-工具和武器",
       "block.siongsngs_fantasy_world.siong_log_log": "菘樹原木",
       "advancements.industrialera.descr": "製作一個鐵齒輪",
+      "item.siongsngs_fantasy_world.amethy_armor_leggings": "紫水晶護腿",
       "item.siongsngs_fantasy_world.copper_shovel": "銅鏟子",
       "biome.siongsngs_fantasy_world.siongforest_ecologicaldomain": "菘森林",
       "item.siongsngs_fantasy_world.copper_sword": "銅劍",
@@ -1513,6 +1576,7 @@
       "block.siongsngs_fantasy_world.siong_log_slab": "菘樹半磚",
       "item.siongsngs_fantasy_world.copperparticle": "銅粒",
       "item.siongsngs_fantasy_world.stonesteak": "石頭牛排",
+      "item.siongsngs_fantasy_world.amethy_armor_helmet": "紫水晶頭盔",
       "block.siongsngs_fantasy_world.amethyst_block": "紫水晶方塊",
       "item.siongsngs_fantasy_world.ironplate": "鐵板",
       "advancements.ironplatepressschedule.title": "壓碎板子!!!",
@@ -1531,16 +1595,17 @@
       "item.siongsngs_fantasy_world.copper_armor_boots": "銅鞋子",
       "advancements.copper_oreprogress.descr": "挖取銅礦!!",
       "item.siongsngs_fantasy_world.amethys_hoe": "紫水晶鋤頭",
-      "item.siongsngs_fantasy_world.copper_armor_leggings": "銅褲子",
-      "advancements.industrialera.title": "工業時代"
+      "item.siongsngs_fantasy_world.copper_armor_leggings": "銅護腿",
+      "advancements.industrialera.title": "工業時代",
+      "item.siongsngs_fantasy_world.amethy_armor_boots": "紫水晶鞋子"
     },
     "en_us": {
       "item.siongsngs_fantasy_world.copperplate": "Copper plate",
       "itemGroup.tabsiong_sngworldfood": "Siong Sng\u0027s fantasy World-Food",
       "item.siongsngs_fantasy_world.amethys_axe": "Amethys Axe",
-      "item.siongsngs_fantasy_world.irongear": "Iron gear",
-      "block.siongsngs_fantasy_world.cooperplatepress": "Cooper plate press",
       "item.siongsngs_fantasy_world.amethys_shovel": "Amethys Shovel",
+      "block.siongsngs_fantasy_world.cooperplatepress": "Cooper plate press",
+      "item.siongsngs_fantasy_world.irongear": "Iron gear",
       "block.siongsngs_fantasy_world.siong_sng_portalframe": "Siong Sng\u0027s fantasy World Portal frame",
       "block.siongsngs_fantasy_world.siong_log_stairs": "Siong Log Stairs",
       "item.siongsngs_fantasy_world.copper_armor_helmet": "Copper Helmet",
@@ -1552,6 +1617,8 @@
       "item.siongsngs_fantasy_world.mechanicalautomaticoperationcomponents": "Mechanical automatic operation of the chip",
       "itemGroup.tabsiong_sngworldblock": "Siong Sng\u0027s fantasy World-Block",
       "block.siongsngs_fantasy_world.copper_ore": "Copper Ore",
+      "itemGroup.tabsiong_sng_worldequipment": "Siong Sng\u0027s fantasy World-equipment",
+      "item.siongsngs_fantasy_world.amethy_armor_chestplate": "Amethy Chestplate",
       "item.siongsngs_fantasy_world.copperingot": "Copper ingot",
       "item.siongsngs_fantasy_world.copper_pickaxe": "Copper Pickaxe",
       "block.siongsngs_fantasy_world.siong_log_planks": "Siong_log Planks",
@@ -1568,6 +1635,7 @@
       "itemGroup.tabsiong_sng_world_toolsandweapons": "Siong Sng\u0027s fantasy World-Tools and weapons",
       "block.siongsngs_fantasy_world.siong_log_log": "Siong_log Log",
       "advancements.industrialera.descr": "Making an iron gears.",
+      "item.siongsngs_fantasy_world.amethy_armor_leggings": "Amethy Leggings",
       "item.siongsngs_fantasy_world.copper_shovel": "Copper Shovel",
       "biome.siongsngs_fantasy_world.siongforest_ecologicaldomain": "Siong forest",
       "item.siongsngs_fantasy_world.copper_sword": "Copper Sword",
@@ -1582,6 +1650,7 @@
       "block.siongsngs_fantasy_world.siong_log_slab": "Siong Log Slab",
       "item.siongsngs_fantasy_world.copperparticle": "Copper particle",
       "item.siongsngs_fantasy_world.stonesteak": "Stone steak",
+      "item.siongsngs_fantasy_world.amethy_armor_helmet": "Amethy Helmet",
       "block.siongsngs_fantasy_world.amethyst_block": "Amethyst Block",
       "item.siongsngs_fantasy_world.ironplate": "Iron plate",
       "advancements.ironplatepressschedule.title": "Crush the board!!!",
@@ -1601,7 +1670,8 @@
       "advancements.copper_oreprogress.descr": "Dig the copper Ore!!",
       "item.siongsngs_fantasy_world.amethys_hoe": "Amethys Hoe",
       "item.siongsngs_fantasy_world.copper_armor_leggings": "Copper Leggings",
-      "advancements.industrialera.title": "Industrial era!"
+      "advancements.industrialera.title": "Industrial era!",
+      "item.siongsngs_fantasy_world.amethy_armor_boots": "Amethy Boots"
     }
   },
   "workspaceSettings": {

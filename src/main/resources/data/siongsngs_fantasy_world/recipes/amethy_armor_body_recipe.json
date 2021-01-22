@@ -1,0 +1,39 @@
+{
+  "group": "siongsngs_fantasy_world",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "siongsngs_fantasy_world:amethystcrystallization"
+    },
+    "2": {
+      "item": "siongsngs_fantasy_world:amethystcrystallization"
+    },
+    "3": {
+      "item": "siongsngs_fantasy_world:amethystcrystallization"
+    },
+    "4": {
+      "item": "siongsngs_fantasy_world:amethystcrystallization"
+    },
+    "5": {
+      "item": "siongsngs_fantasy_world:amethystcrystallization"
+    },
+    "6": {
+      "item": "siongsngs_fantasy_world:amethystcrystallization"
+    },
+    "7": {
+      "item": "siongsngs_fantasy_world:amethystcrystallization"
+    },
+    "8": {
+      "item": "siongsngs_fantasy_world:amethystcrystallization"
+    }
+  },
+  "result": {
+    "item": "siongsngs_fantasy_world:amethy_armor_chestplate",
+    "count": 1
+  }
+}

@@ -19,17 +19,17 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.Entity;
 
 @SiongsngsFantasyWorldModElements.ModElement.Tag
-public class CopperArmorItem extends SiongsngsFantasyWorldModElements.ModElement {
-	@ObjectHolder("siongsngs_fantasy_world:copper_armor_helmet")
+public class AmethyArmorItem extends SiongsngsFantasyWorldModElements.ModElement {
+	@ObjectHolder("siongsngs_fantasy_world:amethy_armor_helmet")
 	public static final Item helmet = null;
-	@ObjectHolder("siongsngs_fantasy_world:copper_armor_chestplate")
+	@ObjectHolder("siongsngs_fantasy_world:amethy_armor_chestplate")
 	public static final Item body = null;
-	@ObjectHolder("siongsngs_fantasy_world:copper_armor_leggings")
+	@ObjectHolder("siongsngs_fantasy_world:amethy_armor_leggings")
 	public static final Item legs = null;
-	@ObjectHolder("siongsngs_fantasy_world:copper_armor_boots")
+	@ObjectHolder("siongsngs_fantasy_world:amethy_armor_boots")
 	public static final Item boots = null;
-	public CopperArmorItem(SiongsngsFantasyWorldModElements instance) {
-		super(instance, 116);
+	public AmethyArmorItem(SiongsngsFantasyWorldModElements instance) {
+		super(instance, 122);
 	}
 
 	@Override
@@ -37,17 +37,17 @@ public class CopperArmorItem extends SiongsngsFantasyWorldModElements.ModElement
 		IArmorMaterial armormaterial = new IArmorMaterial() {
 			@Override
 			public int getDurability(EquipmentSlotType slot) {
-				return new int[]{13, 15, 16, 11}[slot.getIndex()] * 23;
+				return new int[]{13, 15, 16, 11}[slot.getIndex()] * 35;
 			}
 
 			@Override
 			public int getDamageReductionAmount(EquipmentSlotType slot) {
-				return new int[]{3, 9, 8, 3}[slot.getIndex()];
+				return new int[]{5, 14, 12, 5}[slot.getIndex()];
 			}
 
 			@Override
 			public int getEnchantability() {
-				return 14;
+				return 21;
 			}
 
 			@Override
@@ -57,13 +57,13 @@ public class CopperArmorItem extends SiongsngsFantasyWorldModElements.ModElement
 
 			@Override
 			public Ingredient getRepairMaterial() {
-				return Ingredient.fromStacks(new ItemStack(CopperingotItem.block, (int) (1)));
+				return Ingredient.fromStacks(new ItemStack(AmethystcrystallizationItem.block, (int) (1)));
 			}
 
 			@OnlyIn(Dist.CLIENT)
 			@Override
 			public String getName() {
-				return "copper_armor";
+				return "amethy_armor";
 			}
 
 			@Override
@@ -80,29 +80,29 @@ public class CopperArmorItem extends SiongsngsFantasyWorldModElements.ModElement
 				.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.HEAD, new Item.Properties().group(SiongSngWorldequipmentItemGroup.tab)) {
 					@Override
 					public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-						return "siongsngs_fantasy_world:textures/models/armor/copper_layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+						return "siongsngs_fantasy_world:textures/models/armor/amethy_layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 					}
-				}.setRegistryName("copper_armor_helmet"));
+				}.setRegistryName("amethy_armor_helmet"));
 		elements.items
 				.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.CHEST, new Item.Properties().group(SiongSngWorldequipmentItemGroup.tab)) {
 					@Override
 					public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-						return "siongsngs_fantasy_world:textures/models/armor/copper_layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+						return "siongsngs_fantasy_world:textures/models/armor/amethy_layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 					}
-				}.setRegistryName("copper_armor_chestplate"));
+				}.setRegistryName("amethy_armor_chestplate"));
 		elements.items
 				.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.LEGS, new Item.Properties().group(SiongSngWorldequipmentItemGroup.tab)) {
 					@Override
 					public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-						return "siongsngs_fantasy_world:textures/models/armor/copper_layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+						return "siongsngs_fantasy_world:textures/models/armor/amethy_layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 					}
-				}.setRegistryName("copper_armor_leggings"));
+				}.setRegistryName("amethy_armor_leggings"));
 		elements.items
 				.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.FEET, new Item.Properties().group(SiongSngWorldequipmentItemGroup.tab)) {
 					@Override
 					public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-						return "siongsngs_fantasy_world:textures/models/armor/copper_layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
+						return "siongsngs_fantasy_world:textures/models/armor/amethy_layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";
 					}
-				}.setRegistryName("copper_armor_boots"));
+				}.setRegistryName("amethy_armor_boots"));
 	}
 }
