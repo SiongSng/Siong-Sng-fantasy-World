@@ -156,7 +156,7 @@ public class Openinfogui1Gui extends SiongsngsFantasyWorldModElements.ModElement
 			this.font.drawString(ms, "\u73A9\u5BB6\u8CC7\u8A0A", 71, 5, -12829636);
 			this.font.drawString(ms, "" + ((entity.getCapability(SiongsngsFantasyWorldModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new SiongsngsFantasyWorldModVariables.PlayerVariables())).coin) + "", 21, 48, -16777216);
-			this.font.drawString(ms, "" + (entity.getPersistentData().getDouble("love")) + "", 21, 27, -12829636);
+			this.font.drawString(ms, "" + (entity.getPersistentData().getDouble("love")) + "", 21, 28, -16777216);
 		}
 
 		@Override

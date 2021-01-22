@@ -75,12 +75,12 @@
         "data": {
           "text": "<ENBT:number:love>",
           "color": {
-            "value": -12829636,
+            "value": -16777216,
             "falpha": 0.0
           },
           "name": "<ENBT:number:love>",
           "x": 140,
-          "y": 48
+          "y": 49
         }
       }
     ]
