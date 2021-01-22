@@ -1,0 +1,13 @@
+{
+  "group": "siongsngs_fantasy_world",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "siongsngs_fantasy_world:silver_block"
+    }
+  ],
+  "result": {
+    "item": "siongsngs_fantasy_world:silver_ingot",
+    "count": 9
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "group": "silver_grain_recipe",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0"
+  ],
+  "key": {
+    "0": {
+      "item": "siongsngs_fantasy_world:silver_ingot"
+    }
+  },
+  "result": {
+    "item": "siongsngs_fantasy_world:silvergrain",
+    "count": 9
+  }
+}

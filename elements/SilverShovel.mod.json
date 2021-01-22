@@ -1,0 +1,31 @@
+{
+  "_fv": 15,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "silver_shovel",
+    "customModelName": "Normal",
+    "name": "Silver Shovel",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:SiongSngWorldToolsandweapons"
+    },
+    "toolType": "Spade",
+    "harvestLevel": 4,
+    "efficiency": 8.0,
+    "attackSpeed": 1.0,
+    "enchantability": 22,
+    "damageVsEntity": 3.0,
+    "usageCount": 483,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:SilverIngot"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}
