@@ -155,12 +155,13 @@ public class SiongSngbookaboutGui extends SiongsngsFantasyWorldModElements.ModEl
 		@Override
 		protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
 			this.font.drawString(ms, "\u95DC\u65BC \u83D8\u83D8\u7684\u5E7B\u60F3\u4E16\u754C-SSSFW", 16, 6, -8060673);
-			this.font.drawString(ms, "\u83D8\u83D8\u7684\u5E7B\u60F3\u4E16\u754C-\u5546\u6A19 BY \u83D8\u83D8@2021", 223, 131, -12829636);
+			this.font.drawString(ms, "\u83D8\u83D8\u7684\u5E7B\u60F3\u4E16\u754C-\u5546\u6A19 BY \u83D8\u83D8@2021", 216, 131, -12829636);
 			this.font.drawString(ms, "\u6A21\u7D44\u540D\u7A31: Siong Sng's fantasy World", 3, 25, -12829636);
 			this.font.drawString(ms, "\u6A21\u7D44\u8A3B\u518AID: siongsngs_fantasy_world", 3, 40, -12829636);
 			this.font.drawString(ms, "\u6A21\u7D44\u7248\u672C: V1.0.0 Pre-alpha 16", 3, 54, -12829636);
 			this.font.drawString(ms, "\u6A21\u7D44\u4F5C\u8005: Siong Sng", 3, 68, -12829636);
-			this.font.drawString(ms, "\u652F\u63F4\u8A9E\u8A00: English\u3001\u7E41\u9AD4\u4E2D\u6587\u3001?\u4F53\u4E2D\u6587", 3, 96, -12829636);
+			this.font.drawString(ms, "\u652F\u63F4\u8A9E\u8A00: English\u3001\u7E41\u9AD4\u4E2D\u6587\u3001\u7C21\u4F53\u4E2D\u6587", 3, 96,
+					-12829636);
 			this.font.drawString(ms, "\u958B\u767C\u5DE5\u5177: IntelliJ IDEA\u3001Mcreator\u3001GIMP", 3, 81, -12829636);
 			this.font.drawString(ms, "\u6A21\u7D44\u6240\u9700\u8F09\u5165\u5668: Forge(1.16.4-35.1.4)", 2, 111, -12829636);
 			this.font.drawString(ms, "\u83D8\u83D8\u7684\u5E7B\u60F3\u4E16\u754C\u7248\u6B0A\u6240\u6709", 4, 133, -12829636);

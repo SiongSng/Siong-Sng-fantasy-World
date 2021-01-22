@@ -58,7 +58,7 @@ public class SiongSngcoinguiOverlay extends SiongsngsFantasyWorldModElements.Mod
 						.drawString(event.getMatrixStack(),
 								"" + ((entity.getCapability(SiongsngsFantasyWorldModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 										.orElse(new SiongsngsFantasyWorldModVariables.PlayerVariables())).coin) + "",
-								posX + -150, posY + 101, -16777216);
+								posX + -153, posY + 103, -16777216);
 			}
 		}
 	}

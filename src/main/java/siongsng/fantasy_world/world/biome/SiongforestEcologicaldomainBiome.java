@@ -2,6 +2,7 @@
 package siongsng.fantasy_world.world.biome;
 
 import siongsng.fantasy_world.particle.BlueflameParticle;
+import siongsng.fantasy_world.entity.StonecowEntity;
 import siongsng.fantasy_world.block.SiongfruitBlock;
 import siongsng.fantasy_world.block.Siong_logLogBlock;
 import siongsng.fantasy_world.block.Siong_logLeavesBlock;
@@ -74,7 +75,7 @@ public class SiongforestEcologicaldomainBiome extends SiongsngsFantasyWorldModEl
 		public void registerBiomes(RegistryEvent.Register<Biome> event) {
 			if (biome == null) {
 				BiomeAmbience effects = new BiomeAmbience.Builder().setFogColor(-11096073).setWaterColor(4159204).setWaterFogColor(329011)
-						.withSkyColor(-11096073).withFoliageColor(-10016003).withGrassColor(-10008836)
+						.withSkyColor(-11096073).withFoliageColor(-10016003).withGrassColor(-8883207)
 						.setParticle(new ParticleEffectAmbience(BlueflameParticle.particle, 0.005f)).build();
 				BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder()
 						.withSurfaceBuilder(SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(Blocks.GRASS_BLOCK.getDefaultState(),
@@ -118,7 +119,7 @@ public class SiongforestEcologicaldomainBiome extends SiongsngsFantasyWorldModEl
 				DefaultBiomeFeatures.withOverworldOres(biomeGenerationSettings);
 				MobSpawnInfo.Builder mobSpawnInfo = new MobSpawnInfo.Builder().isValidSpawnBiomeForPlayer();
 				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.ZOMBIE, 20, 4, 4));
-				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(EntityType.COW, 4, 1, 2));
+				mobSpawnInfo.withSpawner(EntityClassification.MONSTER, new MobSpawnInfo.Spawners(StonecowEntity.entity, 5, 1, 3));
 				biome = new Biome.Builder().precipitation(Biome.RainType.RAIN).category(Biome.Category.NONE).depth(0.1f).scale(0.2f).temperature(0.5f)
 						.downfall(0.4f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();

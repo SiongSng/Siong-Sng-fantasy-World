@@ -14,7 +14,7 @@
       "falpha": 0.0
     },
     "grassColor": {
-      "value": -10008836,
+      "value": -8883207,
       "falpha": 0.0
     },
     "foliageColor": {
@@ -104,11 +104,11 @@
       },
       {
         "entity": {
-          "value": "EntityCow"
+          "value": "CUSTOM:Stonecow"
         },
         "minGroup": 1,
-        "maxGroup": 2,
-        "weight": 4,
+        "maxGroup": 3,
+        "weight": 5,
         "spawnType": "monster"
       }
     ]

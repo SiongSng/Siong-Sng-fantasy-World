@@ -133,6 +133,8 @@ public class Openinfogui1Gui extends SiongsngsFantasyWorldModElements.ModElement
 			this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("siongsngs_fantasy_world:textures/icon.png"));
 			this.blit(ms, this.guiLeft + 5, this.guiTop + 45, 0, 0, 16, 16, 16, 16);
+			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("siongsngs_fantasy_world:textures/love_1.png"));
+			this.blit(ms, this.guiLeft + 4, this.guiTop + 23, 0, 0, 19, 19, 19, 19);
 		}
 
 		@Override
@@ -153,7 +155,8 @@ public class Openinfogui1Gui extends SiongsngsFantasyWorldModElements.ModElement
 		protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
 			this.font.drawString(ms, "\u73A9\u5BB6\u8CC7\u8A0A", 71, 5, -12829636);
 			this.font.drawString(ms, "" + ((entity.getCapability(SiongsngsFantasyWorldModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new SiongsngsFantasyWorldModVariables.PlayerVariables())).coin) + "", 23, 47, -2868996);
+					.orElse(new SiongsngsFantasyWorldModVariables.PlayerVariables())).coin) + "", 21, 48, -16777216);
+			this.font.drawString(ms, "" + (entity.getPersistentData().getDouble("love")) + "", 21, 27, -12829636);
 		}
 
 		@Override

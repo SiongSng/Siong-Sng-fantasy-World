@@ -52,12 +52,35 @@
         "data": {
           "text": "<VAR:coin>",
           "color": {
-            "value": -2868996,
+            "value": -16777216,
             "falpha": 0.0
           },
           "name": "<VAR:coin>",
-          "x": 142,
-          "y": 68
+          "x": 140,
+          "y": 69
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "love_1.png",
+          "use1Xscale": true,
+          "name": "love_1.png",
+          "x": 123,
+          "y": 44
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<ENBT:number:love>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<ENBT:number:love>",
+          "x": 140,
+          "y": 48
         }
       }
     ]

@@ -2,6 +2,7 @@
 package siongsng.fantasy_world.block;
 
 import siongsng.fantasy_world.itemgroup.SiongSngworldblockItemGroup;
+import siongsng.fantasy_world.item.SiongLogfruitItem;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
@@ -98,7 +99,7 @@ public class SiongfruitBlock extends SiongsngsFantasyWorldModElements.ModElement
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(this, 1));
+			return Collections.singletonList(new ItemStack(SiongLogfruitItem.block, (int) (1)));
 		}
 	}
 }
