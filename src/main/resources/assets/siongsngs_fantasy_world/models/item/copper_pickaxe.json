@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "siongsngs_fantasy_world:items/copper_pickaxe"
+  }
+}

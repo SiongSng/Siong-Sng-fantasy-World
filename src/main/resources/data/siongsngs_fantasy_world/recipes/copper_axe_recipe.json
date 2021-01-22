@@ -1,0 +1,30 @@
+{
+  "group": "siongsngs_fantasy_world",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23",
+    " 5"
+  ],
+  "key": {
+    "0": {
+      "item": "siongsngs_fantasy_world:copperingot"
+    },
+    "1": {
+      "item": "siongsngs_fantasy_world:copperingot"
+    },
+    "2": {
+      "item": "siongsngs_fantasy_world:copperingot"
+    },
+    "3": {
+      "item": "minecraft:stick"
+    },
+    "5": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "siongsngs_fantasy_world:copper_axe",
+    "count": 1
+  }
+}
