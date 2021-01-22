@@ -1,6 +1,6 @@
 package siongsng.fantasy_world.procedures;
 
-import siongsng.fantasy_world.block.SiongSaplingBlock;
+import siongsng.fantasy_world.item.SiongSaplingitemItem;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 import siongsng.fantasy_world.SiongsngsFantasyWorldMod;
 
@@ -44,7 +44,7 @@ public class SionglogLeaves_1Procedure extends SiongsngsFantasyWorldModElements.
 		IWorld world = (IWorld) dependencies.get("world");
 		if ((Math.random() < 0.4)) {
 			if (world instanceof World && !world.isRemote()) {
-				ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(SiongSaplingBlock.block, (int) (1)));
+				ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(SiongSaplingitemItem.block, (int) (1)));
 				entityToSpawn.setPickupDelay((int) 10);
 				world.addEntity(entityToSpawn);
 			}

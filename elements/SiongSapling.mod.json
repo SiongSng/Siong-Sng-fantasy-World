@@ -26,7 +26,7 @@
     "Mx": 1.0,
     "My": 1.0,
     "Mz": 1.0,
-    "name": "Siong Sapling",
+    "name": "Siong Log Sapling(block)",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
@@ -49,7 +49,7 @@
       "value": "PLANTS"
     },
     "tickRate": 20,
-    "tickRandomly": false,
+    "tickRandomly": true,
     "isReplaceable": false,
     "colorOnMap": "DEFAULT",
     "creativePickItem": {

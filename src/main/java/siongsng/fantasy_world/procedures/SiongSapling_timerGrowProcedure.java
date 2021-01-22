@@ -13,6 +13,7 @@ import net.minecraft.util.Rotation;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Mirror;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
 import java.util.Map;
@@ -48,21 +49,16 @@ public class SiongSapling_timerGrowProcedure extends SiongsngsFantasyWorldModEle
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (!world.isRemote()) {
-			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-			TileEntity _tileEntity = world.getTileEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_tileEntity != null)
-				_tileEntity.getTileData().putDouble("timerGrow", ((new Object() {
-					public double getValue(IWorld world, BlockPos pos, String tag) {
-						TileEntity tileEntity = world.getTileEntity(pos);
-						if (tileEntity != null)
-							return tileEntity.getTileData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "timerGrow")) + 1));
-			if (world instanceof World)
-				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+		if ((!(world.isRemote()))) {
+			if (!world.isRemote()) {
+				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				TileEntity _tileEntity = world.getTileEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_tileEntity != null)
+					_tileEntity.getTileData().putDouble("timerGrow", Math.random());
+				if (world instanceof World)
+					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+			}
 		}
 		if (((new Object() {
 			public double getValue(IWorld world, BlockPos pos, String tag) {
@@ -71,27 +67,17 @@ public class SiongSapling_timerGrowProcedure extends SiongsngsFantasyWorldModEle
 					return tileEntity.getTileData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "timerGrow")) > 60)) {
-			if ((Math.random() < 0.5)) {
-				if (world instanceof World && !world.isRemote()) {
-					Template template = ((ServerWorld) world).getStructureTemplateManager()
-							.getTemplateDefaulted(new ResourceLocation("siongsngs_fantasy_world", "siong_log"));
-					if (template != null) {
-						template.func_237144_a_((ServerWorld) world, new BlockPos((int) (z + 2), (int) y, (int) (x + 2)),
-								new PlacementSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setChunk(null).setIgnoreEntities(false),
-								((World) world).rand);
-					}
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "timerGrow")) >= 0.875)) {
+			if (world instanceof World && !world.isRemote()) {
+				Template template = ((ServerWorld) world).getStructureTemplateManager()
+						.getTemplateDefaulted(new ResourceLocation("siongsngs_fantasy_world", "siong_log"));
+				if (template != null) {
+					template.func_237144_a_((ServerWorld) world, new BlockPos((int) (x - 3), (int) y, (int) (z - 3)),
+							new PlacementSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setChunk(null).setIgnoreEntities(false),
+							((World) world).rand);
 				}
 			}
-			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-				TileEntity _tileEntity = world.getTileEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_tileEntity != null)
-					_tileEntity.getTileData().putDouble("timerGrow", 0);
-				if (world instanceof World)
-					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-			}
+			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
 		}
 	}
 }

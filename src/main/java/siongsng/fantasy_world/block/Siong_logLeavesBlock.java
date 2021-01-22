@@ -44,7 +44,8 @@ public class Siong_logLeavesBlock extends SiongsngsFantasyWorldModElements.ModEl
 	}
 	public static class CustomBlock extends LeavesBlock {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.LEAVES).sound(SoundType.PLANT).hardnessAndResistance(0.2f, 0.2f).setLightLevel(s -> 0).notSolid());
+			super(Block.Properties.create(Material.LEAVES).sound(SoundType.PLANT).hardnessAndResistance(0.2f, 0.2f).setLightLevel(s -> 0).notSolid()
+					.tickRandomly());
 			setRegistryName("siong_log_leaves");
 		}
 

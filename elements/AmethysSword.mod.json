@@ -8,7 +8,7 @@
     "name": "Amethys Sword",
     "specialInfo": [],
     "creativeTab": {
-      "value": "COMBAT"
+      "value": "CUSTOM:SiongSngWorldToolsandweapons"
     },
     "toolType": "Sword",
     "harvestLevel": 4,

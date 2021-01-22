@@ -1542,6 +1542,66 @@
           }
         ]
       }
+    },
+    {
+      "name": "Mummy",
+      "type": "mob",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mummy"
+    },
+    {
+      "name": "SiongSapling_book",
+      "type": "procedure",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "siong_sapling_book",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SiongSaplingitem",
+      "type": "item",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "siong_saplingitem"
+    },
+    {
+      "name": "SiongSngWorldplant",
+      "type": "tab",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "siong_sng_worldplant"
     }
   ],
   "variable_elements": [
@@ -1584,14 +1644,16 @@
       "itemGroup.tabsiong_sng_worldequipment": "菘菘的幻想世界-裝備",
       "item.siongsngs_fantasy_world.amethy_armor_chestplate": "紫水晶胸甲",
       "item.siongsngs_fantasy_world.copperingot": "炙熱的銅錠",
+      "item.siongsngs_fantasy_world.mummy_spawn_egg": "木乃伊生怪蛋",
       "item.siongsngs_fantasy_world.copper_pickaxe": "銅稿子",
       "block.siongsngs_fantasy_world.siong_log_planks": "菘樹木材",
       "block.siongsngs_fantasy_world.ultivatesoil": "初階培養土",
       "advancements.copper_oreprogress.title": "取得銅礦!!",
       "key.mcreator.openinfo": "開啟選單",
       "item.siongsngs_fantasy_world.amethys_sword": "紫水晶劍",
+      "entity.siongsngs_fantasy_world.mummy": "木乃伊",
       "block.siongsngs_fantasy_world.amethyst": "紫水晶",
-      "block.siongsngs_fantasy_world.siong_sapling": "菘樹苗",
+      "block.siongsngs_fantasy_world.siong_sapling": "菘樹樹苗(方塊)",
       "item.siongsngs_fantasy_world.amethystcrystallization": "紫水晶晶體",
       "itemGroup.tabsiong_sng_industrialcomponents": "菘菘的幻想世界-工業元件",
       "item.siongsngs_fantasy_world.stonecow_spawn_egg": "石頭牛生怪蛋",
@@ -1620,6 +1682,7 @@
       "item.siongsngs_fantasy_world.ironplate": "鐵板",
       "subtitles.flif_book_1": "",
       "advancements.ironplatepressschedule.title": "壓碎板子!!!",
+      "itemGroup.tabsiong_sng_worldplant": "菘菘的幻想世界-植物",
       "item.siongsngs_fantasy_world.copper_hoe": "銅鋤頭",
       "advancements.ironplatepressschedule.descr": "製作一個壓板機",
       "block.siongsngs_fantasy_world.siong_log_wood": "菘樹塊",
@@ -1630,6 +1693,7 @@
       "item.siongsngs_fantasy_world.copperbackpack.description": "§b銅背包共有36格物品欄，右鍵可以開啟",
       "block.siongsngs_fantasy_world.siong_log_fence_gate": "菘樹柵欄門",
       "block.siongsngs_fantasy_world.amethystore": "紫水晶礦",
+      "item.siongsngs_fantasy_world.siong_saplingitem": "菘樹樹苗",
       "item.siongsngs_fantasy_world.siong_sng_world": "菘菘的幻想世界-激活傳送門工具",
       "key.category.openinfo": "菘菘的幻想世界",
       "item.siongsngs_fantasy_world.copper_armor_boots": "銅鞋子",
@@ -1660,14 +1724,16 @@
       "itemGroup.tabsiong_sng_worldequipment": "Siong Sng\u0027s fantasy World-equipment",
       "item.siongsngs_fantasy_world.amethy_armor_chestplate": "Amethy Chestplate",
       "item.siongsngs_fantasy_world.copperingot": "Copper ingot",
+      "item.siongsngs_fantasy_world.mummy_spawn_egg": "Mummy Spawn Egg",
       "item.siongsngs_fantasy_world.copper_pickaxe": "Copper Pickaxe",
       "block.siongsngs_fantasy_world.siong_log_planks": "Siong_log Planks",
       "block.siongsngs_fantasy_world.ultivatesoil": "Elementary Cultivate Soil",
       "advancements.copper_oreprogress.title": "get Copper Ore!!",
       "key.mcreator.openinfo": "Open Menu",
       "item.siongsngs_fantasy_world.amethys_sword": "Amethys Sword",
+      "entity.siongsngs_fantasy_world.mummy": "Mummy",
       "block.siongsngs_fantasy_world.amethyst": "Amethyst",
-      "block.siongsngs_fantasy_world.siong_sapling": "Siong Sapling",
+      "block.siongsngs_fantasy_world.siong_sapling": "Siong Log Sapling(block)",
       "item.siongsngs_fantasy_world.amethystcrystallization": " Amethyst crystallization",
       "itemGroup.tabsiong_sng_industrialcomponents": "Siong Sng\u0027s fantasy World-Industrial components",
       "item.siongsngs_fantasy_world.stonecow_spawn_egg": "Stone cow Spawn Egg",
@@ -1696,6 +1762,7 @@
       "item.siongsngs_fantasy_world.ironplate": "Iron plate",
       "subtitles.flif_book_1": "",
       "advancements.ironplatepressschedule.title": "Crush the board!!!",
+      "itemGroup.tabsiong_sng_worldplant": "Siong Sng\u0027s fantasy World-plant",
       "item.siongsngs_fantasy_world.copper_hoe": "Copper Hoe",
       "advancements.ironplatepressschedule.descr": "Make a platen press.",
       "block.siongsngs_fantasy_world.siong_log_wood": "Siong_log Wood",
@@ -1706,6 +1773,7 @@
       "item.siongsngs_fantasy_world.copperbackpack.description": "§B Copper backpack has 36 inventory slots, right click to open",
       "block.siongsngs_fantasy_world.siong_log_fence_gate": "Siong Log Fence Gate",
       "block.siongsngs_fantasy_world.amethystore": "Amethyst ore",
+      "item.siongsngs_fantasy_world.siong_saplingitem": "Siong Log Sapling",
       "item.siongsngs_fantasy_world.siong_sng_world": "Siong Sng\u0027s fantasy World Activate the portal tool",
       "key.category.openinfo": "Siong Sng\u0027s fantasy World",
       "item.siongsngs_fantasy_world.copper_armor_boots": "Copper Boots",

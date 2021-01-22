@@ -8,7 +8,7 @@
     "name": "Amethys Pickaxe",
     "specialInfo": [],
     "creativeTab": {
-      "value": "TOOLS"
+      "value": "CUSTOM:SiongSngWorldToolsandweapons"
     },
     "toolType": "Pickaxe",
     "harvestLevel": 4,

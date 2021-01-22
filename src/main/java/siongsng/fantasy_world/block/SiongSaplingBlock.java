@@ -93,7 +93,7 @@ public class SiongSaplingBlock extends SiongsngsFantasyWorldModElements.ModEleme
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.PLANTS).sound(SoundType.PLANT).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).notSolid()
-					.setOpaque((bs, br, bp) -> false));
+					.tickRandomly().setOpaque((bs, br, bp) -> false));
 			setRegistryName("siong_sapling");
 		}
 
@@ -116,15 +116,6 @@ public class SiongSaplingBlock extends SiongsngsFantasyWorldModElements.ModEleme
 		}
 
 		@Override
-		public void onBlockAdded(BlockState state, World world, BlockPos pos, BlockState oldState, boolean moving) {
-			super.onBlockAdded(state, world, pos, oldState, moving);
-			int x = pos.getX();
-			int y = pos.getY();
-			int z = pos.getZ();
-			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 20);
-		}
-
-		@Override
 		public void tick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
 			super.tick(state, world, pos, random);
 			int x = pos.getX();
@@ -138,7 +129,6 @@ public class SiongSaplingBlock extends SiongsngsFantasyWorldModElements.ModEleme
 				$_dependencies.put("world", world);
 				SiongSapling_timerGrowProcedure.executeProcedure($_dependencies);
 			}
-			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 20);
 		}
 
 		@OnlyIn(Dist.CLIENT)
@@ -255,7 +245,7 @@ public class SiongSaplingBlock extends SiongsngsFantasyWorldModElements.ModEleme
 
 		@Override
 		public ITextComponent getDisplayName() {
-			return new StringTextComponent("Siong Sapling");
+			return new StringTextComponent("Siong Log Sapling(block)");
 		}
 
 		@Override
