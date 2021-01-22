@@ -36,7 +36,7 @@ public class CopperPickaxeItem extends SiongsngsFantasyWorldModElements.ModEleme
 			}
 
 			public int getHarvestLevel() {
-				return 4;
+				return 3;
 			}
 
 			public int getEnchantability() {

@@ -36,7 +36,7 @@ public class CopperShovelItem extends SiongsngsFantasyWorldModElements.ModElemen
 			}
 
 			public int getHarvestLevel() {
-				return 4;
+				return 3;
 			}
 
 			public int getEnchantability() {

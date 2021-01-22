@@ -36,7 +36,7 @@ public class CopperHoeItem extends SiongsngsFantasyWorldModElements.ModElement {
 			}
 
 			public int getHarvestLevel() {
-				return 4;
+				return 3;
 			}
 
 			public int getEnchantability() {

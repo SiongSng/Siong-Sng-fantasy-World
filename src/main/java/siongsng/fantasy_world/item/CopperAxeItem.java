@@ -32,11 +32,11 @@ public class CopperAxeItem extends SiongsngsFantasyWorldModElements.ModElement {
 			}
 
 			public float getAttackDamage() {
-				return 16f;
+				return 10f;
 			}
 
 			public int getHarvestLevel() {
-				return 4;
+				return 3;
 			}
 
 			public int getEnchantability() {

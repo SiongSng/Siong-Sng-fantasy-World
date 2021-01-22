@@ -32,11 +32,11 @@ public class CopperSwordItem extends SiongsngsFantasyWorldModElements.ModElement
 			}
 
 			public float getAttackDamage() {
-				return 10f;
+				return 5f;
 			}
 
 			public int getHarvestLevel() {
-				return 4;
+				return 3;
 			}
 
 			public int getEnchantability() {
