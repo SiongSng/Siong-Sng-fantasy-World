@@ -1,0 +1,24 @@
+{
+  "group": "siongsngs_fantasy_world",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "item": "siongsngs_fantasy_world:amethystcrystallization"
+    },
+    "1": {
+      "item": "siongsngs_fantasy_world:amethystcrystallization"
+    },
+    "2": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "siongsngs_fantasy_world:amethys_sword",
+    "count": 1
+  }
+}

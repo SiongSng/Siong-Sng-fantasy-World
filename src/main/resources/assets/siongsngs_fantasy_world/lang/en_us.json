@@ -1,8 +1,10 @@
 {
   "item.siongsngs_fantasy_world.copperplate": "Copper plate",
   "itemGroup.tabsiong_sngworldfood": "Siong Sng\u0027s fantasy World-Food",
-  "item.siongsngs_fantasy_world.irongear": "Iron gear",
+  "item.siongsngs_fantasy_world.amethys_axe": "Amethys Axe",
+  "item.siongsngs_fantasy_world.amethys_shovel": "Amethys Shovel",
   "block.siongsngs_fantasy_world.cooperplatepress": "Cooper plate press",
+  "item.siongsngs_fantasy_world.irongear": "Iron gear",
   "block.siongsngs_fantasy_world.siong_sng_portalframe": "Siong Sng\u0027s fantasy World Portal frame",
   "block.siongsngs_fantasy_world.siong_log_stairs": "Siong Log Stairs",
   "item.siongsngs_fantasy_world.copper_axe": "Copper Axe",
@@ -19,6 +21,7 @@
   "block.siongsngs_fantasy_world.ultivatesoil": "Elementary Cultivate Soil",
   "advancements.copper_oreprogress.title": "get Copper Ore!!",
   "key.mcreator.openinfo": "Open Menu",
+  "item.siongsngs_fantasy_world.amethys_sword": "Amethys Sword",
   "block.siongsngs_fantasy_world.amethyst": "Amethyst",
   "block.siongsngs_fantasy_world.siong_sapling": "Siong Sapling",
   "item.siongsngs_fantasy_world.amethystcrystallization": " Amethyst crystallization",
@@ -47,6 +50,7 @@
   "item.siongsngs_fantasy_world.copper_hoe": "Copper Hoe",
   "advancements.ironplatepressschedule.descr": "Make a platen press.",
   "block.siongsngs_fantasy_world.siong_log_wood": "Siong_log Wood",
+  "item.siongsngs_fantasy_world.amethys_pickaxe": "Amethys Pickaxe",
   "block.siongsngs_fantasy_world.copper_block": "Copper brick",
   "block.siongsngs_fantasy_world.siong_log_leaves": "Siong Log Leaves",
   "block.siongsngs_fantasy_world.ironplatemakingmachine": "Iron plate press",
@@ -56,5 +60,6 @@
   "item.siongsngs_fantasy_world.siong_sng_world": "Siong Sng\u0027s fantasy World Activate the portal tool",
   "key.category.openinfo": "Siong Sng\u0027s fantasy World",
   "advancements.copper_oreprogress.descr": "Dig the copper Ore!!",
+  "item.siongsngs_fantasy_world.amethys_hoe": "Amethys Hoe",
   "advancements.industrialera.title": "Industrial era!"
 }
