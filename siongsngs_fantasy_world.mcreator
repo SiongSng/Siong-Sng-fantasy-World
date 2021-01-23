@@ -2060,6 +2060,24 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "redwoodsaplingitem"
+    },
+    {
+      "name": "AmethystTorch",
+      "type": "block",
+      "sortid": 179,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "amethyst_torch"
+    },
+    {
+      "name": "AmethystTorchrecipe",
+      "type": "recipe",
+      "sortid": 180,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "amethyst_torchrecipe"
     }
   ],
   "variable_elements": [
@@ -2083,15 +2101,15 @@
   "language_map": {
     "zh_tw": {
       "itemGroup.tabsiong_sngworldfood": "菘菘的幻想世界-食物",
-      "item.siongsngs_fantasy_world.irongear": "鐵齒輪",
-      "block.siongsngs_fantasy_world.cooperplatepress": "銅製壓板機",
       "item.siongsngs_fantasy_world.amethys_shovel": "紫水晶鏟子",
+      "block.siongsngs_fantasy_world.cooperplatepress": "銅製壓板機",
+      "item.siongsngs_fantasy_world.irongear": "鐵齒輪",
       "block.siongsngs_fantasy_world.siong_log_stairs": "菘樹樓梯",
       "item.siongsngs_fantasy_world.copper_armor_helmet": "銅頭盔",
       "item.siongsngs_fantasy_world.siong_logfruit": "菘樹果實",
-      "itemGroup.tabsiong_sngworldblock": "菘菘的幻想世界-方塊",
-      "item.siongsngs_fantasy_world.mechanicalautomaticoperationcomponents": "機械自動運作晶片",
       "itemGroup.tabsiong_sngworldbiological": "菘菘的幻想世界-生物",
+      "item.siongsngs_fantasy_world.mechanicalautomaticoperationcomponents": "機械自動運作晶片",
+      "itemGroup.tabsiong_sngworldblock": "菘菘的幻想世界-方塊",
       "item.siongsngs_fantasy_world.amethy_armor_chestplate": "紫水晶胸甲",
       "item.siongsngs_fantasy_world.copperingot": "炙熱的銅錠",
       "block.siongsngs_fantasy_world.ultivatesoil": "初階培養土",
@@ -2113,8 +2131,8 @@
       "block.siongsngs_fantasy_world.silver_ore": "銀礦",
       "block.siongsngs_fantasy_world.siong_log_slab": "菘樹半磚",
       "item.siongsngs_fantasy_world.silver_armor_leggings": "銀護腿",
-      "item.siongsngs_fantasy_world.amethy_armor_helmet": "紫水晶頭盔",
       "item.siongsngs_fantasy_world.copperparticle": "銅粒",
+      "item.siongsngs_fantasy_world.amethy_armor_helmet": "紫水晶頭盔",
       "block.siongsngs_fantasy_world.amethyst_block": "紫水晶方塊",
       "itemGroup.tabsiong_sng_worldplant": "菘菘的幻想世界-植物",
       "block.siongsngs_fantasy_world.siong_log_fence_gate": "菘樹柵欄門",
@@ -2158,6 +2176,7 @@
       "item.siongsngs_fantasy_world.siong_sng_dictionary": "菘菘的幻想世界辭典",
       "block.siongsngs_fantasy_world.siongfruit": "菘樹果實(方塊)",
       "item.siongsngs_fantasy_world.coppergear": "銅齒輪",
+      "block.siongsngs_fantasy_world.amethyst_torch": "紫晶火把",
       "item.siongsngs_fantasy_world.copper_armor_chestplate": "銅胸甲",
       "item.siongsngs_fantasy_world.copperbackpack": "銅背包",
       "block.siongsngs_fantasy_world.barren_iron_ore": "貧瘠鐵礦",
@@ -2262,6 +2281,7 @@
       "item.siongsngs_fantasy_world.siong_sng_dictionary": "Siong Sng\u0027s fantasy World dictionary",
       "block.siongsngs_fantasy_world.siongfruit": "Siong Log fruit(block)",
       "item.siongsngs_fantasy_world.coppergear": "Copper gear",
+      "block.siongsngs_fantasy_world.amethyst_torch": "Amethyst Torch",
       "item.siongsngs_fantasy_world.copper_armor_chestplate": "Copper Chestplate",
       "item.siongsngs_fantasy_world.copperbackpack": "Copper backpack",
       "block.siongsngs_fantasy_world.barren_iron_ore": "Barren Iron Ore",

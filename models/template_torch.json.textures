@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "torch": "amethyst_torch"
+      },
+      "name": "default"
+    }
+  }
+}

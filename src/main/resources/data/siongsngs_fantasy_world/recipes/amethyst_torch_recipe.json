@@ -1,0 +1,16 @@
+{
+  "group": "siongsngs_fantasy_world",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "siongsngs_fantasy_world:amethystcrystallization"
+    },
+    {
+      "item": "minecraft:stick"
+    }
+  ],
+  "result": {
+    "item": "siongsngs_fantasy_world:amethyst_torch",
+    "count": 4
+  }
+}

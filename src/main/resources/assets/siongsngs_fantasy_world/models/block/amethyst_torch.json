@@ -1,0 +1,8 @@
+{
+  "parent": "siongsngs_fantasy_world:custom/template_torch",
+  "textures": {
+    "all": "siongsngs_fantasy_world:blocks/amethyst_torch",
+    "particle": "siongsngs_fantasy_world:blocks/amethyst_torch",
+    "torch": "siongsngs_fantasy_world:blocks/amethyst_torch"
+  }
+}

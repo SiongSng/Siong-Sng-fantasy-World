@@ -151,9 +151,7 @@ public class SiongSngbookgui1Gui extends SiongsngsFantasyWorldModElements.ModEle
 		@Override
 		protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
 			this.font.drawString(ms, "\u6545\u4E8B-\u83D8\u83D8\u7684\u5E7B\u60F3\u4E16\u754C\u8D77\u6E90?", 18, 10, -392702);
-			this.font.drawString(ms,
-					"\u5F88\u4E45\u5F88\u4E45\u4EE5\u524D\uFF0C\u6709\u4E00\u5929\u6709\u4E00\u500B\u4EBA\u53EB\u505A\u83D8\u83D8...", 5, 40,
-					-12829636);
+			this.font.drawString(ms, "\u6709\u4E00\u5929", 5, 40, -12829636);
 			this.font.drawString(ms, "\u7B2C\u4E00\u7AE0-\u5E8F\u5E55", 168, 6, -12829636);
 		}
 

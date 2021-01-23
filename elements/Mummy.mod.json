@@ -4,11 +4,11 @@
   "definition": {
     "mobName": "Mummy",
     "mobLabel": "",
-    "mobModelName": "Villager",
+    "mobModelName": "Biped",
     "mobModelTexture": "mummy.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,
-    "modelHeight": 1.95,
+    "modelHeight": 1.8,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
@@ -72,7 +72,7 @@
     "immuneToPotions": false,
     "immuneToPlayer": false,
     "mobDrop": {
-      "value": ""
+      "value": "Items.ROTTEN_FLESH"
     },
     "livingSound": {
       "value": ""
@@ -113,6 +113,18 @@
     "restrictionBiomes": [
       {
         "value": "desert"
+      },
+      {
+        "value": "desert_hills"
+      },
+      {
+        "value": "badlands"
+      },
+      {
+        "value": "wooded_badlands_plateau"
+      },
+      {
+        "value": "badlands_plateau"
       }
     ],
     "spawnInDungeons": true

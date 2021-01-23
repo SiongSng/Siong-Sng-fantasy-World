@@ -26,6 +26,8 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.DamageSource;
 import net.minecraft.network.IPacket;
 import net.minecraft.item.SpawnEggItem;
+import net.minecraft.item.Items;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.entity.monster.ZombieEntity;
 import net.minecraft.entity.monster.MonsterEntity;
@@ -43,8 +45,9 @@ import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureAttribute;
-import net.minecraft.client.renderer.entity.model.VillagerModel;
-import net.minecraft.client.renderer.entity.MobRenderer;
+import net.minecraft.client.renderer.entity.model.BipedModel;
+import net.minecraft.client.renderer.entity.layers.BipedArmorLayer;
+import net.minecraft.client.renderer.entity.BipedRenderer;
 
 @SiongsngsFantasyWorldModElements.ModElement.Tag
 public class MummyEntity extends SiongsngsFantasyWorldModElements.ModElement {
@@ -58,7 +61,7 @@ public class MummyEntity extends SiongsngsFantasyWorldModElements.ModElement {
 	@Override
 	public void initElements() {
 		entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER).setShouldReceiveVelocityUpdates(true)
-				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.6f, 1.95f)).build("mummy")
+				.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new).size(0.6f, 1.8f)).build("mummy")
 						.setRegistryName("mummy");
 		elements.entities.add(() -> entity);
 		elements.items.add(() -> new SpawnEggItem(entity, -2040660, -2832493, new Item.Properties().group(SiongSngworldbiologicalItemGroup.tab))
@@ -69,6 +72,14 @@ public class MummyEntity extends SiongsngsFantasyWorldModElements.ModElement {
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		boolean biomeCriteria = false;
 		if (new ResourceLocation("desert").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("desert_hills").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("badlands").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("wooded_badlands_plateau").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("badlands_plateau").equals(event.getName()))
 			biomeCriteria = true;
 		if (!biomeCriteria)
 			return;
@@ -86,11 +97,15 @@ public class MummyEntity extends SiongsngsFantasyWorldModElements.ModElement {
 		@SubscribeEvent
 		@OnlyIn(Dist.CLIENT)
 		public void registerModels(ModelRegistryEvent event) {
-			RenderingRegistry.registerEntityRenderingHandler(entity, renderManager -> new MobRenderer(renderManager, new VillagerModel(0), 0.5f) {
-				@Override
-				public ResourceLocation getEntityTexture(Entity entity) {
-					return new ResourceLocation("siongsngs_fantasy_world:textures/mummy.png");
-				}
+			RenderingRegistry.registerEntityRenderingHandler(entity, renderManager -> {
+				BipedRenderer customRender = new BipedRenderer(renderManager, new BipedModel(0), 0.5f) {
+					@Override
+					public ResourceLocation getEntityTexture(Entity entity) {
+						return new ResourceLocation("siongsngs_fantasy_world:textures/mummy.png");
+					}
+				};
+				customRender.addLayer(new BipedArmorLayer(customRender, new BipedModel(0.5f), new BipedModel(1)));
+				return customRender;
 			});
 		}
 	}
@@ -132,6 +147,11 @@ public class MummyEntity extends SiongsngsFantasyWorldModElements.ModElement {
 		@Override
 		public CreatureAttribute getCreatureAttribute() {
 			return CreatureAttribute.UNDEFINED;
+		}
+
+		protected void dropSpecialItems(DamageSource source, int looting, boolean recentlyHitIn) {
+			super.dropSpecialItems(source, looting, recentlyHitIn);
+			this.entityDropItem(new ItemStack(Items.ROTTEN_FLESH, (int) (1)));
 		}
 
 		@Override

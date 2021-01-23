@@ -133,7 +133,7 @@ public class SiongSngbookaboutGui extends SiongsngsFantasyWorldModElements.ModEl
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("siongsngs_fantasy_world:textures/icon.png"));
 			this.blit(ms, this.guiLeft + 1, this.guiTop + 4, 0, 0, 16, 16, 16, 16);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("siongsngs_fantasy_world:textures/icon_text.png"));
-			this.blit(ms, this.guiLeft + 159, this.guiTop + -42, 0, 0, 250, 250, 250, 250);
+			this.blit(ms, this.guiLeft + 155, this.guiTop + -35, 0, 0, 250, 250, 250, 250);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("siongsngs_fantasy_world:textures/icon_1.png"));
 			this.blit(ms, this.guiLeft + 247, this.guiTop + 9, 0, 0, 64, 64, 64, 64);
 		}
@@ -155,7 +155,6 @@ public class SiongSngbookaboutGui extends SiongsngsFantasyWorldModElements.ModEl
 		@Override
 		protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
 			this.font.drawString(ms, "\u95DC\u65BC \u83D8\u83D8\u7684\u5E7B\u60F3\u4E16\u754C-SSSFW", 16, 6, -8060673);
-			this.font.drawString(ms, "\u83D8\u83D8\u7684\u5E7B\u60F3\u4E16\u754C-\u5546\u6A19 BY \u83D8\u83D8@2021", 216, 131, -12829636);
 			this.font.drawString(ms, "\u6A21\u7D44\u540D\u7A31: Siong Sng's fantasy World", 3, 25, -12829636);
 			this.font.drawString(ms, "\u6A21\u7D44\u8A3B\u518AID: siongsngs_fantasy_world", 3, 40, -12829636);
 			this.font.drawString(ms, "\u6A21\u7D44\u7248\u672C: V1.0.0 Pre-alpha 17", 3, 54, -12829636);
@@ -164,7 +163,6 @@ public class SiongSngbookaboutGui extends SiongsngsFantasyWorldModElements.ModEl
 					-12829636);
 			this.font.drawString(ms, "\u958B\u767C\u5DE5\u5177: IntelliJ IDEA\u3001Mcreator\u3001GIMP", 3, 81, -12829636);
 			this.font.drawString(ms, "\u6A21\u7D44\u6240\u9700\u8F09\u5165\u5668: Forge(1.16.4-35.1.4)", 2, 111, -12829636);
-			this.font.drawString(ms, "\u83D8\u83D8\u7684\u5E7B\u60F3\u4E16\u754C\u7248\u6B0A\u6240\u6709", 4, 133, -12829636);
 		}
 
 		@Override
