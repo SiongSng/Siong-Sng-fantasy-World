@@ -40,8 +40,8 @@
     "customDrop": {
       "value": "CUSTOM:SiongSaplingitem"
     },
-    "dropAmount": 1,
-    "useLootTableForDrops": true,
+    "dropAmount": 0,
+    "useLootTableForDrops": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canProvidePower": false,

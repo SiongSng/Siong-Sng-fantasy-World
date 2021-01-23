@@ -76,7 +76,7 @@ public class SiongSapling_timerGrowProcedure extends SiongsngsFantasyWorldModEle
 					Template template = ((ServerWorld) world).getStructureTemplateManager()
 							.getTemplateDefaulted(new ResourceLocation("siongsngs_fantasy_world", "siong_log"));
 					if (template != null) {
-						template.func_237144_a_((ServerWorld) world, new BlockPos((int) (x - 4), (int) y, (int) (z - 4)),
+						template.func_237144_a_((ServerWorld) world, new BlockPos((int) (x - 2), (int) y, (int) (z - 2)),
 								new PlacementSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setChunk(null).setIgnoreEntities(false),
 								((World) world).rand);
 					}
@@ -97,7 +97,7 @@ public class SiongSapling_timerGrowProcedure extends SiongsngsFantasyWorldModEle
 					Template template = ((ServerWorld) world).getStructureTemplateManager()
 							.getTemplateDefaulted(new ResourceLocation("siongsngs_fantasy_world", "redwoos_log"));
 					if (template != null) {
-						template.func_237144_a_((ServerWorld) world, new BlockPos((int) (x - 4), (int) y, (int) (z - 4)),
+						template.func_237144_a_((ServerWorld) world, new BlockPos((int) (x - 2), (int) y, (int) (z - 2)),
 								new PlacementSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setChunk(null).setIgnoreEntities(false),
 								((World) world).rand);
 					}
