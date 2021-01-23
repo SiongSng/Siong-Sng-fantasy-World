@@ -9,6 +9,7 @@ import net.minecraftforge.registries.ObjectHolder;
 
 import net.minecraft.world.World;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.Explosion;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
 import net.minecraft.loot.LootContext;
@@ -77,6 +78,22 @@ public class Siong_logLeavesBlock extends SiongsngsFantasyWorldModElements.ModEl
 				SionglogLeaves_1Procedure.executeProcedure($_dependencies);
 			}
 			return retval;
+		}
+
+		@Override
+		public void onExplosionDestroy(World world, BlockPos pos, Explosion e) {
+			super.onExplosionDestroy(world, pos, e);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				SionglogLeaves_1Procedure.executeProcedure($_dependencies);
+			}
 		}
 	}
 }
