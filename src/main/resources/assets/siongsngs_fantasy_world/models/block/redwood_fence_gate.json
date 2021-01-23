@@ -1,0 +1,6 @@
+{
+  "parent": "block/template_fence_gate",
+  "textures": {
+    "texture": "siongsngs_fantasy_world:blocks/redwood_planks"
+  }
+}

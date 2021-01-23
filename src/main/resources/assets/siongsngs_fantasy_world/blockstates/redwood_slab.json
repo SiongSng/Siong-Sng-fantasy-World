@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "siongsngs_fantasy_world:block/redwood_slab"
+    },
+    "type=top": {
+      "model": "siongsngs_fantasy_world:block/redwood_slab_top"
+    },
+    "type=double": {
+      "model": "siongsngs_fantasy_world:block/redwood_slab_full"
+    }
+  }
+}

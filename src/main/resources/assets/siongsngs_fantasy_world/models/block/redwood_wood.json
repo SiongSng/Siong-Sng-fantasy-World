@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "siongsngs_fantasy_world:blocks/redwood_log_side",
+    "particle": "siongsngs_fantasy_world:blocks/redwood_log_side"
+  }
+}

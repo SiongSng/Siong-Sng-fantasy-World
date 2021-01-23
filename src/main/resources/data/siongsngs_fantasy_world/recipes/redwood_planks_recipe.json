@@ -1,0 +1,13 @@
+{
+  "group": "siongsngs_fantasy_world",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:redwood_log"
+    }
+  ],
+  "result": {
+    "item": "siongsngs_fantasy_world:redwood_planks",
+    "count": 4
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "siongsngs_fantasy_world:blocks/redwood_log_top",
+    "up": "siongsngs_fantasy_world:blocks/redwood_log_top",
+    "north": "siongsngs_fantasy_world:blocks/redwood_log_side",
+    "east": "siongsngs_fantasy_world:blocks/redwood_log_side",
+    "south": "siongsngs_fantasy_world:blocks/redwood_log_side",
+    "west": "siongsngs_fantasy_world:blocks/redwood_log_side",
+    "particle": "siongsngs_fantasy_world:blocks/redwood_log_top"
+  }
+}

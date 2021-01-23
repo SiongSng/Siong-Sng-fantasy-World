@@ -2,19 +2,19 @@
   "_fv": 15,
   "_type": "tag",
   "definition": {
-    "type": "Blocks",
-    "items": [],
-    "blocks": [
+    "type": "Items",
+    "items": [
       {
-        "value": "CUSTOM:Siong_logLog"
+        "value": "CUSTOM:RedwoodWood"
       },
       {
         "value": "CUSTOM:RedwoodLog"
       }
     ],
+    "blocks": [],
     "functions": [],
     "entities": [],
-    "name": "logs",
-    "namespace": "minecraft"
+    "name": "redwood_log",
+    "namespace": "forge"
   }
 }
