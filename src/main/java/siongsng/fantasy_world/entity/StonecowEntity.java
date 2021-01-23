@@ -75,7 +75,7 @@ public class StonecowEntity extends SiongsngsFantasyWorldModElements.ModElement 
 
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
-		event.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(entity, 20, 2, 5));
+		event.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(entity, 18, 2, 5));
 	}
 
 	@Override
@@ -123,9 +123,9 @@ public class StonecowEntity extends SiongsngsFantasyWorldModElements.ModElement 
 		@Override
 		protected void registerGoals() {
 			super.registerGoals();
-			this.goalSelector.addGoal(1, new RandomWalkingGoal(this, 0.2));
+			this.goalSelector.addGoal(1, new RandomWalkingGoal(this, 0.15));
 			this.goalSelector.addGoal(2, new LookRandomlyGoal(this));
-			this.goalSelector.addGoal(3, new TemptGoal(this, 0.8, Ingredient.fromItems(new ItemStack(Items.FLINT, (int) (1)).getItem()), false));
+			this.goalSelector.addGoal(3, new TemptGoal(this, 0.9, Ingredient.fromItems(new ItemStack(Items.FLINT, (int) (1)).getItem()), false));
 			this.goalSelector.addGoal(4, new SwimGoal(this));
 		}
 

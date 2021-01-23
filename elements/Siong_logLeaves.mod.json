@@ -94,12 +94,6 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onDestroyedByPlayer": {
-      "name": "SionglogLeaves_1"
-    },
-    "onDestroyedByExplosion": {
-      "name": "SionglogLeaves_1"
-    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [
