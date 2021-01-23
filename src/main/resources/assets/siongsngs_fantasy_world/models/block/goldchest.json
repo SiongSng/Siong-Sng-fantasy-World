@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "siongsngs_fantasy_world:blocks/gold_chest_top",
+    "up": "siongsngs_fantasy_world:blocks/gold_chest_top",
+    "north": "siongsngs_fantasy_world:blocks/gold_chest_front",
+    "east": "siongsngs_fantasy_world:blocks/gold_chest_top",
+    "south": "siongsngs_fantasy_world:blocks/gold_chest_top",
+    "west": "siongsngs_fantasy_world:blocks/gold_chest_top",
+    "particle": "siongsngs_fantasy_world:blocks/gold_chest_top"
+  }
+}
