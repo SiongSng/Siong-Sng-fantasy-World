@@ -33,7 +33,7 @@
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:SiongSngworldblock"
+      "value": "CUSTOM:SiongSngOre"
     },
     "destroyTool": "pickaxe",
     "customDrop": {

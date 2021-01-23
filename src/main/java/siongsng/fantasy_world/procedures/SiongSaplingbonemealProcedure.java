@@ -122,7 +122,7 @@ public class SiongSaplingbonemealProcedure extends SiongsngsFantasyWorldModEleme
 							((World) world).rand);
 				}
 			}
-			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
+			world.setBlockState(new BlockPos((int) (x - 3), (int) y, (int) (z - 3)), Blocks.AIR.getDefaultState(), 3);
 		}
 	}
 

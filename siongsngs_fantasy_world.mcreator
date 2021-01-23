@@ -1824,6 +1824,24 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "silveringotrecipe"
+    },
+    {
+      "name": "Logs",
+      "type": "tag",
+      "sortid": 156,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "logs"
+    },
+    {
+      "name": "Logleaves",
+      "type": "tag",
+      "sortid": 157,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "logleaves"
     }
   ],
   "variable_elements": [
@@ -1846,9 +1864,9 @@
   ],
   "language_map": {
     "zh_tw": {
-      "item.siongsngs_fantasy_world.silver_sword": "銀劍",
-      "itemGroup.tabsiong_sngworldfood": "菘菘的幻想世界-食物",
       "item.siongsngs_fantasy_world.copperplate": "銅板",
+      "itemGroup.tabsiong_sngworldfood": "菘菘的幻想世界-食物",
+      "item.siongsngs_fantasy_world.silver_sword": "銀劍",
       "item.siongsngs_fantasy_world.amethys_axe": "紫水晶斧頭",
       "item.siongsngs_fantasy_world.amethys_shovel": "紫水晶鏟子",
       "block.siongsngs_fantasy_world.cooperplatepress": "銅製壓板機",
@@ -1879,7 +1897,7 @@
       "block.siongsngs_fantasy_world.silver_block": "銀磚",
       "block.siongsngs_fantasy_world.siong_sapling": "菘樹樹苗(方塊)",
       "item.siongsngs_fantasy_world.amethystcrystallization": "紫水晶晶體",
-      "item.siongsngs_fantasy_world.silver_hoe": "Silver Hoe",
+      "item.siongsngs_fantasy_world.silver_hoe": "銀鋤頭",
       "itemGroup.tabsiong_sng_industrialcomponents": "菘菘的幻想世界-工業元件",
       "item.siongsngs_fantasy_world.stonecow_spawn_egg": "石頭牛生怪蛋",
       "itemGroup.tabutility": "實用工具",
@@ -1887,7 +1905,7 @@
       "block.siongsngs_fantasy_world.siong_log_log": "菘樹原木",
       "item.siongsngs_fantasy_world.silver_ingot": "銀錠",
       "advancements.industrialera.descr": "製作一個鐵齒輪",
-      "item.siongsngs_fantasy_world.silver_armor_helmet": "Silver Helmet",
+      "item.siongsngs_fantasy_world.silver_armor_helmet": "銀頭盔",
       "item.siongsngs_fantasy_world.amethy_armor_leggings": "紫水晶護腿",
       "item.siongsngs_fantasy_world.copper_shovel": "銅鏟子",
       "biome.siongsngs_fantasy_world.siongforest_ecologicaldomain": "菘森林",
@@ -1903,7 +1921,7 @@
       "subtitles.book_1": "",
       "block.siongsngs_fantasy_world.silver_ore": "銀礦",
       "block.siongsngs_fantasy_world.siong_log_slab": "菘樹半磚",
-      "item.siongsngs_fantasy_world.silver_armor_leggings": "Silver Leggings",
+      "item.siongsngs_fantasy_world.silver_armor_leggings": "銀護腿",
       "item.siongsngs_fantasy_world.copperparticle": "銅粒",
       "item.siongsngs_fantasy_world.stonesteak": "石頭牛排",
       "item.siongsngs_fantasy_world.amethy_armor_helmet": "紫水晶頭盔",
@@ -1919,7 +1937,7 @@
       "block.siongsngs_fantasy_world.copper_block": "銅磚",
       "block.siongsngs_fantasy_world.siong_log_leaves": "菘樹樹葉",
       "block.siongsngs_fantasy_world.ironplatemakingmachine": "鐵製壓板機",
-      "item.siongsngs_fantasy_world.silver_shovel": "Silver Shovel",
+      "item.siongsngs_fantasy_world.silver_shovel": "銀鏟子",
       "item.siongsngs_fantasy_world.copperbackpack.description": "§b銅背包共有36格物品欄，右鍵可以開啟",
       "block.siongsngs_fantasy_world.siong_log_fence_gate": "菘樹柵欄門",
       "block.siongsngs_fantasy_world.amethystore": "紫水晶礦",
@@ -1929,14 +1947,14 @@
       "key.category.openinfo": "菘菘的幻想世界",
       "item.siongsngs_fantasy_world.copper_armor_boots": "銅鞋子",
       "advancements.copper_oreprogress.descr": "挖取銅礦!!",
-      "item.siongsngs_fantasy_world.silver_pickaxe": "Silver Pickaxe",
+      "item.siongsngs_fantasy_world.silver_pickaxe": "銀稿子",
       "item.siongsngs_fantasy_world.amethys_hoe": "紫水晶鋤頭",
-      "item.siongsngs_fantasy_world.silver_armor_chestplate": "Silver Chestplate",
+      "item.siongsngs_fantasy_world.silver_armor_chestplate": "銀胸甲",
       "item.siongsngs_fantasy_world.copper_armor_leggings": "銅護腿",
-      "item.siongsngs_fantasy_world.silver_armor_boots": "Silver Boots",
+      "item.siongsngs_fantasy_world.silver_armor_boots": "銀鞋子",
       "advancements.industrialera.title": "工業時代",
       "item.siongsngs_fantasy_world.amethy_armor_boots": "紫水晶鞋子",
-      "item.siongsngs_fantasy_world.silver_axe": "Silver Axe"
+      "item.siongsngs_fantasy_world.silver_axe": "銀斧頭"
     },
     "en_us": {
       "item.siongsngs_fantasy_world.copperplate": "Copper plate",
@@ -2038,7 +2056,7 @@
     "version": "1.0.0",
     "description": "This is a multi-world mod developed by Siong Sng, hoping that everyone can play more diverse Minecraft through this mod",
     "author": "Siong Sng",
-    "websiteURL": "https://discord.gg/5w9BUM4",
+    "websiteURL": "https://discord.gg/gjmazfF9Rj",
     "license": "Academic Free License v3.0",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,

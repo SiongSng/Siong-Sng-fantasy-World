@@ -49,12 +49,12 @@ public class Flif_bookProcedure extends SiongsngsFantasyWorldModElements.ModElem
 					.playSound(null, new BlockPos((int) x, (int) y, (int) z),
 							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
 									.getValue(new ResourceLocation("siongsngs_fantasy_world:flif_book_1")),
-							SoundCategory.NEUTRAL, (float) 1, (float) 1);
+							SoundCategory.NEUTRAL, (float) 3, (float) 1);
 		} else {
 			((World) world).playSound(x, y, z,
 					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
 							.getValue(new ResourceLocation("siongsngs_fantasy_world:flif_book_1")),
-					SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+					SoundCategory.NEUTRAL, (float) 3, (float) 1, false);
 		}
 	}
 }

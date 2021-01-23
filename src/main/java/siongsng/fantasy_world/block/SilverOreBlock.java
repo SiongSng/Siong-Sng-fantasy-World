@@ -1,7 +1,7 @@
 
 package siongsng.fantasy_world.block;
 
-import siongsng.fantasy_world.itemgroup.SiongSngworldblockItemGroup;
+import siongsng.fantasy_world.itemgroup.SiongSngOreItemGroup;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
@@ -46,8 +46,8 @@ public class SilverOreBlock extends SiongsngsFantasyWorldModElements.ModElement 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items.add(
-				() -> new BlockItem(block, new Item.Properties().group(SiongSngworldblockItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items
+				.add(() -> new BlockItem(block, new Item.Properties().group(SiongSngOreItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
