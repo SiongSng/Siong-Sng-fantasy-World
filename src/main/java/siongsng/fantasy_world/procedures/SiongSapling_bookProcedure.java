@@ -1,8 +1,10 @@
 package siongsng.fantasy_world.procedures;
 
 import siongsng.fantasy_world.item.SiongSaplingitemItem;
+import siongsng.fantasy_world.item.RedwoodsaplingitemItem;
 import siongsng.fantasy_world.block.SngCultivatesoilBlock;
 import siongsng.fantasy_world.block.SiongSaplingBlock;
+import siongsng.fantasy_world.block.RedwoodsaplingBlock;
 import siongsng.fantasy_world.block.IntermediateculturesoilBlock;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 import siongsng.fantasy_world.SiongsngsFantasyWorldMod;
@@ -91,6 +93,27 @@ public class SiongSapling_bookProcedure extends SiongsngsFantasyWorldModElements
 						((LivingEntity) entity).swing(Hand.MAIN_HAND, true);
 					}
 					world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), SiongSaplingBlock.block.getDefaultState(), 3);
+					if (entity instanceof PlayerEntity) {
+						ItemStack _stktoremove = ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY);
+						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+								((PlayerEntity) entity).container.func_234641_j_());
+					}
+					if (world instanceof World && !world.isRemote()) {
+						((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.grass.place")),
+								SoundCategory.NEUTRAL, (float) 1, (float) 0.8);
+					} else {
+						((World) world).playSound(x, y, z,
+								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.grass.place")),
+								SoundCategory.NEUTRAL, (float) 1, (float) 0.8, false);
+					}
+				}
+				if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+						.getItem() == new ItemStack(RedwoodsaplingitemItem.block, (int) (1)).getItem())) {
+					if (entity instanceof LivingEntity) {
+						((LivingEntity) entity).swing(Hand.MAIN_HAND, true);
+					}
+					world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), RedwoodsaplingBlock.block.getDefaultState(), 3);
 					if (entity instanceof PlayerEntity) {
 						ItemStack _stktoremove = ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY);
 						((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,

@@ -1,5 +1,7 @@
 package siongsng.fantasy_world.procedures;
 
+import siongsng.fantasy_world.block.SiongSaplingBlock;
+import siongsng.fantasy_world.block.RedwoodsaplingBlock;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 import siongsng.fantasy_world.SiongsngsFantasyWorldMod;
 
@@ -96,31 +98,63 @@ public class SiongSaplingbonemealProcedure extends SiongsngsFantasyWorldModEleme
 					((ServerPlayerEntity) entity).inventory.markDirty();
 			}
 		}
-		if (((new Object() {
-			public double getValue(IWorld world, BlockPos pos, String tag) {
-				TileEntity tileEntity = world.getTileEntity(pos);
-				if (tileEntity != null)
-					return tileEntity.getTileData().getDouble(tag);
-				return -1;
+		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == SiongSaplingBlock.block.getDefaultState().getBlock())) {
+			if (((new Object() {
+				public double getValue(IWorld world, BlockPos pos, String tag) {
+					TileEntity tileEntity = world.getTileEntity(pos);
+					if (tileEntity != null)
+						return tileEntity.getTileData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "rrr")) == 5)) {
+				if (!world.isRemote()) {
+					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+					TileEntity _tileEntity = world.getTileEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_tileEntity != null)
+						_tileEntity.getTileData().putDouble("rrr", 0);
+					if (world instanceof World)
+						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+				}
+				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
+				if (world instanceof World && !world.isRemote()) {
+					Template template = ((ServerWorld) world).getStructureTemplateManager()
+							.getTemplateDefaulted(new ResourceLocation("siongsngs_fantasy_world", "siong_log"));
+					if (template != null) {
+						template.func_237144_a_((ServerWorld) world, new BlockPos((int) (x - 4), (int) y, (int) (z - 4)),
+								new PlacementSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setChunk(null).setIgnoreEntities(false),
+								((World) world).rand);
+					}
+				}
 			}
-		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "rrr")) == 5)) {
-			if (!world.isRemote()) {
-				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-				TileEntity _tileEntity = world.getTileEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_tileEntity != null)
-					_tileEntity.getTileData().putDouble("rrr", 0);
-				if (world instanceof World)
-					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-			}
-			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
-			if (world instanceof World && !world.isRemote()) {
-				Template template = ((ServerWorld) world).getStructureTemplateManager()
-						.getTemplateDefaulted(new ResourceLocation("siongsngs_fantasy_world", "siong_log"));
-				if (template != null) {
-					template.func_237144_a_((ServerWorld) world, new BlockPos((int) (x - 4), (int) y, (int) (z - 4)),
-							new PlacementSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setChunk(null).setIgnoreEntities(false),
-							((World) world).rand);
+		}
+		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == RedwoodsaplingBlock.block.getDefaultState().getBlock())) {
+			if (((new Object() {
+				public double getValue(IWorld world, BlockPos pos, String tag) {
+					TileEntity tileEntity = world.getTileEntity(pos);
+					if (tileEntity != null)
+						return tileEntity.getTileData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "rrr")) == 5)) {
+				if (!world.isRemote()) {
+					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+					TileEntity _tileEntity = world.getTileEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_tileEntity != null)
+						_tileEntity.getTileData().putDouble("rrr", 0);
+					if (world instanceof World)
+						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+				}
+				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
+				if (world instanceof World && !world.isRemote()) {
+					Template template = ((ServerWorld) world).getStructureTemplateManager()
+							.getTemplateDefaulted(new ResourceLocation("siongsngs_fantasy_world", "redwoos_log"));
+					if (template != null) {
+						template.func_237144_a_((ServerWorld) world, new BlockPos((int) (x - 4), (int) y, (int) (z - 4)),
+								new PlacementSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setChunk(null).setIgnoreEntities(false),
+								((World) world).rand);
+					}
 				}
 			}
 		}

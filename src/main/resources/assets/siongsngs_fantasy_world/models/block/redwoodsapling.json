@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "siongsngs_fantasy_world:blocks/redwood_sapling",
+    "particle": "siongsngs_fantasy_world:blocks/redwood_sapling"
+  }
+}
