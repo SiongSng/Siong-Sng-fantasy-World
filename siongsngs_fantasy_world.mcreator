@@ -1842,6 +1842,44 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "logleaves"
+    },
+    {
+      "name": "SionglogfruitDrop",
+      "type": "procedure",
+      "sortid": 158,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sionglogfruit_drop",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SionglogLeavesDrop",
+      "type": "loottable",
+      "sortid": 159,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sionglog_leaves_drop"
     }
   ],
   "variable_elements": [
@@ -1957,9 +1995,9 @@
       "item.siongsngs_fantasy_world.silver_axe": "ª»©Ú¿Y"
     },
     "en_us": {
-      "item.siongsngs_fantasy_world.silver_sword": "Silver Sword",
-      "itemGroup.tabsiong_sngworldfood": "Siong Sng\u0027s fantasy World-Food",
       "item.siongsngs_fantasy_world.copperplate": "Copper plate",
+      "itemGroup.tabsiong_sngworldfood": "Siong Sng\u0027s fantasy World-Food",
+      "item.siongsngs_fantasy_world.silver_sword": "Silver Sword",
       "item.siongsngs_fantasy_world.amethys_axe": "Amethys Axe",
       "item.siongsngs_fantasy_world.amethys_shovel": "Amethys Shovel",
       "block.siongsngs_fantasy_world.cooperplatepress": "Cooper plate press",

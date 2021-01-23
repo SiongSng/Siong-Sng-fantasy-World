@@ -12,8 +12,6 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.Explosion;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
-import net.minecraft.loot.LootContext;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
 import net.minecraft.fluid.FluidState;
@@ -25,9 +23,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import java.util.Map;
-import java.util.List;
 import java.util.HashMap;
-import java.util.Collections;
 
 @SiongsngsFantasyWorldModElements.ModElement.Tag
 public class Siong_logLeavesBlock extends SiongsngsFantasyWorldModElements.ModElement {
@@ -53,14 +49,6 @@ public class Siong_logLeavesBlock extends SiongsngsFantasyWorldModElements.ModEl
 		@Override
 		public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
 			return 30;
-		}
-
-		@Override
-		public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
-			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
-			if (!dropsOriginal.isEmpty())
-				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(this, 0));
 		}
 
 		@Override

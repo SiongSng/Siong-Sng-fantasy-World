@@ -1,6 +1,7 @@
 
 package siongsng.fantasy_world.block;
 
+import siongsng.fantasy_world.procedures.SionglogfruitDropProcedure;
 import siongsng.fantasy_world.itemgroup.SiongSngworldblockItemGroup;
 import siongsng.fantasy_world.item.SiongLogfruitItem;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
@@ -11,6 +12,7 @@ import net.minecraftforge.common.ToolType;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.BlockPos;
@@ -33,7 +35,10 @@ import net.minecraft.block.IWaterLoggable;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
+import java.util.Random;
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
 import java.util.Collections;
 
 @SiongsngsFantasyWorldModElements.ModElement.Tag
@@ -60,7 +65,7 @@ public class SiongfruitBlock extends SiongsngsFantasyWorldModElements.ModElement
 		public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.GROUND).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(1)
-					.harvestTool(ToolType.HOE).notSolid().setOpaque((bs, br, bp) -> false));
+					.harvestTool(ToolType.HOE).notSolid().tickRandomly().setOpaque((bs, br, bp) -> false));
 			this.setDefaultState(this.stateContainer.getBaseState().with(WATERLOGGED, false));
 			setRegistryName("siongfruit");
 		}
@@ -101,6 +106,22 @@ public class SiongfruitBlock extends SiongsngsFantasyWorldModElements.ModElement
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
 			return Collections.singletonList(new ItemStack(SiongLogfruitItem.block, (int) (1)));
+		}
+
+		@Override
+		public void tick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+			super.tick(state, world, pos, random);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				SionglogfruitDropProcedure.executeProcedure($_dependencies);
+			}
 		}
 	}
 }
