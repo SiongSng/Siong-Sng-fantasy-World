@@ -106,28 +106,13 @@
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
-        "value": "Blocks.STONE"
-      },
-      {
         "value": "Blocks.AIR"
       },
       {
-        "value": "Blocks.GRASS"
+        "value": "Blocks.VOID_AIR"
       },
       {
-        "value": "Blocks.GRASS_PATH"
-      },
-      {
-        "value": "Blocks.MYCELIUM"
-      },
-      {
-        "value": "Blocks.DIRT#0"
-      },
-      {
-        "value": "Blocks.DIRT#1"
-      },
-      {
-        "value": "Blocks.DIRT#2"
+        "value": "Blocks.CAVE_AIR"
       }
     ],
     "frequencyPerChunks": 17,

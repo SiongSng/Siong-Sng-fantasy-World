@@ -212,24 +212,14 @@ public class AmethystBlock extends SiongsngsFantasyWorldModElements.ModElement {
 					return false;
 				return super.generate(world, generator, rand, pos, config);
 			}
-		}.withConfiguration(new OreFeatureConfig(new BlockMatchRuleTest(Blocks.STONE.getDefaultState().getBlock()) {
+		}.withConfiguration(new OreFeatureConfig(new BlockMatchRuleTest(Blocks.AIR.getDefaultState().getBlock()) {
 			public boolean test(BlockState blockAt, Random random) {
 				boolean blockCriteria = false;
-				if (blockAt.getBlock() == Blocks.STONE.getDefaultState().getBlock())
-					blockCriteria = true;
 				if (blockAt.getBlock() == Blocks.AIR.getDefaultState().getBlock())
 					blockCriteria = true;
-				if (blockAt.getBlock() == Blocks.GRASS_BLOCK.getDefaultState().getBlock())
+				if (blockAt.getBlock() == Blocks.VOID_AIR.getDefaultState().getBlock())
 					blockCriteria = true;
-				if (blockAt.getBlock() == Blocks.GRASS_PATH.getDefaultState().getBlock())
-					blockCriteria = true;
-				if (blockAt.getBlock() == Blocks.MYCELIUM.getDefaultState().getBlock())
-					blockCriteria = true;
-				if (blockAt.getBlock() == Blocks.DIRT.getDefaultState().getBlock())
-					blockCriteria = true;
-				if (blockAt.getBlock() == Blocks.COARSE_DIRT.getDefaultState().getBlock())
-					blockCriteria = true;
-				if (blockAt.getBlock() == Blocks.PODZOL.getDefaultState().getBlock())
+				if (blockAt.getBlock() == Blocks.CAVE_AIR.getDefaultState().getBlock())
 					blockCriteria = true;
 				return blockCriteria;
 			}

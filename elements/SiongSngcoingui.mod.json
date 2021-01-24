@@ -9,12 +9,12 @@
         "data": {
           "text": "<VAR:coin>",
           "color": {
-            "value": -16777216,
+            "value": -1,
             "falpha": 0.0
           },
           "name": "<VAR:coin>",
-          "x": 69,
-          "y": 185
+          "x": 46,
+          "y": 189
         }
       }
     ],

@@ -55,11 +55,12 @@ public class SiongSngcoinguiOverlay extends SiongsngsFantasyWorldModElements.Mod
 				RenderSystem.enableDepthTest();
 				RenderSystem.enableAlphaTest();
 				RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
-				Minecraft.getInstance().fontRenderer
-						.drawString(event.getMatrixStack(),
-								"" + ((entity.getCapability(SiongsngsFantasyWorldModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-										.orElse(new SiongsngsFantasyWorldModVariables.PlayerVariables())).coin) + "",
-								posX + -144, posY + 65, -16777216);
+				Minecraft
+						.getInstance().fontRenderer
+								.drawString(event.getMatrixStack(),
+										"" + ((entity.getCapability(SiongsngsFantasyWorldModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+												.orElse(new SiongsngsFantasyWorldModVariables.PlayerVariables())).coin) + "",
+										posX + -167, posY + 69, -1);
 			}
 		}
 	}
