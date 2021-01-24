@@ -426,7 +426,7 @@ public class GoldchestguiGui extends SiongsngsFantasyWorldModElements.ModElement
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-			this.font.drawString(ms, "\u91D1\u7BB1\u5B50(12X4)", 4, 7, -15811);
+			this.font.drawString(ms, "\u91D1\u7BB1\u5B50(12X4)", 5, 8, -5269944);
 		}
 
 		@Override

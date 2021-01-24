@@ -48,8 +48,9 @@ public class SiongSngcoinguiOverlay extends SiongsngsFantasyWorldModElements.Mod
 						GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
 				RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
 				RenderSystem.disableAlphaTest();
-				Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("siongsngs_fantasy_world:textures/icon.png"));
-				Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), posX + -167, posY + 99, 0, 0, 16, 16, 16, 16);
+				Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("siongsngs_fantasy_world:textures/gui_1.png"));
+				Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), 0, 0, 0, 0, event.getWindow().getScaledWidth(),
+						event.getWindow().getScaledHeight(), event.getWindow().getScaledWidth(), event.getWindow().getScaledHeight());
 				RenderSystem.depthMask(true);
 				RenderSystem.enableDepthTest();
 				RenderSystem.enableAlphaTest();
@@ -58,7 +59,7 @@ public class SiongSngcoinguiOverlay extends SiongsngsFantasyWorldModElements.Mod
 						.drawString(event.getMatrixStack(),
 								"" + ((entity.getCapability(SiongsngsFantasyWorldModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 										.orElse(new SiongsngsFantasyWorldModVariables.PlayerVariables())).coin) + "",
-								posX + -153, posY + 103, -16777216);
+								posX + -144, posY + 65, -16777216);
 			}
 		}
 	}

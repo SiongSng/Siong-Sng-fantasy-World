@@ -1,7 +1,6 @@
 
 package siongsng.fantasy_world.block;
 
-import siongsng.fantasy_world.procedures.Platen_press_timerProcedure;
 import siongsng.fantasy_world.particle.BlueflameParticle;
 import siongsng.fantasy_world.itemgroup.SiongSngIndustrialcomponentsItemGroup;
 import siongsng.fantasy_world.gui.IronplatepressguiGui;
@@ -66,9 +65,7 @@ import javax.annotation.Nullable;
 
 import java.util.stream.IntStream;
 import java.util.Random;
-import java.util.Map;
 import java.util.List;
-import java.util.HashMap;
 import java.util.Collections;
 
 import io.netty.buffer.Unpooled;
@@ -160,11 +157,6 @@ public class CooperplatepressBlock extends SiongsngsFantasyWorldModElements.ModE
 					double d5 = (random.nextFloat() - 0.5D) * 0.5D;
 					world.addParticle(BlueflameParticle.particle, d0, d1, d2, d3, d4, d5);
 				}
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				Platen_press_timerProcedure.executeProcedure($_dependencies);
-			}
 		}
 
 		@Override

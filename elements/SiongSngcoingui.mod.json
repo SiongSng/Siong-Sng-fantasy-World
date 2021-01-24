@@ -5,16 +5,6 @@
     "priority": "NORMAL",
     "components": [
       {
-        "type": "image",
-        "data": {
-          "image": "icon.png",
-          "use1Xscale": false,
-          "name": "icon.png",
-          "x": 46,
-          "y": 219
-        }
-      },
-      {
         "type": "label",
         "data": {
           "text": "<VAR:coin>",
@@ -23,11 +13,11 @@
             "falpha": 0.0
           },
           "name": "<VAR:coin>",
-          "x": 60,
-          "y": 223
+          "x": 69,
+          "y": 185
         }
       }
     ],
-    "baseTexture": ""
+    "baseTexture": "gui_1.png"
   }
 }

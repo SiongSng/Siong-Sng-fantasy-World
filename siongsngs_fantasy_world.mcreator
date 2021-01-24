@@ -823,23 +823,6 @@
       "registry_name": "siongsngworld_portalframe"
     },
     {
-      "name": "Platen_press_timer",
-      "type": "procedure",
-      "sortid": 79,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "platen_press_timer",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
       "name": "Coin",
       "type": "procedure",
       "sortid": 80,
@@ -1649,15 +1632,6 @@
       "registry_name": "silver_block_ore_recipe"
     },
     {
-      "name": "SilverOreSmelting",
-      "type": "recipe",
-      "sortid": 137,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "silver_ore_smelting"
-    },
-    {
       "name": "Silvergrain",
       "type": "item",
       "sortid": 138,
@@ -2096,6 +2070,32 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "goldchest"
+    },
+    {
+      "name": "Goldchestrecipe",
+      "type": "recipe",
+      "sortid": 182,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "goldchestrecipe"
+    },
+    {
+      "name": "Plate_press_timer",
+      "type": "procedure",
+      "sortid": 183,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "plate_press_timer",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -2119,18 +2119,18 @@
   "language_map": {
     "zh_tw": {
       "itemGroup.tabsiong_sngworldfood": "菘菘的幻想世界-食物",
-      "item.siongsngs_fantasy_world.irongear": "鐵齒輪",
-      "block.siongsngs_fantasy_world.cooperplatepress": "銅製壓板機",
       "item.siongsngs_fantasy_world.amethys_shovel": "紫水晶鏟子",
+      "block.siongsngs_fantasy_world.cooperplatepress": "銅製壓板機",
+      "item.siongsngs_fantasy_world.irongear": "鐵齒輪",
       "block.siongsngs_fantasy_world.siong_log_stairs": "菘樹樓梯",
       "item.siongsngs_fantasy_world.copper_armor_helmet": "銅頭盔",
       "item.siongsngs_fantasy_world.siong_logfruit": "菘樹果實",
-      "itemGroup.tabsiong_sngworldblock": "菘菘的幻想世界-方塊",
-      "item.siongsngs_fantasy_world.mechanicalautomaticoperationcomponents": "機械自動運作晶片",
       "itemGroup.tabsiong_sngworldbiological": "菘菘的幻想世界-生物",
+      "item.siongsngs_fantasy_world.mechanicalautomaticoperationcomponents": "機械自動運作晶片",
+      "itemGroup.tabsiong_sngworldblock": "菘菘的幻想世界-方塊",
       "item.siongsngs_fantasy_world.amethy_armor_chestplate": "紫水晶胸甲",
       "item.siongsngs_fantasy_world.copperingot": "炙熱的銅錠",
-      "block.siongsngs_fantasy_world.goldchest": "Gold chest",
+      "block.siongsngs_fantasy_world.goldchest": "金箱子",
       "block.siongsngs_fantasy_world.ultivatesoil": "初階培養土",
       "biome.siongsngs_fantasy_world.redwood_forest": "紅木林",
       "entity.siongsngs_fantasy_world.mummy": "木乃伊",
@@ -2150,8 +2150,8 @@
       "block.siongsngs_fantasy_world.silver_ore": "銀礦",
       "block.siongsngs_fantasy_world.siong_log_slab": "菘樹半磚",
       "item.siongsngs_fantasy_world.silver_armor_leggings": "銀護腿",
-      "item.siongsngs_fantasy_world.amethy_armor_helmet": "紫水晶頭盔",
       "item.siongsngs_fantasy_world.copperparticle": "銅粒",
+      "item.siongsngs_fantasy_world.amethy_armor_helmet": "紫水晶頭盔",
       "block.siongsngs_fantasy_world.amethyst_block": "紫水晶方塊",
       "itemGroup.tabsiong_sng_worldplant": "菘菘的幻想世界-植物",
       "block.siongsngs_fantasy_world.siong_log_fence_gate": "菘樹柵欄門",

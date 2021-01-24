@@ -2,7 +2,7 @@
   "group": "silver_ingot_recipe",
   "type": "minecraft:smelting",
   "experience": 6,
-  "cookingtime": 450,
+  "cookingtime": 280,
   "ingredient": {
     "item": "siongsngs_fantasy_world:silver_ore"
   },

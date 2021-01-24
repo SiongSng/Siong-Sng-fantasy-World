@@ -4,7 +4,7 @@
   "definition": {
     "recipeType": "Smelting",
     "xpReward": 6.0,
-    "cookingTime": 355,
+    "cookingTime": 220,
     "recipeRetstackSize": 1,
     "group": "copper_ingot_firing_recipe",
     "recipeShapeless": false,

@@ -14,6 +14,7 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.IWorld;
+import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
@@ -68,10 +69,10 @@ public class Gui1Procedure extends SiongsngsFantasyWorldModElements.ModElement {
 		boolean wait = false;
 		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == IronplatemakingmachineBlock.block.getDefaultState()
 				.getBlock())) {
-			wait_time = (double) 40;
+			entity.getPersistentData().putDouble("wait_time", 60);
 		} else if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == CooperplatepressBlock.block.getDefaultState()
 				.getBlock())) {
-			wait_time = (double) 20;
+			entity.getPersistentData().putDouble("wait_time", 20);
 		}
 		if ((((new Object() {
 			public ItemStack getItemStack(int sltid) {
@@ -87,23 +88,24 @@ public class Gui1Procedure extends SiongsngsFantasyWorldModElements.ModElement {
 				}
 				return ItemStack.EMPTY;
 			}
-		}.getItemStack((int) (1))).getItem() == new ItemStack(CopperingotItem.block, (int) (1)).getItem()) && (((wait) == (false)) && ((new Object() {
-			public int getAmount(int sltid) {
-				if (entity instanceof ServerPlayerEntity) {
-					Container _current = ((ServerPlayerEntity) entity).openContainer;
-					if (_current instanceof Supplier) {
-						Object invobj = ((Supplier) _current).get();
-						if (invobj instanceof Map) {
-							ItemStack stack = ((Slot) ((Map) invobj).get(sltid)).getStack();;
-							if (stack != null)
-								return stack.getCount();
+		}.getItemStack((int) (1))).getItem() == new ItemStack(CopperingotItem.block, (int) (1)).getItem())
+				&& (((entity.getPersistentData().getBoolean("wait")) == (false)) && ((new Object() {
+					public int getAmount(int sltid) {
+						if (entity instanceof ServerPlayerEntity) {
+							Container _current = ((ServerPlayerEntity) entity).openContainer;
+							if (_current instanceof Supplier) {
+								Object invobj = ((Supplier) _current).get();
+								if (invobj instanceof Map) {
+									ItemStack stack = ((Slot) ((Map) invobj).get(sltid)).getStack();;
+									if (stack != null)
+										return stack.getCount();
+								}
+							}
 						}
+						return 0;
 					}
-				}
-				return 0;
-			}
-		}.getAmount((int) (1))) >= 2)))) {
-			wait = (boolean) (true);
+				}.getAmount((int) (1))) >= 2)))) {
+			entity.getPersistentData().putBoolean("wait", (true));
 			{
 				Entity _ent = entity;
 				if (_ent instanceof ServerPlayerEntity) {
@@ -191,10 +193,10 @@ public class Gui1Procedure extends SiongsngsFantasyWorldModElements.ModElement {
 							}
 						}
 					}
+					entity.getPersistentData().putBoolean("wait", (false));
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}.start(world, (int) (wait_time));
-			wait = (boolean) (false);
+			}.start(world, (int) (entity.getPersistentData().getDouble("wait_time")));
 		} else if ((((new Object() {
 			public ItemStack getItemStack(int sltid) {
 				Entity _ent = entity;
@@ -209,23 +211,24 @@ public class Gui1Procedure extends SiongsngsFantasyWorldModElements.ModElement {
 				}
 				return ItemStack.EMPTY;
 			}
-		}.getItemStack((int) (1))).getItem() == new ItemStack(Items.IRON_INGOT, (int) (1)).getItem()) && (((wait) == (false)) && ((new Object() {
-			public int getAmount(int sltid) {
-				if (entity instanceof ServerPlayerEntity) {
-					Container _current = ((ServerPlayerEntity) entity).openContainer;
-					if (_current instanceof Supplier) {
-						Object invobj = ((Supplier) _current).get();
-						if (invobj instanceof Map) {
-							ItemStack stack = ((Slot) ((Map) invobj).get(sltid)).getStack();;
-							if (stack != null)
-								return stack.getCount();
+		}.getItemStack((int) (1))).getItem() == new ItemStack(Items.IRON_INGOT, (int) (1)).getItem())
+				&& (((entity.getPersistentData().getBoolean("wait")) == (false)) && ((new Object() {
+					public int getAmount(int sltid) {
+						if (entity instanceof ServerPlayerEntity) {
+							Container _current = ((ServerPlayerEntity) entity).openContainer;
+							if (_current instanceof Supplier) {
+								Object invobj = ((Supplier) _current).get();
+								if (invobj instanceof Map) {
+									ItemStack stack = ((Slot) ((Map) invobj).get(sltid)).getStack();;
+									if (stack != null)
+										return stack.getCount();
+								}
+							}
 						}
+						return 0;
 					}
-				}
-				return 0;
-			}
-		}.getAmount((int) (1))) >= 2)))) {
-			wait = (boolean) (true);
+				}.getAmount((int) (1))) >= 2)))) {
+			entity.getPersistentData().putBoolean("wait", (true));
 			{
 				Entity _ent = entity;
 				if (_ent instanceof ServerPlayerEntity) {
@@ -313,10 +316,56 @@ public class Gui1Procedure extends SiongsngsFantasyWorldModElements.ModElement {
 							}
 						}
 					}
+					entity.getPersistentData().putBoolean("wait", (false));
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}.start(world, (int) (wait_time));
-			wait = (boolean) (false);
+			}.start(world, (int) (entity.getPersistentData().getDouble("wait_time")));
+		}
+		if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
+			((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u89F8\u767C!!!"), (true));
+		}
+		if (((entity.getPersistentData().getBoolean("wait")) == (true))) {
+			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
+				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u958B\u59CB\u58D3\u5236"), (true));
+			}
+			new Object() {
+				private int ticks = 0;
+				private float waitTicks;
+				private IWorld world;
+				public void start(IWorld world, int waitTicks) {
+					this.waitTicks = waitTicks;
+					MinecraftForge.EVENT_BUS.register(this);
+					this.world = world;
+				}
+
+				@SubscribeEvent
+				public void tick(TickEvent.ServerTickEvent event) {
+					if (event.phase == TickEvent.Phase.END) {
+						this.ticks += 1;
+						if (this.ticks >= this.waitTicks)
+							run();
+					}
+				}
+
+				private void run() {
+					entity.getPersistentData().putDouble("timer1", ((entity.getPersistentData().getDouble("timer1")) + 1));
+					entity.getPersistentData().putDouble("timer2",
+							((entity.getPersistentData().getDouble("wait_time")) / (entity.getPersistentData().getDouble("timer1"))));
+					if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
+						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent(
+								(((entity.getPersistentData().getDouble("timer2"))) + "" + ((entity.getPersistentData().getDouble("timer1"))))),
+								(true));
+					}
+					MinecraftForge.EVENT_BUS.unregister(this);
+				}
+			}.start(world, (int) 1);
+		}
+		if (((entity.getPersistentData().getBoolean("wait")) == (false))) {
+			entity.getPersistentData().putDouble("timer1", 0);
+			entity.getPersistentData().putDouble("timer2", 0);
+			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
+				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("\u5B8C\u6210\u58D3\u5236"), (true));
+			}
 		}
 	}
 }
