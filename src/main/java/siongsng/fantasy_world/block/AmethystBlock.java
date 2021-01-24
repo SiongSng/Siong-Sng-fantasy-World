@@ -237,6 +237,6 @@ public class AmethystBlock extends SiongsngsFantasyWorldModElements.ModElement {
 			protected IRuleTestType<?> getType() {
 				return IRuleTestType.BLOCK_MATCH;
 			}
-		}, block.getDefaultState(), 3)).range(115).square().func_242731_b(17));
+		}, block.getDefaultState(), 3)).range(110).square().func_242731_b(17));
 	}
 }

@@ -133,7 +133,7 @@
     "frequencyPerChunks": 17,
     "frequencyOnChunk": 3,
     "minGenerateHeight": 0,
-    "maxGenerateHeight": 115,
+    "maxGenerateHeight": 110,
     "generateCondition": {
       "name": "Amethyst_generate"
     }
