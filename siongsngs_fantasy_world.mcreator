@@ -221,39 +221,6 @@
       "registry_name": "ironplatepressgui"
     },
     {
-      "name": "IronplatemakingmachineZaiFangKuaiShangYouJian",
-      "type": "procedure",
-      "sortid": 23,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "ironplatemakingmachine_zai_fang_kuai_shang_you_jian",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "Gui1",
       "type": "procedure",
       "sortid": 24,
@@ -2627,6 +2594,66 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "fanta_logdwarfshrub"
+    },
+    {
+      "name": "Ironjuicergui",
+      "type": "gui",
+      "sortid": 226,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ironjuicergui"
+    },
+    {
+      "name": "Ironjuicer",
+      "type": "block",
+      "sortid": 226,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ironjuicer"
+    },
+    {
+      "name": "Gui2",
+      "type": "procedure",
+      "sortid": 227,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gui_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Amethystplate",
+      "type": "item",
+      "sortid": 228,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "amethystplate"
     }
   ],
   "variable_elements": [
@@ -2711,6 +2738,7 @@
       "itemGroup.tabsiong_sng_worldplant": "ÛpÛpªº¤Û·Q¥@¬É-´Óª«",
       "block.siongsngs_fantasy_world.siong_log_fence_gate": "Ûp¾ð¬]Äæªù",
       "itemGroup.tabprize": "ÛpÛpªº¤Û·Q¥@¬É-¼ú«~",
+      "item.siongsngs_fantasy_world.amethystplate": "µµ¤ô´¹ªO",
       "block.siongsngs_fantasy_world.amethystore": "µµ¤ô´¹Äq",
       "block.siongsngs_fantasy_world.fanta_stairs": "ªâ¹F¤ì¼Ó±è",
       "item.siongsngs_fantasy_world.siong_saplingitem": "Ûp¾ð¾ð­]",
@@ -2719,6 +2747,7 @@
       "item.siongsngs_fantasy_world.silver_pickaxe": "»È½Z¤l",
       "item.siongsngs_fantasy_world.fantalog_fruit": "ªâ¹F¤ìªG¹ê",
       "item.siongsngs_fantasy_world.copper_armor_leggings": "»ÉÅ@»L",
+      "block.siongsngs_fantasy_world.ironjuicer": "ÅK»sº^¥Ä¾÷",
       "item.siongsngs_fantasy_world.amethy_armor_boots": "µµ¤ô´¹¾c¤l",
       "block.siongsngs_fantasy_world.redwood_leaves": "¬õ¤ì¾ð¸­",
       "block.siongsngs_fantasy_world.redwood_fence_gate": "¬õ¤ì¬]Äæªù",
@@ -2796,15 +2825,15 @@
     "en_us": {
       "key.categories.ui": "Siong Sng\u0027s fantasy World",
       "itemGroup.tabsiong_sngworldfood": "Siong Sng\u0027s fantasy World-Food",
-      "item.siongsngs_fantasy_world.irongear": "Iron gear",
-      "block.siongsngs_fantasy_world.cooperplatepress": "Cooper plate press",
       "item.siongsngs_fantasy_world.amethys_shovel": "Amethys Shovel",
-      "block.siongsngs_fantasy_world.siong_log_stairs": "Siong Log Stairs",
+      "block.siongsngs_fantasy_world.cooperplatepress": "Cooper plate press",
+      "item.siongsngs_fantasy_world.irongear": "Iron gear",
       "item.siongsngs_fantasy_world.copper_armor_helmet": "Copper Helmet",
+      "block.siongsngs_fantasy_world.siong_log_stairs": "Siong Log Stairs",
       "item.siongsngs_fantasy_world.siong_logfruit": "Siong Log fruit",
-      "itemGroup.tabsiong_sngworldblock": "Siong Sng\u0027s fantasy World-Block",
-      "item.siongsngs_fantasy_world.mechanicalautomaticoperationcomponents": "Mechanical automatic operation of the chip",
       "itemGroup.tabsiong_sngworldbiological": "Siong Sng\u0027s fantasy World-Biological",
+      "item.siongsngs_fantasy_world.mechanicalautomaticoperationcomponents": "Mechanical automatic operation of the chip",
+      "itemGroup.tabsiong_sngworldblock": "Siong Sng\u0027s fantasy World-Block",
       "item.siongsngs_fantasy_world.amethy_armor_chestplate": "Amethy Chestplate",
       "item.siongsngs_fantasy_world.copperingot": "Copper ingot",
       "block.siongsngs_fantasy_world.goldchest": "Gold chest",
@@ -2838,6 +2867,7 @@
       "itemGroup.tabsiong_sng_worldplant": "Siong Sng\u0027s fantasy World-plant",
       "block.siongsngs_fantasy_world.siong_log_fence_gate": "Siong Log Fence Gate",
       "itemGroup.tabprize": "Siong Sng\u0027s fantasy World-Prize",
+      "item.siongsngs_fantasy_world.amethystplate": "Amethyst plate",
       "block.siongsngs_fantasy_world.amethystore": "Amethyst ore",
       "block.siongsngs_fantasy_world.fanta_stairs": "Fanta Log Stairs",
       "item.siongsngs_fantasy_world.siong_saplingitem": "Siong Log Sapling",
@@ -2846,6 +2876,7 @@
       "item.siongsngs_fantasy_world.silver_pickaxe": "Silver Pickaxe",
       "item.siongsngs_fantasy_world.fantalog_fruit": "Fanta Log Fruit",
       "item.siongsngs_fantasy_world.copper_armor_leggings": "Copper Leggings",
+      "block.siongsngs_fantasy_world.ironjuicer": "Iron juicer",
       "item.siongsngs_fantasy_world.amethy_armor_boots": "Amethy Boots",
       "block.siongsngs_fantasy_world.redwood_leaves": "Redwood Leaves",
       "block.siongsngs_fantasy_world.redwood_fence_gate": "Redwood Fence Gate",

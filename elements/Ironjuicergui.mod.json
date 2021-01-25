@@ -5,7 +5,7 @@
     "type": 1,
     "width": 198,
     "height": 166,
-    "inventoryOffsetX": -11,
+    "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": true,
     "doesPauseGame": false,
@@ -13,28 +13,69 @@
       {
         "type": "label",
         "data": {
-          "text": "壓板機",
+          "text": "榨汁機",
           "color": {
             "value": -16777216,
             "falpha": 0.0
           },
-          "name": "壓板機",
+          "name": "榨汁機",
           "x": 120,
-          "y": 42
+          "y": 43
         }
       },
       {
-        "type": "button",
+        "type": "label",
         "data": {
-          "text": "製作",
-          "onClick": {
-            "name": "Gui1"
+          "text": "<BNBT:number:ree>%",
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
           },
-          "width": 57,
-          "height": 20,
-          "name": "製作",
-          "x": 166,
-          "y": 93
+          "name": "<BNBT:number:ree>%",
+          "x": 179,
+          "y": 48
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "color": {
+            "value": -8847616,
+            "falpha": 0.0
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #0",
+          "x": 132,
+          "y": 62
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #1",
+          "x": 132,
+          "y": 89
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "arrowanimation1.png",
+          "use1Xscale": false,
+          "name": "arrowanimation1.png",
+          "x": 161,
+          "y": 65
         }
       },
       {
@@ -48,8 +89,21 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #2",
-          "x": 231,
-          "y": 60
+          "x": 213,
+          "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<BNBT:text:name>-<BNBT:number:juice>毫升",
+          "color": {
+            "value": -3163865,
+            "falpha": 0.0
+          },
+          "name": "<BNBT:text:name>-<BNBT:number:juice>毫升",
+          "x": 208,
+          "y": 95
         }
       },
       {
@@ -59,59 +113,13 @@
             "value": ""
           },
           "color": {
-            "value": -8847616,
-            "falpha": 0.0
-          },
-          "id": 1,
-          "disableStackInteraction": false,
-          "dropItemsWhenNotBound": true,
-          "name": "Slot #1",
-          "x": 139,
-          "y": 60
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "color": {
-            "value": -178,
+            "value": -3394561,
             "falpha": 0.0
           },
           "id": 3,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #3",
-          "x": 231,
-          "y": 91
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "arrowanimation1.png",
-          "use1Xscale": false,
-          "name": "arrowanimation1.png",
-          "x": 174,
-          "y": 55
-        }
-      },
-      {
-        "type": "inputslot",
-        "data": {
-          "inputLimit": {
-            "value": "CUSTOM:Mechanicalautomaticoperationcomponents"
-          },
-          "color": {
-            "value": -3394561,
-            "falpha": 0.0
-          },
-          "id": 4,
-          "disableStackInteraction": false,
-          "dropItemsWhenNotBound": true,
-          "onSlotChanged": {
-            "name": "IronplatemakingmachineZaiYouXiKeGengXinShi"
-          },
-          "name": "Slot #4",
           "x": 285,
           "y": 44
         }
@@ -120,19 +128,16 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": "CUSTOM:Mechanicalautomaticoperationcomponents"
+            "value": ""
           },
           "color": {
             "value": -3394561,
             "falpha": 0.0
           },
-          "id": 5,
+          "id": 4,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
-          "onSlotChanged": {
-            "name": "IronplatemakingmachineZaiYouXiKeGengXinShi"
-          },
-          "name": "Slot #5",
+          "name": "Slot #4",
           "x": 285,
           "y": 62
         }
@@ -141,19 +146,16 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": "CUSTOM:Mechanicalautomaticoperationcomponents"
+            "value": ""
           },
           "color": {
             "value": -3394561,
             "falpha": 0.0
           },
-          "id": 6,
+          "id": 5,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
-          "onSlotChanged": {
-            "name": "IronplatemakingmachineZaiYouXiKeGengXinShi"
-          },
-          "name": "Slot #6",
+          "name": "Slot #5",
           "x": 285,
           "y": 80
         }
@@ -162,34 +164,32 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": "CUSTOM:Mechanicalautomaticoperationcomponents"
+            "value": ""
           },
           "color": {
             "value": -3394561,
             "falpha": 0.0
           },
-          "id": 7,
+          "id": 6,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
-          "onSlotChanged": {
-            "name": "IronplatemakingmachineZaiYouXiKeGengXinShi"
-          },
-          "name": "Slot #7",
+          "name": "Slot #6",
           "x": 285,
           "y": 98
         }
       },
       {
-        "type": "label",
+        "type": "button",
         "data": {
-          "text": "<BNBT:number:ree>%",
-          "color": {
-            "value": -65536,
-            "falpha": 0.0
+          "text": "製作",
+          "onClick": {
+            "name": "Gui2"
           },
-          "name": "<BNBT:number:ree>%",
-          "x": 191,
-          "y": 41
+          "width": 41,
+          "height": 20,
+          "name": "製作",
+          "x": 169,
+          "y": 96
         }
       }
     ]

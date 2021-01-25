@@ -4,6 +4,9 @@ import siongsng.fantasy_world.item.IronplateItem;
 import siongsng.fantasy_world.item.CopperplateItem;
 import siongsng.fantasy_world.item.CopperparticleItem;
 import siongsng.fantasy_world.item.CopperingotItem;
+import siongsng.fantasy_world.item.AmethystplateItem;
+import siongsng.fantasy_world.item.AmethystingotItem;
+import siongsng.fantasy_world.item.AmethystdustItem;
 import siongsng.fantasy_world.block.IronplatemakingmachineBlock;
 import siongsng.fantasy_world.block.CooperplatepressBlock;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
@@ -359,6 +362,160 @@ public class Gui1Procedure extends SiongsngsFantasyWorldModElements.ModElement {
 								Object invobj = ((Supplier) _current).get();
 								if (invobj instanceof Map) {
 									ItemStack _setstack = new ItemStack(Items.IRON_NUGGET, (int) (1));
+									_setstack.setCount((int) ((new Object() {
+										public int getAmount(int sltid) {
+											if (entity instanceof ServerPlayerEntity) {
+												Container _current = ((ServerPlayerEntity) entity).openContainer;
+												if (_current instanceof Supplier) {
+													Object invobj = ((Supplier) _current).get();
+													if (invobj instanceof Map) {
+														ItemStack stack = ((Slot) ((Map) invobj).get(sltid)).getStack();;
+														if (stack != null)
+															return stack.getCount();
+													}
+												}
+											}
+											return 0;
+										}
+									}.getAmount((int) (3))) + 1));
+									((Slot) ((Map) invobj).get((int) (3))).putStack(_setstack);
+									_current.detectAndSendChanges();
+								}
+							}
+						}
+					}
+					if (!world.isRemote()) {
+						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+						TileEntity _tileEntity = world.getTileEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_tileEntity != null)
+							_tileEntity.getTileData().putBoolean("wait", (false));
+						if (world instanceof World)
+							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+					}
+					MinecraftForge.EVENT_BUS.unregister(this);
+				}
+			}.start(world, (int) (new Object() {
+				public double getValue(IWorld world, BlockPos pos, String tag) {
+					TileEntity tileEntity = world.getTileEntity(pos);
+					if (tileEntity != null)
+						return tileEntity.getTileData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "wait_time")));
+		} else if ((((new Object() {
+			public ItemStack getItemStack(int sltid) {
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					Container _current = ((ServerPlayerEntity) _ent).openContainer;
+					if (_current instanceof Supplier) {
+						Object invobj = ((Supplier) _current).get();
+						if (invobj instanceof Map) {
+							return ((Slot) ((Map) invobj).get(sltid)).getStack();
+						}
+					}
+				}
+				return ItemStack.EMPTY;
+			}
+		}.getItemStack((int) (1))).getItem() == new ItemStack(AmethystingotItem.block, (int) (1)).getItem()) && (((new Object() {
+			public boolean getValue(IWorld world, BlockPos pos, String tag) {
+				TileEntity tileEntity = world.getTileEntity(pos);
+				if (tileEntity != null)
+					return tileEntity.getTileData().getBoolean(tag);
+				return false;
+			}
+		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "wait")) == (false)) && ((new Object() {
+			public int getAmount(int sltid) {
+				if (entity instanceof ServerPlayerEntity) {
+					Container _current = ((ServerPlayerEntity) entity).openContainer;
+					if (_current instanceof Supplier) {
+						Object invobj = ((Supplier) _current).get();
+						if (invobj instanceof Map) {
+							ItemStack stack = ((Slot) ((Map) invobj).get(sltid)).getStack();;
+							if (stack != null)
+								return stack.getCount();
+						}
+					}
+				}
+				return 0;
+			}
+		}.getAmount((int) (1))) >= 2)))) {
+			{
+				Entity _ent = entity;
+				if (_ent instanceof ServerPlayerEntity) {
+					Container _current = ((ServerPlayerEntity) _ent).openContainer;
+					if (_current instanceof Supplier) {
+						Object invobj = ((Supplier) _current).get();
+						if (invobj instanceof Map) {
+							((Slot) ((Map) invobj).get((int) (1))).decrStackSize((int) (2));
+							_current.detectAndSendChanges();
+						}
+					}
+				}
+			}
+			if (!world.isRemote()) {
+				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				TileEntity _tileEntity = world.getTileEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_tileEntity != null)
+					_tileEntity.getTileData().putBoolean("wait", (true));
+				if (world instanceof World)
+					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+			}
+			new Object() {
+				private int ticks = 0;
+				private float waitTicks;
+				private IWorld world;
+				public void start(IWorld world, int waitTicks) {
+					this.waitTicks = waitTicks;
+					MinecraftForge.EVENT_BUS.register(this);
+					this.world = world;
+				}
+
+				@SubscribeEvent
+				public void tick(TickEvent.ServerTickEvent event) {
+					if (event.phase == TickEvent.Phase.END) {
+						this.ticks += 1;
+						if (this.ticks >= this.waitTicks)
+							run();
+					}
+				}
+
+				private void run() {
+					if (entity instanceof PlayerEntity) {
+						Container _current = ((PlayerEntity) entity).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								ItemStack _setstack = new ItemStack(AmethystplateItem.block, (int) (1));
+								_setstack.setCount((int) ((new Object() {
+									public int getAmount(int sltid) {
+										if (entity instanceof ServerPlayerEntity) {
+											Container _current = ((ServerPlayerEntity) entity).openContainer;
+											if (_current instanceof Supplier) {
+												Object invobj = ((Supplier) _current).get();
+												if (invobj instanceof Map) {
+													ItemStack stack = ((Slot) ((Map) invobj).get(sltid)).getStack();;
+													if (stack != null)
+														return stack.getCount();
+												}
+											}
+										}
+										return 0;
+									}
+								}.getAmount((int) (2))) + 1));
+								((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
+								_current.detectAndSendChanges();
+							}
+						}
+					}
+					if ((Math.random() < 0.3)) {
+						if (entity instanceof PlayerEntity) {
+							Container _current = ((PlayerEntity) entity).openContainer;
+							if (_current instanceof Supplier) {
+								Object invobj = ((Supplier) _current).get();
+								if (invobj instanceof Map) {
+									ItemStack _setstack = new ItemStack(AmethystdustItem.block, (int) (1));
 									_setstack.setCount((int) ((new Object() {
 										public int getAmount(int sltid) {
 											if (entity instanceof ServerPlayerEntity) {

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "siongsngs_fantasy_world:blocks/iron_juicer",
+    "up": "siongsngs_fantasy_world:blocks/iron_plate_press_top",
+    "north": "siongsngs_fantasy_world:blocks/iron_juicer_side",
+    "east": "siongsngs_fantasy_world:blocks/iron_juicer_side",
+    "south": "siongsngs_fantasy_world:blocks/iron_juicer_side",
+    "west": "siongsngs_fantasy_world:blocks/iron_juicer_side",
+    "particle": "siongsngs_fantasy_world:blocks/iron_juicer"
+  }
+}

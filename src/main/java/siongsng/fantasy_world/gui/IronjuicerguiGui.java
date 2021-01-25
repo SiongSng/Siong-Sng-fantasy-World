@@ -1,9 +1,7 @@
 
 package siongsng.fantasy_world.gui;
 
-import siongsng.fantasy_world.procedures.IronplatemakingmachineZaiYouXiKeGengXinShiProcedure;
-import siongsng.fantasy_world.procedures.Gui1Procedure;
-import siongsng.fantasy_world.item.MechanicalautomaticoperationcomponentsItem;
+import siongsng.fantasy_world.procedures.Gui2Procedure;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 import siongsng.fantasy_world.SiongsngsFantasyWorldMod;
 
@@ -49,11 +47,11 @@ import java.util.HashMap;
 import com.mojang.blaze3d.matrix.MatrixStack;
 
 @SiongsngsFantasyWorldModElements.ModElement.Tag
-public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModElement {
+public class IronjuicerguiGui extends SiongsngsFantasyWorldModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
-	public IronplatepressguiGui(SiongsngsFantasyWorldModElements instance) {
-		super(instance, 23);
+	public IronjuicerguiGui(SiongsngsFantasyWorldModElements instance) {
+		super(instance, 226);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
@@ -64,7 +62,7 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 	private static class ContainerRegisterHandler {
 		@SubscribeEvent
 		public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
-			event.getRegistry().register(containerType.setRegistryName("ironplatepressgui"));
+			event.getRegistry().register(containerType.setRegistryName("ironjuicergui"));
 		}
 	}
 	@OnlyIn(Dist.CLIENT)
@@ -88,7 +86,7 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 			super(containerType, id);
 			this.entity = inv.player;
 			this.world = inv.player.world;
-			this.internal = new ItemStackHandler(8);
+			this.internal = new ItemStackHandler(7);
 			BlockPos pos = null;
 			if (extraData != null) {
 				pos = extraData.readBlockPos();
@@ -126,75 +124,31 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 					}
 				}
 			}
-			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 117, 24) {
+			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 18, 26) {
+			}));
+			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 18, 53) {
+			}));
+			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 99, 35) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 25, 24) {
+			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 171, 8) {
 			}));
-			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 117, 55) {
-				@Override
-				public boolean isItemValid(ItemStack stack) {
-					return false;
-				}
+			this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 171, 26) {
 			}));
-			this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 171, 8) {
-				@Override
-				public void onSlotChanged() {
-					super.onSlotChanged();
-					GuiContainerMod.this.slotChanged(4, 0, 0);
-				}
-
-				@Override
-				public boolean isItemValid(ItemStack stack) {
-					return (new ItemStack(MechanicalautomaticoperationcomponentsItem.block, (int) (1)).getItem() == stack.getItem());
-				}
+			this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 171, 44) {
 			}));
-			this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 171, 26) {
-				@Override
-				public void onSlotChanged() {
-					super.onSlotChanged();
-					GuiContainerMod.this.slotChanged(5, 0, 0);
-				}
-
-				@Override
-				public boolean isItemValid(ItemStack stack) {
-					return (new ItemStack(MechanicalautomaticoperationcomponentsItem.block, (int) (1)).getItem() == stack.getItem());
-				}
-			}));
-			this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 171, 44) {
-				@Override
-				public void onSlotChanged() {
-					super.onSlotChanged();
-					GuiContainerMod.this.slotChanged(6, 0, 0);
-				}
-
-				@Override
-				public boolean isItemValid(ItemStack stack) {
-					return (new ItemStack(MechanicalautomaticoperationcomponentsItem.block, (int) (1)).getItem() == stack.getItem());
-				}
-			}));
-			this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 171, 62) {
-				@Override
-				public void onSlotChanged() {
-					super.onSlotChanged();
-					GuiContainerMod.this.slotChanged(7, 0, 0);
-				}
-
-				@Override
-				public boolean isItemValid(ItemStack stack) {
-					return (new ItemStack(MechanicalautomaticoperationcomponentsItem.block, (int) (1)).getItem() == stack.getItem());
-				}
+			this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 171, 62) {
 			}));
 			int si;
 			int sj;
 			for (si = 0; si < 3; ++si)
 				for (sj = 0; sj < 9; ++sj)
-					this.addSlot(new Slot(inv, sj + (si + 1) * 9, 0 + 8 + sj * 18, 0 + 84 + si * 18));
+					this.addSlot(new Slot(inv, sj + (si + 1) * 9, 11 + 8 + sj * 18, 0 + 84 + si * 18));
 			for (si = 0; si < 9; ++si)
-				this.addSlot(new Slot(inv, si, 0 + 8 + si * 18, 0 + 142));
+				this.addSlot(new Slot(inv, si, 11 + 8 + si * 18, 0 + 142));
 		}
 
 		public Map<Integer, Slot> get() {
@@ -364,7 +318,7 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 			this.xSize = 198;
 			this.ySize = 166;
 		}
-		private static final ResourceLocation texture = new ResourceLocation("siongsngs_fantasy_world:textures/ironplatepressgui.png");
+		private static final ResourceLocation texture = new ResourceLocation("siongsngs_fantasy_world:textures/ironjuicergui.png");
 		@Override
 		public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 			this.renderBackground(ms);
@@ -380,7 +334,7 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 			int l = (this.height - this.ySize) / 2;
 			this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("siongsngs_fantasy_world:textures/arrowanimation1.png"));
-			this.blit(ms, this.guiLeft + 59, this.guiTop + 18, 0, 0, 41, 29, 41, 29);
+			this.blit(ms, this.guiLeft + 46, this.guiTop + 28, 0, 0, 41, 29, 41, 29);
 		}
 
 		@Override
@@ -399,7 +353,7 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-			this.font.drawString(ms, "\u58D3\u677F\u6A5F", 5, 5, -16777216);
+			this.font.drawString(ms, "\u69A8\u6C41\u6A5F", 5, 6, -16777216);
 			this.font.drawString(ms, "" + (new Object() {
 				public double getValue(BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
@@ -407,7 +361,22 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 						return tileEntity.getTileData().getDouble(tag);
 					return 0;
 				}
-			}.getValue(new BlockPos((int) x, (int) y, (int) z), "ree")) + "%", 76, 4, -65536);
+			}.getValue(new BlockPos((int) x, (int) y, (int) z), "ree")) + "%", 64, 11, -65536);
+			this.font.drawString(ms, "" + (new Object() {
+				public String getValue(BlockPos pos, String tag) {
+					TileEntity tileEntity = world.getTileEntity(pos);
+					if (tileEntity != null)
+						return tileEntity.getTileData().getString(tag);
+					return "";
+				}
+			}.getValue(new BlockPos((int) x, (int) y, (int) z), "name")) + "-" + (new Object() {
+				public double getValue(BlockPos pos, String tag) {
+					TileEntity tileEntity = world.getTileEntity(pos);
+					if (tileEntity != null)
+						return tileEntity.getTileData().getDouble(tag);
+					return 0;
+				}
+			}.getValue(new BlockPos((int) x, (int) y, (int) z), "juice")) + "\u6BEB\u5347", 93, 58, -3163865);
 		}
 
 		@Override
@@ -420,7 +389,7 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 		public void init(Minecraft minecraft, int width, int height) {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
-			this.addButton(new Button(this.guiLeft + 51, this.guiTop + 56, 57, 20, new StringTextComponent("製作"), e -> {
+			this.addButton(new Button(this.guiLeft + 54, this.guiTop + 59, 41, 20, new StringTextComponent("製作"), e -> {
 				SiongsngsFantasyWorldMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
 				handleButtonAction(entity, 0, x, y, z);
 			}));
@@ -521,7 +490,7 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				Gui1Procedure.executeProcedure($_dependencies);
+				Gui2Procedure.executeProcedure($_dependencies);
 			}
 		}
 	}
@@ -531,49 +500,5 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
-		if (slotID == 4 && changeType == 0) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				IronplatemakingmachineZaiYouXiKeGengXinShiProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (slotID == 5 && changeType == 0) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				IronplatemakingmachineZaiYouXiKeGengXinShiProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (slotID == 6 && changeType == 0) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				IronplatemakingmachineZaiYouXiKeGengXinShiProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (slotID == 7 && changeType == 0) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				IronplatemakingmachineZaiYouXiKeGengXinShiProcedure.executeProcedure($_dependencies);
-			}
-		}
 	}
 }
