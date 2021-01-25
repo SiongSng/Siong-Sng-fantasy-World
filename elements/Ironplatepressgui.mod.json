@@ -65,9 +65,6 @@
           "id": 1,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
-          "onSlotChanged": {
-            "name": "IronplatemakingmachineZaiYouXiKeGengXinShi"
-          },
           "name": "Slot #1",
           "x": 139,
           "y": 60
@@ -185,14 +182,14 @@
       {
         "type": "label",
         "data": {
-          "text": "製作進度:<ENBT:number:timer2>%(此功能非實際結果)",
+          "text": "<BNBT:number:ree>%",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "製作進度:<ENBT:number:timer2>%(此功能非實際結果)",
-          "x": 159,
-          "y": 41
+          "name": "<BNBT:number:ree>%",
+          "x": 157,
+          "y": 42
         }
       }
     ]

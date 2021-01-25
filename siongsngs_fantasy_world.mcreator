@@ -460,15 +460,6 @@
       "registry_name": "intermediateculturesoilformula"
     },
     {
-      "name": "SiongSngcoingui",
-      "type": "overlay",
-      "sortid": 43,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "siong_sngcoingui"
-    },
-    {
       "name": "Join",
       "type": "procedure",
       "sortid": 44,
@@ -2095,8 +2086,199 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AmethystTorchitem",
+      "type": "item",
+      "sortid": 184,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "amethyst_torchitem"
+    },
+    {
+      "name": "AmethystTorchwall",
+      "type": "block",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "amethyst_torchwall"
+    },
+    {
+      "name": "TorchUpdateTick",
+      "type": "procedure",
+      "sortid": 186,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "torch_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TorchWhenNeighbourBlockChanges",
+      "type": "procedure",
+      "sortid": 187,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "torch_when_neighbour_block_changes",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TorchItemRightClickedOnBlock",
+      "type": "procedure",
+      "sortid": 188,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "torch_item_right_clicked_on_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "direction",
+            "type": "direction"
+          },
+          {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Amethystdust",
+      "type": "item",
+      "sortid": 189,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "amethystdust"
+    },
+    {
+      "name": "Amethystingot",
+      "type": "item",
+      "sortid": 190,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "amethystingot"
+    },
+    {
+      "name": "Amethystingotrecipe",
+      "type": "recipe",
+      "sortid": 191,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "amethystingotrecipe"
+    },
+    {
+      "name": "Amethystcrystallizationrecipe",
+      "type": "recipe",
+      "sortid": 192,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "amethystcrystallizationrecipe"
+    },
+    {
+      "name": "Amethystdustcollectionbag",
+      "type": "item",
+      "sortid": 193,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "amethystdustcollectionbag"
+    },
+    {
+      "name": "Amethyst_dust_Pick_up",
+      "type": "procedure",
+      "sortid": 194,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "amethyst_dust_pick_up",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
           }
         ]
       }
@@ -2108,6 +2290,18 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "amethyst_dust",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "amethyst_dust_tf",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -2143,6 +2337,7 @@
       "block.siongsngs_fantasy_world.redwood_wood": "¬õ¤ì¶ô",
       "item.siongsngs_fantasy_world.amethystcrystallization": "µµ¤ô´¹´¹Åé",
       "item.siongsngs_fantasy_world.silver_hoe": "»È¾SÀY",
+      "block.siongsngs_fantasy_world.amethyst_torchwall": "µµ´¹¤õ¬²(°¼­±)",
       "itemGroup.tabutility": "¹ê¥Î¤u¨ã",
       "block.siongsngs_fantasy_world.siong_log_log": "Ûp¾ð­ì¤ì",
       "item.siongsngs_fantasy_world.amethy_armor_leggings": "µµ¤ô´¹Å@»L",
@@ -2156,6 +2351,7 @@
       "item.siongsngs_fantasy_world.silver_armor_leggings": "»ÈÅ@»L",
       "item.siongsngs_fantasy_world.amethy_armor_helmet": "µµ¤ô´¹ÀY²¯",
       "item.siongsngs_fantasy_world.copperparticle": "»É²É",
+      "item.siongsngs_fantasy_world.amethystdust": "µµ´¹¯»",
       "block.siongsngs_fantasy_world.amethyst_block": "µµ¤ô´¹¤è¶ô",
       "itemGroup.tabsiong_sng_worldplant": "ÛpÛpªº¤Û·Q¥@¬É-´Óª«",
       "block.siongsngs_fantasy_world.siong_log_fence_gate": "Ûp¾ð¬]Äæªù",
@@ -2174,12 +2370,14 @@
       "block.siongsngs_fantasy_world.siong_sng_portalframe": "ÛpÛpªº¤Û·Q¥@¬É¶Ç°eªù®Ø¬[",
       "block.siongsngs_fantasy_world.redwood_fence": "¬õ¤ì¬]Äæ",
       "block.siongsngs_fantasy_world.redwood_slab": "¬õ¤ì¥b¿j",
+      "item.siongsngs_fantasy_world.amethystingot": "µµ¤ô´¹¿õ",
       "item.siongsngs_fantasy_world.copper_axe": "»É©òÀY",
       "block.siongsngs_fantasy_world.siong_log_fence": "Ûp¾ð¬]Äæ",
       "block.siongsngs_fantasy_world.intermediateculturesoil": "¤¤¶¥°ö¾i¤g",
       "block.siongsngs_fantasy_world.redwood_planks": "¬õ¤ì¤ì§÷",
       "block.siongsngs_fantasy_world.copper_ore": "»ÉÄq",
       "itemGroup.tabsiong_sng_worldequipment": "ÛpÛpªº¤Û·Q¥@¬É-¸Ë³Æ",
+      "item.siongsngs_fantasy_world.amethyst_torchitem": "µµ´¹¤õ¬²",
       "item.siongsngs_fantasy_world.mummy_spawn_egg": "¤ì¤D¥ì¥Í©Ç³J",
       "item.siongsngs_fantasy_world.copper_pickaxe": "»É½Z¤l",
       "block.siongsngs_fantasy_world.siong_log_planks": "Ûp¾ð¤ì§÷",
@@ -2190,6 +2388,7 @@
       "item.siongsngs_fantasy_world.redwoodsaplingitem": "¬õ¤ì¾ð­]",
       "itemGroup.tabsiong_sng_industrialcomponents": "ÛpÛpªº¤Û·Q¥@¬É-¤u·~¤¸¥ó",
       "item.siongsngs_fantasy_world.stonecow_spawn_egg": "¥ÛÀY¤û¥Í©Ç³J",
+      "item.siongsngs_fantasy_world.amethystdustcollectionbag": "µµ´¹¯»»`¶°³U",
       "itemGroup.tabsiong_sng_world_toolsandweapons": "ÛpÛpªº¤Û·Q¥@¬É-¤u¨ã©MªZ¾¹",
       "item.siongsngs_fantasy_world.silver_ingot": "»È¿õ",
       "advancements.industrialera.descr": "»s§@¤@­ÓÅK¾¦½ü",
@@ -2199,7 +2398,7 @@
       "item.siongsngs_fantasy_world.siong_sng_dictionary": "ÛpÛpªº¤Û·Q¥@¬ÉÃã¨å",
       "block.siongsngs_fantasy_world.siongfruit": "Ûp¾ðªG¹ê(¤è¶ô)",
       "item.siongsngs_fantasy_world.coppergear": "»É¾¦½ü",
-      "block.siongsngs_fantasy_world.amethyst_torch": "µµ´¹¤õ§â",
+      "block.siongsngs_fantasy_world.amethyst_torch": "µµ´¹¤õ¬²(¦a­±)",
       "item.siongsngs_fantasy_world.copper_armor_chestplate": "»É¯Ý¥Ò",
       "item.siongsngs_fantasy_world.copperbackpack": "»É­I¥]",
       "block.siongsngs_fantasy_world.barren_iron_ore": "³h½CÅKÄq",
@@ -2229,15 +2428,15 @@
     },
     "en_us": {
       "itemGroup.tabsiong_sngworldfood": "Siong Sng\u0027s fantasy World-Food",
-      "item.siongsngs_fantasy_world.irongear": "Iron gear",
-      "block.siongsngs_fantasy_world.cooperplatepress": "Cooper plate press",
       "item.siongsngs_fantasy_world.amethys_shovel": "Amethys Shovel",
+      "block.siongsngs_fantasy_world.cooperplatepress": "Cooper plate press",
+      "item.siongsngs_fantasy_world.irongear": "Iron gear",
       "block.siongsngs_fantasy_world.siong_log_stairs": "Siong Log Stairs",
       "item.siongsngs_fantasy_world.copper_armor_helmet": "Copper Helmet",
       "item.siongsngs_fantasy_world.siong_logfruit": "Siong Log fruit",
-      "itemGroup.tabsiong_sngworldblock": "Siong Sng\u0027s fantasy World-Block",
-      "item.siongsngs_fantasy_world.mechanicalautomaticoperationcomponents": "Mechanical automatic operation of the chip",
       "itemGroup.tabsiong_sngworldbiological": "Siong Sng\u0027s fantasy World-Biological",
+      "item.siongsngs_fantasy_world.mechanicalautomaticoperationcomponents": "Mechanical automatic operation of the chip",
+      "itemGroup.tabsiong_sngworldblock": "Siong Sng\u0027s fantasy World-Block",
       "item.siongsngs_fantasy_world.amethy_armor_chestplate": "Amethy Chestplate",
       "item.siongsngs_fantasy_world.copperingot": "Copper ingot",
       "block.siongsngs_fantasy_world.goldchest": "Gold chest",
@@ -2249,6 +2448,7 @@
       "block.siongsngs_fantasy_world.redwood_wood": "Redwood Wood",
       "item.siongsngs_fantasy_world.amethystcrystallization": " Amethyst crystallization",
       "item.siongsngs_fantasy_world.silver_hoe": "Silver Hoe",
+      "block.siongsngs_fantasy_world.amethyst_torchwall": "Amethyst Torch(side)",
       "itemGroup.tabutility": "Utilities",
       "block.siongsngs_fantasy_world.siong_log_log": "Siong_log Log",
       "item.siongsngs_fantasy_world.amethy_armor_leggings": "Amethy Leggings",
@@ -2260,8 +2460,9 @@
       "block.siongsngs_fantasy_world.silver_ore": "Silver Ore",
       "block.siongsngs_fantasy_world.siong_log_slab": "Siong Log Slab",
       "item.siongsngs_fantasy_world.silver_armor_leggings": "Silver Leggings",
-      "item.siongsngs_fantasy_world.amethy_armor_helmet": "Amethy Helmet",
       "item.siongsngs_fantasy_world.copperparticle": "Copper particle",
+      "item.siongsngs_fantasy_world.amethy_armor_helmet": "Amethy Helmet",
+      "item.siongsngs_fantasy_world.amethystdust": "Amethyst dust",
       "block.siongsngs_fantasy_world.amethyst_block": "Amethyst Block",
       "itemGroup.tabsiong_sng_worldplant": "Siong Sng\u0027s fantasy World-plant",
       "block.siongsngs_fantasy_world.siong_log_fence_gate": "Siong Log Fence Gate",
@@ -2280,12 +2481,14 @@
       "block.siongsngs_fantasy_world.siong_sng_portalframe": "Siong Sng\u0027s fantasy World Portal frame",
       "block.siongsngs_fantasy_world.redwood_fence": "Redwood Fence",
       "block.siongsngs_fantasy_world.redwood_slab": "Redwood Slab",
+      "item.siongsngs_fantasy_world.amethystingot": "Amethyst ingot",
       "item.siongsngs_fantasy_world.copper_axe": "Copper Axe",
       "block.siongsngs_fantasy_world.siong_log_fence": "Siong Log Fence",
       "block.siongsngs_fantasy_world.intermediateculturesoil": "Intermediate culture soil",
       "block.siongsngs_fantasy_world.redwood_planks": "Redwood Planks",
       "block.siongsngs_fantasy_world.copper_ore": "Copper Ore",
       "itemGroup.tabsiong_sng_worldequipment": "Siong Sng\u0027s fantasy World-equipment",
+      "item.siongsngs_fantasy_world.amethyst_torchitem": "Amethyst Torch",
       "item.siongsngs_fantasy_world.mummy_spawn_egg": "Mummy Spawn Egg",
       "item.siongsngs_fantasy_world.copper_pickaxe": "Copper Pickaxe",
       "block.siongsngs_fantasy_world.siong_log_planks": "Siong_log Planks",
@@ -2296,6 +2499,7 @@
       "item.siongsngs_fantasy_world.redwoodsaplingitem": "Redwood Log Sapling",
       "itemGroup.tabsiong_sng_industrialcomponents": "Siong Sng\u0027s fantasy World-Industrial components",
       "item.siongsngs_fantasy_world.stonecow_spawn_egg": "Stone cow Spawn Egg",
+      "item.siongsngs_fantasy_world.amethystdustcollectionbag": "Amethyst dust collection bag",
       "itemGroup.tabsiong_sng_world_toolsandweapons": "Siong Sng\u0027s fantasy World-Tools and weapons",
       "item.siongsngs_fantasy_world.silver_ingot": "Silver ingot",
       "advancements.industrialera.descr": "Making an iron gears.",
@@ -2305,7 +2509,7 @@
       "item.siongsngs_fantasy_world.siong_sng_dictionary": "Siong Sng\u0027s fantasy World dictionary",
       "block.siongsngs_fantasy_world.siongfruit": "Siong Log fruit(block)",
       "item.siongsngs_fantasy_world.coppergear": "Copper gear",
-      "block.siongsngs_fantasy_world.amethyst_torch": "Amethyst Torch",
+      "block.siongsngs_fantasy_world.amethyst_torch": "Amethyst Torch(floor)",
       "item.siongsngs_fantasy_world.copper_armor_chestplate": "Copper Chestplate",
       "item.siongsngs_fantasy_world.copperbackpack": "Copper backpack",
       "block.siongsngs_fantasy_world.barren_iron_ore": "Barren Iron Ore",

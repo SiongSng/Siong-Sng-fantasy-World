@@ -13,7 +13,7 @@
     "rotationMode": 2,
     "emissiveRendering": true,
     "displayFluidOverlay": true,
-    "itemTexture": "",
+    "itemTexture": "amethyst",
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
@@ -23,9 +23,9 @@
     "mx": 0.0,
     "my": 0.0,
     "mz": 0.0,
-    "Mx": 0.75,
+    "Mx": 1.0,
     "My": 1.0,
-    "Mz": 0.75,
+    "Mz": 1.0,
     "name": "Amethyst",
     "specialInfo": [
       "§b神秘的紫水晶，紫色與藍色的結合。"

@@ -1,5 +1,6 @@
 package siongsng.fantasy_world.procedures;
 
+import siongsng.fantasy_world.item.AmethystdustItem;
 import siongsng.fantasy_world.item.AmethystcrystallizationItem;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModVariables;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
@@ -10,7 +11,6 @@ import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
 import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.World;
-import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
@@ -48,13 +48,19 @@ public class CoinProcedure extends SiongsngsFantasyWorldModElements.ModElement {
 				});
 			}
 			((itemstack)).setCount((int) 0);
-			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent(
-						(("\u60A8\u6240\u64BF\u53D6\u7684\u7D2B\u6C34\u6676\u6676\u9AD4\uFF0C\u5DF2\u7D93\u6210\u529F\u81EA\u52D5\u5132\u5B58\u81F3\u73A9\u5BB6\u8CC7\u6599\u4E2D...   \u76EE\u524D\u5171\u6709:")
-								+ "" + (((entity.getCapability(SiongsngsFantasyWorldModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-										.orElse(new SiongsngsFantasyWorldModVariables.PlayerVariables())).coin)))),
-						(true));
+		}
+		if ((((itemstack).getItem() == new ItemStack(AmethystdustItem.block, (int) (1)).getItem())
+				&& (((entity.getCapability(SiongsngsFantasyWorldModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new SiongsngsFantasyWorldModVariables.PlayerVariables())).amethyst_dust_tf) == (true)))) {
+			{
+				double _setval = (double) (((entity.getCapability(SiongsngsFantasyWorldModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new SiongsngsFantasyWorldModVariables.PlayerVariables())).amethyst_dust) + (((itemstack)).getCount()));
+				entity.getCapability(SiongsngsFantasyWorldModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.amethyst_dust = _setval;
+					capability.syncPlayerVariables(entity);
+				});
 			}
+			((itemstack)).setCount((int) 0);
 		}
 	}
 

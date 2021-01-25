@@ -8,14 +8,24 @@
       },
       {
         "value": "plains"
+      },
+      {
+        "value": "CUSTOM:SiongforestEcologicaldomain"
+      },
+      {
+        "value": "CUSTOM:RedwoodForest"
       }
     ],
     "worldGenType": "Normal world gen",
     "mainFillerBlock": {
-      "value": "CUSTOM:SngCultivatesoil"
+      "value": "Blocks.STONE#0"
     },
     "fluidBlock": {
       "value": "Blocks.WATER"
+    },
+    "airColor": {
+      "value": -4165664,
+      "falpha": 0.0
     },
     "canRespawnHere": true,
     "hasFog": true,

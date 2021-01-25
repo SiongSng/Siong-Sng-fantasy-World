@@ -21,6 +21,7 @@
             16,
             16
           ],
+          "rotation": 90,
           "texture": "#crystal"
         },
         "west": {
@@ -30,7 +31,7 @@
             16,
             0
           ],
-          "rotation": 180,
+          "rotation": 90,
           "texture": "#crystal"
         }
       }
@@ -39,30 +40,31 @@
       "name": "crystal2",
       "from": [
         0,
-        0,
-        8
+        8,
+        1.1
       ],
       "to": [
         15,
-        14.9,
-        8
+        8,
+        16
       ],
       "faces": {
-        "north": {
-          "uv": [
-            0,
-            0,
-            16,
-            16
-          ],
-          "texture": "#crystal"
-        },
-        "south": {
+        "up": {
           "uv": [
             0,
             16,
             16,
             0
+          ],
+          "rotation": 180,
+          "texture": "#crystal"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
           ],
           "rotation": 180,
           "texture": "#crystal"

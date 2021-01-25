@@ -3,14 +3,17 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "siongsngs_fantasy_world:amethystcrystallization"
+      "item": "siongsngs_fantasy_world:amethystdust"
     },
     {
       "item": "minecraft:stick"
+    },
+    {
+      "item": "minecraft:cobblestone"
     }
   ],
   "result": {
-    "item": "siongsngs_fantasy_world:amethyst_torch",
+    "item": "siongsngs_fantasy_world:amethyst_torchitem",
     "count": 4
   }
 }

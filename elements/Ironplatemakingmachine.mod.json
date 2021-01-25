@@ -51,7 +51,7 @@
     "material": {
       "value": "ROCK"
     },
-    "tickRate": 1,
+    "tickRate": 10,
     "tickRandomly": false,
     "isReplaceable": false,
     "colorOnMap": "DEFAULT",
@@ -85,7 +85,7 @@
     "inventorySize": 8,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
-    "inventoryComparatorPower": false,
+    "inventoryComparatorPower": true,
     "inventoryOutSlotIDs": [
       0,
       2,
@@ -106,6 +106,12 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onTickUpdate": {
+      "name": "Plate_press_timer"
+    },
+    "onRandomUpdateEvent": {
+      "name": "IronplatemakingmachineZaiYouXiKeGengXinShi"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [],

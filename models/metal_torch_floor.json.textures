@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "base",
+        "1": "flames"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -125,6 +125,6 @@ public class AmethystoreBlock extends SiongsngsFantasyWorldModElements.ModElemen
 			protected IRuleTestType<?> getType() {
 				return IRuleTestType.BLOCK_MATCH;
 			}
-		}, block.getDefaultState(), 9)).range(45).square().func_242731_b(11));
+		}, block.getDefaultState(), 7)).range(45).square().func_242731_b(8));
 	}
 }

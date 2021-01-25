@@ -32,7 +32,7 @@ public class AmethysSwordItem extends SiongsngsFantasyWorldModElements.ModElemen
 			}
 
 			public float getAttackDamage() {
-				return 12f;
+				return 6f;
 			}
 
 			public int getHarvestLevel() {

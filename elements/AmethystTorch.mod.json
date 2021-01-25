@@ -2,14 +2,14 @@
   "_fv": 15,
   "_type": "block",
   "definition": {
-    "texture": "amethyst_torch",
+    "texture": "base",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "template_torch:default",
+    "customModelName": "metal_torch_floor:default",
     "rotationMode": 0,
     "emissiveRendering": true,
     "displayFluidOverlay": false,
@@ -19,25 +19,25 @@
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "TRANSLUCENT",
-    "mx": 0.0,
+    "transparencyType": "CUTOUT",
+    "mx": 0.375,
     "my": 0.0,
-    "mz": 0.0,
-    "Mx": 0.25,
+    "mz": 0.375,
+    "Mx": 0.625,
     "My": 1.0,
-    "Mz": 0.25,
-    "name": "Amethyst Torch",
+    "Mz": 0.625,
+    "name": "Amethyst Torch(floor)",
     "specialInfo": [],
     "hardness": 0.0,
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:SiongSngworldblock"
+      "value": "No creative tab entry"
     },
     "destroyTool": "Not specified",
     "customDrop": {
-      "value": ""
+      "value": "CUSTOM:AmethystTorchitem"
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
@@ -48,12 +48,12 @@
     "material": {
       "value": "WOOD"
     },
-    "tickRate": 10,
-    "tickRandomly": true,
+    "tickRate": 300,
+    "tickRandomly": false,
     "isReplaceable": false,
-    "colorOnMap": "DEFAULT",
+    "colorOnMap": "YELLOW",
     "creativePickItem": {
-      "value": ""
+      "value": "CUSTOM:AmethystTorchitem"
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
@@ -66,7 +66,7 @@
     "soundOnStep": {
       "value": "WOOD"
     },
-    "luminance": 8,
+    "luminance": 10,
     "unbreakable": false,
     "breakHarvestLevel": 1,
     "spawnParticles": true,
@@ -93,6 +93,12 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onNeighbourBlockChanges": {
+      "name": "TorchWhenNeighbourBlockChanges"
+    },
+    "onTickUpdate": {
+      "name": "TorchUpdateTick"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [],

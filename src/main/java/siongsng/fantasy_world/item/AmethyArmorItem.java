@@ -42,7 +42,7 @@ public class AmethyArmorItem extends SiongsngsFantasyWorldModElements.ModElement
 
 			@Override
 			public int getDamageReductionAmount(EquipmentSlotType slot) {
-				return new int[]{5, 14, 12, 5}[slot.getIndex()];
+				return new int[]{4, 9, 11, 4}[slot.getIndex()];
 			}
 
 			@Override
@@ -68,7 +68,7 @@ public class AmethyArmorItem extends SiongsngsFantasyWorldModElements.ModElement
 
 			@Override
 			public float getToughness() {
-				return 0f;
+				return 1f;
 			}
 
 			@Override

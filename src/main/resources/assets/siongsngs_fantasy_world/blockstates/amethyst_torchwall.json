@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "siongsngs_fantasy_world:block/amethyst_torchwall"
+    },
+    "facing=east": {
+      "model": "siongsngs_fantasy_world:block/amethyst_torchwall",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "siongsngs_fantasy_world:block/amethyst_torchwall",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "siongsngs_fantasy_world:block/amethyst_torchwall",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "siongsngs_fantasy_world:block/amethyst_torchwall",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "siongsngs_fantasy_world:block/amethyst_torchwall",
+      "x": 90
+    }
+  }
+}

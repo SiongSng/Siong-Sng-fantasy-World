@@ -3,7 +3,6 @@ package siongsng.fantasy_world.world.dimension;
 
 import siongsng.fantasy_world.particle.BlueflameParticle;
 import siongsng.fantasy_world.item.SiongSngWorldItem;
-import siongsng.fantasy_world.block.SngCultivatesoilBlock;
 import siongsng.fantasy_world.block.SiongSngPortalframeBlock;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 
@@ -87,10 +86,10 @@ public class SiongSngWorldDimension extends SiongsngsFantasyWorldModElements.Mod
 			try {
 				ObfuscationReflectionHelper.setPrivateValue(WorldCarver.class, WorldCarver.CAVE, new ImmutableSet.Builder<Block>()
 						.addAll((Set<Block>) ObfuscationReflectionHelper.getPrivateValue(WorldCarver.class, WorldCarver.CAVE, "field_222718_j"))
-						.add(SngCultivatesoilBlock.block.getDefaultState().getBlock()).build(), "field_222718_j");
+						.add(Blocks.STONE.getDefaultState().getBlock()).build(), "field_222718_j");
 				ObfuscationReflectionHelper.setPrivateValue(WorldCarver.class, WorldCarver.CANYON, new ImmutableSet.Builder<Block>()
 						.addAll((Set<Block>) ObfuscationReflectionHelper.getPrivateValue(WorldCarver.class, WorldCarver.CANYON, "field_222718_j"))
-						.add(SngCultivatesoilBlock.block.getDefaultState().getBlock()).build(), "field_222718_j");
+						.add(Blocks.STONE.getDefaultState().getBlock()).build(), "field_222718_j");
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -103,7 +102,7 @@ public class SiongSngWorldDimension extends SiongsngsFantasyWorldModElements.Mod
 		DimensionRenderInfo customEffect = new DimensionRenderInfo(128, true, DimensionRenderInfo.FogType.NORMAL, false, false) {
 			@Override
 			public Vector3d func_230494_a_(Vector3d color, float sunHeight) {
-				return color.mul(sunHeight * 0.94 + 0.06, sunHeight * 0.94 + 0.06, sunHeight * 0.91 + 0.09);
+				return new Vector3d(0.752941176471, 0.435294117647, 0.878431372549);
 			}
 
 			@Override

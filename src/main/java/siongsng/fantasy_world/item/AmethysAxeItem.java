@@ -32,7 +32,7 @@ public class AmethysAxeItem extends SiongsngsFantasyWorldModElements.ModElement 
 			}
 
 			public float getAttackDamage() {
-				return 18f;
+				return 10f;
 			}
 
 			public int getHarvestLevel() {

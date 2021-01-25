@@ -1,6 +1,8 @@
 
 package siongsng.fantasy_world.block;
 
+import siongsng.fantasy_world.procedures.Plate_press_timerProcedure;
+import siongsng.fantasy_world.procedures.IronplatemakingmachineZaiYouXiKeGengXinShiProcedure;
 import siongsng.fantasy_world.particle.BlueflameParticle;
 import siongsng.fantasy_world.itemgroup.SiongSngIndustrialcomponentsItemGroup;
 import siongsng.fantasy_world.gui.IronplatepressguiGui;
@@ -19,6 +21,7 @@ import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.text.StringTextComponent;
@@ -65,7 +68,9 @@ import javax.annotation.Nullable;
 
 import java.util.stream.IntStream;
 import java.util.Random;
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
 import java.util.Collections;
 
 import io.netty.buffer.Unpooled;
@@ -138,6 +143,32 @@ public class CooperplatepressBlock extends SiongsngsFantasyWorldModElements.ModE
 			return Collections.singletonList(new ItemStack(this, 1));
 		}
 
+		@Override
+		public void onBlockAdded(BlockState state, World world, BlockPos pos, BlockState oldState, boolean moving) {
+			super.onBlockAdded(state, world, pos, oldState, moving);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 10);
+		}
+
+		@Override
+		public void tick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+			super.tick(state, world, pos, random);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				Plate_press_timerProcedure.executeProcedure($_dependencies);
+			}
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 10);
+		}
+
 		@OnlyIn(Dist.CLIENT)
 		@Override
 		public void animateTick(BlockState state, World world, BlockPos pos, Random random) {
@@ -157,6 +188,15 @@ public class CooperplatepressBlock extends SiongsngsFantasyWorldModElements.ModE
 					double d5 = (random.nextFloat() - 0.5D) * 0.5D;
 					world.addParticle(BlueflameParticle.particle, d0, d1, d2, d3, d4, d5);
 				}
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				IronplatemakingmachineZaiYouXiKeGengXinShiProcedure.executeProcedure($_dependencies);
+			}
 		}
 
 		@Override
@@ -216,6 +256,20 @@ public class CooperplatepressBlock extends SiongsngsFantasyWorldModElements.ModE
 				}
 				super.onReplaced(state, world, pos, newState, isMoving);
 			}
+		}
+
+		@Override
+		public boolean hasComparatorInputOverride(BlockState state) {
+			return true;
+		}
+
+		@Override
+		public int getComparatorInputOverride(BlockState blockState, World world, BlockPos pos) {
+			TileEntity tileentity = world.getTileEntity(pos);
+			if (tileentity instanceof CustomTileEntity)
+				return Container.calcRedstoneFromInventory((CustomTileEntity) tileentity);
+			else
+				return 0;
 		}
 	}
 

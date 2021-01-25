@@ -133,11 +133,6 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 				}
 			}));
 			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 25, 24) {
-				@Override
-				public void onSlotChanged() {
-					super.onSlotChanged();
-					GuiContainerMod.this.slotChanged(1, 0, 0);
-				}
 			}));
 			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 117, 55) {
 				@Override
@@ -405,8 +400,14 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 		@Override
 		protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
 			this.font.drawString(ms, "\u58D3\u677F\u6A5F", 5, 5, -16777216);
-			this.font.drawString(ms, "\u88FD\u4F5C\u9032\u5EA6:" + (entity.getPersistentData().getDouble("timer2"))
-					+ "%(\u6B64\u529F\u80FD\u975E\u5BE6\u969B\u7D50\u679C)", 44, 4, -12829636);
+			this.font.drawString(ms, "" + (new Object() {
+				public double getValue(BlockPos pos, String tag) {
+					TileEntity tileEntity = world.getTileEntity(pos);
+					if (tileEntity != null)
+						return tileEntity.getTileData().getDouble(tag);
+					return 0;
+				}
+			}.getValue(new BlockPos((int) x, (int) y, (int) z), "ree")) + "%", 42, 5, -12829636);
 		}
 
 		@Override
@@ -530,17 +531,6 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
-		if (slotID == 1 && changeType == 0) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				IronplatemakingmachineZaiYouXiKeGengXinShiProcedure.executeProcedure($_dependencies);
-			}
-		}
 		if (slotID == 4 && changeType == 0) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();

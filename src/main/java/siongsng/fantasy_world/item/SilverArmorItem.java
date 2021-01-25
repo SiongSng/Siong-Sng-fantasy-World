@@ -42,7 +42,7 @@ public class SilverArmorItem extends SiongsngsFantasyWorldModElements.ModElement
 
 			@Override
 			public int getDamageReductionAmount(EquipmentSlotType slot) {
-				return new int[]{3, 10, 8, 3}[slot.getIndex()];
+				return new int[]{2, 6, 8, 2}[slot.getIndex()];
 			}
 
 			@Override
@@ -73,7 +73,7 @@ public class SilverArmorItem extends SiongsngsFantasyWorldModElements.ModElement
 
 			@Override
 			public float getKnockbackResistance() {
-				return 0f;
+				return 0.2f;
 			}
 		};
 		elements.items

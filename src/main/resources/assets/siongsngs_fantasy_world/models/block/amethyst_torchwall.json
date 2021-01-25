@@ -1,0 +1,9 @@
+{
+  "parent": "siongsngs_fantasy_world:custom/metal_torch_wall",
+  "textures": {
+    "all": "siongsngs_fantasy_world:blocks/base",
+    "particle": "siongsngs_fantasy_world:blocks/base",
+    "0": "siongsngs_fantasy_world:blocks/base",
+    "1": "siongsngs_fantasy_world:blocks/flames"
+  }
+}

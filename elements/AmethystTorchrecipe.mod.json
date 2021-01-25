@@ -10,7 +10,7 @@
     "recipeShapeless": true,
     "recipeSlots": [
       {
-        "value": "CUSTOM:Amethystcrystallization"
+        "value": "CUSTOM:Amethystdust"
       },
       {
         "value": ""
@@ -28,7 +28,7 @@
         "value": ""
       },
       {
-        "value": ""
+        "value": "Blocks.COBBLESTONE"
       },
       {
         "value": ""
@@ -38,7 +38,7 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:AmethystTorch"
+      "value": "CUSTOM:AmethystTorchitem"
     },
     "name": "amethyst_torch_recipe",
     "namespace": "mod"

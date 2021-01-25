@@ -1,0 +1,46 @@
+{
+  "_fv": 15,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "amethyst_ingot_recipe",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:Amethystdust"
+      },
+      {
+        "value": "CUSTOM:Amethystdust"
+      },
+      {
+        "value": "CUSTOM:Amethystdust"
+      },
+      {
+        "value": "CUSTOM:Amethystdust"
+      },
+      {
+        "value": "CUSTOM:Amethystdust"
+      },
+      {
+        "value": "CUSTOM:Amethystdust"
+      },
+      {
+        "value": "CUSTOM:Amethystdust"
+      },
+      {
+        "value": "CUSTOM:Amethystdust"
+      },
+      {
+        "value": "CUSTOM:Amethystdust"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Amethystingot"
+    },
+    "name": "amethyst_ingot_recipe",
+    "namespace": "mod"
+  }
+}

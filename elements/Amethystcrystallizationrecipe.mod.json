@@ -1,0 +1,20 @@
+{
+  "_fv": 15,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smelting",
+    "xpReward": 1.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "amethyst_crystallization_recipe",
+    "recipeShapeless": false,
+    "smeltingInputStack": {
+      "value": "CUSTOM:Amethystingot"
+    },
+    "smeltingReturnStack": {
+      "value": "CUSTOM:Amethystcrystallization"
+    },
+    "name": "amethyst_crystallization_recipe",
+    "namespace": "mod"
+  }
+}
