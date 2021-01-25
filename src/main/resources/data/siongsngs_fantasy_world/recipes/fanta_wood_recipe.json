@@ -1,0 +1,26 @@
+{
+  "group": "siongsngs_fantasy_world",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "siongsngs_fantasy_world:fanta_log"
+    },
+    "1": {
+      "item": "siongsngs_fantasy_world:fanta_log"
+    },
+    "2": {
+      "item": "siongsngs_fantasy_world:fanta_log"
+    },
+    "3": {
+      "item": "siongsngs_fantasy_world:fanta_log"
+    }
+  },
+  "result": {
+    "item": "siongsngs_fantasy_world:fanta_wood",
+    "count": 3
+  }
+}

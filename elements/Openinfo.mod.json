@@ -4,7 +4,7 @@
   "definition": {
     "triggerKey": "Y",
     "keyBindingName": "Open Menu",
-    "keyBindingCategoryKey": "openinfo",
+    "keyBindingCategoryKey": "ui",
     "onKeyPressed": {
       "name": "Open_info_run"
     }

@@ -75,7 +75,7 @@ public class StonecowEntity extends SiongsngsFantasyWorldModElements.ModElement 
 
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
-		event.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(entity, 18, 2, 5));
+		event.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(entity, 12, 2, 5));
 	}
 
 	@Override

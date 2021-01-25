@@ -1,0 +1,38 @@
+{
+  "_fv": 15,
+  "_type": "item",
+  "definition": {
+    "renderType": 0,
+    "texture": "scroll_elementary_experience_points",
+    "customModelName": "Normal",
+    "name": "Scroll of Elementary Experience Points",
+    "rarity": "UNCOMMON",
+    "creativeTab": {
+      "value": "CUSTOM:Prize"
+    },
+    "stackSize": 64,
+    "enchantability": 0,
+    "useDuration": 0,
+    "toolType": 1.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInfo": [
+      "§b使用之後可獲取200點經驗值。"
+    ],
+    "hasGlow": false,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "ScrollofElementaryExperiencePoints_open"
+    }
+  }
+}

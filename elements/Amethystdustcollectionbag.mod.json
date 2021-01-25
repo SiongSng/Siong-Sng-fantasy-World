@@ -24,13 +24,21 @@
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "specialInfo": [],
+    "specialInfo": [
+      "§b右鍵可以取出一組紫晶粉，Shift(蹲下)+右鍵可以取出紫晶錠。"
+    ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "Amethystdustcollectionbag_Right_click"
+    },
     "onItemInInventoryTick": {
       "name": "Amethyst_dust_Pick_up"
+    },
+    "onDroppedByPlayer": {
+      "name": "Amethystdustcollectionbag_stop"
     }
   }
 }

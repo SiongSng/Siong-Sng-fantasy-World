@@ -1,0 +1,33 @@
+{
+  "group": "siongsngs_fantasy_world",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0  ",
+    "34 ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "siongsngs_fantasy_world:fanta_planks"
+    },
+    "3": {
+      "item": "siongsngs_fantasy_world:fanta_planks"
+    },
+    "4": {
+      "item": "siongsngs_fantasy_world:fanta_planks"
+    },
+    "6": {
+      "item": "siongsngs_fantasy_world:fanta_planks"
+    },
+    "7": {
+      "item": "siongsngs_fantasy_world:fanta_planks"
+    },
+    "8": {
+      "item": "siongsngs_fantasy_world:fanta_planks"
+    }
+  },
+  "result": {
+    "item": "siongsngs_fantasy_world:fanta_stairs",
+    "count": 4
+  }
+}

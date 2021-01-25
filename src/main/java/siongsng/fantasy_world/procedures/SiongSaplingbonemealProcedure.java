@@ -2,6 +2,7 @@ package siongsng.fantasy_world.procedures;
 
 import siongsng.fantasy_world.block.SiongSaplingBlock;
 import siongsng.fantasy_world.block.RedwoodsaplingBlock;
+import siongsng.fantasy_world.block.FantasaplingBlock;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 import siongsng.fantasy_world.SiongsngsFantasyWorldMod;
 
@@ -163,6 +164,41 @@ public class SiongSaplingbonemealProcedure extends SiongsngsFantasyWorldModEleme
 					if (world instanceof World && !world.isRemote()) {
 						Template template = ((ServerWorld) world).getStructureTemplateManager()
 								.getTemplateDefaulted(new ResourceLocation("siongsngs_fantasy_world", "redwood_log"));
+						if (template != null) {
+							template.func_237144_a_((ServerWorld) world, new BlockPos((int) (x - 2), (int) y, (int) (z - 2)),
+									new PlacementSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setChunk(null).setIgnoreEntities(false),
+									((World) world).rand);
+						}
+					}
+				}
+			}
+		}
+		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == FantasaplingBlock.block.getDefaultState().getBlock())) {
+			if ((((world.getBlockState(new BlockPos((int) x, (int) (y + 7), (int) z))).getBlock() == Blocks.AIR.getDefaultState().getBlock())
+					|| (((world.getBlockState(new BlockPos((int) x, (int) (y + 7), (int) z))).getBlock() == Blocks.VOID_AIR.getDefaultState()
+							.getBlock())
+							|| ((world.getBlockState(new BlockPos((int) x, (int) (y + 7), (int) z))).getBlock() == Blocks.CAVE_AIR.getDefaultState()
+									.getBlock())))) {
+				if (((new Object() {
+					public double getValue(IWorld world, BlockPos pos, String tag) {
+						TileEntity tileEntity = world.getTileEntity(pos);
+						if (tileEntity != null)
+							return tileEntity.getTileData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "rrr")) == 5)) {
+					if (!world.isRemote()) {
+						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+						TileEntity _tileEntity = world.getTileEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_tileEntity != null)
+							_tileEntity.getTileData().putDouble("rrr", 0);
+						if (world instanceof World)
+							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+					}
+					if (world instanceof World && !world.isRemote()) {
+						Template template = ((ServerWorld) world).getStructureTemplateManager()
+								.getTemplateDefaulted(new ResourceLocation("siongsngs_fantasy_world", "fanta_log"));
 						if (template != null) {
 							template.func_237144_a_((ServerWorld) world, new BlockPos((int) (x - 2), (int) y, (int) (z - 2)),
 									new PlacementSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setChunk(null).setIgnoreEntities(false),

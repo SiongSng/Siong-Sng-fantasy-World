@@ -10,6 +10,9 @@
       },
       {
         "value": "CUSTOM:RedwoodLog"
+      },
+      {
+        "value": "CUSTOM:FantaLog"
       }
     ],
     "functions": [],

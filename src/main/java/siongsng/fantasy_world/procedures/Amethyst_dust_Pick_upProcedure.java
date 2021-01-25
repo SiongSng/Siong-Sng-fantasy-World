@@ -36,8 +36,10 @@ public class Amethyst_dust_Pick_upProcedure extends SiongsngsFantasyWorldModElem
 				capability.syncPlayerVariables(entity);
 			});
 		}
-		((itemstack)).setDisplayName(new StringTextComponent((("\u7D2B\u6676\u7C89\u8490\u96C6\u5E36-\u76EE\u524D\u5171\u6709") + ""
-				+ (((entity.getCapability(SiongsngsFantasyWorldModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new SiongsngsFantasyWorldModVariables.PlayerVariables())).amethyst_dust)))));
+		((itemstack))
+				.setDisplayName(new StringTextComponent((("\u7D2B\u6676\u7C89\u8490\u96C6\u5E36-\u76EE\u524D\u5171\u6709 ") + ""
+						+ (((entity.getCapability(SiongsngsFantasyWorldModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new SiongsngsFantasyWorldModVariables.PlayerVariables())).amethyst_dust))
+						+ "" + ("\u500B\u7D2B\u6676\u7C89"))));
 	}
 }

@@ -1,0 +1,38 @@
+{
+  "_fv": 15,
+  "_type": "item",
+  "definition": {
+    "renderType": 0,
+    "texture": "beginners_gifts",
+    "customModelName": "Normal",
+    "name": "Gifts for beginners",
+    "rarity": "UNCOMMON",
+    "creativeTab": {
+      "value": "CUSTOM:Prize"
+    },
+    "stackSize": 64,
+    "enchantability": 0,
+    "useDuration": 0,
+    "toolType": 1.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInfo": [
+      "§b歡迎您來到菘菘的幻想世界，這是菘菘送給您的禮物，收下吧!!!"
+    ],
+    "hasGlow": false,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "Beginnersgiftsgui_open"
+    }
+  }
+}

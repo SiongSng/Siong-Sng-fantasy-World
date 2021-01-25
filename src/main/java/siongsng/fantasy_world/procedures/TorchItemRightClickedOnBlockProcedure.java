@@ -89,132 +89,124 @@ public class TorchItemRightClickedOnBlockProcedure extends SiongsngsFantasyWorld
 				((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
 						((PlayerEntity) entity).container.func_234641_j_());
 			}
-			if ((direction == Direction.UP)) {
-				if ((((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.AIR.getDefaultState().getBlock())
-						|| ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.CAVE_AIR.getDefaultState()
-								.getBlock()))) {
-					world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), AmethystTorchBlock.block.getDefaultState(), 3);
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound(x, y, z,
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
+		}
+		if ((direction == Direction.UP)) {
+			if ((((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.AIR.getDefaultState().getBlock())
+					|| ((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.CAVE_AIR.getDefaultState()
+							.getBlock()))) {
+				world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), AmethystTorchBlock.block.getDefaultState(), 3);
+				if (world instanceof World && !world.isRemote()) {
+					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1);
+				} else {
+					((World) world).playSound(x, y, z,
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 				}
-			} else if ((direction == Direction.NORTH)) {
-				if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.AIR.getDefaultState().getBlock())
-						|| ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.CAVE_AIR.getDefaultState()
-								.getBlock()))) {
-					world.setBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)), AmethystTorchwallBlock.block.getDefaultState(), 3);
-					try {
-						BlockState _bs = world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)));
-						DirectionProperty _property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
-						if (_property != null) {
-							world.setBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)), _bs.with(_property, Direction.NORTH), 3);
-						} else {
-							world.setBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)),
-									_bs.with((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis"),
-											Direction.NORTH.getAxis()),
-									3);
-						}
-					} catch (Exception e) {
-					}
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
+			}
+		} else if ((direction == Direction.NORTH)) {
+			if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.AIR.getDefaultState().getBlock())
+					|| ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)))).getBlock() == Blocks.CAVE_AIR.getDefaultState()
+							.getBlock()))) {
+				world.setBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)), AmethystTorchwallBlock.block.getDefaultState(), 3);
+				try {
+					BlockState _bs = world.getBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)));
+					DirectionProperty _property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
+					if (_property != null) {
+						world.setBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)), _bs.with(_property, Direction.NORTH), 3);
 					} else {
-						((World) world).playSound(x, y, z,
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+						world.setBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)), _bs.with(
+								(EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis"), Direction.NORTH.getAxis()), 3);
 					}
+				} catch (Exception e) {
 				}
-			} else if ((direction == Direction.SOUTH)) {
-				if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == Blocks.AIR.getDefaultState().getBlock())
-						|| ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == Blocks.CAVE_AIR.getDefaultState()
-								.getBlock()))) {
-					world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)), AmethystTorchwallBlock.block.getDefaultState(), 3);
-					try {
-						BlockState _bs = world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)));
-						DirectionProperty _property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
-						if (_property != null) {
-							world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)), _bs.with(_property, Direction.SOUTH), 3);
-						} else {
-							world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)),
-									_bs.with((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis"),
-											Direction.SOUTH.getAxis()),
-									3);
-						}
-					} catch (Exception e) {
-					}
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
-					} else {
-						((World) world).playSound(x, y, z,
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
-					}
+				if (world instanceof World && !world.isRemote()) {
+					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1);
+				} else {
+					((World) world).playSound(x, y, z,
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 				}
-			} else if ((direction == Direction.WEST)) {
-				if ((((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == Blocks.AIR.getDefaultState().getBlock())
-						|| ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == Blocks.CAVE_AIR.getDefaultState()
-								.getBlock()))) {
-					world.setBlockState(new BlockPos((int) (x - 1), (int) y, (int) z), AmethystTorchwallBlock.block.getDefaultState(), 3);
-					try {
-						BlockState _bs = world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z));
-						DirectionProperty _property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
-						if (_property != null) {
-							world.setBlockState(new BlockPos((int) (x - 1), (int) y, (int) z), _bs.with(_property, Direction.WEST), 3);
-						} else {
-							world.setBlockState(new BlockPos((int) (x - 1), (int) y, (int) z),
-									_bs.with((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis"),
-											Direction.WEST.getAxis()),
-									3);
-						}
-					} catch (Exception e) {
-					}
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
+			}
+		} else if ((direction == Direction.SOUTH)) {
+			if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == Blocks.AIR.getDefaultState().getBlock())
+					|| ((world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)))).getBlock() == Blocks.CAVE_AIR.getDefaultState()
+							.getBlock()))) {
+				world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)), AmethystTorchwallBlock.block.getDefaultState(), 3);
+				try {
+					BlockState _bs = world.getBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)));
+					DirectionProperty _property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
+					if (_property != null) {
+						world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)), _bs.with(_property, Direction.SOUTH), 3);
 					} else {
-						((World) world).playSound(x, y, z,
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+						world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)), _bs.with(
+								(EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis"), Direction.SOUTH.getAxis()), 3);
 					}
+				} catch (Exception e) {
 				}
-			} else if ((direction == Direction.EAST)) {
-				if ((((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == Blocks.AIR.getDefaultState().getBlock())
-						|| ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == Blocks.CAVE_AIR.getDefaultState()
-								.getBlock()))) {
-					world.setBlockState(new BlockPos((int) (x + 1), (int) y, (int) z), AmethystTorchwallBlock.block.getDefaultState(), 3);
-					try {
-						BlockState _bs = world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z));
-						DirectionProperty _property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
-						if (_property != null) {
-							world.setBlockState(new BlockPos((int) (x + 1), (int) y, (int) z), _bs.with(_property, Direction.EAST), 3);
-						} else {
-							world.setBlockState(new BlockPos((int) (x + 1), (int) y, (int) z),
-									_bs.with((EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis"),
-											Direction.EAST.getAxis()),
-									3);
-						}
-					} catch (Exception e) {
-					}
-					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1);
+				if (world instanceof World && !world.isRemote()) {
+					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1);
+				} else {
+					((World) world).playSound(x, y, z,
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+				}
+			}
+		} else if ((direction == Direction.WEST)) {
+			if ((((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == Blocks.AIR.getDefaultState().getBlock())
+					|| ((world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z))).getBlock() == Blocks.CAVE_AIR.getDefaultState()
+							.getBlock()))) {
+				world.setBlockState(new BlockPos((int) (x - 1), (int) y, (int) z), AmethystTorchwallBlock.block.getDefaultState(), 3);
+				try {
+					BlockState _bs = world.getBlockState(new BlockPos((int) (x - 1), (int) y, (int) z));
+					DirectionProperty _property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
+					if (_property != null) {
+						world.setBlockState(new BlockPos((int) (x - 1), (int) y, (int) z), _bs.with(_property, Direction.WEST), 3);
 					} else {
-						((World) world).playSound(x, y, z,
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
-								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+						world.setBlockState(new BlockPos((int) (x - 1), (int) y, (int) z), _bs.with(
+								(EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis"), Direction.WEST.getAxis()), 3);
 					}
+				} catch (Exception e) {
+				}
+				if (world instanceof World && !world.isRemote()) {
+					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1);
+				} else {
+					((World) world).playSound(x, y, z,
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+				}
+			}
+		} else if ((direction == Direction.EAST)) {
+			if ((((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == Blocks.AIR.getDefaultState().getBlock())
+					|| ((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z))).getBlock() == Blocks.CAVE_AIR.getDefaultState()
+							.getBlock()))) {
+				world.setBlockState(new BlockPos((int) (x + 1), (int) y, (int) z), AmethystTorchwallBlock.block.getDefaultState(), 3);
+				try {
+					BlockState _bs = world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) z));
+					DirectionProperty _property = (DirectionProperty) _bs.getBlock().getStateContainer().getProperty("facing");
+					if (_property != null) {
+						world.setBlockState(new BlockPos((int) (x + 1), (int) y, (int) z), _bs.with(_property, Direction.EAST), 3);
+					} else {
+						world.setBlockState(new BlockPos((int) (x + 1), (int) y, (int) z), _bs.with(
+								(EnumProperty<Direction.Axis>) _bs.getBlock().getStateContainer().getProperty("axis"), Direction.EAST.getAxis()), 3);
+					}
+				} catch (Exception e) {
+				}
+				if (world instanceof World && !world.isRemote()) {
+					((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1);
+				} else {
+					((World) world).playSound(x, y, z,
+							(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wood.place")),
+							SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 				}
 			}
 		}

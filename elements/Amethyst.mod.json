@@ -10,7 +10,7 @@
     "textureBack": "",
     "renderType": 2,
     "customModelName": "crystal:default",
-    "rotationMode": 2,
+    "rotationMode": 0,
     "emissiveRendering": true,
     "displayFluidOverlay": true,
     "itemTexture": "amethyst",

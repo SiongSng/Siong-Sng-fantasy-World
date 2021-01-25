@@ -62,7 +62,7 @@ public class AmethystTorchBlock extends SiongsngsFantasyWorldModElements.ModElem
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(0f, 10f).setLightLevel(s -> 10).notSolid()
+			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(0f, 10f).setLightLevel(s -> 15).notSolid()
 					.setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true).setOpaque((bs, br, bp) -> false));
 			setRegistryName("amethyst_torch");
 		}

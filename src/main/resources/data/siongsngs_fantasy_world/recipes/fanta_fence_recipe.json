@@ -1,0 +1,32 @@
+{
+  "group": "siongsngs_fantasy_world",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "siongsngs_fantasy_world:fanta_planks"
+    },
+    "1": {
+      "item": "minecraft:stick"
+    },
+    "2": {
+      "item": "siongsngs_fantasy_world:fanta_planks"
+    },
+    "3": {
+      "item": "siongsngs_fantasy_world:fanta_planks"
+    },
+    "4": {
+      "item": "minecraft:stick"
+    },
+    "5": {
+      "item": "siongsngs_fantasy_world:fanta_planks"
+    }
+  },
+  "result": {
+    "item": "siongsngs_fantasy_world:fanta_fence",
+    "count": 3
+  }
+}

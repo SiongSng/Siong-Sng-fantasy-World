@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "siongsngs_fantasy_world:blocks/fanta_planks",
+    "top": "siongsngs_fantasy_world:blocks/fanta_planks",
+    "side": "siongsngs_fantasy_world:blocks/fanta_planks"
+  }
+}

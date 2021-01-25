@@ -407,7 +407,7 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 						return tileEntity.getTileData().getDouble(tag);
 					return 0;
 				}
-			}.getValue(new BlockPos((int) x, (int) y, (int) z), "ree")) + "%", 42, 5, -12829636);
+			}.getValue(new BlockPos((int) x, (int) y, (int) z), "ree")) + "%", 69, 5, -65536);
 		}
 
 		@Override

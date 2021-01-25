@@ -184,11 +184,11 @@
         "data": {
           "text": "<BNBT:number:ree>%",
           "color": {
-            "value": -12829636,
+            "value": -65536,
             "falpha": 0.0
           },
           "name": "<BNBT:number:ree>%",
-          "x": 157,
+          "x": 184,
           "y": 42
         }
       }

@@ -10,7 +10,7 @@
     "recipeShapeless": true,
     "recipeSlots": [
       {
-        "value": "CUSTOM:Amethystcrystallization"
+        "value": "CUSTOM:Amethystdust"
       },
       {
         "value": "Items.BOOK"

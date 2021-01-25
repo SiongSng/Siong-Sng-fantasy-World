@@ -4,6 +4,7 @@ package siongsng.fantasy_world.block;
 import siongsng.fantasy_world.procedures.SiongSapling_timerGrowProcedure;
 import siongsng.fantasy_world.particle.RedparticleParticle;
 import siongsng.fantasy_world.itemgroup.SiongSngworldblockItemGroup;
+import siongsng.fantasy_world.item.RedwoodsaplingitemItem;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
@@ -112,7 +113,7 @@ public class RedwoodsaplingBlock extends SiongsngsFantasyWorldModElements.ModEle
 			List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
-			return Collections.singletonList(new ItemStack(this, 1));
+			return Collections.singletonList(new ItemStack(RedwoodsaplingitemItem.block, (int) (1)));
 		}
 
 		@Override

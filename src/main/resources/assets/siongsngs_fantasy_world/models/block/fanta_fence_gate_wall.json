@@ -1,0 +1,6 @@
+{
+  "parent": "block/template_fence_gate_wall",
+  "textures": {
+    "texture": "siongsngs_fantasy_world:blocks/fanta_planks"
+  }
+}

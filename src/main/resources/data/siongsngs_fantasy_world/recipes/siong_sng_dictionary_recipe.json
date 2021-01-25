@@ -3,7 +3,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "siongsngs_fantasy_world:amethystcrystallization"
+      "item": "siongsngs_fantasy_world:amethystdust"
     },
     {
       "item": "minecraft:book"

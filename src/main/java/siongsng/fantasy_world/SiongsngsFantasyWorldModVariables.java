@@ -70,6 +70,7 @@ public class SiongsngsFantasyWorldModVariables {
 			nbt.putDouble("coin", instance.coin);
 			nbt.putDouble("amethyst_dust", instance.amethyst_dust);
 			nbt.putBoolean("amethyst_dust_tf", instance.amethyst_dust_tf);
+			nbt.putBoolean("JOIN_TF", instance.JOIN_TF);
 			return nbt;
 		}
 
@@ -79,6 +80,7 @@ public class SiongsngsFantasyWorldModVariables {
 			instance.coin = nbt.getDouble("coin");
 			instance.amethyst_dust = nbt.getDouble("amethyst_dust");
 			instance.amethyst_dust_tf = nbt.getBoolean("amethyst_dust_tf");
+			instance.JOIN_TF = nbt.getBoolean("JOIN_TF");
 		}
 	}
 
@@ -86,6 +88,7 @@ public class SiongsngsFantasyWorldModVariables {
 		public double coin = 0;
 		public double amethyst_dust = 0;
 		public boolean amethyst_dust_tf = false;
+		public boolean JOIN_TF = false;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				SiongsngsFantasyWorldMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -123,6 +126,7 @@ public class SiongsngsFantasyWorldModVariables {
 			clone.coin = original.coin;
 			clone.amethyst_dust = original.amethyst_dust;
 			clone.amethyst_dust_tf = original.amethyst_dust_tf;
+			clone.JOIN_TF = original.JOIN_TF;
 		}
 	}
 	public static class PlayerVariablesSyncMessage {
@@ -149,6 +153,7 @@ public class SiongsngsFantasyWorldModVariables {
 					variables.coin = message.data.coin;
 					variables.amethyst_dust = message.data.amethyst_dust;
 					variables.amethyst_dust_tf = message.data.amethyst_dust_tf;
+					variables.JOIN_TF = message.data.JOIN_TF;
 				}
 			});
 			context.setPacketHandled(true);

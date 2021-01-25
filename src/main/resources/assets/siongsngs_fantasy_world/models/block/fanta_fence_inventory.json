@@ -1,0 +1,7 @@
+{
+  "parent": "block/fence_inventory",
+  "textures": {
+    "texture": "siongsngs_fantasy_world:blocks/fanta_planks",
+    "particle": "siongsngs_fantasy_world:blocks/fanta_planks"
+  }
+}

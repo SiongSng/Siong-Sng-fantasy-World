@@ -64,7 +64,7 @@ public class SngCultivatesoilBlock extends SiongsngsFantasyWorldModElements.ModE
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ORGANIC).sound(SoundType.GROUND).hardnessAndResistance(4f, 10f).setLightLevel(s -> 0)
-					.harvestLevel(1).harvestTool(ToolType.SHOVEL).tickRandomly());
+					.harvestLevel(1).harvestTool(ToolType.SHOVEL));
 			setRegistryName("ultivatesoil");
 		}
 
@@ -90,6 +90,15 @@ public class SngCultivatesoilBlock extends SiongsngsFantasyWorldModElements.ModE
 		}
 
 		@Override
+		public void onBlockAdded(BlockState state, World world, BlockPos pos, BlockState oldState, boolean moving) {
+			super.onBlockAdded(state, world, pos, oldState, moving);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 100);
+		}
+
+		@Override
 		public void tick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
 			super.tick(state, world, pos, random);
 			int x = pos.getX();
@@ -103,6 +112,7 @@ public class SngCultivatesoilBlock extends SiongsngsFantasyWorldModElements.ModE
 				$_dependencies.put("world", world);
 				Elementary_culture_soil_growth_bonusProcedure.executeProcedure($_dependencies);
 			}
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 100);
 		}
 	}
 	@SubscribeEvent

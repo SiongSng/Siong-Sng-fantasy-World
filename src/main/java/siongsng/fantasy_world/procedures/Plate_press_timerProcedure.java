@@ -72,7 +72,7 @@ public class Plate_press_timerProcedure extends SiongsngsFantasyWorldModElements
 				TileEntity _tileEntity = world.getTileEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_tileEntity != null)
-					_tileEntity.getTileData().putDouble("ree", (((new Object() {
+					_tileEntity.getTileData().putDouble("ree", Math.round((((new Object() {
 						public double getValue(IWorld world, BlockPos pos, String tag) {
 							TileEntity tileEntity = world.getTileEntity(pos);
 							if (tileEntity != null)
@@ -86,7 +86,7 @@ public class Plate_press_timerProcedure extends SiongsngsFantasyWorldModElements
 								return tileEntity.getTileData().getDouble(tag);
 							return -1;
 						}
-					}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "wait_time"))) * 100));
+					}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "wait_time"))) * 100)));
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}

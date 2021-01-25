@@ -1,0 +1,13 @@
+{
+  "group": "amethyst_dust_recipe",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "siongsngs_fantasy_world:amethystingot"
+    }
+  ],
+  "result": {
+    "item": "siongsngs_fantasy_world:amethystdust",
+    "count": 9
+  }
+}

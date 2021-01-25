@@ -50,8 +50,8 @@
     "material": {
       "value": "GRASS"
     },
-    "tickRate": 10,
-    "tickRandomly": true,
+    "tickRate": 100,
+    "tickRandomly": false,
     "isReplaceable": false,
     "colorOnMap": "DEFAULT",
     "creativePickItem": {

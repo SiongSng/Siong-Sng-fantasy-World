@@ -1,7 +1,7 @@
 
 package siongsng.fantasy_world.block;
 
-import siongsng.fantasy_world.itemgroup.SiongSngworldblockItemGroup;
+import siongsng.fantasy_world.itemgroup.SiongSngIndustrialcomponentsItemGroup;
 import siongsng.fantasy_world.gui.GoldchestguiGui;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 
@@ -79,8 +79,8 @@ public class GoldchestBlock extends SiongsngsFantasyWorldModElements.ModElement 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items.add(
-				() -> new BlockItem(block, new Item.Properties().group(SiongSngworldblockItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(SiongSngIndustrialcomponentsItemGroup.tab))
+				.setRegistryName(block.getRegistryName()));
 	}
 	private static class TileEntityRegisterHandler {
 		@SubscribeEvent
