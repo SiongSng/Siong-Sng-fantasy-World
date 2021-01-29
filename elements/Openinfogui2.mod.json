@@ -1,0 +1,89 @@
+{
+  "_fv": 15,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 290,
+    "height": 232,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "text": "回到選單首頁",
+          "onClick": {
+            "name": "Open_info_run"
+          },
+          "width": 73,
+          "height": 20,
+          "name": "回到選單首頁",
+          "x": 177,
+          "y": 206
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "任務系統",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "任務系統",
+          "x": 196,
+          "y": 8
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "待完成任務",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "待完成任務",
+          "x": 79,
+          "y": 9
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "獲得木材",
+          "width": 57,
+          "height": 20,
+          "name": "獲得木材",
+          "x": 97,
+          "y": 28
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "oak_planks.png",
+          "use1Xscale": false,
+          "name": "oak_planks.png",
+          "x": 78,
+          "y": 29
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "說明:\\n點擊左側邊的按鈕\\n可以查看任務內容和完成後獲得的獎勵\\n\\n加油!! 努力完成任務吧!!!!",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "說明:\\n點擊左側邊的按鈕\\n可以查看任務內容和完成後獲得的獎勵\\n\\n加油!! 努力完成任務吧!!!!",
+          "x": 207,
+          "y": 41
+        }
+      }
+    ]
+  }
+}

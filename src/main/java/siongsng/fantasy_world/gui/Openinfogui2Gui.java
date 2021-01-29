@@ -1,8 +1,7 @@
 
 package siongsng.fantasy_world.gui;
 
-import siongsng.fantasy_world.procedures.Siongbookgui2runProcedure;
-import siongsng.fantasy_world.procedures.Openinforun1Procedure;
+import siongsng.fantasy_world.procedures.Open_info_runProcedure;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 import siongsng.fantasy_world.SiongsngsFantasyWorldMod;
 
@@ -42,11 +41,11 @@ import java.util.HashMap;
 import com.mojang.blaze3d.matrix.MatrixStack;
 
 @SiongsngsFantasyWorldModElements.ModElement.Tag
-public class OpeninfoguiGui extends SiongsngsFantasyWorldModElements.ModElement {
+public class Openinfogui2Gui extends SiongsngsFantasyWorldModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
-	public OpeninfoguiGui(SiongsngsFantasyWorldModElements instance) {
-		super(instance, 85);
+	public Openinfogui2Gui(SiongsngsFantasyWorldModElements instance) {
+		super(instance, 230);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
@@ -57,7 +56,7 @@ public class OpeninfoguiGui extends SiongsngsFantasyWorldModElements.ModElement 
 	private static class ContainerRegisterHandler {
 		@SubscribeEvent
 		public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
-			event.getRegistry().register(containerType.setRegistryName("openinfogui"));
+			event.getRegistry().register(containerType.setRegistryName("openinfogui_2"));
 		}
 	}
 	@OnlyIn(Dist.CLIENT)
@@ -113,10 +112,10 @@ public class OpeninfoguiGui extends SiongsngsFantasyWorldModElements.ModElement 
 			this.y = container.y;
 			this.z = container.z;
 			this.entity = container.entity;
-			this.xSize = 190;
-			this.ySize = 198;
+			this.xSize = 290;
+			this.ySize = 232;
 		}
-		private static final ResourceLocation texture = new ResourceLocation("siongsngs_fantasy_world:textures/openinfogui.png");
+		private static final ResourceLocation texture = new ResourceLocation("siongsngs_fantasy_world:textures/openinfogui_2.png");
 		@Override
 		public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 			this.renderBackground(ms);
@@ -131,8 +130,8 @@ public class OpeninfoguiGui extends SiongsngsFantasyWorldModElements.ModElement 
 			int k = (this.width - this.xSize) / 2;
 			int l = (this.height - this.ySize) / 2;
 			this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("siongsngs_fantasy_world:textures/icon.png"));
-			this.blit(ms, this.guiLeft + 34, this.guiTop + 2, 0, 0, 16, 16, 16, 16);
+			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("siongsngs_fantasy_world:textures/oak_planks.png"));
+			this.blit(ms, this.guiLeft + 9, this.guiTop + 25, 0, 0, 16, 16, 16, 16);
 		}
 
 		@Override
@@ -151,9 +150,11 @@ public class OpeninfoguiGui extends SiongsngsFantasyWorldModElements.ModElement 
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-			this.font.drawString(ms, "\u83D8\u83D8\u7684\u5E7B\u60F3\u4E16\u754C-\u9078\u55AE", 51, 5, -12829636);
-			this.font.drawString(ms, "\u6CE8\u610F:\u6B64\u9078\u55AE\u4ECD\u6709\u8A31\u591A\u529F\u80FD\u5C1A\u672A\u5BE6\u88DD", 30, 177,
-					-12829636);
+			this.font.drawString(ms, "\u4EFB\u52D9\u7CFB\u7D71", 127, 4, -16777216);
+			this.font.drawString(ms, "\u5F85\u5B8C\u6210\u4EFB\u52D9", 10, 5, -12829636);
+			this.font.drawString(ms,
+					"\u8AAA\u660E:\\n\u9EDE\u64CA\u5DE6\u5074\u908A\u7684\u6309\u9215\\n\u53EF\u4EE5\u67E5\u770B\u4EFB\u52D9\u5167\u5BB9\u548C\u5B8C\u6210\u5F8C\u7372\u5F97\u7684\u734E\u52F5\\n\\n\u52A0\u6CB9!! \u52AA\u529B\u5B8C\u6210\u4EFB\u52D9\u5427!!!!",
+					138, 37, -12829636);
 		}
 
 		@Override
@@ -166,21 +167,13 @@ public class OpeninfoguiGui extends SiongsngsFantasyWorldModElements.ModElement 
 		public void init(Minecraft minecraft, int width, int height) {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
-			this.addButton(new Button(this.guiLeft + 5, this.guiTop + 30, 57, 20, new StringTextComponent("玩家資訊"), e -> {
+			this.addButton(new Button(this.guiLeft + 108, this.guiTop + 202, 73, 20, new StringTextComponent("回到選單首頁"), e -> {
 				SiongsngsFantasyWorldMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
 				handleButtonAction(entity, 0, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 66, this.guiTop + 30, 57, 20, new StringTextComponent("時裝系統"), e -> {
+			this.addButton(new Button(this.guiLeft + 28, this.guiTop + 24, 57, 20, new StringTextComponent("獲得木材"), e -> {
 				SiongsngsFantasyWorldMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
 				handleButtonAction(entity, 1, x, y, z);
-			}));
-			this.addButton(new Button(this.guiLeft + 127, this.guiTop + 30, 57, 20, new StringTextComponent("好友介面"), e -> {
-				SiongsngsFantasyWorldMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(2, x, y, z));
-				handleButtonAction(entity, 2, x, y, z);
-			}));
-			this.addButton(new Button(this.guiLeft + 4, this.guiTop + 59, 57, 20, new StringTextComponent("任務系統"), e -> {
-				SiongsngsFantasyWorldMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(3, x, y, z));
-				handleButtonAction(entity, 3, x, y, z);
 			}));
 		}
 	}
@@ -279,18 +272,7 @@ public class OpeninfoguiGui extends SiongsngsFantasyWorldModElements.ModElement 
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				Openinforun1Procedure.executeProcedure($_dependencies);
-			}
-		}
-		if (buttonID == 3) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				Siongbookgui2runProcedure.executeProcedure($_dependencies);
+				Open_info_runProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}

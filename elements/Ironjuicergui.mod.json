@@ -32,8 +32,8 @@
             "falpha": 0.0
           },
           "name": "<BNBT:number:ree>%",
-          "x": 179,
-          "y": 48
+          "x": 182,
+          "y": 49
         }
       },
       {
@@ -74,36 +74,21 @@
           "image": "arrowanimation1.png",
           "use1Xscale": false,
           "name": "arrowanimation1.png",
-          "x": 161,
-          "y": 65
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "color": {
-            "value": -178,
-            "falpha": 0.0
-          },
-          "id": 2,
-          "disableStackInteraction": false,
-          "dropItemsWhenNotBound": true,
-          "name": "Slot #2",
-          "x": 213,
-          "y": 71
+          "x": 163,
+          "y": 64
         }
       },
       {
         "type": "label",
         "data": {
-          "text": "<BNBT:text:name>-<BNBT:number:juice>²@¤É",
+          "text": "<BNBT:number:juice>²@¤É",
           "color": {
             "value": -3163865,
             "falpha": 0.0
           },
-          "name": "<BNBT:text:name>-<BNBT:number:juice>²@¤É",
-          "x": 208,
-          "y": 95
+          "name": "<BNBT:number:juice>²@¤É",
+          "x": 234,
+          "y": 74
         }
       },
       {
@@ -190,6 +175,33 @@
           "name": "»s§@",
           "x": 169,
           "y": 96
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<BNBT:text:name> ",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "<BNBT:text:name> ",
+          "x": 214,
+          "y": 97
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 2,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #2",
+          "x": 212,
+          "y": 70
         }
       }
     ]

@@ -1,0 +1,42 @@
+{
+  "group": "siong_sng_world_activate_tool_recipe",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "siongsngs_fantasy_world:amethystplate"
+    },
+    "1": {
+      "item": "siongsngs_fantasy_world:amethystdust"
+    },
+    "2": {
+      "item": "siongsngs_fantasy_world:amethystplate"
+    },
+    "3": {
+      "item": "siongsngs_fantasy_world:siong_log_planks"
+    },
+    "4": {
+      "item": "siongsngs_fantasy_world:amethystcrystallization"
+    },
+    "5": {
+      "item": "siongsngs_fantasy_world:siong_log_planks"
+    },
+    "6": {
+      "item": "siongsngs_fantasy_world:amethystplate"
+    },
+    "7": {
+      "item": "siongsngs_fantasy_world:amethystdust"
+    },
+    "8": {
+      "item": "siongsngs_fantasy_world:amethystplate"
+    }
+  },
+  "result": {
+    "item": "siongsngs_fantasy_world:siong_sng_world",
+    "count": 1
+  }
+}

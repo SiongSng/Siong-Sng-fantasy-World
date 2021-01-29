@@ -128,12 +128,6 @@ public class IronjuicerguiGui extends SiongsngsFantasyWorldModElements.ModElemen
 			}));
 			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 18, 53) {
 			}));
-			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 99, 35) {
-				@Override
-				public boolean isItemValid(ItemStack stack) {
-					return false;
-				}
-			}));
 			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 171, 8) {
 			}));
 			this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 171, 26) {
@@ -141,6 +135,8 @@ public class IronjuicerguiGui extends SiongsngsFantasyWorldModElements.ModElemen
 			this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 171, 44) {
 			}));
 			this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 171, 62) {
+			}));
+			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 98, 34) {
 			}));
 			int si;
 			int sj;
@@ -334,7 +330,7 @@ public class IronjuicerguiGui extends SiongsngsFantasyWorldModElements.ModElemen
 			int l = (this.height - this.ySize) / 2;
 			this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("siongsngs_fantasy_world:textures/arrowanimation1.png"));
-			this.blit(ms, this.guiLeft + 46, this.guiTop + 28, 0, 0, 41, 29, 41, 29);
+			this.blit(ms, this.guiLeft + 48, this.guiTop + 27, 0, 0, 41, 29, 41, 29);
 		}
 
 		@Override
@@ -361,7 +357,15 @@ public class IronjuicerguiGui extends SiongsngsFantasyWorldModElements.ModElemen
 						return tileEntity.getTileData().getDouble(tag);
 					return 0;
 				}
-			}.getValue(new BlockPos((int) x, (int) y, (int) z), "ree")) + "%", 64, 11, -65536);
+			}.getValue(new BlockPos((int) x, (int) y, (int) z), "ree")) + "%", 67, 12, -65536);
+			this.font.drawString(ms, "" + (new Object() {
+				public double getValue(BlockPos pos, String tag) {
+					TileEntity tileEntity = world.getTileEntity(pos);
+					if (tileEntity != null)
+						return tileEntity.getTileData().getDouble(tag);
+					return 0;
+				}
+			}.getValue(new BlockPos((int) x, (int) y, (int) z), "juice")) + "\u6BEB\u5347", 119, 37, -3163865);
 			this.font.drawString(ms, "" + (new Object() {
 				public String getValue(BlockPos pos, String tag) {
 					TileEntity tileEntity = world.getTileEntity(pos);
@@ -369,14 +373,7 @@ public class IronjuicerguiGui extends SiongsngsFantasyWorldModElements.ModElemen
 						return tileEntity.getTileData().getString(tag);
 					return "";
 				}
-			}.getValue(new BlockPos((int) x, (int) y, (int) z), "name")) + "-" + (new Object() {
-				public double getValue(BlockPos pos, String tag) {
-					TileEntity tileEntity = world.getTileEntity(pos);
-					if (tileEntity != null)
-						return tileEntity.getTileData().getDouble(tag);
-					return 0;
-				}
-			}.getValue(new BlockPos((int) x, (int) y, (int) z), "juice")) + "\u6BEB\u5347", 93, 58, -3163865);
+			}.getValue(new BlockPos((int) x, (int) y, (int) z), "name")) + " ", 99, 60, -16777216);
 		}
 
 		@Override

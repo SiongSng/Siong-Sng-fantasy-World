@@ -3,6 +3,7 @@ package siongsng.fantasy_world.procedures;
 import siongsng.fantasy_world.item.SiongLogfruitItem;
 import siongsng.fantasy_world.item.FantalogFruitItem;
 import siongsng.fantasy_world.block.IronjuicerBlock;
+import siongsng.fantasy_world.block.FantaJuiceBlock;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 import siongsng.fantasy_world.SiongsngsFantasyWorldMod;
 
@@ -14,10 +15,12 @@ import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.block.BlockState;
 
@@ -151,7 +154,7 @@ public class Gui2Procedure extends SiongsngsFantasyWorldModElements.ModElement {
 										return tileEntity.getTileData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "juice")) + 590));
+							}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "juice")) + 500));
 						if (world instanceof World)
 							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 					}
@@ -259,7 +262,7 @@ public class Gui2Procedure extends SiongsngsFantasyWorldModElements.ModElement {
 										return tileEntity.getTileData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "juice")) + 590));
+							}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "juice")) + 500));
 						if (world instanceof World)
 							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 					}
@@ -271,6 +274,41 @@ public class Gui2Procedure extends SiongsngsFantasyWorldModElements.ModElement {
 							_tileEntity.getTileData().putString("name", "\u82AC\u9054\u679C\u6C41");
 						if (world instanceof World)
 							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+					}
+					if ((((new Object() {
+						public ItemStack getItemStack(int sltid) {
+							Entity _ent = entity;
+							if (_ent instanceof ServerPlayerEntity) {
+								Container _current = ((ServerPlayerEntity) _ent).openContainer;
+								if (_current instanceof Supplier) {
+									Object invobj = ((Supplier) _current).get();
+									if (invobj instanceof Map) {
+										return ((Slot) ((Map) invobj).get(sltid)).getStack();
+									}
+								}
+							}
+							return ItemStack.EMPTY;
+						}
+					}.getItemStack((int) (2))).getItem() == new ItemStack(Items.BUCKET, (int) (1)).getItem()) && ((new Object() {
+						public double getValue(IWorld world, BlockPos pos, String tag) {
+							TileEntity tileEntity = world.getTileEntity(pos);
+							if (tileEntity != null)
+								return tileEntity.getTileData().getDouble(tag);
+							return -1;
+						}
+					}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "juice")) >= 1000))) {
+						if (entity instanceof PlayerEntity) {
+							Container _current = ((PlayerEntity) entity).openContainer;
+							if (_current instanceof Supplier) {
+								Object invobj = ((Supplier) _current).get();
+								if (invobj instanceof Map) {
+									ItemStack _setstack = new ItemStack(FantaJuiceBlock.block, (int) (1));
+									_setstack.setCount((int) 1);
+									((Slot) ((Map) invobj).get((int) (2))).putStack(_setstack);
+									_current.detectAndSendChanges();
+								}
+							}
+						}
 					}
 					if (!world.isRemote()) {
 						BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);

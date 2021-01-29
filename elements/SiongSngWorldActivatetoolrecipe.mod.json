@@ -1,0 +1,46 @@
+{
+  "_fv": 15,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "siong_sng_world_activate_tool_recipe",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:Amethystplate"
+      },
+      {
+        "value": "CUSTOM:Amethystdust"
+      },
+      {
+        "value": "CUSTOM:Amethystplate"
+      },
+      {
+        "value": "CUSTOM:Siong_logPlanks"
+      },
+      {
+        "value": "CUSTOM:Amethystcrystallization"
+      },
+      {
+        "value": "CUSTOM:Siong_logPlanks"
+      },
+      {
+        "value": "CUSTOM:Amethystplate"
+      },
+      {
+        "value": "CUSTOM:Amethystdust"
+      },
+      {
+        "value": "CUSTOM:Amethystplate"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:SiongSngWorld"
+    },
+    "name": "siong_sng_world_activate_tool_recipe",
+    "namespace": "mod"
+  }
+}

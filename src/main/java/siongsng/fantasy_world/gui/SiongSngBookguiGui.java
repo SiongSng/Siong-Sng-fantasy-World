@@ -195,7 +195,7 @@ public class SiongSngBookguiGui extends SiongsngsFantasyWorldModElements.ModElem
 				SiongsngsFantasyWorldMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(5, x, y, z));
 				handleButtonAction(entity, 5, x, y, z);
 			}));
-			this.addButton(new Button(this.guiLeft + 212, this.guiTop + 12, 41, 20, new StringTextComponent("¶i«×"), e -> {
+			this.addButton(new Button(this.guiLeft + 212, this.guiTop + 12, 41, 20, new StringTextComponent("¥ÍºA°ì"), e -> {
 				SiongsngsFantasyWorldMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(6, x, y, z));
 				handleButtonAction(entity, 6, x, y, z);
 			}));

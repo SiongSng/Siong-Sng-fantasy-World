@@ -75,8 +75,10 @@ public class SiongSaplingbonemealProcedure extends SiongsngsFantasyWorldModEleme
 				.getItem() == new ItemStack(Items.BONE_MEAL, (int) (1)).getItem())
 				&& (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == SiongSaplingBlock.block.getDefaultState()
 						.getBlock())
-						|| ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == RedwoodsaplingBlock.block.getDefaultState()
-								.getBlock())))) {
+						|| (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == RedwoodsaplingBlock.block.getDefaultState()
+								.getBlock())
+								|| ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == FantasaplingBlock.block
+										.getDefaultState().getBlock()))))) {
 			if (!world.isRemote()) {
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				TileEntity _tileEntity = world.getTileEntity(_bp);

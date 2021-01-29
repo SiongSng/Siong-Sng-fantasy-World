@@ -1,6 +1,7 @@
 
 package siongsng.fantasy_world.block;
 
+import siongsng.fantasy_world.procedures.JuicertimerProcedure;
 import siongsng.fantasy_world.particle.OrangeparticlesParticle;
 import siongsng.fantasy_world.itemgroup.SiongSngIndustrialcomponentsItemGroup;
 import siongsng.fantasy_world.gui.IronjuicerguiGui;
@@ -12,6 +13,8 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.fml.network.NetworkHooks;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fluids.capability.templates.FluidTank;
+import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.common.util.LazyOptional;
@@ -19,6 +22,7 @@ import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.text.StringTextComponent;
@@ -65,7 +69,9 @@ import javax.annotation.Nullable;
 
 import java.util.stream.IntStream;
 import java.util.Random;
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
 import java.util.Collections;
 
 import io.netty.buffer.Unpooled;
@@ -136,6 +142,32 @@ public class IronjuicerBlock extends SiongsngsFantasyWorldModElements.ModElement
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
 			return Collections.singletonList(new ItemStack(this, 1));
+		}
+
+		@Override
+		public void onBlockAdded(BlockState state, World world, BlockPos pos, BlockState oldState, boolean moving) {
+			super.onBlockAdded(state, world, pos, oldState, moving);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 10);
+		}
+
+		@Override
+		public void tick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+			super.tick(state, world, pos, random);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				JuicertimerProcedure.executeProcedure($_dependencies);
+			}
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 10);
 		}
 
 		@OnlyIn(Dist.CLIENT)
@@ -246,6 +278,8 @@ public class IronjuicerBlock extends SiongsngsFantasyWorldModElements.ModElement
 				this.stacks = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
 			}
 			ItemStackHelper.loadAllItems(compound, this.stacks);
+			if (compound.get("fluidTank") != null)
+				CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY.readNBT(fluidTank, null, compound.get("fluidTank"));
 		}
 
 		@Override
@@ -254,6 +288,7 @@ public class IronjuicerBlock extends SiongsngsFantasyWorldModElements.ModElement
 			if (!this.checkLootAndWrite(compound)) {
 				ItemStackHelper.saveAllItems(compound, this.stacks);
 			}
+			compound.put("fluidTank", CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY.writeNBT(fluidTank, null));
 			return compound;
 		}
 
@@ -349,10 +384,26 @@ public class IronjuicerBlock extends SiongsngsFantasyWorldModElements.ModElement
 			return true;
 		}
 		private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
+		private final FluidTank fluidTank = new FluidTank(10000, fs -> {
+			if (fs.getFluid() == FantaJuiceBlock.still)
+				return true;
+			if (fs.getFluid() == FantaJuiceBlock.flowing)
+				return true;
+			return false;
+		}) {
+			@Override
+			protected void onContentsChanged() {
+				super.onContentsChanged();
+				markDirty();
+				world.notifyBlockUpdate(pos, world.getBlockState(pos), world.getBlockState(pos), 2);
+			}
+		};
 		@Override
 		public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
 			if (!this.removed && facing != null && capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
 				return handlers[facing.ordinal()].cast();
+			if (!this.removed && capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY)
+				return LazyOptional.of(() -> fluidTank).cast();
 			return super.getCapability(capability, facing);
 		}
 

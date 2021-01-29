@@ -81,6 +81,20 @@
           "x": 149,
           "y": 198
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "任務系統",
+          "onClick": {
+            "name": "Siongbookgui2run"
+          },
+          "width": 57,
+          "height": 20,
+          "name": "任務系統",
+          "x": 123,
+          "y": 80
+        }
       }
     ]
   }

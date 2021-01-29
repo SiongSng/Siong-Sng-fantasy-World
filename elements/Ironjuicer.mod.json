@@ -2,10 +2,10 @@
   "_fv": 15,
   "_type": "block",
   "definition": {
-    "texture": "iron_juicer",
+    "texture": "iron_plate_press_top",
     "textureTop": "iron_plate_press_top",
     "textureLeft": "iron_juicer_side",
-    "textureFront": "iron_juicer_side",
+    "textureFront": "iron_juicer",
     "textureRight": "iron_juicer_side",
     "textureBack": "iron_juicer_side",
     "renderType": 10,
@@ -102,9 +102,19 @@
     "energyCapacity": 400000,
     "energyMaxReceive": 200,
     "energyMaxExtract": 200,
-    "isFluidTank": false,
-    "fluidCapacity": 8000,
-    "fluidRestrictions": [],
+    "isFluidTank": true,
+    "fluidCapacity": 10000,
+    "fluidRestrictions": [
+      {
+        "value": "CUSTOM:FantaJuice"
+      },
+      {
+        "value": "CUSTOM:FantaJuice:Flowing"
+      }
+    ],
+    "onTickUpdate": {
+      "name": "Juicertimer"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [

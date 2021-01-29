@@ -111,10 +111,10 @@
       {
         "type": "button",
         "data": {
-          "text": "進度",
+          "text": "生態域",
           "width": 41,
           "height": 20,
-          "name": "進度",
+          "name": "生態域",
           "x": 240,
           "y": 35
         }
