@@ -1,0 +1,42 @@
+{
+  "group": "amethystdustcollectionbag_recipe",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:leather"
+    },
+    "1": {
+      "item": "minecraft:leather"
+    },
+    "2": {
+      "item": "minecraft:leather"
+    },
+    "3": {
+      "item": "siongsngs_fantasy_world:amethystcrystallization"
+    },
+    "4": {
+      "item": "siongsngs_fantasy_world:amethystdust"
+    },
+    "5": {
+      "item": "siongsngs_fantasy_world:amethystcrystallization"
+    },
+    "6": {
+      "item": "minecraft:leather"
+    },
+    "7": {
+      "item": "minecraft:leather"
+    },
+    "8": {
+      "item": "minecraft:leather"
+    }
+  },
+  "result": {
+    "item": "siongsngs_fantasy_world:amethystdustcollectionbag",
+    "count": 1
+  }
+}

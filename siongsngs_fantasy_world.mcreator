@@ -2752,6 +2752,15 @@
           }
         ]
       }
+    },
+    {
+      "name": "Amethystdustcollectionbagrecipe",
+      "type": "recipe",
+      "sortid": 234,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "amethystdustcollectionbagrecipe"
     }
   ],
   "variable_elements": [

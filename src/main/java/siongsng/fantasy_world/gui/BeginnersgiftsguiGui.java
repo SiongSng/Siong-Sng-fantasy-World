@@ -425,20 +425,6 @@ public class BeginnersgiftsguiGui extends SiongsngsFantasyWorldModElements.ModEl
 			if (!bound && (playerIn instanceof ServerPlayerEntity)) {
 				if (!playerIn.isAlive() || playerIn instanceof ServerPlayerEntity && ((ServerPlayerEntity) playerIn).hasDisconnected()) {
 					for (int j = 0; j < internal.getSlots(); ++j) {
-						if (j == 0)
-							continue;
-						if (j == 1)
-							continue;
-						if (j == 2)
-							continue;
-						if (j == 3)
-							continue;
-						if (j == 4)
-							continue;
-						if (j == 5)
-							continue;
-						if (j == 6)
-							continue;
 						if (j == 7)
 							continue;
 						if (j == 8)
@@ -447,20 +433,6 @@ public class BeginnersgiftsguiGui extends SiongsngsFantasyWorldModElements.ModEl
 					}
 				} else {
 					for (int i = 0; i < internal.getSlots(); ++i) {
-						if (i == 0)
-							continue;
-						if (i == 1)
-							continue;
-						if (i == 2)
-							continue;
-						if (i == 3)
-							continue;
-						if (i == 4)
-							continue;
-						if (i == 5)
-							continue;
-						if (i == 6)
-							continue;
 						if (i == 7)
 							continue;
 						if (i == 8)

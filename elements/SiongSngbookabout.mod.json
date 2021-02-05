@@ -53,8 +53,8 @@
           "image": "icon_text.png",
           "use1Xscale": true,
           "name": "icon_text.png",
-          "x": 183,
-          "y": -13
+          "x": 178,
+          "y": -7
         }
       },
       {
@@ -63,8 +63,8 @@
           "image": "icon_1.png",
           "use1Xscale": true,
           "name": "icon_1.png",
-          "x": 275,
-          "y": 32
+          "x": 272,
+          "y": 39
         }
       },
       {

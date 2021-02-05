@@ -133,9 +133,9 @@ public class SiongSngbookaboutGui extends SiongsngsFantasyWorldModElements.ModEl
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("siongsngs_fantasy_world:textures/icon.png"));
 			this.blit(ms, this.guiLeft + 1, this.guiTop + 4, 0, 0, 16, 16, 16, 16);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("siongsngs_fantasy_world:textures/icon_text.png"));
-			this.blit(ms, this.guiLeft + 155, this.guiTop + -35, 0, 0, 250, 250, 250, 250);
+			this.blit(ms, this.guiLeft + 150, this.guiTop + -29, 0, 0, 250, 250, 250, 250);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("siongsngs_fantasy_world:textures/icon_1.png"));
-			this.blit(ms, this.guiLeft + 247, this.guiTop + 9, 0, 0, 64, 64, 64, 64);
+			this.blit(ms, this.guiLeft + 244, this.guiTop + 16, 0, 0, 64, 64, 64, 64);
 		}
 
 		@Override
