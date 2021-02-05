@@ -37,6 +37,9 @@
     "onItemInInventoryTick": {
       "name": "Amethyst_dust_Pick_up"
     },
+    "onStoppedUsing": {
+      "name": "Amethystdustcollectionbag_stop"
+    },
     "onDroppedByPlayer": {
       "name": "Amethystdustcollectionbag_stop"
     }

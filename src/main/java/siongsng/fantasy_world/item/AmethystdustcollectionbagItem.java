@@ -18,6 +18,7 @@ import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
@@ -79,6 +80,18 @@ public class AmethystdustcollectionbagItem extends SiongsngsFantasyWorldModEleme
 				Amethystdustcollectionbag_Right_clickProcedure.executeProcedure($_dependencies);
 			}
 			return ar;
+		}
+
+		@Override
+		public void onPlayerStoppedUsing(ItemStack itemstack, World world, LivingEntity entity, int time) {
+			double x = entity.getPosX();
+			double y = entity.getPosY();
+			double z = entity.getPosZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				Amethystdustcollectionbag_stopProcedure.executeProcedure($_dependencies);
+			}
 		}
 
 		@Override
