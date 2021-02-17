@@ -4,14 +4,14 @@ import siongsng.fantasy_world.item.MechanicalautomaticoperationcomponentsItem;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 import siongsng.fantasy_world.SiongsngsFantasyWorldMod;
 
-import net.minecraft.world.IWorld;
-import net.minecraft.item.ItemStack;
-import net.minecraft.inventory.container.Slot;
-import net.minecraft.inventory.container.Container;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.Entity;
+import net.minecraftforge.items.CapabilityItemHandler;
 
-import java.util.function.Supplier;
+import net.minecraft.world.IWorld;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.item.ItemStack;
+
+import java.util.concurrent.atomic.AtomicReference;
 import java.util.Map;
 import java.util.HashMap;
 
@@ -22,11 +22,6 @@ public class IronplatemakingmachineZaiYouXiKeGengXinShiProcedure extends Siongsn
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				SiongsngsFantasyWorldMod.LOGGER.warn("Failed to load dependency entity for procedure IronplatemakingmachineZaiYouXiKeGengXinShi!");
-			return;
-		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
 				SiongsngsFantasyWorldMod.LOGGER.warn("Failed to load dependency x for procedure IronplatemakingmachineZaiYouXiKeGengXinShi!");
@@ -47,79 +42,66 @@ public class IronplatemakingmachineZaiYouXiKeGengXinShiProcedure extends Siongsn
 				SiongsngsFantasyWorldMod.LOGGER.warn("Failed to load dependency world for procedure IronplatemakingmachineZaiYouXiKeGengXinShi!");
 			return;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		if ((((new Object() {
-			public ItemStack getItemStack(int sltid) {
-				Entity _ent = entity;
-				if (_ent instanceof ServerPlayerEntity) {
-					Container _current = ((ServerPlayerEntity) _ent).openContainer;
-					if (_current instanceof Supplier) {
-						Object invobj = ((Supplier) _current).get();
-						if (invobj instanceof Map) {
-							return ((Slot) ((Map) invobj).get(sltid)).getStack();
-						}
-					}
+			public ItemStack getItemStack(BlockPos pos, int sltid) {
+				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+				TileEntity _ent = world.getTileEntity(pos);
+				if (_ent != null) {
+					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+						_retval.set(capability.getStackInSlot(sltid).copy());
+					});
 				}
-				return ItemStack.EMPTY;
+				return _retval.get();
 			}
-		}.getItemStack((int) (4))).getItem() == new ItemStack(MechanicalautomaticoperationcomponentsItem.block, (int) (1)).getItem())
-				|| (((new Object() {
-					public ItemStack getItemStack(int sltid) {
-						Entity _ent = entity;
-						if (_ent instanceof ServerPlayerEntity) {
-							Container _current = ((ServerPlayerEntity) _ent).openContainer;
-							if (_current instanceof Supplier) {
-								Object invobj = ((Supplier) _current).get();
-								if (invobj instanceof Map) {
-									return ((Slot) ((Map) invobj).get(sltid)).getStack();
-								}
-							}
+		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (4)))
+				.getItem() == new ItemStack(MechanicalautomaticoperationcomponentsItem.block, (int) (1)).getItem()) || (((new Object() {
+					public ItemStack getItemStack(BlockPos pos, int sltid) {
+						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+						TileEntity _ent = world.getTileEntity(pos);
+						if (_ent != null) {
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								_retval.set(capability.getStackInSlot(sltid).copy());
+							});
 						}
-						return ItemStack.EMPTY;
+						return _retval.get();
 					}
-				}.getItemStack((int) (5))).getItem() == new ItemStack(MechanicalautomaticoperationcomponentsItem.block, (int) (1)).getItem())
-						|| (((new Object() {
-							public ItemStack getItemStack(int sltid) {
-								Entity _ent = entity;
-								if (_ent instanceof ServerPlayerEntity) {
-									Container _current = ((ServerPlayerEntity) _ent).openContainer;
-									if (_current instanceof Supplier) {
-										Object invobj = ((Supplier) _current).get();
-										if (invobj instanceof Map) {
-											return ((Slot) ((Map) invobj).get(sltid)).getStack();
-										}
-									}
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (5)))
+						.getItem() == new ItemStack(MechanicalautomaticoperationcomponentsItem.block, (int) (1)).getItem()) || (((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								TileEntity _ent = world.getTileEntity(pos);
+								if (_ent != null) {
+									_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+										_retval.set(capability.getStackInSlot(sltid).copy());
+									});
 								}
-								return ItemStack.EMPTY;
+								return _retval.get();
 							}
-						}.getItemStack((int) (6))).getItem() == new ItemStack(MechanicalautomaticoperationcomponentsItem.block, (int) (1)).getItem())
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (6)))
+								.getItem() == new ItemStack(MechanicalautomaticoperationcomponentsItem.block, (int) (1)).getItem())
 								|| ((new Object() {
-									public ItemStack getItemStack(int sltid) {
-										Entity _ent = entity;
-										if (_ent instanceof ServerPlayerEntity) {
-											Container _current = ((ServerPlayerEntity) _ent).openContainer;
-											if (_current instanceof Supplier) {
-												Object invobj = ((Supplier) _current).get();
-												if (invobj instanceof Map) {
-													return ((Slot) ((Map) invobj).get(sltid)).getStack();
-												}
-											}
+									public ItemStack getItemStack(BlockPos pos, int sltid) {
+										AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+										TileEntity _ent = world.getTileEntity(pos);
+										if (_ent != null) {
+											_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+												_retval.set(capability.getStackInSlot(sltid).copy());
+											});
 										}
-										return ItemStack.EMPTY;
+										return _retval.get();
 									}
-								}.getItemStack((int) (7))).getItem() == new ItemStack(MechanicalautomaticoperationcomponentsItem.block, (int) (1))
-										.getItem()))))) {
+								}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (7)))
+										.getItem() == new ItemStack(MechanicalautomaticoperationcomponentsItem.block, (int) (1)).getItem()))))) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("world", world);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
 				Gui1Procedure.executeProcedure($_dependencies);
 			}
 		}

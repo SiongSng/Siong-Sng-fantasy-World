@@ -109,9 +109,6 @@
     "onTickUpdate": {
       "name": "Plate_press_timer"
     },
-    "onRandomUpdateEvent": {
-      "name": "IronplatemakingmachineZaiYouXiKeGengXinShi"
-    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [],

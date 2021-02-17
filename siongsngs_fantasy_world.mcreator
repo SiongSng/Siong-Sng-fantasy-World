@@ -231,10 +231,6 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -466,10 +462,6 @@
       "registry_name": "platen_chip_program",
       "metadata": {
         "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
           {
             "name": "x",
             "type": "number"
@@ -2761,6 +2753,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "amethystdustcollectionbagrecipe"
+    },
+    {
+      "name": "Siongstonecobblestone",
+      "type": "block",
+      "sortid": 235,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "siongstonecobblestone"
     }
   ],
   "variable_elements": [
@@ -2803,15 +2804,15 @@
     "zh_tw": {
       "key.categories.ui": "菘菘的幻想世界",
       "itemGroup.tabsiong_sngworldfood": "菘菘的幻想世界-食物",
-      "item.siongsngs_fantasy_world.amethys_shovel": "幻想水晶鏟子",
-      "block.siongsngs_fantasy_world.cooperplatepress": "銅製壓板機",
       "item.siongsngs_fantasy_world.irongear": "鐵齒輪",
-      "item.siongsngs_fantasy_world.copper_armor_helmet": "銅頭盔",
+      "block.siongsngs_fantasy_world.cooperplatepress": "銅製壓板機",
+      "item.siongsngs_fantasy_world.amethys_shovel": "幻想水晶鏟子",
       "block.siongsngs_fantasy_world.siong_log_stairs": "菘樹樓梯",
+      "item.siongsngs_fantasy_world.copper_armor_helmet": "銅頭盔",
       "item.siongsngs_fantasy_world.siong_logfruit": "菘樹果實",
-      "itemGroup.tabsiong_sngworldblock": "菘菘的幻想世界-方塊",
-      "item.siongsngs_fantasy_world.mechanicalautomaticoperationcomponents": "機械自動運作晶片",
       "itemGroup.tabsiong_sngworldbiological": "菘菘的幻想世界-生物",
+      "item.siongsngs_fantasy_world.mechanicalautomaticoperationcomponents": "機械自動運作晶片",
+      "itemGroup.tabsiong_sngworldblock": "菘菘的幻想世界-方塊",
       "item.siongsngs_fantasy_world.amethy_armor_chestplate": "幻想水晶胸甲",
       "item.siongsngs_fantasy_world.copperingot": "炙熱的銅錠",
       "block.siongsngs_fantasy_world.goldchest": "金箱子",
@@ -2878,6 +2879,7 @@
       "item.siongsngs_fantasy_world.amethyst_torchitem": "幻想水晶火炬",
       "item.siongsngs_fantasy_world.mummy_spawn_egg": "木乃伊生怪蛋",
       "item.siongsngs_fantasy_world.copper_pickaxe": "銅稿子",
+      "block.siongsngs_fantasy_world.siongstonecobblestone": "Siong stone Cobblestone",
       "block.siongsngs_fantasy_world.siong_log_planks": "菘樹木材",
       "advancements.copper_oreprogress.title": "取得銅礦!!",
       "key.mcreator.openinfo": "開啟選單",
@@ -2935,15 +2937,15 @@
     "en_us": {
       "key.categories.ui": "Siong Sng\u0027s fantasy World",
       "itemGroup.tabsiong_sngworldfood": "Siong Sng\u0027s fantasy World-Food",
-      "item.siongsngs_fantasy_world.amethys_shovel": "Amethys Shovel",
-      "block.siongsngs_fantasy_world.cooperplatepress": "Cooper plate press",
       "item.siongsngs_fantasy_world.irongear": "Iron gear",
-      "item.siongsngs_fantasy_world.copper_armor_helmet": "Copper Helmet",
+      "block.siongsngs_fantasy_world.cooperplatepress": "Cooper plate press",
+      "item.siongsngs_fantasy_world.amethys_shovel": "Amethys Shovel",
       "block.siongsngs_fantasy_world.siong_log_stairs": "Siong Log Stairs",
+      "item.siongsngs_fantasy_world.copper_armor_helmet": "Copper Helmet",
       "item.siongsngs_fantasy_world.siong_logfruit": "Siong Log fruit",
-      "itemGroup.tabsiong_sngworldbiological": "Siong Sng\u0027s fantasy World-Biological",
-      "item.siongsngs_fantasy_world.mechanicalautomaticoperationcomponents": "Mechanical automatic operation of the chip",
       "itemGroup.tabsiong_sngworldblock": "Siong Sng\u0027s fantasy World-Block",
+      "item.siongsngs_fantasy_world.mechanicalautomaticoperationcomponents": "Mechanical automatic operation of the chip",
+      "itemGroup.tabsiong_sngworldbiological": "Siong Sng\u0027s fantasy World-Biological",
       "item.siongsngs_fantasy_world.amethy_armor_chestplate": "Amethy Chestplate",
       "item.siongsngs_fantasy_world.copperingot": "Copper ingot",
       "block.siongsngs_fantasy_world.goldchest": "Gold chest",
@@ -3010,6 +3012,7 @@
       "item.siongsngs_fantasy_world.amethyst_torchitem": "Amethyst Torch",
       "item.siongsngs_fantasy_world.mummy_spawn_egg": "Mummy Spawn Egg",
       "item.siongsngs_fantasy_world.copper_pickaxe": "Copper Pickaxe",
+      "block.siongsngs_fantasy_world.siongstonecobblestone": "Siong stone Cobblestone",
       "block.siongsngs_fantasy_world.siong_log_planks": "Siong_log Planks",
       "advancements.copper_oreprogress.title": "get Copper Ore!!",
       "key.mcreator.openinfo": "Open Menu",

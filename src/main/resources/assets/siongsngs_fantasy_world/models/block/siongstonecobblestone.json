@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "siongsngs_fantasy_world:blocks/siong_stone_cobblestone",
+    "up": "siongsngs_fantasy_world:blocks/siong_stone_cobblestone",
+    "north": "siongsngs_fantasy_world:blocks/siong_stone_cobblestone",
+    "east": "siongsngs_fantasy_world:blocks/siong_stone_cobblestone",
+    "south": "siongsngs_fantasy_world:blocks/siong_stone_cobblestone",
+    "west": "siongsngs_fantasy_world:blocks/siong_stone_cobblestone",
+    "particle": "siongsngs_fantasy_world:blocks/siong_stone_cobblestone"
+  }
+}

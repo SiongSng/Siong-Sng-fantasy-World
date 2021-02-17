@@ -407,7 +407,7 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 						return tileEntity.getTileData().getDouble(tag);
 					return 0;
 				}
-			}.getValue(new BlockPos((int) x, (int) y, (int) z), "ree")) + "%", 76, 4, -65536);
+			}.getValue(new BlockPos((int) x, (int) y, (int) z), "ree")) + "%", 69, 7, -65536);
 		}
 
 		@Override
@@ -516,7 +516,6 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 		if (buttonID == 0) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
@@ -534,7 +533,6 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 		if (slotID == 4 && changeType == 0) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
@@ -545,7 +543,6 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 		if (slotID == 5 && changeType == 0) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
@@ -556,7 +553,6 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 		if (slotID == 6 && changeType == 0) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
@@ -567,7 +563,6 @@ public class IronplatepressguiGui extends SiongsngsFantasyWorldModElements.ModEl
 		if (slotID == 7 && changeType == 0) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);

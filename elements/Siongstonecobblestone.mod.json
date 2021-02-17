@@ -2,15 +2,15 @@
   "_fv": 15,
   "_type": "block",
   "definition": {
-    "texture": "iron_plate_press_top",
-    "textureTop": "iron_plate_press_top",
-    "textureLeft": "iron_plate_making_machine_side",
-    "textureFront": "iron_plate_press_positive",
-    "textureRight": "iron_plate_making_machine_side",
-    "textureBack": "iron_plate_making_machine_side",
+    "texture": "siong_stone_cobblestone",
+    "textureTop": "siong_stone_cobblestone",
+    "textureLeft": "siong_stone_cobblestone",
+    "textureFront": "siong_stone_cobblestone",
+    "textureRight": "siong_stone_cobblestone",
+    "textureBack": "siong_stone_cobblestone",
     "renderType": 10,
     "customModelName": "Normal",
-    "rotationMode": 2,
+    "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
@@ -26,17 +26,14 @@
     "Mx": 1.0,
     "My": 1.0,
     "Mz": 1.0,
-    "name": "Iron plate press",
-    "specialInfo": [
-      "§b可以使用鐵製壓板機來製作許多板子，升級壓板機可以讓壓制速度更快。",
-      "壓制速度 --- X1"
-    ],
-    "hardness": 5.0,
-    "resistance": 50.0,
+    "name": "Siong stone Cobblestone",
+    "specialInfo": [],
+    "hardness": 1.0,
+    "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "CUSTOM:SiongSngIndustrialcomponents"
+      "value": "CUSTOM:SiongSngworldblock"
     },
     "destroyTool": "Not specified",
     "customDrop": {
@@ -72,32 +69,22 @@
     "luminance": 0,
     "unbreakable": false,
     "breakHarvestLevel": 1,
-    "spawnParticles": true,
+    "spawnParticles": false,
     "particleToSpawn": {
       "value": "CUSTOM:Blueflame"
     },
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
-    "particleAmount": 6,
-    "hasInventory": true,
-    "guiBoundTo": "Ironplatepressgui",
-    "openGUIOnRightClick": true,
-    "inventorySize": 8,
+    "particleAmount": 4,
+    "hasInventory": false,
+    "guiBoundTo": "<NONE>",
+    "openGUIOnRightClick": false,
+    "inventorySize": 9,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
-    "inventoryOutSlotIDs": [
-      0,
-      2,
-      3
-    ],
-    "inventoryInSlotIDs": [
-      1,
-      4,
-      5,
-      6,
-      7
-    ],
+    "inventoryOutSlotIDs": [],
+    "inventoryInSlotIDs": [],
     "hasEnergyStorage": false,
     "energyInitial": 0,
     "energyCapacity": 400000,
@@ -106,9 +93,6 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onTickUpdate": {
-      "name": "Plate_press_timer"
-    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [],

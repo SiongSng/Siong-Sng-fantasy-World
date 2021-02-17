@@ -2,7 +2,6 @@
 package siongsng.fantasy_world.block;
 
 import siongsng.fantasy_world.procedures.Plate_press_timerProcedure;
-import siongsng.fantasy_world.procedures.IronplatemakingmachineZaiYouXiKeGengXinShiProcedure;
 import siongsng.fantasy_world.particle.BlueflameParticle;
 import siongsng.fantasy_world.itemgroup.SiongSngIndustrialcomponentsItemGroup;
 import siongsng.fantasy_world.gui.IronplatepressguiGui;
@@ -189,15 +188,6 @@ public class IronplatemakingmachineBlock extends SiongsngsFantasyWorldModElement
 					double d5 = (random.nextFloat() - 0.5D) * 0.5D;
 					world.addParticle(BlueflameParticle.particle, d0, d1, d2, d3, d4, d5);
 				}
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				IronplatemakingmachineZaiYouXiKeGengXinShiProcedure.executeProcedure($_dependencies);
-			}
 		}
 
 		@Override
