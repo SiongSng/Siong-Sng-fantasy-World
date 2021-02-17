@@ -31,7 +31,7 @@ public class MechanicalautomaticoperationcomponentsItem extends SiongsngsFantasy
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(UtilityItemGroup.tab).maxStackSize(16).rarity(Rarity.UNCOMMON));
+			super(new Item.Properties().group(UtilityItemGroup.tab).maxStackSize(1).rarity(Rarity.UNCOMMON));
 			setRegistryName("mechanicalautomaticoperationcomponents");
 		}
 
