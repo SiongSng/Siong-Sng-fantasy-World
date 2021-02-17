@@ -27,5 +27,5 @@ jobs:
     - name: "Upload Artifact"
       uses: actions/upload-artifact@v1
       with:
-        name: Siong-Sng-fantasy-World+Forge-${{needs.job1.outputs.build_number}}
+        name: Siong-Sng-fantasy-World+Forge-$GITHUB_RUN_ID
         path: build/libs
