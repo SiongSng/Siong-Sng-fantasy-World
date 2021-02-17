@@ -14,37 +14,37 @@ import net.minecraft.item.BoneMealItem;
 import java.util.Map;
 
 @SiongsngsFantasyWorldModElements.ModElement.Tag
-public class Elementary_culture_soil_growth_bonusProcedure extends SiongsngsFantasyWorldModElements.ModElement {
-	public Elementary_culture_soil_growth_bonusProcedure(SiongsngsFantasyWorldModElements instance) {
-		super(instance, 33);
+public class IntermediateculturesoilgrowthbonusProcedure extends SiongsngsFantasyWorldModElements.ModElement {
+	public IntermediateculturesoilgrowthbonusProcedure(SiongsngsFantasyWorldModElements instance) {
+		super(instance, 236);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				SiongsngsFantasyWorldMod.LOGGER.warn("Failed to load dependency x for procedure Elementary_culture_soil_growth_bonus!");
+				SiongsngsFantasyWorldMod.LOGGER.warn("Failed to load dependency x for procedure Intermediateculturesoilgrowthbonus!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				SiongsngsFantasyWorldMod.LOGGER.warn("Failed to load dependency y for procedure Elementary_culture_soil_growth_bonus!");
+				SiongsngsFantasyWorldMod.LOGGER.warn("Failed to load dependency y for procedure Intermediateculturesoilgrowthbonus!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				SiongsngsFantasyWorldMod.LOGGER.warn("Failed to load dependency z for procedure Elementary_culture_soil_growth_bonus!");
+				SiongsngsFantasyWorldMod.LOGGER.warn("Failed to load dependency z for procedure Intermediateculturesoilgrowthbonus!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				SiongsngsFantasyWorldMod.LOGGER.warn("Failed to load dependency world for procedure Elementary_culture_soil_growth_bonus!");
+				SiongsngsFantasyWorldMod.LOGGER.warn("Failed to load dependency world for procedure Intermediateculturesoilgrowthbonus!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((Math.random() < 0.12)) {
+		if ((Math.random() < 0.24)) {
 			if (world instanceof World) {
 				if (BoneMealItem.applyBonemeal(new ItemStack(Items.BONE_MEAL), (World) world, new BlockPos((int) x, (int) (y + 1), (int) z))
 						|| BoneMealItem.growSeagrass(new ItemStack(Items.BONE_MEAL), (World) world, new BlockPos((int) x, (int) (y + 1), (int) z),
