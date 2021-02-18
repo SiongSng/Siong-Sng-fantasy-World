@@ -84,7 +84,7 @@
       "sea_level": 63,
       "disable_mob_generation": false,
       "default_block": {
-        "Name": "siongsngs_fantasy_world:siongstonecobblestone"
+        "Name": "siongsngs_fantasy_world:siongstone"
       },
       "default_fluid": {
         "Name": "minecraft:water",

@@ -2791,6 +2791,48 @@
           }
         ]
       }
+    },
+    {
+      "name": "Siongstone_damage",
+      "type": "procedure",
+      "sortid": 237,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "siongstone_damage",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Siongstone",
+      "type": "block",
+      "sortid": 237,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "siongstone"
     }
   ],
   "variable_elements": [
@@ -2908,7 +2950,7 @@
       "item.siongsngs_fantasy_world.amethyst_torchitem": "¤Û·Q¤ô´¹¤õ¬²",
       "item.siongsngs_fantasy_world.mummy_spawn_egg": "¤ì¤D¥ì¥Í©Ç³J",
       "item.siongsngs_fantasy_world.copper_pickaxe": "»É½Z¤l",
-      "block.siongsngs_fantasy_world.siongstonecobblestone": "Siong stone Cobblestone",
+      "block.siongsngs_fantasy_world.siongstonecobblestone": "Ûp¥ÛÃZ³n¥Û",
       "block.siongsngs_fantasy_world.siong_log_planks": "Ûp¾ð¤ì§÷",
       "advancements.copper_oreprogress.title": "¨ú±o»ÉÄq!!",
       "key.mcreator.openinfo": "¶}±Ò¿ï³æ",
@@ -2927,6 +2969,7 @@
       "item.siongsngs_fantasy_world.fanta_juice_bucket": "ªâ¹F¥Ä±í",
       "advancements.industrialera.descr": "»s§@¤@­ÓÅK¾¦½ü",
       "item.siongsngs_fantasy_world.silver_armor_helmet": "»ÈÀY²¯",
+      "block.siongsngs_fantasy_world.siongstone": "Ûp¥Û",
       "biome.siongsngs_fantasy_world.siongforest_ecologicaldomain": "Ûp´ËªL",
       "entity.siongsngs_fantasy_world.stonecow": "¥ÛÀY¤û",
       "item.siongsngs_fantasy_world.siong_sng_dictionary": "ÛpÛpªº¤Û·Q¥@¬ÉÃã¨å",
@@ -2966,15 +3009,15 @@
     "en_us": {
       "key.categories.ui": "Siong Sng\u0027s fantasy World",
       "itemGroup.tabsiong_sngworldfood": "Siong Sng\u0027s fantasy World-Food",
-      "item.siongsngs_fantasy_world.amethys_shovel": "Amethys Shovel",
-      "block.siongsngs_fantasy_world.cooperplatepress": "Cooper plate press",
       "item.siongsngs_fantasy_world.irongear": "Iron gear",
-      "item.siongsngs_fantasy_world.copper_armor_helmet": "Copper Helmet",
+      "block.siongsngs_fantasy_world.cooperplatepress": "Cooper plate press",
+      "item.siongsngs_fantasy_world.amethys_shovel": "Amethys Shovel",
       "block.siongsngs_fantasy_world.siong_log_stairs": "Siong Log Stairs",
+      "item.siongsngs_fantasy_world.copper_armor_helmet": "Copper Helmet",
       "item.siongsngs_fantasy_world.siong_logfruit": "Siong Log fruit",
-      "itemGroup.tabsiong_sngworldbiological": "Siong Sng\u0027s fantasy World-Biological",
-      "item.siongsngs_fantasy_world.mechanicalautomaticoperationcomponents": "Mechanical automatic operation of the chip",
       "itemGroup.tabsiong_sngworldblock": "Siong Sng\u0027s fantasy World-Block",
+      "item.siongsngs_fantasy_world.mechanicalautomaticoperationcomponents": "Mechanical automatic operation of the chip",
+      "itemGroup.tabsiong_sngworldbiological": "Siong Sng\u0027s fantasy World-Biological",
       "item.siongsngs_fantasy_world.amethy_armor_chestplate": "Amethy Chestplate",
       "item.siongsngs_fantasy_world.copperingot": "Copper ingot",
       "block.siongsngs_fantasy_world.goldchest": "Gold chest",
@@ -3060,6 +3103,7 @@
       "item.siongsngs_fantasy_world.fanta_juice_bucket": "FantaJuice Bucket",
       "advancements.industrialera.descr": "Making an iron gears.",
       "item.siongsngs_fantasy_world.silver_armor_helmet": "Silver Helmet",
+      "block.siongsngs_fantasy_world.siongstone": "Siong stone",
       "biome.siongsngs_fantasy_world.siongforest_ecologicaldomain": "Siong forest",
       "entity.siongsngs_fantasy_world.stonecow": "Stone cow",
       "item.siongsngs_fantasy_world.siong_sng_dictionary": "Siong Sng\u0027s fantasy World dictionary",

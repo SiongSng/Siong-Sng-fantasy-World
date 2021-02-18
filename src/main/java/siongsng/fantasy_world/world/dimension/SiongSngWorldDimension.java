@@ -3,7 +3,7 @@ package siongsng.fantasy_world.world.dimension;
 
 import siongsng.fantasy_world.particle.BlueflameParticle;
 import siongsng.fantasy_world.item.SiongSngWorldItem;
-import siongsng.fantasy_world.block.SiongstonecobblestoneBlock;
+import siongsng.fantasy_world.block.SiongstoneBlock;
 import siongsng.fantasy_world.block.SiongSngPortalframeBlock;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 
@@ -87,10 +87,10 @@ public class SiongSngWorldDimension extends SiongsngsFantasyWorldModElements.Mod
 			try {
 				ObfuscationReflectionHelper.setPrivateValue(WorldCarver.class, WorldCarver.CAVE, new ImmutableSet.Builder<Block>()
 						.addAll((Set<Block>) ObfuscationReflectionHelper.getPrivateValue(WorldCarver.class, WorldCarver.CAVE, "field_222718_j"))
-						.add(SiongstonecobblestoneBlock.block.getDefaultState().getBlock()).build(), "field_222718_j");
+						.add(SiongstoneBlock.block.getDefaultState().getBlock()).build(), "field_222718_j");
 				ObfuscationReflectionHelper.setPrivateValue(WorldCarver.class, WorldCarver.CANYON, new ImmutableSet.Builder<Block>()
 						.addAll((Set<Block>) ObfuscationReflectionHelper.getPrivateValue(WorldCarver.class, WorldCarver.CANYON, "field_222718_j"))
-						.add(SiongstonecobblestoneBlock.block.getDefaultState().getBlock()).build(), "field_222718_j");
+						.add(SiongstoneBlock.block.getDefaultState().getBlock()).build(), "field_222718_j");
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
