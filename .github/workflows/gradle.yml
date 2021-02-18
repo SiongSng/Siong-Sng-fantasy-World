@@ -27,5 +27,15 @@ jobs:
     - name: "Upload Artifact"
       uses: actions/upload-artifact@v1
       with:
-        name: Siong-Sng-fantasy-World+Forge-${{ github.run_number }}
+        name: Siong-Sng-fantasy-World+Forge-${{ github.run_number }}.jar
         path: build/libs
+    - name: Upload binaries to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: build/libs
+        asset_name: Siong-Sng-fantasy-World.jar
+        tag: Snapshot-${{ github.run_number }}
+        prerelease: true
+        overwrite: true
+        body: "注意:此為開發中版本，可能存在許多錯誤"
