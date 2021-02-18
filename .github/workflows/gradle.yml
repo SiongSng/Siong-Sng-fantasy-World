@@ -33,7 +33,7 @@ jobs:
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: build/libs/Siong-Sng-fantasy-World.jar
+        file: build/libs/Siong-Sng-fantasy-World-1.0.jar
         asset_name: Siong-Sng-fantasy-World.jar
         tag: Snapshot-${{ github.run_number }}
         prerelease: true
