@@ -38,4 +38,4 @@ jobs:
         tag: Snapshot-${{ github.run_number }}
         prerelease: true
         overwrite: true
-        body: "注意:此為開發中版本，可能存在許多錯誤"
+        body: "更新內容:\n${{ github.workflow }}\n\n注意:此為開發中版本，可能存在許多錯誤"
