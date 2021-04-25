@@ -12,7 +12,7 @@ apply plugin: 'eclipse'
 
 version = '1.0'
 group = 'com.yourname.modid'
-archivesBaseName = 'modid'
+archivesBaseName = 'Siong-Sng-fantasy-World'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(8)
 
