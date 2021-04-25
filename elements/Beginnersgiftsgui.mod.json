@@ -14,7 +14,7 @@
         "type": "outputslot",
         "data": {
           "id": 0,
-          "disableStackInteraction": false,
+          "disableStackInteraction": true,
           "dropItemsWhenNotBound": true,
           "name": "Slot #0",
           "x": 132,
@@ -25,7 +25,7 @@
         "type": "outputslot",
         "data": {
           "id": 1,
-          "disableStackInteraction": false,
+          "disableStackInteraction": true,
           "dropItemsWhenNotBound": true,
           "name": "Slot #1",
           "x": 150,
@@ -36,7 +36,7 @@
         "type": "outputslot",
         "data": {
           "id": 2,
-          "disableStackInteraction": false,
+          "disableStackInteraction": true,
           "dropItemsWhenNotBound": true,
           "name": "Slot #2",
           "x": 168,
@@ -47,7 +47,7 @@
         "type": "outputslot",
         "data": {
           "id": 3,
-          "disableStackInteraction": false,
+          "disableStackInteraction": true,
           "dropItemsWhenNotBound": true,
           "name": "Slot #3",
           "x": 186,
@@ -58,7 +58,7 @@
         "type": "outputslot",
         "data": {
           "id": 4,
-          "disableStackInteraction": false,
+          "disableStackInteraction": true,
           "dropItemsWhenNotBound": true,
           "name": "Slot #4",
           "x": 204,
@@ -69,7 +69,7 @@
         "type": "outputslot",
         "data": {
           "id": 5,
-          "disableStackInteraction": false,
+          "disableStackInteraction": true,
           "dropItemsWhenNotBound": true,
           "name": "Slot #5",
           "x": 222,
@@ -80,7 +80,7 @@
         "type": "outputslot",
         "data": {
           "id": 6,
-          "disableStackInteraction": false,
+          "disableStackInteraction": true,
           "dropItemsWhenNotBound": true,
           "name": "Slot #6",
           "x": 240,
@@ -310,12 +310,12 @@
       {
         "type": "label",
         "data": {
-          "text": "初學者禮物(關閉介面後即可獲得物品)",
+          "text": "初學者禮物(關閉介面即可領取)",
           "color": {
             "value": -65536,
             "falpha": 0.0
           },
-          "name": "初學者禮物(關閉介面後即可獲得物品)",
+          "name": "初學者禮物(關閉介面即可領取)",
           "x": 130,
           "y": 41
         }

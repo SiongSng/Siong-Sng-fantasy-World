@@ -66,7 +66,7 @@ public class BeginnersgiftsguiGuiWindow extends ContainerScreen<Beginnersgiftsgu
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "\u521D\u5B78\u8005\u79AE\u7269(\u95DC\u9589\u4ECB\u9762\u5F8C\u5373\u53EF\u7372\u5F97\u7269\u54C1)", 4, 4, -65536);
+		this.font.drawString(ms, "\u521D\u5B78\u8005\u79AE\u7269(\u95DC\u9589\u4ECB\u9762\u5373\u53EF\u9818\u53D6)", 4, 4, -65536);
 	}
 
 	@Override

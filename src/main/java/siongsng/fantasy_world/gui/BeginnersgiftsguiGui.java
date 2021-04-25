@@ -115,11 +115,21 @@ public class BeginnersgiftsguiGui extends SiongsngsFantasyWorldModElements.ModEl
 			}
 			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 7, 17) {
 				@Override
+				public boolean canTakeStack(PlayerEntity player) {
+					return false;
+				}
+
+				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
 			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 25, 17) {
+				@Override
+				public boolean canTakeStack(PlayerEntity player) {
+					return false;
+				}
+
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
@@ -127,11 +137,21 @@ public class BeginnersgiftsguiGui extends SiongsngsFantasyWorldModElements.ModEl
 			}));
 			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 43, 17) {
 				@Override
+				public boolean canTakeStack(PlayerEntity player) {
+					return false;
+				}
+
+				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
 			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 61, 17) {
+				@Override
+				public boolean canTakeStack(PlayerEntity player) {
+					return false;
+				}
+
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
@@ -139,17 +159,32 @@ public class BeginnersgiftsguiGui extends SiongsngsFantasyWorldModElements.ModEl
 			}));
 			this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 79, 17) {
 				@Override
+				public boolean canTakeStack(PlayerEntity player) {
+					return false;
+				}
+
+				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
 			this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 97, 17) {
 				@Override
+				public boolean canTakeStack(PlayerEntity player) {
+					return false;
+				}
+
+				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
 			this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 115, 17) {
+				@Override
+				public boolean canTakeStack(PlayerEntity player) {
+					return false;
+				}
+
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
