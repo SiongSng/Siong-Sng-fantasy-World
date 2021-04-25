@@ -1,5 +1,5 @@
 {
-  "_fv": 15,
+  "_fv": 18,
   "_type": "particle",
   "definition": {
     "texture": "blue_flame_particles.png",
@@ -12,6 +12,8 @@
     "gravity": 0.0,
     "maxAge": 7,
     "maxAgeDiff": 1,
+    "angularVelocity": 0.0,
+    "angularAcceleration": 0.0,
     "canCollide": true,
     "alwaysShow": false,
     "renderType": "OPAQUE"

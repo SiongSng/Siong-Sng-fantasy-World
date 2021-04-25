@@ -64,7 +64,7 @@ public class SiongfruitBlock extends SiongsngsFantasyWorldModElements.ModElement
 		public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.GROUND).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(1)
-					.harvestTool(ToolType.HOE).notSolid().tickRandomly().setOpaque((bs, br, bp) -> false));
+					.harvestTool(ToolType.HOE).setRequiresTool().notSolid().tickRandomly().setOpaque((bs, br, bp) -> false));
 			this.setDefaultState(this.stateContainer.getBaseState().with(WATERLOGGED, false));
 			setRegistryName("siongfruit");
 		}

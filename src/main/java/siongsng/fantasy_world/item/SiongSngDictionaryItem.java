@@ -3,6 +3,7 @@ package siongsng.fantasy_world.item;
 
 import siongsng.fantasy_world.procedures.Flif_bookProcedure;
 import siongsng.fantasy_world.itemgroup.UtilityItemGroup;
+import siongsng.fantasy_world.gui.SiongSngBookguiGuiWindow;
 import siongsng.fantasy_world.gui.SiongSngBookguiGui;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 
@@ -63,7 +64,7 @@ public class SiongSngDictionaryItem extends SiongsngsFantasyWorldModElements.Mod
 	@OnlyIn(Dist.CLIENT)
 	public void onItemDropped(ItemTossEvent event) {
 		if (event.getEntityItem().getItem().getItem() == block) {
-			if (Minecraft.getInstance().currentScreen instanceof SiongSngBookguiGui.GuiWindow) {
+			if (Minecraft.getInstance().currentScreen instanceof SiongSngBookguiGuiWindow) {
 				Minecraft.getInstance().player.closeScreen();
 			}
 		}

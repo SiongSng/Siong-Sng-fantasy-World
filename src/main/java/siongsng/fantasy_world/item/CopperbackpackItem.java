@@ -2,6 +2,7 @@
 package siongsng.fantasy_world.item;
 
 import siongsng.fantasy_world.itemgroup.UtilityItemGroup;
+import siongsng.fantasy_world.gui.CopperbackpackguiGuiWindow;
 import siongsng.fantasy_world.gui.CopperbackpackguiGui;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 
@@ -20,7 +21,6 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
-import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.math.BlockPos;
@@ -61,7 +61,7 @@ public class CopperbackpackItem extends SiongsngsFantasyWorldModElements.ModElem
 	@OnlyIn(Dist.CLIENT)
 	public void onItemDropped(ItemTossEvent event) {
 		if (event.getEntityItem().getItem().getItem() == block) {
-			if (Minecraft.getInstance().currentScreen instanceof CopperbackpackguiGui.GuiWindow) {
+			if (Minecraft.getInstance().currentScreen instanceof CopperbackpackguiGuiWindow) {
 				Minecraft.getInstance().player.closeScreen();
 			}
 		}
@@ -95,7 +95,8 @@ public class CopperbackpackItem extends SiongsngsFantasyWorldModElements.ModElem
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(( new TranslationTextComponent("item.siongsngs_fantasy_world.copperbackpack.description")));
+			list.add(new StringTextComponent(
+					"\u00A7b\u9285\u80CC\u5305\u5171\u670936\u683C\u7269\u54C1\u6B04\uFF0C\u53F3\u9375\u53EF\u4EE5\u958B\u555F"));
 		}
 
 		@Override

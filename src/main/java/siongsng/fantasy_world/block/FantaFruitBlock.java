@@ -50,7 +50,7 @@ public class FantaFruitBlock extends SiongsngsFantasyWorldModElements.ModElement
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.GROUND).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(1)
-					.harvestTool(ToolType.HOE).notSolid().setOpaque((bs, br, bp) -> false));
+					.harvestTool(ToolType.HOE).setRequiresTool().notSolid().setOpaque((bs, br, bp) -> false));
 			setRegistryName("fanta_fruit");
 		}
 

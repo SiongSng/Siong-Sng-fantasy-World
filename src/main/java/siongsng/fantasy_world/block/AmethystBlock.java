@@ -7,18 +7,22 @@ import siongsng.fantasy_world.itemgroup.SiongSngOreItemGroup;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.gen.feature.template.RuleTest;
 import net.minecraft.world.gen.feature.template.IRuleTestType;
-import net.minecraft.world.gen.feature.template.BlockMatchRuleTest;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.feature.OreFeature;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.ChunkGenerator;
 import net.minecraft.world.World;
@@ -28,6 +32,7 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IBlockDisplayReader;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
@@ -62,6 +67,7 @@ public class AmethystBlock extends SiongsngsFantasyWorldModElements.ModElement {
 	public AmethystBlock(SiongsngsFantasyWorldModElements instance) {
 		super(instance, 38);
 		MinecraftForge.EVENT_BUS.register(this);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
 
 	@Override
@@ -79,8 +85,8 @@ public class AmethystBlock extends SiongsngsFantasyWorldModElements.ModElement {
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.GLASS).hardnessAndResistance(3f, 15f).setLightLevel(s -> 4).harvestLevel(3)
-					.harvestTool(ToolType.PICKAXE).notSolid().setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true)
-					.setOpaque((bs, br, bp) -> false));
+					.harvestTool(ToolType.PICKAXE).setRequiresTool().notSolid().setNeedsPostProcessing((bs, br, bp) -> true)
+					.setEmmisiveRendering((bs, br, bp) -> true).setOpaque((bs, br, bp) -> false));
 			setRegistryName("amethyst");
 		}
 
@@ -141,41 +147,61 @@ public class AmethystBlock extends SiongsngsFantasyWorldModElements.ModElement {
 				}
 		}
 	}
+	private static Feature<OreFeatureConfig> feature = null;
+	private static ConfiguredFeature<?, ?> configuredFeature = null;
+	private static IRuleTestType<CustomRuleTest> CUSTOM_MATCH = null;
+	private static class CustomRuleTest extends RuleTest {
+		static final CustomRuleTest INSTANCE = new CustomRuleTest();
+		static final com.mojang.serialization.Codec<CustomRuleTest> codec = com.mojang.serialization.Codec.unit(() -> INSTANCE);
+		public boolean test(BlockState blockAt, Random random) {
+			boolean blockCriteria = false;
+			if (blockAt.getBlock() == Blocks.AIR.getDefaultState().getBlock())
+				blockCriteria = true;
+			if (blockAt.getBlock() == Blocks.VOID_AIR.getDefaultState().getBlock())
+				blockCriteria = true;
+			if (blockAt.getBlock() == Blocks.CAVE_AIR.getDefaultState().getBlock())
+				blockCriteria = true;
+			return blockCriteria;
+		}
+
+		protected IRuleTestType<?> getType() {
+			return CUSTOM_MATCH;
+		}
+	}
+
+	private static class FeatureRegisterHandler {
+		@SubscribeEvent
+		public void registerFeature(RegistryEvent.Register<Feature<?>> event) {
+			CUSTOM_MATCH = Registry.register(Registry.RULE_TEST, new ResourceLocation("siongsngs_fantasy_world:amethyst_match"),
+					() -> CustomRuleTest.codec);
+			feature = new OreFeature(OreFeatureConfig.CODEC) {
+				@Override
+				public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
+					RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
+					boolean dimensionCriteria = false;
+					if (dimensionType == World.OVERWORLD)
+						dimensionCriteria = true;
+					if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY,
+							new ResourceLocation("siongsngs_fantasy_world:siong_sng_world")))
+						dimensionCriteria = true;
+					if (!dimensionCriteria)
+						return false;
+					int x = pos.getX();
+					int y = pos.getY();
+					int z = pos.getZ();
+					if (!Amethyst_generateProcedure.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world)))
+						return false;
+					return super.generate(world, generator, rand, pos, config);
+				}
+			};
+			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 3)).range(110)
+					.square().func_242731_b(17);
+			event.getRegistry().register(feature.setRegistryName("amethyst"));
+			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("siongsngs_fantasy_world:amethyst"), configuredFeature);
+		}
+	}
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
-		event.getGeneration().getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).add(() -> new OreFeature(OreFeatureConfig.CODEC) {
-			@Override
-			public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
-				RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
-				boolean dimensionCriteria = false;
-				if (dimensionType == World.OVERWORLD)
-					dimensionCriteria = true;
-				if (dimensionType == RegistryKey.getOrCreateKey(Registry.WORLD_KEY, new ResourceLocation("siongsngs_fantasy_world:siong_sng_world")))
-					dimensionCriteria = true;
-				if (!dimensionCriteria)
-					return false;
-				int x = pos.getX();
-				int y = pos.getY();
-				int z = pos.getZ();
-				if (!Amethyst_generateProcedure.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world)))
-					return false;
-				return super.generate(world, generator, rand, pos, config);
-			}
-		}.withConfiguration(new OreFeatureConfig(new BlockMatchRuleTest(Blocks.AIR.getDefaultState().getBlock()) {
-			public boolean test(BlockState blockAt, Random random) {
-				boolean blockCriteria = false;
-				if (blockAt.getBlock() == Blocks.AIR.getDefaultState().getBlock())
-					blockCriteria = true;
-				if (blockAt.getBlock() == Blocks.VOID_AIR.getDefaultState().getBlock())
-					blockCriteria = true;
-				if (blockAt.getBlock() == Blocks.CAVE_AIR.getDefaultState().getBlock())
-					blockCriteria = true;
-				return blockCriteria;
-			}
-
-			protected IRuleTestType<?> getType() {
-				return IRuleTestType.BLOCK_MATCH;
-			}
-		}, block.getDefaultState(), 3)).range(110).square().func_242731_b(17));
+		event.getGeneration().getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).add(() -> configuredFeature);
 	}
 }

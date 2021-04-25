@@ -40,7 +40,7 @@ public class Siong_logLogBlock extends SiongsngsFantasyWorldModElements.ModEleme
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 2f).setLightLevel(s -> 0).harvestLevel(0)
-					.harvestTool(ToolType.AXE));
+					.harvestTool(ToolType.AXE).setRequiresTool());
 			setRegistryName("siong_log_log");
 		}
 

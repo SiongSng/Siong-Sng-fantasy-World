@@ -51,7 +51,7 @@ public class IntermediateculturesoilBlock extends SiongsngsFantasyWorldModElemen
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ORGANIC).sound(SoundType.GROUND).hardnessAndResistance(5f, 10f).setLightLevel(s -> 0)
-					.harvestLevel(2).harvestTool(ToolType.SHOVEL));
+					.harvestLevel(2).harvestTool(ToolType.SHOVEL).setRequiresTool());
 			setRegistryName("intermediateculturesoil");
 		}
 

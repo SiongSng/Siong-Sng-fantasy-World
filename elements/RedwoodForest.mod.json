@@ -1,5 +1,5 @@
 {
-  "_fv": 15,
+  "_fv": 18,
   "_type": "biome",
   "definition": {
     "name": "Redwood Forest",
@@ -94,7 +94,8 @@
     "oceanRuinType": "NONE",
     "defaultFeatures": [
       "Caves",
-      "Ores"
+      "Ores",
+      "FrozenTopLayer"
     ],
     "spawnEntries": []
   }

@@ -75,7 +75,7 @@ public class AmethystTorchBlock extends SiongsngsFantasyWorldModElements.ModElem
 		@Override
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
 			Vector3d offset = state.getOffset(world, pos);
-			return VoxelShapes.create(0.375D, 0D, 0.375D, 0.625D, 1D, 0.625D).withOffset(offset.x, offset.y, offset.z);
+			return VoxelShapes.or(makeCuboidShape(6, 0, 6, 10, 16, 10)).withOffset(offset.x, offset.y, offset.z);
 		}
 
 		@Override

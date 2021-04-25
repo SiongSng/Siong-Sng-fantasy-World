@@ -39,7 +39,7 @@ public class RedwoodPlanksBlock extends SiongsngsFantasyWorldModElements.ModElem
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 3f).setLightLevel(s -> 0).harvestLevel(0)
-					.harvestTool(ToolType.AXE));
+					.harvestTool(ToolType.AXE).setRequiresTool());
 			setRegistryName("redwood_planks");
 		}
 

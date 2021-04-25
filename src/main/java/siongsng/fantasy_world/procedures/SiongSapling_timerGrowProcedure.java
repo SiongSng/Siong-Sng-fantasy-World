@@ -77,7 +77,7 @@ public class SiongSapling_timerGrowProcedure extends SiongsngsFantasyWorldModEle
 						return -1;
 					}
 				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "timerGrow")) >= 0.875)) {
-					if (world instanceof World && !world.isRemote()) {
+					if (world instanceof ServerWorld) {
 						Template template = ((ServerWorld) world).getStructureTemplateManager()
 								.getTemplateDefaulted(new ResourceLocation("siongsngs_fantasy_world", "siong_log"));
 						if (template != null) {
@@ -112,7 +112,7 @@ public class SiongSapling_timerGrowProcedure extends SiongsngsFantasyWorldModEle
 						return -1;
 					}
 				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "timerGrow")) >= 0.875)) {
-					if (world instanceof World && !world.isRemote()) {
+					if (world instanceof ServerWorld) {
 						Template template = ((ServerWorld) world).getStructureTemplateManager()
 								.getTemplateDefaulted(new ResourceLocation("siongsngs_fantasy_world", "redwood_log"));
 						if (template != null) {
@@ -147,7 +147,7 @@ public class SiongSapling_timerGrowProcedure extends SiongsngsFantasyWorldModEle
 						return -1;
 					}
 				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "timerGrow")) >= 0.875)) {
-					if (world instanceof World && !world.isRemote()) {
+					if (world instanceof ServerWorld) {
 						Template template = ((ServerWorld) world).getStructureTemplateManager()
 								.getTemplateDefaulted(new ResourceLocation("siongsngs_fantasy_world", "fanta_log"));
 						if (template != null) {

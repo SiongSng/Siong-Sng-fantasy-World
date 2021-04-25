@@ -128,7 +128,7 @@ public class SiongSaplingbonemealProcedure extends SiongsngsFantasyWorldModEleme
 						if (world instanceof World)
 							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 					}
-					if (world instanceof World && !world.isRemote()) {
+					if (world instanceof ServerWorld) {
 						Template template = ((ServerWorld) world).getStructureTemplateManager()
 								.getTemplateDefaulted(new ResourceLocation("siongsngs_fantasy_world", "siong_log"));
 						if (template != null) {
@@ -163,7 +163,7 @@ public class SiongSaplingbonemealProcedure extends SiongsngsFantasyWorldModEleme
 						if (world instanceof World)
 							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 					}
-					if (world instanceof World && !world.isRemote()) {
+					if (world instanceof ServerWorld) {
 						Template template = ((ServerWorld) world).getStructureTemplateManager()
 								.getTemplateDefaulted(new ResourceLocation("siongsngs_fantasy_world", "redwood_log"));
 						if (template != null) {
@@ -198,7 +198,7 @@ public class SiongSaplingbonemealProcedure extends SiongsngsFantasyWorldModEleme
 						if (world instanceof World)
 							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 					}
-					if (world instanceof World && !world.isRemote()) {
+					if (world instanceof ServerWorld) {
 						Template template = ((ServerWorld) world).getStructureTemplateManager()
 								.getTemplateDefaulted(new ResourceLocation("siongsngs_fantasy_world", "fanta_log"));
 						if (template != null) {
@@ -228,6 +228,7 @@ public class SiongSaplingbonemealProcedure extends SiongsngsFantasyWorldModEleme
 		dependencies.put("z", k);
 		dependencies.put("world", world);
 		dependencies.put("entity", entity);
+		dependencies.put("direction", event.getFace());
 		dependencies.put("event", event);
 		this.executeProcedure(dependencies);
 	}

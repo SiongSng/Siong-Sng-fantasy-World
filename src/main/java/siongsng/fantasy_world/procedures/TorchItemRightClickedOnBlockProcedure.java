@@ -22,7 +22,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.network.play.NetworkPlayerInfo;
-import net.minecraft.client.entity.player.ClientPlayerEntity;
+import net.minecraft.client.entity.player.AbstractClientPlayerEntity;
 import net.minecraft.client.Minecraft;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
@@ -78,7 +78,7 @@ public class TorchItemRightClickedOnBlockProcedure extends SiongsngsFantasyWorld
 					return ((ServerPlayerEntity) _ent).interactionManager.getGameType() == GameType.SURVIVAL;
 				} else if (_ent instanceof PlayerEntity && _ent.world.isRemote()) {
 					NetworkPlayerInfo _npi = Minecraft.getInstance().getConnection()
-							.getPlayerInfo(((ClientPlayerEntity) _ent).getGameProfile().getId());
+							.getPlayerInfo(((AbstractClientPlayerEntity) _ent).getGameProfile().getId());
 					return _npi != null && _npi.getGameType() == GameType.SURVIVAL;
 				}
 				return false;

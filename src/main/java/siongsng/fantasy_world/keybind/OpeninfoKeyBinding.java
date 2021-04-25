@@ -39,7 +39,7 @@ public class OpeninfoKeyBinding extends SiongsngsFantasyWorldModElements.ModElem
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
-		keys = new KeyBinding("key.mcreator.openinfo", GLFW.GLFW_KEY_Y, "key.categories.ui");
+		keys = new KeyBinding("key.siongsngs_fantasy_world.openinfo", GLFW.GLFW_KEY_Y, "key.categories.ui");
 		ClientRegistry.registerKeyBinding(keys);
 		MinecraftForge.EVENT_BUS.register(this);
 	}

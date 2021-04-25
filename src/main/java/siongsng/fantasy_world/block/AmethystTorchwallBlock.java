@@ -87,17 +87,17 @@ public class AmethystTorchwallBlock extends SiongsngsFantasyWorldModElements.Mod
 			switch ((Direction) state.get(FACING)) {
 				case SOUTH :
 				default :
-					return VoxelShapes.create(0.625D, 0D, 0.375D, 0.375D, 1D, 0D).withOffset(offset.x, offset.y, offset.z);
+					return VoxelShapes.or(makeCuboidShape(10, 0, 6, 6, 16, 0)).withOffset(offset.x, offset.y, offset.z);
 				case NORTH :
-					return VoxelShapes.create(0.375D, 0D, 0.625D, 0.625D, 1D, 1D).withOffset(offset.x, offset.y, offset.z);
-				case WEST :
-					return VoxelShapes.create(0.625D, 0D, 0.625D, 1D, 1D, 0.375D).withOffset(offset.x, offset.y, offset.z);
+					return VoxelShapes.or(makeCuboidShape(6, 0, 10, 10, 16, 16)).withOffset(offset.x, offset.y, offset.z);
 				case EAST :
-					return VoxelShapes.create(0.375D, 0D, 0.375D, 0D, 1D, 0.625D).withOffset(offset.x, offset.y, offset.z);
+					return VoxelShapes.or(makeCuboidShape(6, 0, 6, 0, 16, 10)).withOffset(offset.x, offset.y, offset.z);
+				case WEST :
+					return VoxelShapes.or(makeCuboidShape(10, 0, 10, 16, 16, 6)).withOffset(offset.x, offset.y, offset.z);
 				case UP :
-					return VoxelShapes.create(0.375D, 0.375D, 0D, 0.625D, 0D, 1D).withOffset(offset.x, offset.y, offset.z);
+					return VoxelShapes.or(makeCuboidShape(6, 6, 0, 10, 0, 16)).withOffset(offset.x, offset.y, offset.z);
 				case DOWN :
-					return VoxelShapes.create(0.375D, 0.625D, 1D, 0.625D, 1D, 0D).withOffset(offset.x, offset.y, offset.z);
+					return VoxelShapes.or(makeCuboidShape(6, 10, 16, 10, 16, 0)).withOffset(offset.x, offset.y, offset.z);
 			}
 		}
 

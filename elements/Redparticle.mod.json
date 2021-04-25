@@ -1,5 +1,5 @@
 {
-  "_fv": 15,
+  "_fv": 18,
   "_type": "particle",
   "definition": {
     "texture": "red_particle.png",
@@ -12,6 +12,8 @@
     "gravity": 0.0,
     "maxAge": 7,
     "maxAgeDiff": 0,
+    "angularVelocity": 0.0,
+    "angularAcceleration": 0.0,
     "canCollide": true,
     "alwaysShow": false,
     "renderType": "OPAQUE"

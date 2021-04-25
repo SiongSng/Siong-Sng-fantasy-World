@@ -118,15 +118,14 @@ public class SiongsngsFantasyWorldModVariables {
 
 	@SubscribeEvent
 	public void clonePlayer(PlayerEvent.Clone event) {
-		if (event.isWasDeath()) {
-			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new PlayerVariables()));
-			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new PlayerVariables()));
-			clone.coin = original.coin;
-			clone.amethyst_dust = original.amethyst_dust;
-			clone.amethyst_dust_tf = original.amethyst_dust_tf;
-			clone.JOIN_TF = original.JOIN_TF;
+		PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new PlayerVariables()));
+		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
+		clone.coin = original.coin;
+		clone.amethyst_dust = original.amethyst_dust;
+		clone.amethyst_dust_tf = original.amethyst_dust_tf;
+		clone.JOIN_TF = original.JOIN_TF;
+		if (!event.isWasDeath()) {
 		}
 	}
 	public static class PlayerVariablesSyncMessage {

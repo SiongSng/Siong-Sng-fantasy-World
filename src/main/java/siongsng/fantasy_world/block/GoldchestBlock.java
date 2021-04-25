@@ -93,7 +93,7 @@ public class GoldchestBlock extends SiongsngsFantasyWorldModElements.ModElement 
 		public static final DirectionProperty FACING = DirectionalBlock.FACING;
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.METAL).hardnessAndResistance(3f, 10f).setLightLevel(s -> 0).harvestLevel(3)
-					.harvestTool(ToolType.AXE));
+					.harvestTool(ToolType.AXE).setRequiresTool());
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
 			setRegistryName("goldchest");
 		}

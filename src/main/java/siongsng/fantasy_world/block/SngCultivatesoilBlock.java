@@ -6,8 +6,10 @@ import siongsng.fantasy_world.itemgroup.SiongSngworldblockItemGroup;
 import siongsng.fantasy_world.SiongsngsFantasyWorldModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.IPlantable;
@@ -15,10 +17,12 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.server.ServerWorld;
+import net.minecraft.world.gen.feature.template.RuleTest;
 import net.minecraft.world.gen.feature.template.IRuleTestType;
-import net.minecraft.world.gen.feature.template.BlockMatchRuleTest;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.feature.OreFeature;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.ChunkGenerator;
 import net.minecraft.world.World;
@@ -26,7 +30,10 @@ import net.minecraft.world.ISeedReader;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.registry.WorldGenRegistries;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.Direction;
 import net.minecraft.loot.LootContext;
@@ -53,6 +60,7 @@ public class SngCultivatesoilBlock extends SiongsngsFantasyWorldModElements.ModE
 	public SngCultivatesoilBlock(SiongsngsFantasyWorldModElements instance) {
 		super(instance, 2);
 		MinecraftForge.EVENT_BUS.register(this);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new FeatureRegisterHandler());
 	}
 
 	@Override
@@ -64,7 +72,7 @@ public class SngCultivatesoilBlock extends SiongsngsFantasyWorldModElements.ModE
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ORGANIC).sound(SoundType.GROUND).hardnessAndResistance(4f, 10f).setLightLevel(s -> 0)
-					.harvestLevel(1).harvestTool(ToolType.SHOVEL));
+					.harvestLevel(1).harvestTool(ToolType.SHOVEL).setRequiresTool());
 			setRegistryName("ultivatesoil");
 		}
 
@@ -115,40 +123,59 @@ public class SngCultivatesoilBlock extends SiongsngsFantasyWorldModElements.ModE
 			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 100);
 		}
 	}
+	private static Feature<OreFeatureConfig> feature = null;
+	private static ConfiguredFeature<?, ?> configuredFeature = null;
+	private static IRuleTestType<CustomRuleTest> CUSTOM_MATCH = null;
+	private static class CustomRuleTest extends RuleTest {
+		static final CustomRuleTest INSTANCE = new CustomRuleTest();
+		static final com.mojang.serialization.Codec<CustomRuleTest> codec = com.mojang.serialization.Codec.unit(() -> INSTANCE);
+		public boolean test(BlockState blockAt, Random random) {
+			boolean blockCriteria = false;
+			if (blockAt.getBlock() == Blocks.GRASS_BLOCK.getDefaultState().getBlock())
+				blockCriteria = true;
+			if (blockAt.getBlock() == Blocks.GRASS_PATH.getDefaultState().getBlock())
+				blockCriteria = true;
+			if (blockAt.getBlock() == Blocks.MYCELIUM.getDefaultState().getBlock())
+				blockCriteria = true;
+			if (blockAt.getBlock() == Blocks.DIRT.getDefaultState().getBlock())
+				blockCriteria = true;
+			if (blockAt.getBlock() == Blocks.COARSE_DIRT.getDefaultState().getBlock())
+				blockCriteria = true;
+			if (blockAt.getBlock() == Blocks.PODZOL.getDefaultState().getBlock())
+				blockCriteria = true;
+			return blockCriteria;
+		}
+
+		protected IRuleTestType<?> getType() {
+			return CUSTOM_MATCH;
+		}
+	}
+
+	private static class FeatureRegisterHandler {
+		@SubscribeEvent
+		public void registerFeature(RegistryEvent.Register<Feature<?>> event) {
+			CUSTOM_MATCH = Registry.register(Registry.RULE_TEST, new ResourceLocation("siongsngs_fantasy_world:ultivatesoil_match"),
+					() -> CustomRuleTest.codec);
+			feature = new OreFeature(OreFeatureConfig.CODEC) {
+				@Override
+				public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
+					RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
+					boolean dimensionCriteria = false;
+					if (dimensionType == World.OVERWORLD)
+						dimensionCriteria = true;
+					if (!dimensionCriteria)
+						return false;
+					return super.generate(world, generator, rand, pos, config);
+				}
+			};
+			configuredFeature = feature.withConfiguration(new OreFeatureConfig(CustomRuleTest.INSTANCE, block.getDefaultState(), 16)).range(110)
+					.square().func_242731_b(13);
+			event.getRegistry().register(feature.setRegistryName("ultivatesoil"));
+			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("siongsngs_fantasy_world:ultivatesoil"), configuredFeature);
+		}
+	}
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
-		event.getGeneration().getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).add(() -> new OreFeature(OreFeatureConfig.CODEC) {
-			@Override
-			public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
-				RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
-				boolean dimensionCriteria = false;
-				if (dimensionType == World.OVERWORLD)
-					dimensionCriteria = true;
-				if (!dimensionCriteria)
-					return false;
-				return super.generate(world, generator, rand, pos, config);
-			}
-		}.withConfiguration(new OreFeatureConfig(new BlockMatchRuleTest(Blocks.GRASS_BLOCK.getDefaultState().getBlock()) {
-			public boolean test(BlockState blockAt, Random random) {
-				boolean blockCriteria = false;
-				if (blockAt.getBlock() == Blocks.GRASS_BLOCK.getDefaultState().getBlock())
-					blockCriteria = true;
-				if (blockAt.getBlock() == Blocks.GRASS_PATH.getDefaultState().getBlock())
-					blockCriteria = true;
-				if (blockAt.getBlock() == Blocks.MYCELIUM.getDefaultState().getBlock())
-					blockCriteria = true;
-				if (blockAt.getBlock() == Blocks.DIRT.getDefaultState().getBlock())
-					blockCriteria = true;
-				if (blockAt.getBlock() == Blocks.COARSE_DIRT.getDefaultState().getBlock())
-					blockCriteria = true;
-				if (blockAt.getBlock() == Blocks.PODZOL.getDefaultState().getBlock())
-					blockCriteria = true;
-				return blockCriteria;
-			}
-
-			protected IRuleTestType<?> getType() {
-				return IRuleTestType.BLOCK_MATCH;
-			}
-		}, block.getDefaultState(), 16)).range(110).square().func_242731_b(13));
+		event.getGeneration().getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).add(() -> configuredFeature);
 	}
 }
